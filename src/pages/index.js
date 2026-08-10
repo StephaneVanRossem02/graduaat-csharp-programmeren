@@ -15,7 +15,7 @@ function HeroSection() {
           <strong>Object-Oriented Programming</strong> op één plaats.
         </p>
         <div className={styles.heroButtons}>
-          <Link className={styles.btnPrimary} to="/semester-1-programming-principles/h0-werken-met-visual-studio">
+          <Link className={styles.btnPrimary} to="/semester-1-programming-principles/h1-werken-met-visual-studio">
             Semester 1 — Programming Principles
           </Link>
           <Link className={styles.btnSecondary} to="/semester-2-oop/h8-klassen-en-objecten">
@@ -38,7 +38,7 @@ function CardGrid() {
     {
       title: 'Semester 1 — Programming Principles',
       description: 'Variabelen, datatypes, beslissingen, loops, methoden, arrays en meer.',
-      to: '/semester-1-programming-principles/h0-werken-met-visual-studio',
+      to: '/semester-1-programming-principles/h1-werken-met-visual-studio',
       badge: '1',
     },
     {

@@ -1,16 +1,19 @@
-ï»¿# Nuttige extras
-
-## Nuttige extra's
+# Nuttige extra's
 
 ## Boeken
 
 Er zijn quasi oneindig veel boeken over C# geschreven, althans zo lijkt het. Hier een selectie van boeken met een korte bespreking waarom ik denk dat ze voor jou een meerwaarde kunnen zijn bij het leren programmeren in C#:
 
+### Cursus boek
+Deze cursus is heel sterk beïnvloed door de cursus van de bacheloropleiding van Tim Dams (later hier meer info over) Die cursus is ook beschikbaar in boekvorm:
+ [Zie Scherp Scherper](https://www.bol.com/be/nl/f/zie-scherp-scherper-2e-editie/9300000110361496/)
+ Alles wat je nodig hebt voor zowel semester 1 als 2 staat hierin.
+
 ### Beginner boeken
 
 * [C# Programming](https://ineasysteps.com/products-page/all_books/c-sharp-programming-in-easy-steps/) van Mike McGrath: een uiterst compact, maar zeer helder en kleurrijk boekje dat ik ten stelligste aanbeveel als je wat last hebt met de materie van de eerste weken.
 * [Microsoft Visual C# 2015: An introduction to OOP](https://www.amazon.com/Microsoft-Visual-2015-Introduction-Object-Oriented/dp/1285860233) van Joyce Farrell: Niet het meest sexy boek, maar wel het meest volledige qua overlap met de leerstof van deze cursus. Aanrader voor zij die wat meer in detail willen gaan en op zoek zijn naar oneindig veel potentiele examenvragen ;)
-* [Head First C#](https://www.bol.com/nl/f/head-first-c/37019965/?country=BE) van Andrew Stellman & Jennifer Greene: laat de ietwat bizarre, bijna kleuterachtige look and feel van de head first boeken je niet afschrikken. Ieder boek in deze serie is goud waar. De head first boeken zijn dï¿½ ideale manier als je zoekt naar een alternatieve manier om complexe materie te begrijpen. Bekijk zeker ook de Head First Design Patterns en Head First Sql boeken in de reeks!
+* [Head First C#](https://www.bol.com/nl/f/head-first-c/37019965/?country=BE) van Andrew Stellman & Jennifer Greene: laat de ietwat bizarre, bijna kleuterachtige look and feel van de head first boeken je niet afschrikken. Ieder boek in deze serie is goud waar. De head first boeken zijn de ideale manier als je zoekt naar een alternatieve manier om complexe materie te begrijpen. Bekijk zeker ook de Head First Design Patterns en Head First Sql boeken in de reeks!
 
 ### Geavanceerd
 
@@ -25,7 +28,6 @@ Leren programmeren door enkele de opdrachten in deze cursus te maken zal je niet
 
 Volgende document bevat een overzicht van de basis C# syntax zaken van het eerste en (deel van het) tweede semester: [download hier](https://github.com/v-nys/cursusprogrammeren/tree/e865f37d2ea41dc32c32aa2e02a9a763c7ea56f5/assets/0_intro/cheat-sheet.pdf)
 
-![Cheat sheet preview](/img/img-3004.jpg)
 
 ### Game-based programmeren
 

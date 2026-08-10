@@ -299,7 +299,22 @@ const sidebars = {
       label: 'Appendix',
       items: [
         'appendix/visual-studio-tips-and-tricks',
-        'appendix/codingguidelines',
+        {
+          type: 'category',
+          label: 'Coding guidelines',
+          link: { type: 'doc', id: 'appendix/coding-guidelines/index' },
+          items: [
+            'appendix/coding-guidelines/compileert-niet',
+            'appendix/coding-guidelines/klassen-in-1-bestand',
+            'appendix/coding-guidelines/redundante-code',
+            'appendix/coding-guidelines/bladspiegel',
+            'appendix/coding-guidelines/naamgeving',
+            'appendix/coding-guidelines/goto-break-continue',
+            'appendix/coding-guidelines/linq-gebruiken',
+            'appendix/coding-guidelines/methoden-in-methoden',
+            'appendix/coding-guidelines/toplevel-statements',
+          ],
+        },
         'appendix/graveyard',
       ],
     },
