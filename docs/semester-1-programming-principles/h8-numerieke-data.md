@@ -1,3 +1,6 @@
 # H8: Numerieke data
 
-In dit hoofdstuk kijken we naar meer gevorderde operaties die vooral te maken hebben met getallen.
+- [Math klasse](./h8-numerieke-data/de-math-klasse.md)
+- [Random](./h8-numerieke-data/random.md)
+- [Casting en conversie](./h8-numerieke-data/casting-en-conversie.md)
+- [Oefeningen](./h8-numerieke-data/oefeningen.md)
