@@ -33,7 +33,7 @@ const sidebars = {
             'semester-1-programming-principles/h1-werken-met-visual-studio/je-eerste-stappen-in-c',
             'semester-1-programming-principles/h1-werken-met-visual-studio/console',
             'semester-1-programming-principles/h1-werken-met-visual-studio/kleuren',
-            'semester-1-programming-principles/h1werken-met-visual-studio/oefeningen',
+            'semester-1-programming-principles/h1-werken-met-visual-studio/oefeningen',
           ],
         },
         {
