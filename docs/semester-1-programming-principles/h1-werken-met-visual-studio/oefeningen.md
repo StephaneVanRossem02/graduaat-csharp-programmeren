@@ -79,6 +79,8 @@ Wat het lezen en schrijven van tekst betreft moet gebruik gemaakt worden `Consol
 * Probeer meer dan 200 tekens in te voeren
 * Probeer geen tekst in te voeren
 
+<OefeningAssistent oefening="H1-MyFirstProgram" hoofdstuk="H1" />
+
 ## Oefening: H1-Rubbish
 
 ### Leerdoelen
@@ -125,6 +127,8 @@ Per regel die getoond wordt op het scherm, maak je gebruik van `Console.WriteLin
 * Test uit met tekst met internationale karakters, bijvoorbeeld de ç.
 * Ga na wat er gebeurt als je een lege regel invoert, dus als je meteen op ENTER duwt wanneer gevraagd wordt om invoer.
 
+<OefeningAssistent oefening="H1-Rubbish" hoofdstuk="H1" />
+
 ## Oefening: H1-ColoredRubbish
 
 ### Leerdoelen
@@ -164,6 +168,8 @@ Voor elke regel die in kleur getoond wordt, wissel je de voorgrondkleur. Op de j
 
 * Test opnieuw uit met een kleur, maaltijd, auto, film en boek naar keuze.
 
+<OefeningAssistent oefening="H1-ColoredRubbish" hoofdstuk="H1" />
+
 ## Oefening: H1-AddressCard
 
 ### Leerdoelen
@@ -186,3 +192,5 @@ Schrijf deze oefening als een nieuwe methode met de naam `AddressCard`in de klas
 
 
 ####
+
+<OefeningAssistent oefening="H1-AddressCard" hoofdstuk="H1" />

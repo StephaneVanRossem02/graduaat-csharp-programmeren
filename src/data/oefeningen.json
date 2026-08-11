@@ -1,0 +1,140 @@
+{
+  "_lees_dit_eerst": [
+    "Deze inhoud komt in de JS-bundel terecht en is dus leesbaar voor studenten.",
+    "Zet hier NOOIT een volledige referentie-oplossing in: enkel leerdoelen,",
+    "functionele analyse, valkuilen en een korte hint-ladder.",
+    "De teksten hieronder zijn overgenomen uit de oefeningpagina's zelf.",
+    "Wijzigt een opgave, pas dan ook dit bestand aan."
+  ],
+
+  "hoofdstukken": {
+    "H1": {
+      "titel": "Werken met Visual Studio",
+      "toegelaten": [
+        "Console.WriteLine en Console.Write",
+        "Console.ReadLine",
+        "Console.ForegroundColor en Console.ResetColor",
+        "lokale variabelen met een expliciet type, meestal string",
+        "strings aan elkaar hangen met de +-operator (dat mag in de eerste twee lessen)",
+        "een eigen static methode zonder parameters in de klasse EenProgrammaSchrijvenInCSharp",
+        "die methode oproepen vanuit Main"
+      ],
+      "nogNietGezien": [
+        "stringinterpolatie ($\"...\") en string.Format: in de eerste twee lessen hangen we strings aan elkaar met +",
+        "var en dynamic: we declareren altijd met een expliciet, statisch type",
+        "loops (for, while, foreach)",
+        "arrays en lijsten",
+        "if/else en switch",
+        "methodes met parameters of met een returnwaarde",
+        "LINQ, lambda's en delegates"
+      ],
+      "verboden": [
+        "top-level statements: bij een nieuw project moet het vinkje 'Do not use top-level statements' aan staan (-5 punten)",
+        "een methode binnen een andere methode definieren (-3 punten)",
+        "goto, en break of continue buiten een switch (-3 punten)"
+      ]
+    }
+  },
+
+  "oefeningen": {
+    "H1-MyFirstProgram": {
+      "titel": "H1-MyFirstProgram",
+      "hoofdstuk": "H1",
+      "methodeNaam": "MyFirstProgram",
+      "leerdoelen": [
+        "een eigen programma kunnen uitvoeren",
+        "input en output via Console.ReadLine en Console.WriteLine"
+      ],
+      "functioneleAnalyse": "In een dos-box wordt eerst een titel getoond, namelijk 'dit is mijn eerste c# programma'. Daarna wordt gevraagd om de voornaam en de achternaam te noteren. Wat er verder moet gebeuren, staat in de voorbeeldinteractie op de cursuspagina.",
+      "organisatie": "Schrijf dit als een methode met de naam MyFirstProgram. Test uit door ze op te roepen in Main.",
+      "voorbeeldinteractieOntbreekt": true,
+      "veelgemaakteFouten": [
+        "de methode wel schrijven maar nooit oproepen in Main, waardoor er niets gebeurt",
+        "het vinkje 'Do not use top-level statements' vergeten bij het aanmaken van het project",
+        "het resultaat van Console.ReadLine niet opvangen in een variabele",
+        "geen vraag tonen voor je leest, waardoor de gebruiker naar een leeg scherm staart"
+      ],
+      "hints": [
+        "Draait je programma wel? Een methode die enkel gedefinieerd is, voert niets uit. Roep je ze op in Main?",
+        "Console.ReadLine() geeft iets terug. Wat doe je met dat resultaat als je het later nog nodig hebt?",
+        "Toon eerst een duidelijke vraag op het scherm voor je de invoer leest."
+      ]
+    },
+
+    "H1-Rubbish": {
+      "titel": "H1-Rubbish",
+      "hoofdstuk": "H1",
+      "methodeNaam": "Rubbish",
+      "leerdoelen": [
+        "een eigen programma kunnen uitvoeren",
+        "input en output via Console.ReadLine en Console.WriteLine",
+        "de computer leren zien als een domme verwerker"
+      ],
+      "functioneleAnalyse": "Het programma verwerkt tekst die de gebruiker intypt. Het print daarna nieuwe berichten die die tekst bevatten, maar het haalt de antwoorden bewust door elkaar: het toont je favoriete kleur wanneer het beweert je favoriete eten te tonen, enzovoort. De bedoeling is dat de student inziet dat de computer exact doet wat je schrijft, ook als dat onzin oplevert.",
+      "organisatie": "Schrijf dit programma als een methode met de naam Rubbish binnen de klasse EenProgrammaSchrijvenInCSharp. Test uit door die methode op te roepen binnen Main.",
+      "voorbeeldinteractie": "Wat is je favoriete kleur?\n> blauw\nWat is je favoriete eten?\n> spaghetti\nWat is je favoriete auto?\n> Toyota Aygo\nWat is je favoriete film?\n> Robocop 2\nWat is je favoriete boek?\n> The Gone-Away World\nJe favoriete kleur is spaghetti. Je eet graag Toyota Aygo. Je lievelingsfilm is The Gone-Away World en je favoriete boek is Robocop 2.",
+      "veelgemaakteFouten": [
+        "elk antwoord niet in een eigen variabele bewaren, waardoor je het later niet meer hebt",
+        "het resultaat van Console.ReadLine niet opvangen",
+        "de vraag pas tonen na het lezen van de invoer",
+        "spaties vergeten bij het aan elkaar hangen van tekst met +",
+        "stringinterpolatie gebruiken, wat in deze les nog niet gezien is"
+      ],
+      "hints": [
+        "Vergelijk de laatste regel van jouw uitvoer met die in de voorbeeldinteractie. Welke waarde staat er op een plaats waar je ze niet verwacht?",
+        "Hoeveel antwoorden moet je onthouden tot op het einde? Hoeveel variabelen heb je nu?",
+        "Console.ReadLine() geeft de ingetypte regel terug. Als je dat resultaat nergens in bewaart, is het weg.",
+        "Als je tekst samenvoegt met +, staan er dan wel spaties tussen de losse stukken?"
+      ],
+      "testscenarios": [
+        "een heel lang stuk tekst van meer dan 200 tekens als favoriete kleur",
+        "tekst met internationale karakters, bijvoorbeeld de c-cedille",
+        "een lege regel, dus meteen op ENTER duwen"
+      ]
+    },
+
+    "H1-ColoredRubbish": {
+      "titel": "H1-ColoredRubbish",
+      "hoofdstuk": "H1",
+      "methodeNaam": "ColoredRubbish",
+      "leerdoelen": [
+        "de kleur van tekst in de console aanpassen",
+        "herhaling van de leerdoelen uit H1-Rubbish"
+      ],
+      "functioneleAnalyse": "Dit programma werkt net als H1-Rubbish, maar elke regel die aan de gebruiker getoond wordt krijgt een andere kleur. De kleuren zijn, in deze volgorde: DarkGreen, DarkRed, DarkYellow, Blue, Cyan, Red. Op de juiste plaatsen herstelt het programma de oorspronkelijke kleuren van de terminal.",
+      "organisatie": "Schrijf dit als een nieuwe methode met de naam ColoredRubbish in de klasse EenProgrammaSchrijvenInCSharp. Test uit door ze op te roepen binnen Main.",
+      "voorbeeldinteractieOntbreekt": true,
+      "veelgemaakteFouten": [
+        "de kleur pas instellen na het schrijven van de regel in plaats van ervoor",
+        "de oorspronkelijke kleur niet herstellen, waardoor de terminal gekleurd blijft",
+        "de kleur als string proberen doorgeven in plaats van via ConsoleColor",
+        "de volgorde van de zes kleuren niet aanhouden"
+      ],
+      "hints": [
+        "Denk aan de volgorde van de instructies: wat moet er gebeuren voor een regel op het scherm verschijnt?",
+        "Console.ForegroundColor verwacht een waarde uit ConsoleColor. Typ ConsoleColor gevolgd door een punt en kijk wat IntelliSense voorstelt.",
+        "Hoe zorg je dat het console-venster achteraf niet in de laatste kleur blijft staan?"
+      ]
+    },
+
+    "H1-AddressCard": {
+      "titel": "H1-AddressCard",
+      "hoofdstuk": "H1",
+      "methodeNaam": "AddressCard",
+      "leerdoelen": ["herhaling van de leerdoelen uit H1"],
+      "functioneleAnalyse": "Op basis van gegevens die de gebruiker ingeeft, stelt het programma een naamkaartje samen en toont dat op het scherm.",
+      "organisatie": "Schrijf dit als een nieuwe methode met de naam AddressCard in de klasse EenProgrammaSchrijvenInCSharp. Test uit door ze op te roepen binnen Main.",
+      "voorbeeldinteractieOntbreekt": true,
+      "veelgemaakteFouten": [
+        "het resultaat van Console.ReadLine niet opvangen in een variabele",
+        "geen vraag tonen voor je leest",
+        "spaties vergeten bij het samenvoegen van tekst met +"
+      ],
+      "hints": [
+        "Welke gegevens heb je nodig voor je het kaartje kan tonen? Vraag ze een voor een.",
+        "Bewaar elk antwoord in een eigen variabele met een duidelijke Engelse naam.",
+        "Bekijk de voorbeeldinteractie op de cursuspagina en vergelijk regel per regel met jouw uitvoer."
+      ]
+    }
+  }
+}
