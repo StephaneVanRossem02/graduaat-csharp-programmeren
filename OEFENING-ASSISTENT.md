@@ -31,9 +31,18 @@ naartoe behalve rechtstreeks naar Google. Wij zien hem niet.
 
 ### Wat de assistent wel en niet doet
 
-Wel: aanwijzen waar het misloopt, een wedervraag stellen, je herinneren aan iets uit de
-cursus, en waarschuwen als je iets doet dat punten kost. Niet: de oefening voor jou
-oplossen. Dat is geen onwil, dat is het punt.
+Je kan er met twee soorten vragen terecht.
+
+**"Ik snap de opgave niet."** Dan legt hij uit wat je programma moet doen, in andere
+woorden dan de cursuspagina, stap voor stap, met een ander voorbeeld. Daar is hij ruim
+in: begrijpen wat er gevraagd wordt is geen valsspelen.
+
+**"Mijn code werkt niet."** Dan krijg je een hint of een wedervraag die je zelf verder
+helpt. Een per keer. Je code meesturen mag, maar hoeft niet.
+
+Wat hij niet doet: de oefening voor jou oplossen, of vertellen welke code je moet
+schrijven. Dat is geen onwil, dat is het punt. Je leert programmeren door zelf vast te
+lopen en er weer uit te geraken.
 
 Je hebt **30 vragen per dag**.
 
@@ -101,7 +110,7 @@ customFields: {
 | Instelling           | Standaard               | Waarvoor                              |
 | -------------------- | ----------------------- | ------------------------------------- |
 | `model`              | `gemini-3.5-flash-lite` | Modelnaam                             |
-| `maxOutputTokens`    | `1000`                  | Noodrem op de lengte van het antwoord |
+| `maxOutputTokens`    | `1500`                  | Noodrem op de lengte van het antwoord |
 | `thinkingLevel`      | `null`                  | `'minimal'`…`'high'`, of `null`       |
 | `maxCodeTekens`      | `4000`                  | Maximum geplakte code                 |
 | `maxVraagTekens`     | `1000`                  | Maximum lengte van de vraag           |
@@ -127,7 +136,13 @@ Dit is nagekeken, niet aangenomen.
 **De key gaat in een header, niet in de URL.** Query strings komen in server-logs en in
 de browsergeschiedenis terecht.
 
-**`maxOutputTokens` staat op 1000, niet op 400.** Gemini 3.x-modellen denken na voor ze
+**De assistent onderscheidt drie soorten vragen.** Uitleg over de opgave, vastgelopen
+code, en "geef gewoon de oplossing". Dat onderscheid staat expliciet in de system prompt,
+want zonder dat kreeg een student die de opdracht niet begreep een wedervraag terug in
+plaats van een uitleg. De grens is **wat** tegenover **hoe**: beschrijven wat het
+programma moet doen mag onbeperkt, beschrijven met welke C#-constructies dat gebeurt niet.
+
+**`maxOutputTokens` staat op 1500, niet op 400.** Gemini 3.x-modellen denken na voor ze
 antwoorden en die denk-tokens tellen mee als output-tokens. Bij een harde limiet van 400
 kan het model zijn hele budget opgebruiken tijdens het denken en een leeg antwoord
 teruggeven. De hints blijven kort omdat de system prompt dat oplegt, niet omdat de

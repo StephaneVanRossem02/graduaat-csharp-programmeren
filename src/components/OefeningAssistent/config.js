@@ -28,7 +28,7 @@ export const DEFAULT_CONFIG = {
    * De hints blijven kort omdat de system prompt dat oplegt, niet omdat de
    * token-limiet ze afkapt. Die limiet is enkel een noodrem.
    */
-  maxOutputTokens: 1000,
+  maxOutputTokens: 1500,
 
   /**
    * Denkniveau ('minimal' | 'low' | 'medium' | 'high'), of null om het veld

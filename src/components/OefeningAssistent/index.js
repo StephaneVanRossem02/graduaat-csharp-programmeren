@@ -69,6 +69,7 @@ export default function OefeningAssistent({ oefening, hoofdstuk }) {
   const [verbruik, setVerbruik] = useState(0);
 
   const gesprekEinde = useRef(null);
+  const vraagVeld = useRef(null);
 
   // localStorage bestaat niet tijdens het bouwen van de site, dus pas na mount lezen.
   useEffect(() => {
@@ -249,10 +250,33 @@ export default function OefeningAssistent({ oefening, hoofdstuk }) {
       ) : (
         <>
           {berichten.length === 0 && (
-            <p className={styles.uitleg}>
-              Stel een vraag over waar je vastzit. Je krijgt geen oplossing, wel een hint of een
-              wedervraag die je verder helpt. Plak gerust je eigen code erbij.
-            </p>
+            <>
+              <p className={styles.uitleg}>
+                Snap je de opgave niet goed? Vraag om ze anders uit te leggen. Loopt je code vast?
+                Beschrijf wat er misgaat, en stuur je code mee als je wil. Je krijgt nooit de
+                oplossing, wel iets waarmee je zelf verder geraakt.
+              </p>
+              <div className={styles.voorzetten}>
+                {[
+                  'Leg deze opgave eens op een andere manier uit.',
+                  'Wat moet mijn programma precies doen?',
+                  'Ik weet niet hoe ik eraan begin.',
+                  'Mijn uitvoer klopt niet met het voorbeeld.',
+                ].map((tekst) => (
+                  <button
+                    key={tekst}
+                    type="button"
+                    className={styles.voorzet}
+                    onClick={() => {
+                      setVraag(tekst);
+                      vraagVeld.current?.focus();
+                    }}
+                  >
+                    {tekst}
+                  </button>
+                ))}
+              </div>
+            </>
           )}
 
           {berichten.length > 0 && (
@@ -301,6 +325,7 @@ export default function OefeningAssistent({ oefening, hoofdstuk }) {
 
           <form onSubmit={verstuur} className={styles.vraagForm}>
             <textarea
+              ref={vraagVeld}
               className={styles.vraagInvoer}
               value={vraag}
               onChange={(event) => setVraag(event.target.value)}
@@ -317,7 +342,7 @@ export default function OefeningAssistent({ oefening, hoofdstuk }) {
               onClick={() => setToontCode((vorige) => !vorige)}
               aria-expanded={toontCode}
             >
-              {toontCode ? 'Code verbergen' : 'Mijn code toevoegen'}
+              {toontCode ? 'Code verbergen' : 'Mijn code toevoegen (optioneel)'}
             </button>
 
             {toontCode && (
