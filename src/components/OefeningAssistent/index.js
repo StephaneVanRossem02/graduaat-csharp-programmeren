@@ -142,9 +142,13 @@ export default function OefeningAssistent({ oefening, hoofdstuk }) {
       try {
         const antwoord = await vraagAanGemini({
           apiKey: key,
+          // Terugvalprompt, zonder oplossing. Gaat de aanvraag via de Worker, dan bouwt
+          // die zijn eigen prompt met de oplossing erbij en wordt deze genegeerd.
           systemPrompt: bouwSystemPrompt({ oefeningId: oefening, hoofdstukId: hoofdstuk }),
           geschiedenis,
           config,
+          oefening,
+          hoofdstuk,
         });
         setBerichten([...nieuweBerichten, { rol: 'assistent', tekst: antwoord }]);
         // Pas tellen na een geslaagd antwoord: een mislukte poging mag geen quota kosten.
@@ -208,8 +212,8 @@ export default function OefeningAssistent({ oefening, hoofdstuk }) {
         <form onSubmit={bewaarNieuweKey} className={styles.keyForm}>
           <p className={styles.uitleg}>
             Deze assistent werkt met je eigen gratis Gemini-key. Je geeft die een keer in, daarna
-            blijft hij in deze browser bewaard. Hij wordt nergens naartoe gestuurd behalve naar
-            Google.
+            blijft hij in deze browser bewaard. Bij elke vraag gaat hij via de server van de
+            opleiding naar Google. Wij bewaren hem niet.
           </p>
           <ol className={styles.stappen}>
             <li>

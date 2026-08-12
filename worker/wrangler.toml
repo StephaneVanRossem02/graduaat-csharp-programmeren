@@ -1,0 +1,13 @@
+name = "oefening-assistent"
+main = "src/index.js"
+compatibility_date = "2026-08-01"
+
+# Geen secrets en geen KV nodig: de Worker heeft geen eigen Gemini-key.
+# De key van de student komt per aanvraag mee in de header x-student-key.
+
+# Lokaal draaien zonder Cloudflare-account:
+#   npx wrangler dev --port 8787
+#
+# Deployen (hiervoor is wel een account nodig):
+#   npx wrangler login
+#   npx wrangler deploy

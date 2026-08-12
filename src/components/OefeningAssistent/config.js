@@ -20,6 +20,17 @@ export const DEFAULT_CONFIG = {
   apiBasis: 'https://generativelanguage.googleapis.com/v1beta',
 
   /**
+   * Adres van de Cloudflare Worker. Die voegt de referentie-oplossing toe aan de prompt,
+   * iets wat in de browser niet kan zonder ze aan studenten prijs te geven.
+   *
+   * Staat dit op null, of is de Worker onbereikbaar, dan praat de browser rechtstreeks
+   * met Google. De assistent werkt dan nog steeds, maar zonder oplossing om mee te
+   * vergelijken. Dat is bewust: een Worker die plat ligt mag de assistent op alle
+   * oefeningpagina's niet stukmaken.
+   */
+  workerUrl: null,
+
+  /**
    * Bewust hoger dan de ~400 die je zou verwachten voor korte hints.
    *
    * Gemini 3.x-modellen denken na voor ze antwoorden, en die denk-tokens tellen

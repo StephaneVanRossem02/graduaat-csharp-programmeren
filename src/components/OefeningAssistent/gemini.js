@@ -76,7 +76,15 @@ function leesAntwoordTekst(kandidaat) {
  * @param {AbortSignal} [opties.signal]
  * @returns {Promise<string>} het antwoord van de assistent
  */
-export async function vraagAanGemini({ apiKey, systemPrompt, geschiedenis, config, signal }) {
+export async function vraagAanGemini({
+  apiKey,
+  systemPrompt,
+  geschiedenis,
+  config,
+  signal,
+  oefening,
+  hoofdstuk,
+}) {
   if (!apiKey) {
     throw new AssistentFout('geen-key', 'Er is nog geen API-key ingesteld.');
   }
@@ -90,29 +98,77 @@ export async function vraagAanGemini({ apiKey, systemPrompt, geschiedenis, confi
     generationConfig.thinkingConfig = { thinkingLevel: config.thinkingLevel };
   }
 
-  const body = {
-    systemInstruction: { parts: [{ text: systemPrompt }] },
-    contents: geschiedenis.map((beurt) => ({
-      role: beurt.rol === 'student' ? 'user' : 'model',
-      parts: [{ text: beurt.tekst }],
-    })),
-    generationConfig,
-  };
-
-  const url = `${config.apiBasis}/models/${encodeURIComponent(config.model)}:generateContent`;
+  const contents = geschiedenis.map((beurt) => ({
+    role: beurt.rol === 'student' ? 'user' : 'model',
+    parts: [{ text: beurt.tekst }],
+  }));
 
   let response;
-  try {
-    response = await fetch(url, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'x-goog-api-key': apiKey },
-      body: JSON.stringify(body),
-      signal,
-    });
-  } catch (fout) {
-    if (fout?.name === 'AbortError') throw fout;
-    // fetch gooit hier bij offline zijn, een geblokkeerde request of een CORS-probleem.
-    throw new AssistentFout('netwerk', 'Geen verbinding met de Gemini-API.');
+  let viaWorker = false;
+
+  if (config.workerUrl) {
+    try {
+      response = await fetch(config.workerUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-student-key': apiKey },
+        body: JSON.stringify({
+          oefening,
+          hoofdstuk,
+          geschiedenis: contents,
+          model: config.model,
+          generationConfig,
+        }),
+        signal,
+      });
+      viaWorker = true;
+    } catch (fout) {
+      if (fout?.name === 'AbortError') throw fout;
+      // Worker onbereikbaar. Niet doorbreken: hieronder valt hij terug op Google.
+      // De assistent werkt dan zonder referentie-oplossing, en dat is beter dan niets.
+      response = null;
+    }
+  }
+
+  if (!response) {
+    const body = {
+      systemInstruction: { parts: [{ text: systemPrompt }] },
+      contents,
+      generationConfig,
+    };
+    const url = `${config.apiBasis}/models/${encodeURIComponent(config.model)}:generateContent`;
+
+    try {
+      response = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-goog-api-key': apiKey },
+        body: JSON.stringify(body),
+        signal,
+      });
+    } catch (fout) {
+      if (fout?.name === 'AbortError') throw fout;
+      // fetch gooit hier bij offline zijn, een geblokkeerde request of een CORS-probleem.
+      throw new AssistentFout('netwerk', 'Geen verbinding met de Gemini-API.');
+    }
+  }
+
+  // 5xx van de Worker zelf: ook dan nog een keer rechtstreeks proberen.
+  if (viaWorker && response.status >= 500) {
+    const body = {
+      systemInstruction: { parts: [{ text: systemPrompt }] },
+      contents,
+      generationConfig,
+    };
+    const url = `${config.apiBasis}/models/${encodeURIComponent(config.model)}:generateContent`;
+    try {
+      response = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-goog-api-key': apiKey },
+        body: JSON.stringify(body),
+        signal,
+      });
+    } catch {
+      /* de oorspronkelijke reactie van de Worker wordt hieronder afgehandeld */
+    }
   }
 
   let data = null;

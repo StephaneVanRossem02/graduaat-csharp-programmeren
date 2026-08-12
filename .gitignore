@@ -18,3 +18,6 @@ Thumbs.db
 
 # Claude memory
 .claude/
+
+# lokale wrangler-rommel
+worker/.wrangler/

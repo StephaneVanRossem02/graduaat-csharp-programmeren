@@ -1,0 +1,22 @@
+{
+  "_lees_dit_eerst": [
+    "Dit bestand wordt ALLEEN door de Cloudflare Worker gebruikt.",
+    "Het staat bewust buiten src/, zodat het nooit per ongeluk in de frontend-bundel",
+    "geimporteerd wordt. Importeer het nergens vanuit src/.",
+    "",
+    "Per oefening kan je drie velden invullen, allemaal optioneel:",
+    "  aanpak  - een of twee zinnen: welke constructies, welke structuur.",
+    "  code    - de referentie-oplossing zoals de docenten ze schrijven.",
+    "  let_op  - waar studenten typisch van afwijken, en of dat erg is.",
+    "",
+    "De assistent krijgt dit te zien om MEE TE VERGELIJKEN, met de uitdrukkelijke",
+    "instructie het nooit te tonen. Zie het oplossing-blok in prompt.js."
+  ],
+
+  "oplossingen": {
+    "H1-MyFirstProgram": {},
+    "H1-Rubbish": {},
+    "H1-ColoredRubbish": {},
+    "H1-AddressCard": {}
+  }
+}
