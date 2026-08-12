@@ -10,6 +10,7 @@ export const CODE_AFSPRAKEN = [
   'Klassen, methodes, constanten en properties in PascalCase. Lokale variabelen, argumenten en velden in camelCase.',
   'Geen underscore vooraan bij private members.',
   'Vermijd afkortingen, behalve algemeen aanvaarde zoals ID en HTML.',
+  'Geen nietszeggende namen zoals x, boe of meuh. Enkel looptellers mogen i, j, x of y heten.',
   'Declareer altijd met een expliciet, statisch type. Dus geen var en geen dynamic.',
   'using-directieven staan vooraan in het bestand, gevolgd door de namespace.',
   'Elk zelf gedefinieerd datatype staat in een eigen bestand met dezelfde naam.',
@@ -124,7 +125,10 @@ ${blok('Organisatie van de code:', oefening?.organisatie)}${blok(
     oefening?.voorbeeldinteractieOntbreekt
       ? '\nDe voorbeeldinteractie staat als afbeelding op de cursuspagina en jij kan ze niet zien.\nDoe dus geen uitspraken over de exacte verwachte uitvoer. Vraag de student wat er staat,\nof verwijs hem naar de voorbeeldinteractie op de pagina.\n'
       : ''
-  }${blok('Testscenarios uit de opgave:', lijst(oefening?.testscenarios, ''))}
+  }${blok('Details die studenten hier vaak over het hoofd zien:', oefening?.letOp)}${blok(
+    'Testscenarios uit de opgave:',
+    lijst(oefening?.testscenarios, ''),
+  )}
 Fouten die studenten hier vaak maken:
 ${lijst(oefening?.veelgemaakteFouten, 'geen bekende valkuilen')}
 

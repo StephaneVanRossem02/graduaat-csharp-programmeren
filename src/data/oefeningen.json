@@ -47,7 +47,8 @@
       ],
       "functioneleAnalyse": "In een dos-box wordt eerst een titel getoond, namelijk 'dit is mijn eerste c# programma'. Daarna wordt gevraagd om de voornaam en de achternaam te noteren. Wat er verder moet gebeuren, staat in de voorbeeldinteractie op de cursuspagina.",
       "organisatie": "Schrijf dit als een methode met de naam MyFirstProgram. Test uit door ze op te roepen in Main.",
-      "voorbeeldinteractieOntbreekt": true,
+      "voorbeeldinteractie": "Dit is mijn eerste C#-programma\n...............................\nTyp je voornaam: Jef\nTyp je achternaam: Peeters\n\nDus je naam is: Peeters Jef\nOf: Jef Peeters",
+      "letOp": "In de voorlaatste regel staat de achternaam voor de voornaam, in de laatste regel omgekeerd. Onder de titel staat een rij punten.",
       "veelgemaakteFouten": [
         "de methode wel schrijven maar nooit oproepen in Main, waardoor er niets gebeurt",
         "het vinkje 'Do not use top-level statements' vergeten bij het aanmaken van het project",
@@ -103,7 +104,8 @@
       ],
       "functioneleAnalyse": "Dit programma werkt net als H1-Rubbish, maar elke regel die aan de gebruiker getoond wordt krijgt een andere kleur. De kleuren zijn, in deze volgorde: DarkGreen, DarkRed, DarkYellow, Blue, Cyan, Red. Op de juiste plaatsen herstelt het programma de oorspronkelijke kleuren van de terminal.",
       "organisatie": "Schrijf dit als een nieuwe methode met de naam ColoredRubbish in de klasse EenProgrammaSchrijvenInCSharp. Test uit door ze op te roepen binnen Main.",
-      "voorbeeldinteractieOntbreekt": true,
+      "voorbeeldinteractie": "Wat is je favoriete kleur?      (DarkGreen)\ngroen\nWat is je favoriete eten?       (DarkRed)\nsushi\nWat is je favoriete auto?       (DarkYellow)\nBentley\nWat is je favoriete film?       (Blue)\nDances with Wolves\nWat is je favoriete boek?       (Cyan)\nHet verdriet van Belgie\nJe favoriete kleur is sushi. Je eet graag Bentley. Je lievelingsfilm is Het verdriet van Belgie en je favoriete boek is Dances with Wolves.      (Red)",
+      "letOp": "De kleur tussen haakjes hoort niet op het scherm: die geeft aan in welke kleur die regel getoond wordt. Enkel de vragen en de slotregel zijn gekleurd, wat de gebruiker zelf intypt niet. In de screenshot op de cursuspagina valt de e-trema van Belgie weg door de tekenset van de console; dat is precies waar het testscenario over internationale karakters op doelt.",
       "veelgemaakteFouten": [
         "de kleur pas instellen na het schrijven van de regel in plaats van ervoor",
         "de oorspronkelijke kleur niet herstellen, waardoor de terminal gekleurd blijft",
@@ -124,7 +126,8 @@
       "leerdoelen": ["herhaling van de leerdoelen uit H1"],
       "functioneleAnalyse": "Op basis van gegevens die de gebruiker ingeeft, stelt het programma een naamkaartje samen en toont dat op het scherm.",
       "organisatie": "Schrijf dit als een nieuwe methode met de naam AddressCard in de klasse EenProgrammaSchrijvenInCSharp. Test uit door ze op te roepen binnen Main.",
-      "voorbeeldinteractieOntbreekt": true,
+      "voorbeeldinteractie": "Naamkaartje\n\nWat is je naam? Wout Van Aert\nWat is je straat? Velodroomstraat\nWat is je huisnummer? 2\nWat is je gemeente? Herentals\nWat is je postcode? 2200\n\n\nWout Van Aert\nVelodroomstraat 2\n2200 Herentals",
+      "letOp": "Boven de titel staat een decoratieve rij tekens. Let op de volgorde: er wordt eerst naar de gemeente gevraagd en dan naar de postcode, maar op het kaartje staat de postcode voor de gemeente. Straat en huisnummer komen samen op een regel.",
       "veelgemaakteFouten": [
         "het resultaat van Console.ReadLine niet opvangen in een variabele",
         "geen vraag tonen voor je leest",
