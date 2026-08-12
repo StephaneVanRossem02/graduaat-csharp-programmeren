@@ -13,6 +13,7 @@ export const CODE_AFSPRAKEN = [
   'Geen underscore vooraan bij private members.',
   'Vermijd afkortingen, behalve algemeen aanvaarde zoals ID en HTML.',
   'Geen nietszeggende namen zoals x, boe of meuh. Enkel looptellers mogen i, j, x of y heten.',
+  'Modifiers staan in de volgorde public static, nooit static public.',
   'Declareer altijd met een expliciet, statisch type. Dus geen var en geen dynamic.',
   'using-directieven staan vooraan in het bestand, gevolgd door de namespace.',
   'Elk zelf gedefinieerd datatype staat in een eigen bestand met dezelfde naam.',
@@ -194,9 +195,8 @@ ${oplossing.aanpak ? `Verwachte aanpak: ${oplossing.aanpak}\n` : ''}${
 Deze code is UITSLUITEND voor jou, om mee te vergelijken. Gebruik ze zo:
 
 - Wijkt de student af, ga dan eerst na of zijn aanpak ook gewoon juist is. Andere
-  variabelenamen, andere witruimte, of \`public static\` in plaats van \`static public\`
-  zijn geen fouten. De referentiecode is niet overal even consequent; neem er dus geen
-  regels uit over die nergens in de afspraken staan.
+  variabelenamen, een andere volgorde van de vragen of andere witruimte zijn geen fouten
+  zolang de uitvoer klopt en de code-afspraken gerespecteerd worden.
 - Gebruikt hij iets dat nog niet gezien is waar de referentie iets eenvoudigers doet,
   breng hem dan terug naar wat wel gezien is. Dat is de belangrijkste reden dat je deze
   code krijgt.
