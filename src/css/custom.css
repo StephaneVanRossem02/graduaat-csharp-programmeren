@@ -27,3 +27,28 @@ article h2 {
   border-bottom: 2px solid var(--ifm-color-primary);
   padding-bottom: 0.3rem;
 }
+
+/* Orange navbar everywhere except the homepage, which keeps its original
+   (pre-redesign) navbar since it already has its own hero banner below it. */
+#__docusaurus:not(:has(> .homepage)) .navbar {
+  background-color: color-mix(in srgb, var(--ifm-color-primary-lightest) 70%, white 30%);
+}
+
+[data-theme='dark'] #__docusaurus:not(:has(> .homepage)) .navbar {
+  background-color: color-mix(in srgb, var(--ifm-color-primary-darkest) 96%, white 4%);
+}
+
+#__docusaurus:not(:has(> .homepage)) .navbar__title,
+#__docusaurus:not(:has(> .homepage)) .navbar__link {
+  color: #000000;
+}
+
+[data-theme='dark'] #__docusaurus:not(:has(> .homepage)) .navbar__title,
+[data-theme='dark'] #__docusaurus:not(:has(> .homepage)) .navbar__link {
+  color: #ffffff;
+}
+
+[data-theme='dark'] #__docusaurus:not(:has(> .homepage)) .navbar__link:hover,
+[data-theme='dark'] #__docusaurus:not(:has(> .homepage)) .navbar__link--active {
+  color: var(--ifm-color-primary-lightest);
+}
