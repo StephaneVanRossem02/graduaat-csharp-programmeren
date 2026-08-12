@@ -58,10 +58,17 @@ Maak een programma dat aan de gebruiker een geheel getal vraagt. Het programma g
 
 Maak een methode met de naam `EvenOrOdd`.
 
-Een getal is even als de rest van de deling door 2 nul is. Hiervoor kan je de modulo operator gebruiken. Het teken voor de modulo is het `%` -teken.\
+Een getal is even als de rest van de deling door 2 nul is. Hiervoor kan je de modulo operator gebruiken. 
+
+#### ⚠️ Modulo
+> Ook wel de restoperator genoemd, geeft de restwaarde terug die niet gedeeld kan worden. \
+Het teken voor de modulo is het `%` -teken.\
 Voorbeelden:\
-7%2 geeft 1 => 7 is oneven\
-8%2 geeft 0 => 8 is even
+`10 % 3` = 1, want 9 is deelbaar door 3, 10-9 = 1\
+`14 % 5` = 4, want 10 is deelbaar door 5, 14-10 = 4\
+Voorbeelden voor (on)even:\
+`7 % 2` geeft 1 => 7 is oneven\
+`8 % 2` geeft 0 => 8 is even
 
 Zet volgende flowchart om in code:
 
