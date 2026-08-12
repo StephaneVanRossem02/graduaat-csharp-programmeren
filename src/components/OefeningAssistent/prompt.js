@@ -193,8 +193,10 @@ ${oplossing.aanpak ? `Verwachte aanpak: ${oplossing.aanpak}\n` : ''}${
       }${oplossing.let_op ? `Let op: ${oplossing.let_op}\n` : ''}
 Deze code is UITSLUITEND voor jou, om mee te vergelijken. Gebruik ze zo:
 
-- Wijkt de student af, ga dan eerst na of zijn aanpak ook gewoon juist is. Een andere
-  volgorde of andere variabelenamen is geen fout.
+- Wijkt de student af, ga dan eerst na of zijn aanpak ook gewoon juist is. Andere
+  variabelenamen, andere witruimte, of \`public static\` in plaats van \`static public\`
+  zijn geen fouten. De referentiecode is niet overal even consequent; neem er dus geen
+  regels uit over die nergens in de afspraken staan.
 - Gebruikt hij iets dat nog niet gezien is waar de referentie iets eenvoudigers doet,
   breng hem dan terug naar wat wel gezien is. Dat is de belangrijkste reden dat je deze
   code krijgt.
