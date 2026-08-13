@@ -69,7 +69,28 @@ export const DEFAULT_CONFIG = {
   maxBeurtenGeheugen: 6,
 };
 
+/**
+ * Alleen op localhost mag de Worker-URL uit localStorage komen. Zo kan je een Worker
+ * uitproberen zonder config.js aan te passen, terwijl op de echte site altijd geldt wat
+ * er in de configuratie staat.
+ *
+ * In de console van je browser:
+ *   localStorage.setItem('oefening-assistent:worker-url', 'http://127.0.0.1:8787')
+ *   localStorage.removeItem('oefening-assistent:worker-url')
+ */
+function testWorkerUrl() {
+  try {
+    if (typeof window === 'undefined') return null;
+    const host = window.location.hostname;
+    if (host !== 'localhost' && host !== '127.0.0.1') return null;
+    return window.localStorage.getItem('oefening-assistent:worker-url') || null;
+  } catch {
+    return null;
+  }
+}
+
 /** Voegt de overrides uit docusaurus.config.js samen met de standaardwaarden. */
 export function leesConfig(siteConfig) {
-  return { ...DEFAULT_CONFIG, ...(siteConfig?.customFields?.oefeningAssistent ?? {}) };
+  const config = { ...DEFAULT_CONFIG, ...(siteConfig?.customFields?.oefeningAssistent ?? {}) };
+  return { ...config, workerUrl: testWorkerUrl() ?? config.workerUrl };
 }
