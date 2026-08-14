@@ -30,6 +30,18 @@ const config = {
     locales: ['nl'],
   },
 
+  customFields: {
+    // Overschrijft de standaardwaarden van de oefening-assistent (zie
+    // src/components/OefeningAssistent/config.js).
+    oefeningAssistent: {
+      // Adres van de Cloudflare Worker die de referentie-oplossing aan de prompt
+      // toevoegt. Leeg op de hoofdsite (Vincent), zodat die zonder Worker draait.
+      // Zet de env-var OEFENING_ASSISTENT_WORKER_URL bij de build om een gedeployede
+      // Worker te koppelen; op localhost heeft de localStorage-override nog voorrang.
+      workerUrl: process.env.OEFENING_ASSISTENT_WORKER_URL || null,
+    },
+  },
+
   presets: [
     [
       'classic',

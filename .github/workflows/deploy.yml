@@ -28,6 +28,10 @@ jobs:
 
       - name: Build website
         run: npm run build
+        env:
+          # Repository-variabele: het adres van de gedeployede Cloudflare Worker.
+          # Leeg gelaten (bv. op de hoofdrepo) draait de site zonder Worker.
+          OEFENING_ASSISTENT_WORKER_URL: ${{ vars.OEFENING_ASSISTENT_WORKER_URL }}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
