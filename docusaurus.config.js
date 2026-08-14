@@ -35,10 +35,15 @@ const config = {
     // src/components/OefeningAssistent/config.js).
     oefeningAssistent: {
       // Adres van de Cloudflare Worker die de referentie-oplossing aan de prompt
-      // toevoegt. Leeg op de hoofdsite (Vincent), zodat die zonder Worker draait.
-      // Zet de env-var OEFENING_ASSISTENT_WORKER_URL bij de build om een gedeployede
-      // Worker te koppelen; op localhost heeft de localStorage-override nog voorrang.
-      workerUrl: process.env.OEFENING_ASSISTENT_WORKER_URL || null,
+      // toevoegt. Volgorde: een expliciete env-var wint altijd; anders krijgt enkel
+      // de test-fork (StephaneVanRossem02) de gedeployede Worker, en blijft de
+      // hoofdsite (Vincent) zonder Worker draaien (null). Op localhost heeft de
+      // localStorage-override nog voorrang.
+      workerUrl:
+        process.env.OEFENING_ASSISTENT_WORKER_URL ||
+        ((process.env.GITHUB_REPOSITORY_OWNER || '').toLowerCase() === 'stephanevanrossem02'
+          ? 'https://oefening-assistent.stephanevanrossem2.workers.dev'
+          : null),
     },
   },
 
