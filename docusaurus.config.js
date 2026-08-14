@@ -7,10 +7,13 @@ const config = {
   tagline: 'Cursus Programming Principles & Object-Oriented Programming',
   favicon: 'img/favicon.png',
 
-  url: 'https://VincentVCAP.github.io',
+  // Wie de site publiceert wordt uit de omgeving gehaald, zodat een fork vanzelf naar
+  // zijn eigen GitHub Pages verwijst in plaats van naar die van de hoofdrepo.
+  // GITHUB_REPOSITORY_OWNER zet GitHub Actions zelf; lokaal valt alles terug op VincentVCAP.
+  url: `https://${(process.env.GITHUB_REPOSITORY_OWNER || 'VincentVCAP').toLowerCase()}.github.io`,
   baseUrl: '/graduaat-csharp-programmeren/',
 
-  organizationName: 'VincentVCAP',
+  organizationName: process.env.GITHUB_REPOSITORY_OWNER || 'VincentVCAP',
   projectName: 'graduaat-csharp-programmeren',
 
   onBrokenLinks: 'warn',

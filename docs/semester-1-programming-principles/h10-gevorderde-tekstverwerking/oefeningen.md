@@ -23,6 +23,8 @@ Schrijf in de klasse `GevorderdeTekstverwerking`een methode `SumOfNumbers`. Deze
 
 ![](/img/img-3044.png)
 
+<OefeningAssistent oefening="H10-SumOfNumbers" hoofdstuk="H10" />
+
 ## H10-CentralAlignmentText
 
 ### Leerdoelen
@@ -44,6 +46,8 @@ Vervolgens wordt de tekst getoond aan de gebruiker.
 ### Voorbeeldinteractie
 
 ![](/img/img-3045.png)
+
+<OefeningAssistent oefening="H10-CentralAlignmentText" hoofdstuk="H10" />
 
 ## H10-NeatlyOrderedChristmasShoppingList
 
@@ -72,6 +76,8 @@ Pas door middel van stringformattering en string methodes de code aan, zodat:
 ![](/img/img-3046.png)
 
 
+<OefeningAssistent oefening="H10-NeatlyOrderedChristmasShoppingList" hoofdstuk="H10" />
+
 ## H10-Pixels-Persistent
 
 ### Functionele analyse
@@ -88,6 +94,8 @@ Zorg ervoor dat je twee extra opties hebt in je tekenprogramma. Om een tekening 
 
 ![](/img/img-3047.png)
 
+
+<OefeningAssistent oefening="H10-Pixels-Persistent" hoofdstuk="H10" />
 
 ## H10-Galgje
 
@@ -121,6 +129,8 @@ Er wordt ook bijgehouden hoeveel pogingen de gebruiker er over gedaan heeft tot 
 ![](/img/img-3048.png)
 
 
+<OefeningAssistent oefening="H10-Galgje" hoofdstuk="H10" />
+
 ## *Indien TexCell gemaakt: H10-TextCellPersistent*
 
 ### *Leerdoelen*
@@ -146,3 +156,5 @@ Er wordt ook bijgehouden hoeveel pogingen de gebruiker er over gedaan heeft tot 
 ##
 
 ###
+
+<OefeningAssistent oefening="H10-TextCellPersistent" hoofdstuk="H10" />

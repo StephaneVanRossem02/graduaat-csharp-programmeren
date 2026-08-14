@@ -40,6 +40,8 @@ Uiteindelijk geef je dan het resultaat weer in de console.
 * Voer tekst in van 1 karakter
 * Voer geen tekst in
 
+<OefeningAssistent oefening="H3-CapitalLetters" hoofdstuk="H3" />
+
 ## Oefening: H3-string-interpolation <a href="#oefening-h3-string-interpolation" id="oefening-h3-string-interpolation"></a>
 
 ### Leerdoelen <a href="#leerdoelen-2" id="leerdoelen-2"></a>
@@ -67,6 +69,8 @@ Pas string interpolatie m.b.v. `$` toe om de veranderlijke onderdelen van de out
 #### Testscenario's <a href="#testscenarios-2" id="testscenarios-2"></a>
 
 * Zie oefening H2-MultiplicationTables en H2-Space.
+
+<OefeningAssistent oefening="H3-string-interpolation" hoofdstuk="H3" />
 
 ## Oefening: H3-VATCalculation <a href="#oefening-h3-bereken-btw" id="oefening-h3-bereken-btw"></a>
 
@@ -99,6 +103,8 @@ Pas string interpolatie toe om de output te tonen.
 * Typ tekst in
 * Geef een veel te groot bedrag in
 
+<OefeningAssistent oefening="H3-VATCalculation" hoofdstuk="H3" />
+
 ## Oefening: H3-LeetSpeak <a href="#oefening-h3-leetspeak" id="oefening-h3-leetspeak"></a>
 
 ### Leerdoelen <a href="#leerdoelen-4" id="leerdoelen-4"></a>
@@ -127,6 +133,8 @@ Oefeningb@@rtkunst!
 * test met een zin met vijf a's of meer
 * test met een lege string
 
+<OefeningAssistent oefening="H3-LeetSpeak" hoofdstuk="H3" />
+
 ## Oefening: H3-Instructions <a href="#oefening-h3-instructies" id="oefening-h3-instructies"></a>
 
 ### Leerdoelen <a href="#leerdoelen-5" id="leerdoelen-5"></a>
@@ -154,6 +162,8 @@ Wat is de naam van de cursus?
 Maak een map als volgt: /home/VIN/Programmeren
 ```
 
+<OefeningAssistent oefening="H3-Instructions" hoofdstuk="H3" />
+
 ## Oefening: H3-Lotto <a href="#oefening-h3-lotto" id="oefening-h3-lotto"></a>
 
 ### Leerdoelen <a href="#leerdoelen-6" id="leerdoelen-6"></a>
@@ -178,6 +188,8 @@ Je cijfers zijn:
 05|08|13
 18|27|44
 ```
+
+<OefeningAssistent oefening="H3-Lotto" hoofdstuk="H3" />
 
 ## Oefening: H3-SumOfNumbers <a href="#oefening-h3-som-van-cijfers" id="oefening-h3-som-van-cijfers"></a>
 
@@ -204,6 +216,8 @@ Gelieve een getal in te voeren dat bestaat uit exact 5 decimale cijfers.
 De som is 27.
 ```
 
+<OefeningAssistent oefening="H3-SumOfNumbers" hoofdstuk="H3" />
+
 ## Oefening: H3-NameFromEmail <a href="#oefening-h3-naam-uit-mail" id="oefening-h3-naam-uit-mail"></a>
 
 ### Leerdoelen <a href="#leerdoelen-8" id="leerdoelen-8"></a>
@@ -226,6 +240,8 @@ Geef je e-mailadres:
 > ann.debrabandere@ap.be
 Je naam uit je e-mail is: ANN.DEBRABANDERE
 ```
+
+<OefeningAssistent oefening="H3-NameFromEmail" hoofdstuk="H3" />
 
 ## Oefening: H3-FirstLetterAndSurname <a href="#oefening-h3-eerste-letter-en-achternaam" id="oefening-h3-eerste-letter-en-achternaam"></a>
 
@@ -250,6 +266,8 @@ Geef je naam:
 De eerste letter van je naam is: A.
 Je achternaam is: De Brabandere
 ```
+
+<OefeningAssistent oefening="H3-FirstLetterAndSurname" hoofdstuk="H3" />
 
 ## Oefening: H3-AccessCode <a href="#oefening-h3-toegangscode" id="oefening-h3-toegangscode"></a>
 
@@ -282,3 +300,5 @@ Je toegangscode is nS14
 ```
 
 ###
+
+<OefeningAssistent oefening="H3-AccessCode" hoofdstuk="H3" />

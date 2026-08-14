@@ -33,6 +33,8 @@ De andere methodes zijn:
 
 ![](/img/img-3133.png)
 
+<OefeningAssistent oefening="H7-VoidOperations" hoofdstuk="H7" />
+
 ### Oefening: H7-ReturnOperations
 
 **Leerdoelen**
@@ -63,6 +65,8 @@ De andere methodes zijn:
 
 Zoals boven, met de vermelde aanpassingen (afronding tot 1 cijfer na de komma en getallen gescheiden door `,`)
 
+<OefeningAssistent oefening="H7-ReturnOperations" hoofdstuk="H7" />
+
 ### **Oefening H7-EmailadresGenerator**
 
 #### **Leerdoelen**
@@ -87,6 +91,8 @@ Je kan eventueel volgende flowchart gebruiken:
 Voorbeeldinteractie
 
 ![](/img/img-0148.png)
+
+<OefeningAssistent oefening="H7-EmailadresGenerator" hoofdstuk="H7" />
 
 ### H7-Triangle
 
@@ -120,3 +126,5 @@ Welk karakter gebruiken we als patroon?
 ..
 ...
 ```
+
+<OefeningAssistent oefening="H7-Triangle" hoofdstuk="H7" />

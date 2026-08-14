@@ -47,6 +47,8 @@ Let op: met `Console.ReadLine()` lees je **tekst** in, dus waarden die je kan to
 * Voer een getal met 100 cijfers in.
 * Voer geen getal in.
 
+<OefeningAssistent oefening="H2-AddUp" hoofdstuk="H2" />
+
 ## Oefening: H2-FuelConsumption
 
 ### Leerdoelen
@@ -98,6 +100,8 @@ Uiteindelijk geef je dan het resultaat weer in de console.
 * Voer een getal met 100 cijfers in.
 * Voer geen getal in.
 
+<OefeningAssistent oefening="H2-FuelConsumption" hoofdstuk="H2" />
+
 ## Oefening: H2-LittleMath
 
 ### Leerdoelen
@@ -143,6 +147,8 @@ Eerst wordt een resultaat berekend, daarna wordt het geprint.
 
 [Hier](https://www.programiz.com/csharp-programming/operator-precedence-associativity) vind je een tabel terug die uitlegt welke operaties voorrang hebben.
 
+<OefeningAssistent oefening="H2-LittleMath" hoofdstuk="H2" />
+
 ## Oefening: H2-Average
 
 ### Leerdoelen
@@ -175,6 +181,8 @@ Eerst wordt het resultaat berekend, daarna wordt het geprint.
 
 * Test uit met getallen van het type `int`.
 * Test uit met getallen van het type `float`.
+
+<OefeningAssistent oefening="H2-Average" hoofdstuk="H2" />
 
 ## Oefening: H2-MultiplicationTables
 
@@ -218,6 +226,8 @@ Voor elk resultaat wordt het scherm eerst leeggemaakt. Daarna pas wordt het resu
 
 * Test uit zoals gegeven.
 * Test uit voor 511. Je zou maar één teken in je code moeten aanpassen als je de instructies hebt gevolgd.
+
+<OefeningAssistent oefening="H2-MultiplicationTables" hoofdstuk="H2" />
 
 ## Oefening: H2-Space
 
@@ -268,6 +278,8 @@ Plaats je gewicht in een variabele. Kies zelf een geschikt type.
 * Test uit voor je eigen gewicht.
 * Test uit voor het gewicht van een persoon met een massa van 100kg.
 
+<OefeningAssistent oefening="H2-Space" hoofdstuk="H2" />
+
 ## Oefening: H2-BicycleSeller
 
 ### Leerdoelen
@@ -292,3 +304,5 @@ Bereken apart de BTW en de verkoopprijs BTW inbegrepen.
 #### voorbeeldinteractie(s)
 
 ![](/img/img-3043.png)
+
+<OefeningAssistent oefening="H2-BicycleSeller" hoofdstuk="H2" />

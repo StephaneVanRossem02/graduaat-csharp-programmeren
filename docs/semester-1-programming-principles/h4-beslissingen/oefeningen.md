@@ -42,6 +42,8 @@ Maak een methode met de naam `ShoeSeller`. Maak gebruik van een `if.` Zet volgen
 
 ![](/img/img-3069.png)
 
+<OefeningAssistent oefening="H4-ShoeSeller" hoofdstuk="H4" />
+
 ## **Oefening: H4-EvenOrOdd**
 
 #### **Leerdoelen**
@@ -74,6 +76,8 @@ Zet volgende flowchart om in code:
 
 ![](/img/img-3072.png)
 
+<OefeningAssistent oefening="H4-EvenOrOdd" hoofdstuk="H4" />
+
 ## **Oefening: H4-PositiveNegativeZero**
 
 #### **Leerdoelen**
@@ -103,6 +107,8 @@ Zet volgende flowchart om in code:
 ![](/img/img-3075.png)
 
 ![](/img/img-3076.png)
+
+<OefeningAssistent oefening="H4-PositiveNegativeZero" hoofdstuk="H4" />
 
 ## **Oefening: H4-BMICalculator**
 
@@ -139,6 +145,8 @@ Maak gebruik van een `if` – `else if` – `else if` …
 
 ![](/img/img-3077.png)
 
+<OefeningAssistent oefening="H4-BMICalculator" hoofdstuk="H4" />
+
 ## **Oefening: H4-LargestNumberOfThree**
 
 #### **Leerdoelen**
@@ -161,6 +169,8 @@ Maak gebruik van een `if` – `else if` - `else`
 
 ![](/img/img-3078.png)
 
+<OefeningAssistent oefening="H4-LargestNumberOfThree" hoofdstuk="H4" />
+
 ## **Oefening: H4-Exams**
 
 #### **Leerdoelen**
@@ -181,6 +191,8 @@ Maak gebruik van een `if` – `else`.
 **Voorbeeldinteractie**
 
 ![](/img/img-3079.png)
+
+<OefeningAssistent oefening="H4-Exams" hoofdstuk="H4" />
 
 ## Oefening: H4-OhmsLaw
 
@@ -208,6 +220,8 @@ Denk eraan dat de gegeven formule wiskundig gedefinieerd is. Houd rekening met h
 
 ![](/img/img-3082.png)
 
+<OefeningAssistent oefening="H4-OhmsLaw" hoofdstuk="H4" />
+
 ## Oefening H4-LeapYear
 
 #### Functionele analyse
@@ -229,6 +243,8 @@ Je hebt een schrikkeljaar als het jaartal deelbaar is door 4, behalve als het oo
 
 ![](/img/img-3083.png)
 
+
+<OefeningAssistent oefening="H4-LeapYear" hoofdstuk="H4" />
 
 ## Oefening H4-PocketMoney
 
@@ -257,6 +273,8 @@ Het standaard zakgeld is 20 euro. Dit bedrag kan vermeerderd of verminderd worde
 ![](/img/img-3085.png)
 
 
+<OefeningAssistent oefening="H4-PocketMoney" hoofdstuk="H4" />
+
 ## Keuzemenu's maken
 
 #### Leerdoelen: <a href="#leerdoelen-5" id="leerdoelen-5"></a>
@@ -282,3 +300,5 @@ Elke klasse die je tot hiertoe in dit project gemaakt hebt, voorzie je dus van e
 ![](/img/img-3088.png)
 
 ![](/img/img-3089.png)
+
+<OefeningAssistent oefening="H4-Menu" hoofdstuk="H4" />

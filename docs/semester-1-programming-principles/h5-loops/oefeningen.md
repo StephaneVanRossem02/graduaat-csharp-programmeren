@@ -32,6 +32,8 @@ Zet volgende flowchart om in code:
 
 Voer een negatief getal in.
 
+<OefeningAssistent oefening="H5-CountDown" hoofdstuk="H5" />
+
 ## Oefening: H5-Password
 
 ## **Leerdoelen**
@@ -60,6 +62,8 @@ Zet volgende flowchart om in code:
 
 · Duw meteen op ENTER
 
+<OefeningAssistent oefening="H5-Password" hoofdstuk="H5" />
+
 ## Oefening: H5-Average
 
 ### **Leerdoelen**
@@ -84,6 +88,8 @@ Werk een oplossing uit met gebruik van een while lus of een do while lus. Zorg e
 
 * Test met negatieve waarden
 * Geef dadelijk een 0 in. Wat wordt er dan getoond als waarde van het gemiddelde en wat betekent dit?
+
+<OefeningAssistent oefening="H5-Average" hoofdstuk="H5" />
 
 ## Oefening: H5-Party
 
@@ -110,6 +116,8 @@ Werk een oplossing uit met gebruik van een while lus.
 * Geef dadelijk “nee” in.
 * Probeer meer dan 20 personen in te schrijven.
 
+<OefeningAssistent oefening="H5-Party" hoofdstuk="H5" />
+
 ## Oefening: H5-NumberOfDigits
 
 ### **Leerdoelen**
@@ -130,6 +138,8 @@ Het is de bedoeling dat je het aantal digits telt met een do while loop, dus nie
 
 ![](/img/img-3112.png)
 
+<OefeningAssistent oefening="H5-NumberOfDigits" hoofdstuk="H5" />
+
 ## Oefening: H5-Lions
 
 ### Leerdoelen
@@ -148,6 +158,8 @@ Maak een methode met de naam `Lions.`
 
 ![](/img/img-3113.png)
 
+
+<OefeningAssistent oefening="H5-Lions" hoofdstuk="H5" />
 
 ## Oefening: H5-SumOfEvenNumbers
 
@@ -179,6 +191,8 @@ Zet volgende flowchart om in code:
 * Geef 0 in.
 * Geef 1 in.
 
+<OefeningAssistent oefening="H5-SumOfEvenNumbers" hoofdstuk="H5" />
+
 ## Oefening: H5-Factors
 
 ### **Leerdoelen**
@@ -205,6 +219,8 @@ Gebruik een while loop. Gebruik een extra if om ervoor te zorgen dat er op het e
 * Geef 1 in.
 * Geef een negatief getal in.
 * Geef een priemgetal in.
+
+<OefeningAssistent oefening="H5-Factors" hoofdstuk="H5" />
 
 ## Oefening: H5-RNATranscription
 
@@ -243,6 +259,8 @@ Noem de methode voor deze oefening `RNATranscription`.
 * Geef een getal in.
 * Druk op ENTER.
 
+<OefeningAssistent oefening="H5-RNATranscription" hoofdstuk="H5" />
+
 ## Oefening: H5-Accountant
 
 ### Leerdoelen
@@ -277,6 +295,8 @@ Voor de eerste drie zaken kom je toe met een variabele. Voor de laatste is dit l
 #### **Testscenario's**
 
 · Druk dadelijke op ENTER.
+
+<OefeningAssistent oefening="H5-Accountant" hoofdstuk="H5" />
 
 ## Oefeningen FOR
 
@@ -322,6 +342,8 @@ Uitbreiding:
 
 ![](/img/img-3124.png)
 
+<OefeningAssistent oefening="H5-Minus100Plus100" hoofdstuk="H5" />
+
 ## Oefening: H5-AMultiplicationTable
 
 ### **Leerdoelen**
@@ -345,6 +367,8 @@ Maak een methode met de naam `AMultiplicationTable`.
 
 Geef 0 in.
 
+<OefeningAssistent oefening="H5-AMultiplicationTable" hoofdstuk="H5" />
+
 ## Oefening: H5-Multiples6And8
 
 ### **Leerdoelen**
@@ -364,6 +388,8 @@ Maak een methode met de naam `Multiples6And8`.
 ![](/img/img-3126.png)
 
 ##
+
+<OefeningAssistent oefening="H5-Multiples6And8" hoofdstuk="H5" />
 
 ## Oefening H5-Fibonacci
 
@@ -385,6 +411,8 @@ Vraag aan de gebruiker hoeveel getallen moeten getoond worden van de reeks.
 
 ![](/img/img-3127.png)
 
+
+<OefeningAssistent oefening="H5-Fibonacci" hoofdstuk="H5" />
 
 ## Oefening: H5-PrimeNumberChecker
 
@@ -413,6 +441,8 @@ Je mag veronderstellen dat de gebruiker minstens 2 intypt\*\*.\*\*
 
 Test met een negatief getal.
 
+<OefeningAssistent oefening="H5-PrimeNumberChecker" hoofdstuk="H5" />
+
 ## Oefening: H5-PrimeNumberGenerator
 
 ### **Leerdoelen**
@@ -436,3 +466,5 @@ Je kan een deel van de code van de vorige oefening gebruiken
 **Testscenario's**
 
 Test met een negatieve laagste waarde.
+
+<OefeningAssistent oefening="H5-PrimeNumberGenerator" hoofdstuk="H5" />

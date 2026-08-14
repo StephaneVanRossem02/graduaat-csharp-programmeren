@@ -29,6 +29,8 @@ Toon de inhoud van de array zoals in het voorbeeld (je kan "\t" gebruiken voor d
 ![](/img/img-3154.png)
 
 
+<OefeningAssistent oefening="H9-FillRandom" hoofdstuk="H9" />
+
 ## H9 - MultiplicationTables
 
 ### Leerdoelen
@@ -52,6 +54,8 @@ Maak in een methode `MultiplicationTables`een twee dimensionale array van 10 rij
 // Tip
 table[row,column]:d3
 ```
+
+<OefeningAssistent oefening="H9-MultiplicationTables" hoofdstuk="H9" />
 
 ## H9 - MakingTeams
 
@@ -83,6 +87,8 @@ Toon de samenstelling van de teams zoals in het voorbeeld.
 ![](/img/img-3156.png)
 
 
+<OefeningAssistent oefening="H9-MakingTeams" hoofdstuk="H9" />
+
 ## H9-Multiplications
 
 ### Leerdoelen
@@ -111,6 +117,8 @@ Toon tenslotte in `Multiplications` het behaalde resultaat.
 ![](/img/img-3158.png)
 
 
+<OefeningAssistent oefening="H9-Multiplications" hoofdstuk="H9" />
+
 ## H9-SumRowN
 
 ### Leerdoelen
@@ -135,6 +143,8 @@ Console.WriteLine("Van welke rij wil je de som zien?");
 int row = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine(SumRowN(numbers,row));
 ```
+
+<OefeningAssistent oefening="H9-SumRowN" hoofdstuk="H9" />
 
 ## H09-RowSums
 
@@ -175,6 +185,8 @@ Sommen per rij:
 16
 ```
 
+<OefeningAssistent oefening="H9-RowSums" hoofdstuk="H9" />
+
 ## H09-Pixels
 
 ### Leerdoelen
@@ -204,6 +216,8 @@ Vraag hierin eerst aan de gebruiker welke afmetingen hij wil gebruiken voor zijn
 
 ![](/img/img-3159.png)
 
+<OefeningAssistent oefening="H9-Pixels" hoofdstuk="H9" />
+
 ## H09-color-filter
 
 ### Leerdoelen
@@ -229,6 +243,8 @@ Wat wil je doen?
 2. afbeelding tonen
 3. roodfilter toepassen
 ```
+
+<OefeningAssistent oefening="H9-RedFilter" hoofdstuk="H9" />
 
 ## H09-triangle-filter
 
@@ -256,6 +272,8 @@ Wat wil je doen?
 3. roodfilter toepassen
 4. driehoeksfilter toepassen
 ```
+
+<OefeningAssistent oefening="H9-TriangleFilter" hoofdstuk="H9" />
 
 ## H09-HeatmapPaardensprong
 
@@ -286,6 +304,8 @@ Je gaat vervolgens vertrekkende van deze positie een aantal willekeurige spronge
 ### Voorbeeldinteractie
 
 ![](/img/img-3161.png)
+
+<OefeningAssistent oefening="H9-HeatmapKnightMoves" hoofdstuk="H9" />
 
 ## H09-ConwayGameOfLife
 
@@ -325,3 +345,5 @@ Laat elke generatie 2 seconden zien en bereken dan de volgende generatie (kijk e
 ##
 
 ##
+
+<OefeningAssistent oefening="H9-ConwayGameOfLife" hoofdstuk="H9" />

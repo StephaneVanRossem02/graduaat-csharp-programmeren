@@ -6,7 +6,6 @@
     "De teksten hieronder zijn overgenomen uit de oefeningpagina's zelf.",
     "Wijzigt een opgave, pas dan ook dit bestand aan."
   ],
-
   "hoofdstukken": {
     "H1": {
       "titel": "Werken met Visual Studio",
@@ -33,9 +32,205 @@
         "een methode binnen een andere methode definieren (-3 punten)",
         "goto, en break of continue buiten een switch (-3 punten)"
       ]
+    },
+    "H2": {
+      "titel": "Variabelen en datatypes",
+      "toegelaten": [
+        "alles uit H1 (Console.Write/WriteLine/ReadLine, kleuren, strings met + samenvoegen)",
+        "de types int, double en float voor variabelen",
+        "invoer omzetten met Convert.ToInt32 en Convert.ToDouble",
+        "rekenkundige operatoren (+ - * / %) en operatorvoorrang",
+        "het verschil tussen gehele deling en kommadeling, en casten tussen getaltypes",
+        "Math.Round om af te ronden, en Console.Clear om het scherm leeg te maken"
+      ],
+      "nogNietGezien": [
+        "stringinterpolatie ($\"...\") en string.Format: die komen pas in H3, hier bouw je tekst op met +",
+        "var en dynamic: declareer altijd met een expliciet, statisch type",
+        "if/else en switch (komen in H4)",
+        "loops: for, while, foreach (komen in H5)",
+        "arrays en lijsten (komen in H6)",
+        "eigen methodes met parameters of een returnwaarde (komen in H7)",
+        "LINQ, lambda's en delegates"
+      ],
+      "verboden": [
+        "top-level statements: bij een nieuw project moet het vinkje 'Do not use top-level statements' aan staan (-5 punten)",
+        "een methode binnen een andere methode definieren (-3 punten)",
+        "goto, en break of continue buiten een switch (-3 punten)"
+      ]
+    },
+    "H3": {
+      "titel": "Tekst in code (strings)",
+      "toegelaten": [
+        "alles uit H1 en H2",
+        "stringinterpolatie met $\"...\"",
+        "stringmethodes zoals Substring, IndexOf, ToUpper, ToLower, Replace en de eigenschap Length",
+        "Convert.ToChar en Convert.ToInt32 om tussen tekst en getal om te zetten",
+        "formatteren met bijvoorbeeld {waarde:F1}"
+      ],
+      "nogNietGezien": [
+        "if/else en switch (komen in H4)",
+        "loops: for, while, foreach (komen in H5)",
+        "arrays en lijsten (komen in H6)",
+        "eigen methodes met parameters of een returnwaarde (komen in H7)",
+        "string.Split en string.Join (komen pas in H10)",
+        "LINQ, lambda's en delegates"
+      ],
+      "verboden": [
+        "top-level statements: bij een nieuw project moet het vinkje 'Do not use top-level statements' aan staan (-5 punten)",
+        "een methode binnen een andere methode definieren (-3 punten)",
+        "goto, en break of continue buiten een switch (-3 punten)"
+      ]
+    },
+    "H4": {
+      "titel": "Beslissingen",
+      "toegelaten": [
+        "alles uit H1 tot en met H3",
+        "if, else if en else",
+        "de switch met case, default en break",
+        "vergelijkingsoperatoren (== != < > <= >=)",
+        "logische operatoren (&&, || en !) en samengestelde booleaanse expressies",
+        "geneste if's"
+      ],
+      "nogNietGezien": [
+        "loops: for, while, do-while, foreach (komen in H5)",
+        "arrays en lijsten (komen in H6)",
+        "eigen methodes met parameters of een returnwaarde, buiten de gegeven SubMenu-structuur (komen in H7)",
+        "LINQ, lambda's en delegates"
+      ],
+      "verboden": [
+        "top-level statements: bij een nieuw project moet het vinkje 'Do not use top-level statements' aan staan (-5 punten)",
+        "een methode binnen een andere methode definieren (-3 punten)",
+        "goto, en break of continue buiten een switch (-3 punten)"
+      ]
+    },
+    "H5": {
+      "titel": "Loops",
+      "toegelaten": [
+        "alles uit H1 tot en met H4",
+        "de while-lus, de do-while-lus en de for-lus",
+        "geneste lussen en een lus met een samengestelde voorwaarde",
+        "een oneindige lus met while(true) met een stopvoorwaarde erin",
+        "een teller en een accumulator (som) bijhouden in een variabele",
+        "tekst opbouwen in een lus met +="
+      ],
+      "nogNietGezien": [
+        "arrays en lijsten (komen in H6)",
+        "foreach (komt in H6)",
+        "eigen methodes met parameters of een returnwaarde (komen in H7)",
+        "LINQ, lambda's en delegates"
+      ],
+      "verboden": [
+        "top-level statements: bij een nieuw project moet het vinkje 'Do not use top-level statements' aan staan (-5 punten)",
+        "een methode binnen een andere methode definieren (-3 punten)",
+        "goto, en break of continue buiten een switch (-3 punten)"
+      ]
+    },
+    "H6": {
+      "titel": "Arrays en lijsten",
+      "toegelaten": [
+        "alles uit H1 tot en met H5",
+        "arrays declareren, initialiseren, opvullen en doorlopen met een for-lus",
+        "de eigenschap Length en Array.Sort en Array.IndexOf",
+        "List<T> met Add, Remove, Contains, Sort en Count",
+        "de foreach-lus",
+        "de aggregatiemethodes .Sum(), .Max(), .Min() en .Average() enkel waar de opgave er uitdrukkelijk om vraagt",
+        "Random met de code die in de opgave meegegeven wordt"
+      ],
+      "nogNietGezien": [
+        "eigen methodes met parameters of een returnwaarde (komen in H7)",
+        "meerdimensionale arrays (komen in H9)",
+        "LINQ-query's, lambda's en delegates"
+      ],
+      "verboden": [
+        "top-level statements: bij een nieuw project moet het vinkje 'Do not use top-level statements' aan staan (-5 punten)",
+        "een methode binnen een andere methode definieren (-3 punten)",
+        "goto, en break of continue buiten een switch (-3 punten)",
+        "een LINQ-methode op een array gebruiken waar de opgave zelf een lus vraagt (-3 punten)"
+      ]
+    },
+    "H7": {
+      "titel": "Methoden",
+      "toegelaten": [
+        "alles uit H1 tot en met H6",
+        "eigen methodes met parameters",
+        "methodes met een returnwaarde, ook een bool of een List<int> teruggeven",
+        "methodes die andere methodes oproepen",
+        "het onderscheid tussen een void-methode en een methode met returnwaarde"
+      ],
+      "nogNietGezien": [
+        "meerdimensionale arrays (komen in H9)",
+        "Random en de Math-machten Math.Pow (komen in H8)",
+        "eigen klassen met velden, properties of constructors (semester 2)",
+        "LINQ-query's, lambda's en delegates"
+      ],
+      "verboden": [
+        "top-level statements: bij een nieuw project moet het vinkje 'Do not use top-level statements' aan staan (-5 punten)",
+        "een methode binnen een andere methode definieren (-3 punten)",
+        "goto, en break of continue buiten een switch (-3 punten)"
+      ]
+    },
+    "H8": {
+      "titel": "Numerieke data",
+      "toegelaten": [
+        "alles uit H1 tot en met H7",
+        "methodes uit Math zoals Math.Pow, Math.PI, Math.Round en Math.Sqrt",
+        "Random: new Random() en .Next(...)",
+        "constanten (int-variabelen) gebruiken om keuzes leesbaar te maken"
+      ],
+      "nogNietGezien": [
+        "meerdimensionale arrays (komen in H9)",
+        "eigen klassen met velden, properties of constructors (semester 2)",
+        "LINQ-query's, lambda's en delegates"
+      ],
+      "verboden": [
+        "top-level statements: bij een nieuw project moet het vinkje 'Do not use top-level statements' aan staan (-5 punten)",
+        "een methode binnen een andere methode definieren (-3 punten)",
+        "goto, en break of continue buiten een switch (-3 punten)"
+      ]
+    },
+    "H9": {
+      "titel": "Meerdimensionaal werken",
+      "toegelaten": [
+        "alles uit H1 tot en met H8",
+        "tweedimensionale arrays met [ , ]",
+        "GetLength(0) en GetLength(1)",
+        "geneste for-lussen over rijen en kolommen",
+        "een eigen enum-type definieren en gebruiken",
+        "casten tussen een enum en een int, en Thread.Sleep"
+      ],
+      "nogNietGezien": [
+        "eigen klassen met velden, properties of constructors (semester 2)",
+        "jagged arrays (array van arrays)",
+        "LINQ-query's, lambda's en delegates"
+      ],
+      "verboden": [
+        "top-level statements: bij een nieuw project moet het vinkje 'Do not use top-level statements' aan staan (-5 punten)",
+        "een methode binnen een andere methode definieren (-3 punten)",
+        "goto, en break of continue buiten een switch (-3 punten)"
+      ]
+    },
+    "H10": {
+      "titel": "Gevorderde tekstverwerking",
+      "toegelaten": [
+        "alles uit H1 tot en met H9",
+        "string.Split en string.Join",
+        "PadLeft en PadRight en uitlijnen in kolommen",
+        "geavanceerde stringformattering, met een dynamisch brede scheidingslijn",
+        "ToCharArray en bewerkingen op losse karakters",
+        "voor de opsla-oefeningen: File.ReadAllLines en File.WriteAllLines"
+      ],
+      "nogNietGezien": [
+        "eigen klassen met velden, properties of constructors (semester 2)",
+        "reguliere expressies",
+        "LINQ-query's, lambda's en delegates"
+      ],
+      "verboden": [
+        "top-level statements: bij een nieuw project moet het vinkje 'Do not use top-level statements' aan staan (-5 punten)",
+        "een methode binnen een andere methode definieren (-3 punten)",
+        "goto, en break of continue buiten een switch (-3 punten)"
+      ]
     }
   },
-
   "oefeningen": {
     "H1-MyFirstProgram": {
       "titel": "H1-MyFirstProgram",
@@ -61,7 +256,6 @@
         "Toon eerst een duidelijke vraag op het scherm voor je de invoer leest."
       ]
     },
-
     "H1-Rubbish": {
       "titel": "H1-Rubbish",
       "hoofdstuk": "H1",
@@ -93,7 +287,6 @@
         "een lege regel, dus meteen op ENTER duwen"
       ]
     },
-
     "H1-ColoredRubbish": {
       "titel": "H1-ColoredRubbish",
       "hoofdstuk": "H1",
@@ -118,12 +311,13 @@
         "Hoe zorg je dat het console-venster achteraf niet in de laatste kleur blijft staan?"
       ]
     },
-
     "H1-AddressCard": {
       "titel": "H1-AddressCard",
       "hoofdstuk": "H1",
       "methodeNaam": "AddressCard",
-      "leerdoelen": ["herhaling van de leerdoelen uit H1"],
+      "leerdoelen": [
+        "herhaling van de leerdoelen uit H1"
+      ],
       "functioneleAnalyse": "Op basis van gegevens die de gebruiker ingeeft, stelt het programma een naamkaartje samen en toont dat op het scherm.",
       "organisatie": "Schrijf dit als een nieuwe methode met de naam AddressCard in de klasse EenProgrammaSchrijvenInCSharp. Test uit door ze op te roepen binnen Main.",
       "voorbeeldinteractie": "Naamkaartje\n\nWat is je naam? Wout Van Aert\nWat is je straat? Velodroomstraat\nWat is je huisnummer? 2\nWat is je gemeente? Herentals\nWat is je postcode? 2200\n\n\nWout Van Aert\nVelodroomstraat 2\n2200 Herentals",
@@ -138,6 +332,1503 @@
         "Bewaar elk antwoord in een eigen variabele met een duidelijke Engelse naam.",
         "Bekijk de voorbeeldinteractie op de cursuspagina en vergelijk regel per regel met jouw uitvoer."
       ]
+    },
+    "H2-AddUp": {
+      "titel": "H2-AddUp",
+      "hoofdstuk": "H2",
+      "methodeNaam": "AddUp",
+      "leerdoelen": [
+        "input opslaan in variabelen",
+        "berekeningen met opgeslagen data",
+        "resultaat tonen"
+      ],
+      "functioneleAnalyse": "De gebruiker geeft twee getallen in. Het programma telt ze op en toont de som.",
+      "organisatie": "Schrijf dit als een static methode met de naam AddUp in de klasse VariabelenEnDatatypes. Test ze uit door ze op te roepen vanuit Main.",
+      "veelgemaakteFouten": [
+        "het resultaat van Console.ReadLine niet omzetten naar een getal met Convert.ToInt32",
+        "de som niet in een aparte variabele bewaren voor je ze toont"
+      ],
+      "hints": [
+        "Met Console.ReadLine lees je tekst. Hoe maak je daar een geheel getal van?",
+        "Bewaar elk ingelezen getal in een eigen variabele voor je ermee rekent."
+      ],
+      "voorbeeldinteractie": "Wat is het eerste getal?\n> 1\nWat is het tweede getal?\n> 4\nDe som is 5."
+    },
+    "H2-FuelConsumption": {
+      "titel": "H2-FuelConsumption",
+      "hoofdstuk": "H2",
+      "methodeNaam": "FuelConsumption",
+      "leerdoelen": [
+        "input opslaan in variabelen",
+        "berekeningen met opgeslagen data",
+        "het juiste getaltype kiezen"
+      ],
+      "functioneleAnalyse": "Het programma berekent het gemiddelde verbruik van een wagen op basis van het aantal liter voor en na de rit en de kilometerstand voor en na de rit. Formule: 100 * (literVoor - literNa) / (kmNa - kmVoor).",
+      "organisatie": "Schrijf dit als een static methode met de naam FuelConsumption in de klasse VariabelenEnDatatypes. Test ze uit door ze op te roepen vanuit Main.",
+      "veelgemaakteFouten": [
+        "een int gebruiken waar een kommagetal (double) nodig is",
+        "de volgorde in de formule verkeerd zetten waardoor de deling niet klopt"
+      ],
+      "hints": [
+        "Deze grootheden zijn kommagetallen. Welk type past daarbij?",
+        "Zet de formule stap voor stap op; let op de haakjes rond teller en noemer."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H2-LittleMath": {
+      "titel": "H2-LittleMath",
+      "hoofdstuk": "H2",
+      "methodeNaam": "LittleMath",
+      "leerdoelen": [
+        "expressies schrijven",
+        "voorrang van operatoren",
+        "effect van het datatype op een berekening"
+      ],
+      "functioneleAnalyse": "Het programma berekent vier vaste expressies en toont de resultaten. Je onderzoekt het verschil tussen een berekening met gehele getallen en met kommagetallen.",
+      "organisatie": "Schrijf dit als een static methode met de naam LittleMath in de klasse VariabelenEnDatatypes. Test ze uit door ze op te roepen vanuit Main.",
+      "veelgemaakteFouten": [
+        "denken dat vermenigvuldigen en delen dezelfde voorrang hebben als optellen en aftrekken",
+        "niet doorhebben dat gehele deling anders afrondt dan deling met een double"
+      ],
+      "hints": [
+        "Welke operatoren worden eerst uitgerekend? Denk aan de voorrangsregels.",
+        "Vergelijk elk resultaat eens als int en eens als float. Waar verschilt het en waarom?"
+      ],
+      "voorbeeldinteractie": "23\n280\n12\n-10"
+    },
+    "H2-Average": {
+      "titel": "H2-Average",
+      "hoofdstuk": "H2",
+      "methodeNaam": "Average",
+      "leerdoelen": [
+        "expressies schrijven",
+        "effect van het datatype op een berekening"
+      ],
+      "functioneleAnalyse": "Het programma berekent het gemiddelde van de drie vaste getallen 18, 11 en 8: het telt ze op en deelt door drie.",
+      "organisatie": "Schrijf dit als een static methode met de naam Average in de klasse VariabelenEnDatatypes. Test ze uit door ze op te roepen vanuit Main.",
+      "veelgemaakteFouten": [
+        "door 3 (een int) delen waardoor het resultaat afgekapt wordt in plaats van een kommagetal te geven"
+      ],
+      "hints": [
+        "Als je een geheel getal door een geheel getal deelt, wat gebeurt er dan met de cijfers na de komma?",
+        "Hoe zorg je dat de deling wel een kommagetal oplevert?"
+      ],
+      "voorbeeldinteractie": "12"
+    },
+    "H2-MultiplicationTables": {
+      "titel": "H2-MultiplicationTables",
+      "hoofdstuk": "H2",
+      "methodeNaam": "MultiplicationTables",
+      "leerdoelen": [
+        "het scherm leegmaken",
+        "werken met wiskundige operatoren",
+        "interactie met de gebruiker"
+      ],
+      "functioneleAnalyse": "Het programma toont de tafel van vermenigvuldiging van 411. Na elk resultaat wacht het op ENTER en maakt het scherm leeg voor het volgende resultaat. Je gebruikt hier nog geen lus: schrijf gewoon tien instructies.",
+      "organisatie": "Schrijf dit als een static methode met de naam MultiplicationTables in de klasse VariabelenEnDatatypes. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "een lus gebruiken terwijl die nog niet gezien is; schrijf hier tien losse instructies",
+        "het getal 411 niet in een variabele zetten, zodat je het overal moet aanpassen",
+        "Console.Clear() vergeten tussen twee resultaten"
+      ],
+      "hints": [
+        "Zet het getal 411 in een variabele; dan moet je maar een plaats aanpassen om het te wijzigen.",
+        "Waar hoort Console.ReadLine() (wachten op ENTER) en waar hoort Console.Clear()?"
+      ],
+      "voorbeeldinteractie": "1 * 411 is 411.\n2 * 411 is 822.\n(enzovoort, telkens na een druk op ENTER en met een leeggemaakt scherm)\n10 * 411 is 4110.",
+      "letOp": "Je kent nog geen lussen. Probeer ze niet te gebruiken, ook al zag je ze elders."
+    },
+    "H2-Space": {
+      "titel": "H2-Space",
+      "hoofdstuk": "H2",
+      "methodeNaam": "Space",
+      "leerdoelen": [
+        "werken met kommagetallen"
+      ],
+      "functioneleAnalyse": "Op basis van je gewicht op aarde berekent het programma je schijnbaar gewicht op elk hemellichaam met een vaste omzettingsfactor per planeet.",
+      "organisatie": "Schrijf dit als een static methode met de naam Space in de klasse VariabelenEnDatatypes. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "een geheel type kiezen waardoor de vermenigvuldiging met de factor fout afrondt"
+      ],
+      "hints": [
+        "Kies een type dat kommagetallen aankan voor het gewicht.",
+        "Elke regel is het gewicht maal de factor van die planeet."
+      ],
+      "voorbeeldinteractie": "Op Mercurius voel je je alsof je 26.22kg weegt.\nOp Venus voel je je alsof je 62.79kg weegt.\nOp Aarde voel je je alsof je 69kg weegt.\nOp Mars voel je je alsof je 26.22kg weegt.\nOp Jupiter voel je je alsof je 161.46kg weegt.\nOp Saturnus voel je je alsof je 73.14kg weegt.\nOp Uranus voel je je alsof je 63.48kg weegt.\nOp Neptunus voel je je alsof je 82.11kg weegt.\nOp Pluto voel je je alsof je 4.14kg weegt."
+    },
+    "H2-BicycleSeller": {
+      "titel": "H2-BicycleSeller",
+      "hoofdstuk": "H2",
+      "methodeNaam": "BicycleSeller",
+      "leerdoelen": [
+        "herhaling van de leerstof van H2",
+        "een flowchart omzetten naar C#"
+      ],
+      "functioneleAnalyse": "Een fietsenhandelaar koopt in tegen inkoopprijs en verkoopt met btw. Het programma berekent apart de btw en de verkoopprijs inclusief btw.",
+      "organisatie": "Schrijf dit als een static methode met de naam BicycleSeller in de klasse VariabelenEnDatatypes. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "een int gebruiken voor de prijzen in plaats van een double",
+        "de btw en de verkoopprijs door elkaar halen"
+      ],
+      "hints": [
+        "Gebruik een double voor de prijzen en een int voor het btw-percentage.",
+        "Reken eerst de btw uit, en tel die daarna bij de inkoopprijs voor de verkoopprijs."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H3-CapitalLetters": {
+      "titel": "H3-CapitalLetters",
+      "hoofdstuk": "H3",
+      "methodeNaam": "CapitalLetters",
+      "leerdoelen": [
+        "variabelen voor invoer en uitvoer",
+        "functionaliteit van strings"
+      ],
+      "functioneleAnalyse": "De gebruiker geeft tekst in. Het programma toont diezelfde tekst volledig in hoofdletters.",
+      "organisatie": "Schrijf dit als een static methode met de naam CapitalLetters in de klasse StringsEnHunMethoden. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "de omgezette tekst niet opvangen; sommige stringmethodes wijzigen de string niet maar geven een nieuwe terug"
+      ],
+      "hints": [
+        "Er bestaat een stringmethode die een tekst in hoofdletters teruggeeft.",
+        "Let op: die methode verandert je variabele niet vanzelf. Wat doe je met wat ze teruggeeft?"
+      ],
+      "voorbeeldinteractie": "Welke tekst moet ik omzetten?\n> Hello World\nHELLO WORLD"
+    },
+    "H3-string-interpolation": {
+      "titel": "H3-string-interpolation",
+      "hoofdstuk": "H3",
+      "methodeNaam": "MultiplicationTablesStringInterpolation",
+      "leerdoelen": [
+        "gebruik van stringinterpolatie"
+      ],
+      "functioneleAnalyse": "Je schrijft twee methodes, MultiplicationTablesStringInterpolation en SpaceStringInterpolation, die net hetzelfde doen als hun tegenhangers uit H2, maar de tekst opbouwen met stringinterpolatie ($\"...\") in plaats van met + en losse Console.Write-oproepen.",
+      "organisatie": "Schrijf dit als een static methode met de naam MultiplicationTablesStringInterpolation in de klasse StringsEnHunMethoden. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "stukjes tekst nog met + aan elkaar plakken in plaats van alles in een geinterpoleerde string te zetten",
+        "de accolades { } vergeten rond de veranderlijke stukken"
+      ],
+      "hints": [
+        "Zet een $ voor je string en plaats de veranderlijke stukken tussen accolades.",
+        "Vergelijk met je H2-oplossing: dezelfde uitvoer, andere opbouw."
+      ],
+      "voorbeeldinteractie": "De uitvoer is identiek aan H2-MultiplicationTables en H2-Space; enkel de manier van opbouwen verschilt.\nBijvoorbeeld: 1 * 411 is 411\nOp Mercurius voel je je alsof je 26.22kg weegt."
+    },
+    "H3-VATCalculation": {
+      "titel": "H3-VATCalculation",
+      "hoofdstuk": "H3",
+      "methodeNaam": "VATCalculation",
+      "leerdoelen": [
+        "gebruik van stringinterpolatie"
+      ],
+      "functioneleAnalyse": "De gebruiker geeft een bedrag en een btw-percentage in. Het programma toont het bedrag inclusief btw.",
+      "organisatie": "Schrijf dit als een static methode met de naam VATCalculation in de klasse StringsEnHunMethoden. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "het percentage als geheel getal delen waardoor de btw op nul uitkomt (gebruik bijvoorbeeld / 100.0)"
+      ],
+      "hints": [
+        "Om een percentage van een bedrag te nemen deel je door 100. Let op geheel versus kommagetal.",
+        "Bouw de slotregel op met stringinterpolatie."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H3-LeetSpeak": {
+      "titel": "H3-LeetSpeak",
+      "hoofdstuk": "H3",
+      "methodeNaam": "LeetSpeak",
+      "leerdoelen": [
+        "functionaliteit van strings leren kennen"
+      ],
+      "functioneleAnalyse": "De gebruiker geeft een regel tekst in. Het programma haalt alle spaties eruit en vervangt elke 'a' door een '@'.",
+      "organisatie": "Schrijf dit als een static methode met de naam LeetSpeak in de klasse StringsEnHunMethoden. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "denken dat Replace de originele string aanpast; ze geeft een nieuwe string terug",
+        "maar een van beide bewerkingen (spaties of a's) uitvoeren"
+      ],
+      "hints": [
+        "Er is een stringmethode die alle voorkomens van iets vervangt door iets anders.",
+        "Je moet twee vervangingen doen. Vang telkens het resultaat op in je variabele."
+      ],
+      "voorbeeldinteractie": "Geef je tekst in\n> Oefening baart kunst!\nOefeningb@@rtkunst!"
+    },
+    "H3-Instructions": {
+      "titel": "H3-Instructions",
+      "hoofdstuk": "H3",
+      "methodeNaam": "Instructions",
+      "leerdoelen": [
+        "werken met stringinterpolatie",
+        "werken met stringmethodes"
+      ],
+      "functioneleAnalyse": "Op basis van de voornaam en de cursusnaam genereert het programma een mappad: /home/, dan de eerste drie letters van de voornaam in hoofdletters, met daaronder een submap met de cursusnaam.",
+      "organisatie": "Schrijf dit als een static methode met de naam Instructions in de klasse StringsEnHunMethoden. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "de volledige voornaam gebruiken in plaats van de eerste drie letters",
+        "vergeten de drie letters naar hoofdletters om te zetten"
+      ],
+      "hints": [
+        "Hoe knip je de eerste drie letters uit een string?",
+        "Combineer knippen en naar hoofdletters omzetten, en zet alles in een geinterpoleerde string."
+      ],
+      "voorbeeldinteractie": "Wat is je naam?\n> Vincent\nWat is de naam van de cursus?\n> Programmeren\nMaak een map als volgt: /home/VIN/Programmeren"
+    },
+    "H3-Lotto": {
+      "titel": "H3-Lotto",
+      "hoofdstuk": "H3",
+      "methodeNaam": "Lotto",
+      "leerdoelen": [
+        "functionaliteit van strings",
+        "stringinterpolatie"
+      ],
+      "functioneleAnalyse": "De gebruiker geeft zes lottocijfers in, elk twee tekens, gescheiden door komma's zonder spaties. Het programma toont ze overzichtelijk in twee rijen, gescheiden door | .",
+      "organisatie": "Schrijf dit als een static methode met de naam Lotto in de klasse StringsEnHunMethoden. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "de begin-index of de lengte bij het knippen verkeerd berekenen door de komma's te vergeten mee te tellen"
+      ],
+      "hints": [
+        "Tel eens de posities: elk getal is twee tekens, met telkens een komma ertussen.",
+        "Gebruik de knip-methode met de juiste startpositie en lengte per getal."
+      ],
+      "voorbeeldinteractie": "Wat zijn je cijfers (tussen 01 en 45)?\n> 05,08,13,18,27,44\nJe cijfers zijn:\n05|08|13\n18|27|44"
+    },
+    "H3-SumOfNumbers": {
+      "titel": "H3-SumOfNumbers",
+      "hoofdstuk": "H3",
+      "methodeNaam": "SumOfNumbers",
+      "leerdoelen": [
+        "functionaliteit van strings",
+        "stringinterpolatie",
+        "omzetting tussen tekst en getal"
+      ],
+      "functioneleAnalyse": "De gebruiker geeft een getal van exact vijf cijfers in. Het programma berekent de som van die vijf losse cijfers.",
+      "organisatie": "Schrijf dit als een static methode met de naam SumOfNumbers in de klasse StringsEnHunMethoden. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "het hele getal in een keer optellen in plaats van cijfer per cijfer",
+        "een los cijfer als tekst behandelen zodat '6' + '3' de tekst '63' wordt in plaats van 9"
+      ],
+      "hints": [
+        "Knip het getal op in vijf losse cijfers (elk een teken).",
+        "Zet elk los cijfer om naar een getal voor je optelt, anders plak je tekst aan elkaar."
+      ],
+      "voorbeeldinteractie": "Gelieve een getal in te voeren dat bestaat uit exact 5 decimale cijfers.\n> 63927\nDe som is 27."
+    },
+    "H3-NameFromEmail": {
+      "titel": "H3-NameFromEmail",
+      "hoofdstuk": "H3",
+      "methodeNaam": "NameFromEmail",
+      "leerdoelen": [
+        "functionaliteit van strings",
+        "stringinterpolatie"
+      ],
+      "functioneleAnalyse": "De gebruiker geeft een e-mailadres in. Het programma toont het deel voor de @ in hoofdletters.",
+      "organisatie": "Schrijf dit als een static methode met de naam NameFromEmail in de klasse StringsEnHunMethoden. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "een vaste lengte aannemen in plaats van de positie van de @ op te zoeken"
+      ],
+      "hints": [
+        "Zoek eerst de positie van het @-teken.",
+        "Knip alles voor die positie en zet het om naar hoofdletters."
+      ],
+      "voorbeeldinteractie": "Geef je e-mailadres:\n> ann.debrabandere@ap.be\nJe naam uit je e-mail is: ANN.DEBRABANDERE"
+    },
+    "H3-FirstLetterAndSurname": {
+      "titel": "H3-FirstLetterAndSurname",
+      "hoofdstuk": "H3",
+      "methodeNaam": "FirstLetterAndSurname",
+      "leerdoelen": [
+        "functionaliteit van strings",
+        "stringinterpolatie"
+      ],
+      "functioneleAnalyse": "De gebruiker geeft een volledige naam in. Het programma toont de eerste letter van de voornaam en daarna de achternaam (alles na de eerste spatie).",
+      "organisatie": "Schrijf dit als een static methode met de naam FirstLetterAndSurname in de klasse StringsEnHunMethoden. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "een vaste positie voor de achternaam aannemen in plaats van de eerste spatie op te zoeken"
+      ],
+      "hints": [
+        "De eerste letter is het teken op positie 0.",
+        "Zoek de eerste spatie; alles daarna is de achternaam."
+      ],
+      "voorbeeldinteractie": "Geef je naam:\n> Ann De Brabandere\nDe eerste letter van je naam is: A.\nJe achternaam is: De Brabandere"
+    },
+    "H3-AccessCode": {
+      "titel": "H3-AccessCode",
+      "hoofdstuk": "H3",
+      "methodeNaam": "AccessCode",
+      "leerdoelen": [
+        "functionaliteit van strings",
+        "stringinterpolatie",
+        "omzetting tussen tekst en getal"
+      ],
+      "functioneleAnalyse": "Uit de naam, het geboortejaar en de postcode van de gebruiker stelt het programma een toegangscode samen: voorlaatste letter van de naam in kleine letters, laatste letter in hoofdletters, laatste cijfer van het geboortejaar, en het eerste cijfer van de postcode in het kwadraat.",
+      "organisatie": "Schrijf dit als een static methode met de naam AccessCode in de klasse StringsEnHunMethoden. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "het laatste teken op positie Length in plaats van Length-1 zoeken",
+        "het eerste cijfer van de postcode als tekst kwadrateren in plaats van het eerst om te zetten naar een getal"
+      ],
+      "hints": [
+        "Het laatste teken van een string staat op positie Length-1, het voorlaatste op Length-2.",
+        "Zet het cijfer van de postcode eerst om naar een getal voor je het met zichzelf vermenigvuldigt."
+      ],
+      "voorbeeldinteractie": "Geef je naam: > Janssens\nGeef je geboortejaar: > 2001\nGeef je postcode: > 2000\nJe toegangscode is nS14"
+    },
+    "H4-ShoeSeller": {
+      "titel": "H4-ShoeSeller",
+      "hoofdstuk": "H4",
+      "methodeNaam": "ShoeSeller",
+      "leerdoelen": [
+        "een flowchart omzetten naar conditionele code",
+        "eenvoudige en samengestelde voorwaarde"
+      ],
+      "functioneleAnalyse": "Basis: het programma vraagt hoeveel paar schoenen (50 euro per paar) de klant koopt en geeft 10% korting bij meer dan 2 paar. Uitbreiding: de korting geldt enkel met een klantenkaart.",
+      "organisatie": "Schrijf dit als een static methode met de naam ShoeSeller in de klasse Beslissingen. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "de korting op de prijs per paar toepassen in plaats van op het totaal",
+        "bij de uitbreiding de twee voorwaarden niet met && combineren"
+      ],
+      "hints": [
+        "Reken eerst het totaal uit; pas daarna de korting toe als de voorwaarde klopt.",
+        "Bij de uitbreiding gelden twee dingen tegelijk: hoe combineer je die?"
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H4-EvenOrOdd": {
+      "titel": "H4-EvenOrOdd",
+      "hoofdstuk": "H4",
+      "methodeNaam": "EvenOrOdd",
+      "leerdoelen": [
+        "een flowchart omzetten naar conditionele code",
+        "tweevoudige voorwaarde",
+        "gebruik van modulo"
+      ],
+      "functioneleAnalyse": "De gebruiker geeft een geheel getal in. Het programma zegt of het even of oneven is.",
+      "organisatie": "Schrijf dit als een static methode met de naam EvenOrOdd in de klasse Beslissingen. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "testen met / (deling) in plaats van % (modulo)"
+      ],
+      "hints": [
+        "Een getal is even als de rest bij deling door 2 nul is. Welke operator geeft je die rest?"
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H4-PositiveNegativeZero": {
+      "titel": "H4-PositiveNegativeZero",
+      "hoofdstuk": "H4",
+      "methodeNaam": "PositiveNegativeZero",
+      "leerdoelen": [
+        "een flowchart omzetten naar conditionele code",
+        "meervoudige voorwaarde"
+      ],
+      "functioneleAnalyse": "De gebruiker geeft een geheel getal in. Het programma zegt of het positief, negatief of nul is.",
+      "organisatie": "Schrijf dit als een static methode met de naam PositiveNegativeZero in de klasse Beslissingen. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "het geval nul vergeten, waardoor 0 als negatief of positief bestempeld wordt"
+      ],
+      "hints": [
+        "Gebruik if, else if en else zodat de drie gevallen elkaar niet overlappen.",
+        "Vergeet het geval 'precies nul' niet."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H4-BMICalculator": {
+      "titel": "H4-BMICalculator",
+      "hoofdstuk": "H4",
+      "methodeNaam": "BMICalculator",
+      "leerdoelen": [
+        "meervoudige voorwaarde",
+        "gebruik van else if"
+      ],
+      "functioneleAnalyse": "Het programma berekent de BMI (gewicht gedeeld door lengte in het kwadraat) en toont er een beoordeling bij, volgens de grenzen 18.5, 25, 30 en 40.",
+      "organisatie": "Schrijf dit als een static methode met de naam BMICalculator in de klasse Beslissingen. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "de grenzen laten overlappen of in de verkeerde volgorde testen",
+        "de lengte als geheel getal inlezen in plaats van als kommagetal"
+      ],
+      "hints": [
+        "Met een keten van if / else if hoef je elke grens maar aan een kant te testen.",
+        "Begin bij de laagste grens en werk naar boven, of omgekeerd, maar blijf consequent."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H4-LargestNumberOfThree": {
+      "titel": "H4-LargestNumberOfThree",
+      "hoofdstuk": "H4",
+      "methodeNaam": "LargestNumberOfThree",
+      "leerdoelen": [
+        "meervoudige voorwaarde",
+        "samengestelde booleaanse expressie",
+        "gebruik van else if"
+      ],
+      "functioneleAnalyse": "De gebruiker geeft drie getallen in. Het programma bepaalt welk het grootste is.",
+      "organisatie": "Schrijf dit als een static methode met de naam LargestNumberOfThree in de klasse Beslissingen. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "maar met twee getallen tegelijk vergelijken en zo een geval missen"
+      ],
+      "hints": [
+        "Om te weten of het eerste getal het grootste is, moet het groter zijn dan de twee andere tegelijk.",
+        "Denk aan het geval waarin twee getallen gelijk zijn."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H4-Exams": {
+      "titel": "H4-Exams",
+      "hoofdstuk": "H4",
+      "methodeNaam": "Exams",
+      "leerdoelen": [
+        "voorwaarde",
+        "samengestelde booleaanse expressie"
+      ],
+      "functioneleAnalyse": "De gebruiker geeft de resultaten van drie examens op 100 in. De student slaagt met een gemiddelde van meer dan 50% en hoogstens 1 onvoldoende.",
+      "organisatie": "Schrijf dit als een static methode met de naam Exams in de klasse Beslissingen. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "het aantal onvoldoendes niet apart bijhouden",
+        "de twee slaagvoorwaarden niet met && combineren"
+      ],
+      "hints": [
+        "Hou tijdens het inlezen een teller bij van het aantal onvoldoendes.",
+        "Slagen hangt van twee dingen tegelijk af: het gemiddelde en het aantal onvoldoendes."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H4-OhmsLaw": {
+      "titel": "H4-OhmsLaw",
+      "hoofdstuk": "H4",
+      "methodeNaam": "OhmsLaw",
+      "leerdoelen": [
+        "conditionele berekeningen"
+      ],
+      "functioneleAnalyse": "De gebruiker kiest wat hij wil berekenen (spanning, weerstand of stroomsterkte), geeft de twee andere waarden in, en het programma past de wet van Ohm (I = U / R) toe.",
+      "organisatie": "Schrijf dit als een static methode met de naam OhmsLaw in de klasse Beslissingen. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "de tekstkeuze van de gebruiker niet exact vergelijken (hoofdletters, spaties)",
+        "int gebruiken waar kommagetallen nodig zijn"
+      ],
+      "hints": [
+        "Splits in drie gevallen naargelang wat de gebruiker wil berekenen.",
+        "Leid per geval de juiste formule af uit I = U / R."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H4-LeapYear": {
+      "titel": "H4-LeapYear",
+      "hoofdstuk": "H4",
+      "methodeNaam": "LeapYear",
+      "leerdoelen": [
+        "geneste voorwaarden"
+      ],
+      "functioneleAnalyse": "De gebruiker geeft een jaartal in. Het programma zegt of het een schrikkeljaar is: deelbaar door 4, behalve deelbaar door 100, tenzij ook deelbaar door 400.",
+      "organisatie": "Schrijf dit als een static methode met de naam LeapYear in de klasse Beslissingen. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "de drie regels in de verkeerde volgorde toepassen waardoor 1900 en 2000 fout uitkomen"
+      ],
+      "hints": [
+        "Werk de regel van binnen naar buiten uit: eerst deelbaar door 4, dan de uitzondering 100, dan de uitzondering-op-de-uitzondering 400.",
+        "Test met 1900 (geen) en 2000 (wel)."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H4-PocketMoney": {
+      "titel": "H4-PocketMoney",
+      "hoofdstuk": "H4",
+      "methodeNaam": "PocketMoney",
+      "leerdoelen": [
+        "meervoudige voorwaarde met berekeningen"
+      ],
+      "functioneleAnalyse": "Het standaard zakgeld is 20 euro en wordt aangepast volgens de behaalde punten, volgens zes gevallen (meer dan 15, meer dan 10, precies 10, meer dan 7, meer dan 5, en 5 of minder).",
+      "organisatie": "Schrijf dit als een static methode met de naam PocketMoney in de klasse Beslissingen. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "overlappende grenzen waardoor een puntenaantal in twee gevallen valt",
+        "het geval 'precies 10' vergeten"
+      ],
+      "hints": [
+        "Gebruik een keten van if / else if zodat elk puntenaantal in precies een geval valt.",
+        "Let op de aparte behandeling van precies 10 punten."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H4-Menu": {
+      "titel": "H4-Menu",
+      "hoofdstuk": "H4",
+      "methodeNaam": "SubMenu",
+      "leerdoelen": [
+        "conditionele functionaliteit",
+        "gebruik van de switch"
+      ],
+      "functioneleAnalyse": "Je bouwt een keuzemenu. In elke oefeningenklasse maak je een methode SubMenu die de gebruiker uit de oefeningen van dat hoofdstuk laat kiezen. In Program maak je een hoofdmenu dat naar het juiste SubMenu doorschakelt.",
+      "organisatie": "Schrijf dit als een static methode met de naam SubMenu in de klasse Beslissingen. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "de break vergeten waardoor meerdere cases na elkaar uitvoeren",
+        "geen default-case voorzien voor een ongeldige keuze"
+      ],
+      "hints": [
+        "Een switch op de keuze van de gebruiker is hier overzichtelijker dan een lange if-keten.",
+        "Vergeet per case de break niet, en voorzie een default voor een ongeldige keuze."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H5-CountDown": {
+      "titel": "H5-CountDown",
+      "hoofdstuk": "H5",
+      "methodeNaam": "CountDown",
+      "leerdoelen": [
+        "een flowchart omzetten naar code",
+        "gebruik van een while-lus"
+      ],
+      "functioneleAnalyse": "De gebruiker geeft een positief geheel getal in. Het programma telt af van dat getal tot 1, elk getal op een eigen regel, en toont daarna 'Start!'.",
+      "organisatie": "Schrijf dit als een static methode met de naam CountDown in de klasse Loops. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "de wachtervariabele niet verlagen waardoor de lus oneindig loopt",
+        "'Start!' binnen de lus tonen in plaats van erna"
+      ],
+      "hints": [
+        "Wat is de voorwaarde om te blijven aftellen, en wat verandert er elke ronde?",
+        "'Start!' hoort pas na de lus."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H5-Password": {
+      "titel": "H5-Password",
+      "hoofdstuk": "H5",
+      "methodeNaam": "Password",
+      "leerdoelen": [
+        "gebruik van een do-while-lus"
+      ],
+      "functioneleAnalyse": "Het programma vraagt om een wachtwoord tot 'AP' ingegeven wordt, telt het aantal pogingen en toont dat aantal.",
+      "organisatie": "Schrijf dit als een static methode met de naam Password in de klasse Loops. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "een while gebruiken waardoor de vraag mogelijk nooit gesteld wordt; hier moet ze minstens een keer",
+        "de teller op de verkeerde plaats verhogen"
+      ],
+      "hints": [
+        "Je wil de vraag minstens een keer stellen. Welke lusvorm past daarbij?",
+        "Verhoog de teller bij elke poging, ook de geslaagde."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H5-Average": {
+      "titel": "H5-Average",
+      "hoofdstuk": "H5",
+      "methodeNaam": "Average",
+      "leerdoelen": [
+        "gebruik van een while- of do-while-lus"
+      ],
+      "functioneleAnalyse": "De gebruiker geeft getallen in tot hij 0 ingeeft. Het programma toont het gemiddelde van de ingegeven getallen (de afsluitende 0 telt niet mee) met cijfers na de komma.",
+      "organisatie": "Schrijf dit als een static methode met de naam Average in de klasse Loops. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "de afsluitende 0 meetellen in het aantal getallen",
+        "geheel delen waardoor de cijfers na de komma wegvallen"
+      ],
+      "hints": [
+        "Tel je de 0 die de reeks stopt mee als een ingegeven getal? Wat betekent dat voor je teller?",
+        "Zorg dat de deling een kommagetal oplevert."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H5-Party": {
+      "titel": "H5-Party",
+      "hoofdstuk": "H5",
+      "methodeNaam": "Party",
+      "leerdoelen": [
+        "gebruik van een while met een samengestelde booleaanse expressie"
+      ],
+      "functioneleAnalyse": "Je noteert inschrijvingen voor een feestje: maximaal 20 personen, en je kan op elk moment stoppen. Op het einde toon je alle namen.",
+      "organisatie": "Schrijf dit als een static methode met de naam Party in de klasse Loops. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "maar een van beide stopvoorwaarden controleren (maximum of 'nee')",
+        "de namen niet bewaren zodat je ze op het einde niet meer hebt"
+      ],
+      "hints": [
+        "Er zijn twee redenen om te stoppen. Hoe combineer je die in de lusvoorwaarde?",
+        "Bouw de namen op in een string terwijl je inschrijft."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H5-NumberOfDigits": {
+      "titel": "H5-NumberOfDigits",
+      "hoofdstuk": "H5",
+      "methodeNaam": "NumberOfDigits",
+      "leerdoelen": [
+        "gebruik van een do-while"
+      ],
+      "functioneleAnalyse": "Het programma telt hoeveel cijfers een ingegeven geheel getal heeft, met een lus (dus niet door het getal als tekst te behandelen).",
+      "organisatie": "Schrijf dit als een static methode met de naam NumberOfDigits in de klasse Loops. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "het getal als string behandelen in plaats van te blijven delen door 10",
+        "bij het getal 0 op nul cijfers uitkomen"
+      ],
+      "hints": [
+        "Wat gebeurt er met het aantal cijfers telkens je het getal door 10 deelt?",
+        "Een do-while voert de lus minstens een keer uit; handig voor het getal 0."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H5-Lions": {
+      "titel": "H5-Lions",
+      "hoofdstuk": "H5",
+      "methodeNaam": "Lions",
+      "leerdoelen": [
+        "gebruik van een while- of do-while-lus"
+      ],
+      "functioneleAnalyse": "Een park start met 50 leeuwen; het aantal groeit elk jaar met 15%. Het programma toont per jaar het aantal en stopt zodra er 100 of meer zijn.",
+      "organisatie": "Schrijf dit als een static methode met de naam Lions in de klasse Loops. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "het aantal leeuwen als int bijhouden waardoor de groei van 15% fout afrondt"
+      ],
+      "hints": [
+        "Groei van 15% betekent vermenigvuldigen met 1.15. Welk type heb je daarvoor nodig?",
+        "Verhoog het aantal jaren elke ronde en toon de tussenstand."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H5-SumOfEvenNumbers": {
+      "titel": "H5-SumOfEvenNumbers",
+      "hoofdstuk": "H5",
+      "methodeNaam": "SumOfEvenNumbers",
+      "leerdoelen": [
+        "gebruik van een while met een geneste if",
+        "een flowchart omzetten naar code"
+      ],
+      "functioneleAnalyse": "Het programma maakt de som van alle even getallen van 1 tot een waarde n, en toont onderweg elk even getal met de tussentijdse som.",
+      "organisatie": "Schrijf dit als een static methode met de naam SumOfEvenNumbers in de klasse Loops. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "alle getallen optellen in plaats van enkel de even getallen",
+        "de tussenstand na de lus tonen in plaats van bij elk even getal"
+      ],
+      "hints": [
+        "Loop van 1 tot n en test per getal of het even is.",
+        "Tel enkel de even getallen op en toon telkens de tussenstand."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H5-Factors": {
+      "titel": "H5-Factors",
+      "hoofdstuk": "H5",
+      "methodeNaam": "Factors",
+      "leerdoelen": [
+        "gebruik van een while met geneste if's"
+      ],
+      "functioneleAnalyse": "Het programma ontbindt een getal n in factoren: alle getallen waardoor n deelbaar is zonder rest. Op het einde staat er geen komma te veel.",
+      "organisatie": "Schrijf dit als een static methode met de naam Factors in de klasse Loops. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "een komma achter de laatste factor laten staan",
+        "niet tot en met n zelf testen"
+      ],
+      "hints": [
+        "Test voor elk getal van 1 tot n of het een deler is (rest nul).",
+        "Met een extra if voorkom je dat er na de laatste factor nog een komma komt."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H5-RNATranscription": {
+      "titel": "H5-RNATranscription",
+      "hoofdstuk": "H5",
+      "methodeNaam": "RNATranscription",
+      "leerdoelen": [
+        "gebruik van een do-while met een geneste if of switch"
+      ],
+      "functioneleAnalyse": "De gebruiker geeft een voor een DNA-letters in. Elke letter wordt omgezet (G->C, C->G, T->A, A->U) en aan de RNA-string toegevoegd. Bij 'stop' toont het programma het resultaat. Andere invoer wordt genegeerd.",
+      "organisatie": "Schrijf dit als een static methode met de naam RNATranscription in de klasse Loops. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "ongeldige invoer of 'stop' toch aan het resultaat toevoegen",
+        "de omzetting G->C en C->G door elkaar halen"
+      ],
+      "hints": [
+        "Een switch op de ingegeven letter maakt de vier gevallen overzichtelijk.",
+        "Bouw het resultaat op in een string en stop de lus bij 'stop'."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H5-Accountant": {
+      "titel": "H5-Accountant",
+      "hoofdstuk": "H5",
+      "methodeNaam": "Accountant",
+      "leerdoelen": [
+        "gebruik van een do-while met een geneste if",
+        "gebruik van een oneindige lus"
+      ],
+      "functioneleAnalyse": "Een boekhoudprogramma waarin de gebruiker doorlopend positieve en negatieve getallen ingeeft. Het toont de balans, de som van de positieve getallen, de som van de negatieve getallen en het gemiddelde.",
+      "organisatie": "Schrijf dit als een static methode met de naam Accountant in de klasse Loops. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "geen teller bijhouden voor het aantal getallen, waardoor het gemiddelde niet klopt",
+        "positieve en negatieve getallen niet apart optellen"
+      ],
+      "hints": [
+        "Hou een teller bij van het aantal ingevoerde getallen voor het gemiddelde.",
+        "Beslis per getal of het bij de positieve of de negatieve som hoort."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H5-Minus100Plus100": {
+      "titel": "H5-Minus100Plus100",
+      "hoofdstuk": "H5",
+      "methodeNaam": "Minus100Plus100",
+      "leerdoelen": [
+        "gebruik van een for-lus",
+        "de update-stap aanpassen"
+      ],
+      "functioneleAnalyse": "Basis: toon alle getallen van -100 tot 100. Uitbreiding: toon enkel de even getallen van -100 tot 100.",
+      "organisatie": "Schrijf dit als een static methode met de naam Minus100Plus100 in de klasse Loops. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "bij de uitbreiding een if in de lus zetten terwijl je ook gewoon de stap op 2 kan zetten"
+      ],
+      "hints": [
+        "Een for-lus heeft een start, een voorwaarde en een update. Wat zet je waar?",
+        "Voor enkel de even getallen: hoe pas je de update-stap aan?"
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H5-AMultiplicationTable": {
+      "titel": "H5-AMultiplicationTable",
+      "hoofdstuk": "H5",
+      "methodeNaam": "AMultiplicationTable",
+      "leerdoelen": [
+        "gebruik van een for-lus"
+      ],
+      "functioneleAnalyse": "De gebruiker geeft een getal in. Het programma toont de tafel van vermenigvuldiging tot 10 van dat getal, elke regel onder elkaar.",
+      "organisatie": "Schrijf dit als een static methode met de naam AMultiplicationTable in de klasse Loops. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "van 0 tot 9 lopen in plaats van van 1 tot 10"
+      ],
+      "hints": [
+        "Laat de teller van 1 tot en met 10 lopen.",
+        "Toon per ronde teller maal het ingegeven getal."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H5-Multiples6And8": {
+      "titel": "H5-Multiples6And8",
+      "hoofdstuk": "H5",
+      "methodeNaam": "Multiples6And8",
+      "leerdoelen": [
+        "gebruik van een for-lus met een geneste if met een samengestelde booleaanse expressie"
+      ],
+      "functioneleAnalyse": "Het programma toont alle getallen van 1 tot en met 100 die een veelvoud zijn van 6 of van 8.",
+      "organisatie": "Schrijf dit als een static methode met de naam Multiples6And8 in de klasse Loops. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "&& gebruiken waar || bedoeld is (of omgekeerd)"
+      ],
+      "hints": [
+        "Een veelvoud van 6 herken je aan rest nul bij deling door 6. Idem voor 8.",
+        "Lees de opgave goed: gaat het om 'of' of om 'en'?"
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H5-Fibonacci": {
+      "titel": "H5-Fibonacci",
+      "hoofdstuk": "H5",
+      "methodeNaam": "Fibonacci",
+      "leerdoelen": [
+        "gebruik van een for-lus"
+      ],
+      "functioneleAnalyse": "De gebruiker geeft aan hoeveel getallen van de Fibonacci-reeks getoond moeten worden. Elk getal is de som van de twee vorige; de reeks start met 0 en 1.",
+      "organisatie": "Schrijf dit als een static methode met de naam Fibonacci in de klasse Loops. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "de twee startgetallen niet apart afhandelen",
+        "de twee vorige getallen niet correct doorschuiven"
+      ],
+      "hints": [
+        "Hou de twee vorige getallen bij in twee variabelen.",
+        "Elke ronde is het nieuwe getal hun som; schuif daarna alles een plaats op."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H5-PrimeNumberChecker": {
+      "titel": "H5-PrimeNumberChecker",
+      "hoofdstuk": "H5",
+      "methodeNaam": "PrimeNumberChecker",
+      "leerdoelen": [
+        "gebruik van een for-lus met een geneste if"
+      ],
+      "functioneleAnalyse": "De gebruiker geeft een getal (minstens 2) in. Het programma bepaalt of het een priemgetal is: precies twee gehele delers.",
+      "organisatie": "Schrijf dit als een static methode met de naam PrimeNumberChecker in de klasse Loops. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "een bool-vlag gebruiken maar die nooit op false zetten bij een deler",
+        "ook door 1 en door het getal zelf testen en zo alles als niet-priem bestempelen"
+      ],
+      "hints": [
+        "Gebruik een bool die je op false zet zodra je een deler tussen 2 en het getal vindt.",
+        "Test enkel de getallen tussen 2 en het getal zelf."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H5-PrimeNumberGenerator": {
+      "titel": "H5-PrimeNumberGenerator",
+      "hoofdstuk": "H5",
+      "methodeNaam": "PrimeNumberGenerator",
+      "leerdoelen": [
+        "gebruik van een while-lus met een geneste for-lus"
+      ],
+      "functioneleAnalyse": "De gebruiker geeft een laagste en een hoogste waarde in. Het programma toont alle priemgetallen daartussen.",
+      "organisatie": "Schrijf dit als een static methode met de naam PrimeNumberGenerator in de klasse Loops. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "de priem-test niet per getal opnieuw beginnen",
+        "1 als priemgetal meetellen"
+      ],
+      "hints": [
+        "Doorloop elk getal in het bereik en pas per getal de priem-test toe.",
+        "Zet de bool-vlag voor elk nieuw getal opnieuw op true."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H6-ArrayTrueFalse": {
+      "titel": "H6-ArrayTrueFalse",
+      "hoofdstuk": "H6",
+      "methodeNaam": "ArrayTrueFalse",
+      "leerdoelen": [
+        "arrays declareren, initialiseren en opvullen",
+        "een array afprinten"
+      ],
+      "functioneleAnalyse": "Het programma maakt een array van 30 elementen, afwisselend true en false, en toont de inhoud. Uitbreiding: toon de elementen met komma's ertussen, zonder komma op het einde.",
+      "organisatie": "Schrijf dit als een static methode met de naam ArrayTrueFalse in de klasse Arrays. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "een komma achter het laatste element laten staan",
+        "de index-even-test verwarren met de waarde"
+      ],
+      "hints": [
+        "Even index krijgt de ene waarde, oneven index de andere. Modulo helpt.",
+        "Voor de uitbreiding: hoe herken je het laatste element zodat je daar geen komma zet?"
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H6-ArrayExercise": {
+      "titel": "H6-ArrayExercise",
+      "hoofdstuk": "H6",
+      "methodeNaam": "ArrayExercise",
+      "leerdoelen": [
+        "arrays opvullen en gebruiken",
+        "statistieken berekenen over een array"
+      ],
+      "functioneleAnalyse": "De gebruiker geeft 10 gehele getallen in een array in. Het programma toont de som, het gemiddelde en het grootste getal, en daarna alle getallen die groter of gelijk zijn aan een opgegeven minimum (of 'Niets is groter').",
+      "organisatie": "Schrijf dit als een static methode met de naam ArrayExercise in de klasse Arrays. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "de statistieken al tijdens het inlezen berekenen; hier moet dat pas achteraf",
+        "het grootste getal starten op 0 in plaats van op het eerste element"
+      ],
+      "hints": [
+        "Vul eerst de array volledig, en bereken de statistieken pas daarna in een aparte lus.",
+        "Start je 'grootste' op het eerste element van de array, niet op 0."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H6-Shopping": {
+      "titel": "H6-Shopping",
+      "hoofdstuk": "H6",
+      "methodeNaam": "Shopping",
+      "leerdoelen": [
+        "arrays opvullen, sorteren en doorzoeken"
+      ],
+      "functioneleAnalyse": "De gebruiker stelt een boodschappenlijst samen (aantal items eerst), krijgt ze gesorteerd te zien, en duidt in de winkel aan wat gekocht is. Op het einde toont het programma wat niet gekocht is.",
+      "organisatie": "Schrijf dit als een static methode met de naam Shopping in de klasse Arrays. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "een gekocht item niet markeren in de array",
+        "niet controleren of een ingetypt item wel op de lijst staat"
+      ],
+      "hints": [
+        "Array.Sort sorteert je lijst; Array.IndexOf zegt of en waar iets staat.",
+        "Hoe duid je aan dat een item gekocht is zonder de lengte van de array te veranderen?"
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H6-ChristmasShopping": {
+      "titel": "H6-ChristmasShopping",
+      "hoofdstuk": "H6",
+      "methodeNaam": "ChristmasShopping",
+      "leerdoelen": [
+        "arrays gebruiken",
+        "aggregatiemethodes op een array"
+      ],
+      "functioneleAnalyse": "De gebruiker geeft een budget en de prijzen van een aantal cadeaus in. Het programma waarschuwt zodra het budget overschreden wordt en toont totaal, duurste, goedkoopste en gemiddelde prijs.",
+      "organisatie": "Schrijf dit als een static methode met de naam ChristmasShopping in de klasse Arrays. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "de waarschuwing niet tijdens het invoeren tonen",
+        "totaal, max, min en gemiddelde met de hand berekenen terwijl de opgave om de array-methodes vraagt"
+      ],
+      "hints": [
+        "De opgave vraagt hier uitdrukkelijk naar .Sum(), .Max(), .Min() en .Average().",
+        "Controleer na elke ingave of de som al boven het budget zit."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H6-Lottery": {
+      "titel": "H6-Lottery",
+      "hoofdstuk": "H6",
+      "methodeNaam": "Lottery",
+      "leerdoelen": [
+        "arrays opvullen",
+        "een waarde opzoeken in een array"
+      ],
+      "functioneleAnalyse": "De gebruiker geeft 6 lottogetallen in. Het programma simuleert een trekking van 6 verschillende getallen, telt de juiste, bepaalt de winst en toont beide reeksen gesorteerd.",
+      "organisatie": "Schrijf dit als een static methode met de naam Lottery in de klasse Arrays. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "bij de trekking dubbele getallen toelaten",
+        "de gekozen en getrokken getallen niet sorteren voor het tonen"
+      ],
+      "hints": [
+        "De opgave geeft je de code om 6 verschillende getallen te trekken; bekijk hoe die dubbels vermijdt.",
+        "Tel hoeveel van de gekozen getallen in de trekking voorkomen met Array.IndexOf."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H6-IntegerIndexOf": {
+      "titel": "H6-IntegerIndexOf",
+      "hoofdstuk": "H6",
+      "methodeNaam": "IntegerIndexOf",
+      "leerdoelen": [
+        "een array doorzoeken met zelfgeschreven code"
+      ],
+      "functioneleAnalyse": "De gebruiker geeft 10 getallen en een zoekgetal in. Het programma zoekt zelf (dus zonder bestaande methode) of en waar het getal in de array zit.",
+      "organisatie": "Schrijf dit als een static methode met de naam IntegerIndexOf in de klasse Arrays. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "blijven zoeken nadat het getal al gevonden is",
+        "-1 (niet gevonden) niet correct afhandelen"
+      ],
+      "hints": [
+        "Hou een index bij die -1 blijft tot je het getal vindt.",
+        "Je mag stoppen zodra je het gevonden hebt."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H6-BinarySearch": {
+      "titel": "H6-BinarySearch",
+      "hoofdstuk": "H6",
+      "methodeNaam": "BinarySearch",
+      "leerdoelen": [
+        "een gesorteerde array doorzoeken met binair zoeken"
+      ],
+      "functioneleAnalyse": "Het programma zoekt een automerk in een (gesorteerde) array met binair zoeken: telkens de middelste waarde vergelijken en de helft weggooien waar de waarde niet in kan zitten.",
+      "organisatie": "Schrijf dit als een static methode met de naam BinarySearch in de klasse Arrays. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "de array niet sorteren voor je binair zoekt",
+        "de grenzen (start/eind) niet correct opschuiven waardoor de lus niet stopt"
+      ],
+      "hints": [
+        "Binair zoeken werkt enkel op een gesorteerde array. Sorteer eerst.",
+        "Gebruik string1.CompareTo(string2) om te weten welke helft je houdt."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H6-ShoppingList": {
+      "titel": "H6-ShoppingList",
+      "hoofdstuk": "H6",
+      "methodeNaam": "ShoppingList",
+      "leerdoelen": [
+        "een List declareren, initialiseren en gebruiken"
+      ],
+      "functioneleAnalyse": "Een variant van H6-Shopping met List<T> in plaats van een array. Je vraagt de grootte niet vooraf; een lege regel stopt de invoer. Gekochte items verwijder je uit de lijst; het restant toon je met een foreach.",
+      "organisatie": "Schrijf dit als een static methode met de naam ShoppingList in de klasse Arrays. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "een array-aanpak overnemen terwijl een List net toelaat items te verwijderen",
+        "vergeten dat een lege regel de invoer stopt"
+      ],
+      "hints": [
+        "Met een List hoef je de grootte niet vooraf te kennen; je voegt toe met Add.",
+        "Gekochte items mag je gewoon verwijderen; het restant toon je met foreach."
+      ],
+      "voorbeeldinteractie": "Wat is item 1 op je lijst?\n> kaas\nWat is item 2 op je lijst?\n> eieren\nWat is item 3 op je lijst?\n> boter\nWat is item 4 op je lijst?\n>\nDit is je gesorteerde lijst:\n1: boter\n2: eieren\n3: kaas\nOp naar de winkel!\nWelk item heb je gekocht?\n> kaas\nNog winkelen? (Ja of Nee)\n> nee\nNaar huis met de boodschappen!\nVolgende items van je lijst ben je vergeten te kopen:\nboter eieren"
+    },
+    "H6-ChristmasShoppingList": {
+      "titel": "H6-ChristmasShoppingList",
+      "hoofdstuk": "H6",
+      "methodeNaam": "ChristmasShoppingList",
+      "leerdoelen": [
+        "een List declareren, initialiseren en gebruiken"
+      ],
+      "functioneleAnalyse": "Een variant van H6-ChristmasShopping met List<T>. Je vraagt het aantal cadeaus niet vooraf; je stopt bij een lege regel of zodra je over budget gaat.",
+      "organisatie": "Schrijf dit als een static methode met de naam ChristmasShoppingList in de klasse Arrays. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "niet stoppen zodra het budget overschreden is",
+        "een lege regel niet als stopteken behandelen"
+      ],
+      "hints": [
+        "Voeg prijzen toe aan een List tot een lege regel of tot je over budget gaat.",
+        "De aggregatiemethodes werken ook op een List."
+      ],
+      "voorbeeldinteractie": "Wat is het budget voor je kerstinkopen?\n> 500\nPrijs van cadeau 1?\n> 200\nPrijs van cadeau 2?\n> 330\nJe bent al 30.0 euro over het budget!\nInfo over je aankopen:\nTotaal bedrag: 530.0 euro\nDuurste cadeau: 330.0 euro\nGoedkoopste cadeau: 200.0 euro\nGemiddelde prijs: 265.0 euro"
+    },
+    "H7-VoidOperations": {
+      "titel": "H7-VoidOperations",
+      "hoofdstuk": "H7",
+      "methodeNaam": "VoidOperations",
+      "leerdoelen": [
+        "methodes definieren met parameters",
+        "methodes oproepen"
+      ],
+      "functioneleAnalyse": "Je schrijft meerdere void-methodes (straal, omtrek, oppervlakte van een cirkel; maximum van twee getallen; even/oneven; oneven getallen tot n). Elke methode toont zelf haar resultaat. Enkel VoidOperations leest invoer in en roept de andere op.",
+      "organisatie": "Schrijf dit als een static methode met de naam VoidOperations in de klasse Methodes. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "Console.ReadLine in de reken-methodes zetten in plaats van enkel in VoidOperations",
+        "een berekend resultaat teruggeven in plaats van het in de methode zelf te tonen"
+      ],
+      "hints": [
+        "Deze methodes zijn allemaal void: ze tonen hun resultaat zelf met Console.WriteLine.",
+        "Enkel VoidOperations mag invoer lezen en de andere methodes oproepen."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H7-ReturnOperations": {
+      "titel": "H7-ReturnOperations",
+      "hoofdstuk": "H7",
+      "methodeNaam": "ReturnOperations",
+      "leerdoelen": [
+        "methodes definieren met parameters en returnwaarde",
+        "returnwaarden gebruiken"
+      ],
+      "functioneleAnalyse": "Zoals H7-VoidOperations, maar nu berekenen de methodes hun resultaat en geven het terug (ook een bool en een List<int>), zonder zelf iets te tonen. Enkel ReturnOperations toont; de waarden worden op een cijfer na de komma afgerond.",
+      "organisatie": "Schrijf dit als een static methode met de naam ReturnOperations in de klasse Methodes. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "in de reken-methodes toch Console.WriteLine gebruiken",
+        "de returnwaarde niet opvangen of niet gebruiken"
+      ],
+      "hints": [
+        "Deze methodes tonen niets; ze geven een waarde terug die ReturnOperations toont.",
+        "Het returntype is hier niet void: denk aan double, bool en List<int>."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H7-EmailadresGenerator": {
+      "titel": "H7-EmailadresGenerator",
+      "hoofdstuk": "H7",
+      "methodeNaam": "EmailAddressGenerator",
+      "leerdoelen": [
+        "methodes met returntype en parameters",
+        "methodes oproepen"
+      ],
+      "functioneleAnalyse": "Het programma maakt uit voornaam, naam en het studentkenmerk een geldig AP-e-mailadres in kleine letters. Je gebruikt geen ingebouwde stringmethodes maar schrijft er zelf (StringToLower is als aanzet gegeven).",
+      "organisatie": "Schrijf dit als een static methode met de naam EmailAddressGenerator in de klasse Methodes. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "toch ingebouwde stringmethodes gebruiken terwijl de opgave eigen methodes vraagt",
+        "de spaties in de naam niet weghalen"
+      ],
+      "hints": [
+        "Schrijf zelf een methode die tekens naar kleine letters omzet, naar het voorbeeld van StringToLower.",
+        "Bouw het adres op naargelang de persoon student is of niet."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H7-Triangle": {
+      "titel": "H7-Triangle",
+      "hoofdstuk": "H7",
+      "methodeNaam": "DrawTriangle",
+      "leerdoelen": [
+        "methodes die andere methodes oproepen"
+      ],
+      "functioneleAnalyse": "Een tekenprogramma dat een driehoek tekent van een gegeven hoogte met een gegeven karakter. DrawTriangle roept meermaals DrawLine op, dat een regel als string teruggeeft en zelf niets toont.",
+      "organisatie": "Schrijf dit als een static methode met de naam DrawTriangle in de klasse Methodes. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "DrawLine zelf laten tonen in plaats van een string te laten teruggeven",
+        "de regellengte niet met het regelnummer laten meegroeien"
+      ],
+      "hints": [
+        "DrawLine bouwt een regel op en geeft die terug; DrawTriangle toont ze.",
+        "De lengte van regel i is precies i karakters."
+      ],
+      "voorbeeldinteractie": "Hoe hoog is de driehoek?\n> 4\nWelk karakter gebruiken we als patroon?\n> #\n#\n##\n###\n####"
+    },
+    "H8-LengthAreaVolume": {
+      "titel": "H8-LengthAreaVolume",
+      "hoofdstuk": "H8",
+      "methodeNaam": "LengthAreaVolume",
+      "leerdoelen": [
+        "werken met machten"
+      ],
+      "functioneleAnalyse": "Gegeven de lengte van een zijde berekent het programma de oppervlakte van het vierkant en het volume van de kubus. Je mag de lengte-variabele hoogstens vier keer gebruiken.",
+      "organisatie": "Schrijf dit als een static methode met de naam LengthAreaVolume in de klasse NumeriekeData. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "de zijde herhaaldelijk met zichzelf vermenigvuldigen in plaats van een Math-methode te gebruiken"
+      ],
+      "hints": [
+        "Er bestaat een Math-methode om een getal tot een macht te verheffen.",
+        "Oppervlakte is de zijde tot de tweede, volume tot de derde macht."
+      ],
+      "voorbeeldinteractie": "Hoe lang is de zijde in meter?\n> 10\nDe lengte is: 10m\nDe oppervlakte is: 100m²\nHet volume is: 1000m³"
+    },
+    "H8-RockScissorsPaper": {
+      "titel": "H8-RockScissorsPaper",
+      "hoofdstuk": "H8",
+      "methodeNaam": "RockScissorsPaper",
+      "leerdoelen": [
+        "een taak herhalen met een lus",
+        "werken met Random"
+      ],
+      "functioneleAnalyse": "Steen-schaar-papier tegen de computer. Per ronde kiest de speler en kiest de computer willekeurig; de winnaar krijgt een punt. Wie eerst 10 punten haalt, wint.",
+      "organisatie": "Schrijf dit als een static methode met de naam RockScissorsPaper in de klasse NumeriekeData. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "de win-regels onvolledig uitwerken",
+        "de lus niet laten stoppen zodra iemand 10 punten heeft"
+      ],
+      "hints": [
+        "Genereer de keuze van de computer met Random tussen 1 en 3.",
+        "Werk per spelerkeuze uit welke computerkeuze wint of verliest."
+      ],
+      "voorbeeldinteractie": "Maak een keuze:\n1 voor schaar\n2 voor steen\n3 voor papier\n> 2\nDe computer kiest steen!\nNiemand wint deze ronde!\nJij hebt 0 punten, de computer heeft 0 punten."
+    },
+    "H8-TextCellRandom": {
+      "titel": "H8-TextCellRandom",
+      "hoofdstuk": "H8",
+      "methodeNaam": "TextCellMetRandom",
+      "leerdoelen": [
+        "werken met Random binnen je eigen TextCell-project"
+      ],
+      "functioneleAnalyse": "Uitbreiding op het TextCell-project: een cel kan een formule =rand() bevatten die de cel initialiseert op een willekeurige waarde tussen 1 en 10. Je maakt hiervoor een aparte klasse TextCellMetRandom, gekopieerd van TextCell.",
+      "organisatie": "Schrijf dit als een static methode met de naam TextCellMetRandom in de klasse NumeriekeData. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "de bestaande TextCell-code aanpassen in plaats van een kopie te maken"
+      ],
+      "hints": [
+        "Bekijk waar in je bestaande TextCell een celwaarde bepaald wordt; daar hoort de =rand()-afhandeling.",
+        "Random tussen 1 en 10 ken je uit H8."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H8-TextCellDecimals": {
+      "titel": "H8-TextCellDecimals",
+      "hoofdstuk": "H8",
+      "methodeNaam": "TextCellMetKomma",
+      "leerdoelen": [
+        "werken met kommagetallen binnen je eigen TextCell-project"
+      ],
+      "functioneleAnalyse": "Uitbreiding op het TextCell-project: ondersteun kommagetallen, altijd getoond met maximaal twee cijfers na de komma. Je maakt hiervoor een aparte klasse TextCellMetKomma, gekopieerd van TextCell.",
+      "organisatie": "Schrijf dit als een static methode met de naam TextCellMetKomma in de klasse NumeriekeData. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "niet overal int naar double aanpassen waardoor er alsnog afgekapt wordt"
+      ],
+      "hints": [
+        "Waar veronderstelt je code nu een int? Die plaatsen moeten naar double.",
+        "Rond op het einde af tot twee cijfers na de komma."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H9-FillRandom": {
+      "titel": "H9-FillRandom",
+      "hoofdstuk": "H9",
+      "methodeNaam": "FillRandom",
+      "leerdoelen": [
+        "een tweedimensionale array gebruiken",
+        "werken met Random"
+      ],
+      "functioneleAnalyse": "Het programma maakt een 2D-array van 4 op 4, vult ze met willekeurige getallen van 0 tot en met 9, toont ze netjes en toont de som van alle getallen.",
+      "organisatie": "Schrijf dit als een static methode met de naam FillRandom in de klasse Meerdimensionaal. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "de som buiten de geneste lus opbouwen waardoor niet alles meegeteld wordt"
+      ],
+      "hints": [
+        "Je hebt twee geneste for-lussen nodig: een voor de rijen, een voor de kolommen.",
+        "Tel elk getal bij de som terwijl je de array opvult."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H9-MultiplicationTables": {
+      "titel": "H9-MultiplicationTables",
+      "hoofdstuk": "H9",
+      "methodeNaam": "MultiplicationTables",
+      "leerdoelen": [
+        "een tweedimensionale array gebruiken"
+      ],
+      "functioneleAnalyse": "Het programma vult een 2D-array van 10 op 10 met de producten van de tafels van vermenigvuldiging en toont die.",
+      "organisatie": "Schrijf dit als een static methode met de naam MultiplicationTables in de klasse Meerdimensionaal. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "de indexen (0-based) verwarren met de factoren (1-based)"
+      ],
+      "hints": [
+        "De waarde op rij r, kolom k is (r+1) maal (k+1), want indexen starten op 0.",
+        "Met de opmaak :d3 lijn je de getallen mooi uit."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H9-MakingTeams": {
+      "titel": "H9-MakingTeams",
+      "hoofdstuk": "H9",
+      "methodeNaam": "MakingTeams",
+      "leerdoelen": [
+        "een- en tweedimensionale arrays gebruiken"
+      ],
+      "functioneleAnalyse": "Uit zes gegeven namen stel je drie teams samen. Je vraagt de teamnamen, zet ze op de eerste plaats van elke rij, en verdeelt de spelers over de overige plaatsen.",
+      "organisatie": "Schrijf dit als een static methode met de naam MakingTeams in de klasse Meerdimensionaal. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "de teamnaam-kolom verwarren met de spelerskolommen",
+        "de teller die door de namen loopt niet correct bijhouden"
+      ],
+      "hints": [
+        "Op plaats 0 van elke rij komt de teamnaam, op plaats 1 en 2 de spelers.",
+        "Gebruik een aparte teller die door de zes namen loopt terwijl je de teams vult."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H9-Multiplications": {
+      "titel": "H9-Multiplications",
+      "hoofdstuk": "H9",
+      "methodeNaam": "Multiplications",
+      "leerdoelen": [
+        "werken met 2D-arrays",
+        "methodes met parameters"
+      ],
+      "functioneleAnalyse": "Het programma vult een 2D-array (10 rijen, 3 kolommen) met twee willekeurige factoren en hun product, en laat de gebruiker via de methode PracticeMultiplications de producten oefenen. Op het einde toont het het aantal juiste antwoorden.",
+      "organisatie": "Schrijf dit als een static methode met de naam Multiplications in de klasse Meerdimensionaal. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "het juiste antwoord niet uit de derde kolom halen om te vergelijken"
+      ],
+      "hints": [
+        "Zet in kolom 0 en 1 de factoren en in kolom 2 hun product.",
+        "PracticeMultiplications krijgt de array mee en geeft het aantal juiste antwoorden terug."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H9-SumRowN": {
+      "titel": "H9-SumRowN",
+      "hoofdstuk": "H9",
+      "methodeNaam": "SumRowN",
+      "leerdoelen": [
+        "werken met multidimensionale arrays"
+      ],
+      "functioneleAnalyse": "Je schrijft een methode SumRowN met twee parameters: een 2D-array van double en een rijnummer. Ze geeft de som van die rij terug (en toont zelf niets). Je test ze met de gegeven voorbeeldarray.",
+      "organisatie": "Schrijf dit als een static methode met de naam SumRowN in de klasse Meerdimensionaal. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "een rijnummer 1-based krijgen maar 0-based indexeren zonder aan te passen",
+        "de som tonen in plaats van teruggeven"
+      ],
+      "hints": [
+        "De methode toont niets; ze geeft de som terug.",
+        "Let op het verschil tussen het rijnummer dat de gebruiker geeft en de array-index."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H9-RowSums": {
+      "titel": "H9-RowSums",
+      "hoofdstuk": "H9",
+      "methodeNaam": "RowSums",
+      "leerdoelen": [
+        "werken met multidimensionale arrays"
+      ],
+      "functioneleAnalyse": "Het programma maakt een 2D-array met een gevraagd aantal rijen en kolommen, vraagt elke waarde, en toont de som per rij.",
+      "organisatie": "Schrijf dit als een static methode met de naam RowSums in de klasse Meerdimensionaal. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "de som per rij niet terugzetten op nul bij het begin van een nieuwe rij"
+      ],
+      "hints": [
+        "Voor elke rij begin je de som opnieuw op nul.",
+        "De buitenste lus loopt over de rijen, de binnenste telt de kolommen op."
+      ],
+      "voorbeeldinteractie": "Hoe veel rijen telt je array?\n> 3\nHoe veel kolommen telt je array?\n> 2\nWaarde voor rij 1, kolom 1?\n> 4\nWaarde voor rij 1, kolom 2?\n> 2\n...\nSommen per rij:\n6\n2\n16"
+    },
+    "H9-Pixels": {
+      "titel": "H9-Pixels",
+      "hoofdstuk": "H9",
+      "methodeNaam": "Pixels",
+      "leerdoelen": [
+        "werken met multidimensionale arrays",
+        "werken met enumeratietypes"
+      ],
+      "functioneleAnalyse": "Een tekenprogramma in de terminal. De gebruiker kiest de afmetingen, en kan in een lus een pixel kleuren of de afbeelding tonen. De array is van het type ConsoleColor.",
+      "organisatie": "Schrijf dit als een static methode met de naam Pixels in de klasse Meerdimensionaal. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "de rij- en kolomindex verwisselen",
+        "de kleur niet uit de lijst van ConsoleColor-waarden halen"
+      ],
+      "hints": [
+        "Maak een 2D-array van ConsoleColor met de gevraagde afmetingen.",
+        "Toon elke pixel als een spatie met de juiste achtergrondkleur."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H9-RedFilter": {
+      "titel": "H9-RedFilter",
+      "hoofdstuk": "H9",
+      "methodeNaam": "RedFilter",
+      "leerdoelen": [
+        "werken met multidimensionale arrays",
+        "werken met enumeratietypes"
+      ],
+      "functioneleAnalyse": "Een filter voor het tekenprogramma. De methode RedFilter krijgt een afbeelding (ConsoleColor[,]) en maakt alle vakjes op een oneven rij én een oneven kolom rood. Ze toont de afbeelding niet.",
+      "organisatie": "Schrijf dit als een static methode met de naam RedFilter in de klasse Meerdimensionaal. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "de afbeelding tonen binnen de filter in plaats van ze enkel te bewerken",
+        "de voorwaarde 'oneven rij en oneven kolom' verkeerd combineren"
+      ],
+      "hints": [
+        "Loop over alle vakjes en test of rij en kolom allebei oneven zijn.",
+        "De filter bewerkt enkel de array; het tonen gebeurt elders."
+      ],
+      "voorbeeldinteractie": "Wat wil je doen?\n1. een pixel kleuren\n2. afbeelding tonen\n3. roodfilter toepassen"
+    },
+    "H9-TriangleFilter": {
+      "titel": "H9-TriangleFilter",
+      "hoofdstuk": "H9",
+      "methodeNaam": "LowerTriangleFilter",
+      "leerdoelen": [
+        "werken met multidimensionale arrays",
+        "werken met onderling afhankelijke indexen"
+      ],
+      "functioneleAnalyse": "Een filter die alle pixels op en onder de diagonaal wit maakt. Werkt enkel op een vierkante afbeelding; anders toont ze de foutmelding 'deze filter kan niet worden toegepast op deze afbeelding'.",
+      "organisatie": "Schrijf dit als een static methode met de naam LowerTriangleFilter in de klasse Meerdimensionaal. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "niet controleren of de afbeelding vierkant is",
+        "de grens van de binnenste lus niet aan de rij-index koppelen"
+      ],
+      "hints": [
+        "Controleer eerst of het aantal rijen gelijk is aan het aantal kolommen.",
+        "Voor de onderste driehoek loopt de kolom-index mee met de rij-index."
+      ],
+      "voorbeeldinteractie": "Wat wil je doen?\n1. een pixel kleuren\n2. afbeelding tonen\n3. roodfilter toepassen\n4. driehoeksfilter toepassen"
+    },
+    "H9-HeatmapKnightMoves": {
+      "titel": "H9-HeatmapKnightMoves",
+      "hoofdstuk": "H9",
+      "methodeNaam": "HeatmapKnightMovesMain",
+      "leerdoelen": [
+        "werken met multidimensionale arrays",
+        "geneste iteratie",
+        "werken met Random"
+      ],
+      "functioneleAnalyse": "Een paard maakt een aantal willekeurige sprongen op een schaakbord vanuit een gegeven positie. Achteraf toont het programma een heatmap: hoe vaak elke positie bezocht is. Startpunt is HeatmapKnightMovesMain.",
+      "organisatie": "Schrijf dit als een static methode met de naam HeatmapKnightMovesMain in de klasse Meerdimensionaal. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "een sprong buiten het bord toelaten",
+        "de positie-notatie (A1..H8) verkeerd omzetten naar array-indexen"
+      ],
+      "hints": [
+        "Per sprong zijn er acht mogelijkheden; kies er willekeurig een die binnen het bord valt.",
+        "Zet de letter/cijfer-positie om naar rij- en kolomindexen en verhoog de teller op die plaats."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H9-ConwayGameOfLife": {
+      "titel": "H9-ConwayGameOfLife",
+      "hoofdstuk": "H9",
+      "methodeNaam": "ConwayGameOfLifeMain",
+      "leerdoelen": [
+        "werken met multidimensionale arrays",
+        "geneste iteratie",
+        "werken met een enum"
+      ],
+      "functioneleAnalyse": "Een vereenvoudigde console-versie van Conway's Game of Life. Je vult een bord willekeurig met levende en dode cellen (een enum voor de status) en toont generatie per generatie volgens de bekende buur-regels, met 2 seconden tussen elke generatie.",
+      "organisatie": "Schrijf dit als een static methode met de naam ConwayGameOfLifeMain in de klasse Meerdimensionaal. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "de buren aan de rand niet correct afbakenen (buiten de array kijken)",
+        "de cel zelf meetellen als buur"
+      ],
+      "hints": [
+        "Gebruik een enum voor de celstatus (levend/dood).",
+        "Bij het tellen van buren: blijf binnen het bord en tel de cel zelf niet mee."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H10-SumOfNumbers": {
+      "titel": "H10-SumOfNumbers",
+      "hoofdstuk": "H10",
+      "methodeNaam": "SumOfNumbers",
+      "leerdoelen": [
+        "werken met Split en Join",
+        "itereren over een array"
+      ],
+      "functioneleAnalyse": "De gebruiker geeft een aantal getallen gescheiden door ';' in. Het programma splitst de invoer, maakt de som en toont die. Het aantal getallen kiest de gebruiker zelf.",
+      "organisatie": "Schrijf dit als een static methode met de naam SumOfNumbers in de klasse GevorderdeTekstverwerking. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "een vast aantal getallen aannemen in plaats van de gesplitste array te doorlopen",
+        "de losse stukken als tekst optellen in plaats van ze om te zetten naar getallen"
+      ],
+      "hints": [
+        "Split de invoer op het teken ';' tot een array van stukjes tekst.",
+        "Zet elk stukje om naar een getal voor je optelt; met Join kan je ze weer tonen."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H10-CentralAlignmentText": {
+      "titel": "H10-CentralAlignmentText",
+      "hoofdstuk": "H10",
+      "methodeNaam": "CentralAlignmentText",
+      "leerdoelen": [
+        "tekst formatteren",
+        "stringinterpolatie",
+        "een methode oproepen"
+      ],
+      "functioneleAnalyse": "De gebruiker geeft een tekst en een gewenste breedte (minimaal de lengte van de tekst) in. Een aparte methode CentralAlignment centreert de tekst met een opvulkarakter en geeft ze terug; CentralAlignmentText toont het resultaat.",
+      "organisatie": "Schrijf dit als een static methode met de naam CentralAlignmentText in de klasse GevorderdeTekstverwerking. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "de controle op de minimale lengte overslaan",
+        "de opvulling maar aan een kant toevoegen in plaats van gecentreerd"
+      ],
+      "hints": [
+        "PadLeft en PadRight helpen om tekst op te vullen tot een bepaalde breedte.",
+        "Verdeel de op te vullen ruimte over links en rechts om te centreren."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H10-NeatlyOrderedChristmasShoppingList": {
+      "titel": "H10-NeatlyOrderedChristmasShoppingList",
+      "hoofdstuk": "H10",
+      "methodeNaam": "NeatlyOrderedChristmasShoppingList",
+      "leerdoelen": [
+        "stringformattering",
+        "stringmethodes",
+        "werken met karakters"
+      ],
+      "functioneleAnalyse": "Een nettere versie van ChristmasShoppingList: een scheidingslijn die precies zo breed is als de hoofding, alle bedragen uitgelijnd in een kolom, en het muntsymbool van de gebruiker (bijvoorbeeld €, $ of £) automatisch gebruikt.",
+      "organisatie": "Schrijf dit als een static methode met de naam NeatlyOrderedChristmasShoppingList in de klasse GevorderdeTekstverwerking. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "een scheidingslijn met een vast aantal tekens hardcoderen in plaats van ze mee te laten groeien",
+        "de bedragen niet uitlijnen"
+      ],
+      "hints": [
+        "Baseer de breedte van de scheidingslijn op de lengte van de hoofding.",
+        "Met PadRight/PadLeft zet je de bedragen netjes onder elkaar."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H10-Pixels-Persistent": {
+      "titel": "H10-Pixels-Persistent",
+      "hoofdstuk": "H10",
+      "methodeNaam": "Pixels",
+      "leerdoelen": [
+        "input en output van tekstbestanden"
+      ],
+      "functioneleAnalyse": "Een uitbreiding van het Pixels-tekenprogramma met opslaan en inladen. Om op te slaan cast je elke ConsoleColor naar een int en schrijf je per rij de getallen gescheiden door puntkomma weg; inladen doet het omgekeerde.",
+      "organisatie": "Schrijf dit als een static methode met de naam Pixels in de klasse GevorderdeTekstverwerking. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "bij het inladen de tekst niet terug omzetten naar ConsoleColor",
+        "de rij- en kolomstructuur niet bewaren in het bestand"
+      ],
+      "hints": [
+        "Een ConsoleColor kan je casten naar een int en omgekeerd.",
+        "Sla per rij de getallen op, gescheiden door puntkomma, en keer dat om bij het inladen."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H10-Galgje": {
+      "titel": "H10-Galgje",
+      "hoofdstuk": "H10",
+      "methodeNaam": "Galgje",
+      "leerdoelen": [
+        "werken met een char-array",
+        "werken met een lus en voorwaarden"
+      ],
+      "functioneleAnalyse": "Een galgje-spel: het programma kiest willekeurig een woord uit vijf. De gebruiker raadt letters (getoond op de juiste plaats) of een heel woord. Achteraf toont het het aantal pogingen.",
+      "organisatie": "Schrijf dit als een static methode met de naam Galgje in de klasse GevorderdeTekstverwerking. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "niet onderscheiden of de invoer een letter (lengte 1) of een woord is",
+        "de plaats(en) waar een geraden letter voorkomt niet allemaal tonen"
+      ],
+      "hints": [
+        "De invoer is een letter als de lengte 1 is, anders een woord.",
+        "Met ToCharArray zet je het woord om naar losse tekens om te vergelijken."
+      ],
+      "voorbeeldinteractieOntbreekt": true
+    },
+    "H10-TextCellPersistent": {
+      "titel": "H10-TextCellPersistent",
+      "hoofdstuk": "H10",
+      "methodeNaam": "TextCellPersistent",
+      "leerdoelen": [
+        "input en output van tekstbestanden binnen je eigen TextCell-project"
+      ],
+      "functioneleAnalyse": "Uitbreiding op het TextCell-project: gemaakte TextCells opslaan en weer openen via een relatief pad (./TextCell/bestandsnaam.aptx). Je maakt hiervoor een kopie TextCellPersistent.",
+      "organisatie": "Schrijf dit als een static methode met de naam TextCellPersistent in de klasse GevorderdeTekstverwerking. Test ze uit via het keuzemenu (de methode SubMenu) of rechtstreeks vanuit Main.",
+      "veelgemaakteFouten": [
+        "niet controleren of het bestand bestaat bij het inladen",
+        "een absoluut pad hardcoderen in plaats van een relatief pad"
+      ],
+      "hints": [
+        "File.ReadAllLines en File.WriteAllLines lezen en schrijven een bestand regel per regel.",
+        "Test bij opslaan en laden of het bestand al dan niet bestaat."
+      ],
+      "voorbeeldinteractieOntbreekt": true
     }
   }
 }

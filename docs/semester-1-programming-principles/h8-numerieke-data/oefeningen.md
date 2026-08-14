@@ -30,6 +30,8 @@ De oppervlakte is: 100m²
 Het volume is: 1000m³
 ```
 
+<OefeningAssistent oefening="H8-LengthAreaVolume" hoofdstuk="H8" />
+
 ## Oefening: H8-RockScissorsPaper
 
 ### Leerdoelen
@@ -98,6 +100,8 @@ Jij hebt 8 punten, de computer heeft 10 punten.
 De computer is gewonnen!
 ```
 
+<OefeningAssistent oefening="H8-RockScissorsPaper" hoofdstuk="H8" />
+
 ## *Indien TextCell gemaakt: Oefening: TextCell met willekeurige getallen*
 
 ***Maak voor deze oefening een aparte klasse TextCellMetRandom. Kopieer hierin de code van je klasse TextCell en pas daarna pas aan.***
@@ -110,6 +114,8 @@ De computer is gewonnen!
 
 *Zorg ervoor dat een cel in TextCell ook een formule van de vorm `=rand()` kan bevatten. Dit initialiseert de cel op een willekeurige waarde tussen 1 en 10.*
 
+<OefeningAssistent oefening="H8-TextCellRandom" hoofdstuk="H8" />
+
 ## *Oefening: TextCell met kommagetallen*
 
 ***Maak voor deze oefening een aparte klasse TextCellMetKomma. Kopieer hierin de code van je klasse TextCell en pas daarna pas aan.***
@@ -121,3 +127,5 @@ De computer is gewonnen!
 ### *Technische analyse*
 
 *Pas op de juiste plaatsen alle code die een `int` veronderstelt aan naar een `double`. Zorg ervoor dat, na het uitrekenen van alle formules, alle cellen klassiek afgerond worden tot 2 cijfers na de komma.*
+
+<OefeningAssistent oefening="H8-TextCellDecimals" hoofdstuk="H8" />
