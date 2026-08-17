@@ -129,12 +129,13 @@ Maak een programma dat kan gebruikt worden om kerstinkopen te doen, rekening hou
 * Initialiseren van arrays
 * Opvullen van arrays
 * Opzoeken waarde in arrays
+* Gebruik van random (⚠️ let op dit heb je nog niet gezien, maar staat in de oefening deels beschreven)
 
 **Functionele analyse**
 
 Je vraagt de gebruiker zijn 6 lotto getallen (getal tussen 1 en 42) in te geven. Je hoeft geen controle te doen op de getallen die de gebruiker ingeeft. Je bewaart deze getallen in een array lotteryForm.
 
-Vervolgens simuleer je een trekking. Dat doe je door random 6 getallen te genereren (zie hiervoor [Random](/programmeren/semester-1-programming-principles/h8-numerieke-data/random.md)) en die ook in een array lotteryDraw te bewaren. Let op: hier moet je wel controleren of het inderdaad 6 verschillende getallen zijn (hoe kan je nagaan of iets aanwezig is in je array?).
+Vervolgens simuleer je een trekking. Dat doe je door random 6 getallen te genereren (zie hiervoor [Random](../h8-numerieke-data/random.md)) en die ook in een array lotteryDraw te bewaren. Let op: hier moet je wel controleren of het inderdaad 6 verschillende getallen zijn (hoe kan je nagaan of iets aanwezig is in je array?).
 
 Dan doe je een validatie. Heeft de gebruiker 3 juiste cijfers wint hij 10 €, bij 4 juiste cijfers 1000 €, bij 5 juiste cijfers 100.000 € en bij 6 juiste cijfers 10.000.000 €.
 

@@ -192,7 +192,7 @@ Sommen per rij:
 ### Leerdoelen
 
 * Werken met multidimensionale arrays
-* Werken met enumeratietypes
+* Werken met enumeratietypes (⚠️ let op dit heb je nog niet gezien, maar staat in de oefening deels beschreven)
 
 ### Functionele analyse
 
@@ -336,14 +336,6 @@ Vervolgens ga je generatie per generatie laten zien. Van de éne generatie op de
 * Any live cell with two or three live neighbors lives, unchanged, to the next generation.
 * Any dead cell with exactly three live neighbors comes to life.
 
-Laat elke generatie 2 seconden zien en bereken dan de volgende generatie (kijk even naar de oefening met de chronometer!).
-
-### Voorbeeldinteractie
-
-![](/img/img-3162.png)
-
-##
-
-##
+Laat elke generatie 2 seconden zien en bereken dan de volgende generatie
 
 <OefeningAssistent oefening="H9-ConwayGameOfLife" hoofdstuk="H9" />
