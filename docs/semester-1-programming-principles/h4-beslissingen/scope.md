@@ -1,6 +1,8 @@
 # Scope van variabelen
 
-> ✅ [Kennisclip voor deze inhoud](https://youtu.be/-2Rgaha0eqM)
+:::tip
+[Kennisclip voor deze inhoud](https://youtu.be/-2Rgaha0eqM)
+:::
 
 ## Scope van variabelen
 

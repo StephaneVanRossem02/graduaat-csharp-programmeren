@@ -1,6 +1,12 @@
+---
+draft: true
+---
+
 # Intermezzo: TextCell
 
-> ✅ [Kennisclip](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=429eb98b-38a9-45ef-a114-ade20076a352)
+:::tip
+[Kennisclip](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=429eb98b-38a9-45ef-a114-ade20076a352)
+:::
 
 ## Inleiding
 

@@ -6,7 +6,9 @@ In het vorige hoofdstuk leerden we hoe we met behulp van beslissingen onze code 
 
 **Door herhalende code met loops te schrijven maken we onze code korter en bijgevolg ook minder foutgevoelig en beter onderhoudbaar.**
 
-> ℹ️ Van zodra je dezelfde lijn(en) code onder elkaar in je code ziet staan (door bijvoorbeeld te copy pasten) is de kans zéér groot dat je dit korter kunt schrijven met loops.
+:::info
+Van zodra je dezelfde lijn(en) code onder elkaar in je code ziet staan (door bijvoorbeeld te copy pasten) is de kans zéér groot dat je dit korter kunt schrijven met loops.
+:::
 
 ### Soorten loops
 

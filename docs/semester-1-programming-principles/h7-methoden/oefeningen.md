@@ -90,7 +90,7 @@ Je kan eventueel volgende flowchart gebruiken:
 
 Voorbeeldinteractie
 
-![](/img/img-0148.png)
+![](/img/img-3134.png)
 
 <OefeningAssistent oefening="H7-EmailadresGenerator" hoofdstuk="H7" />
 

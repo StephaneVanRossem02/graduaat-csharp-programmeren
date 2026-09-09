@@ -47,8 +47,12 @@ for (int teller = 0; teller <= 10; teller += 2)
 
 Voor de indexvariabele kiest men meestal niet `teller`, maar `i`, maar dat is niet noodzakelijk. In de setup wordt dus een variabele op een start-waarde gezet. De test zal aan de start van iedere loop kijken of de voorwaarde nog waar is, indien dat het geval is dan wordt een nieuwe loop gestart en wordt `i` met een bepaalde waarde, zoals in update aangegeven, verhoogd.
 
-> ⚠️ Je kan niets met een `for` dat je met een `while` niet kan. Je kan niets met een `while` dat je met een `for` niet kan. Als je dit niet inziet, heb je lussen nog niet begrepen en moet je dit hoofdstuk vanaf het begin opnieuw lezen.
-> 
-> P.S.: wat voor lus is hier net gebruikt?!
+:::warning
+Je kan niets met een `for` dat je met een `while` niet kan. Je kan niets met een `while` dat je met een `for` niet kan. Als je dit niet inziet, heb je lussen nog niet begrepen en moet je dit hoofdstuk vanaf het begin opnieuw lezen.
 
-> ℹ️ Waarom stemt de Flowgorithm hierboven niet perfect overeen met de C#-code? Omdat in de C#-code `teller` **gedeclareerd wordt als onderdeel van de for**. In de code die we uit de Flowgorithm hierboven kunnen genereren, wordt `teller` niet gedeclareerd als onderdeel van de lus en blijft deze dus bestaan nadat de lus is afgewerkt. Dit is een klein detail, maar we vinden het belangrijk uit te leggen waarom deze code niet gelijkwaardig is.
+P.S.: wat voor lus is hier net gebruikt?!
+:::
+
+:::info
+Waarom stemt de Flowgorithm hierboven niet perfect overeen met de C#-code? Omdat in de C#-code `teller` **gedeclareerd wordt als onderdeel van de for**. In de code die we uit de Flowgorithm hierboven kunnen genereren, wordt `teller` niet gedeclareerd als onderdeel van de lus en blijft deze dus bestaan nadat de lus is afgewerkt. Dit is een klein detail, maar we vinden het belangrijk uit te leggen waarom deze code niet gelijkwaardig is.
+:::

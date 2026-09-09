@@ -2,7 +2,9 @@
 
 ## Input van de gebruiker verwerken
 
-> ✅ [Kennisclip voor deze inhoud](https://youtu.be/DGhdggwcdDk)
+:::tip
+[Kennisclip voor deze inhoud](https://youtu.be/DGhdggwcdDk)
+:::
 
 ## Conversie
 
@@ -31,6 +33,10 @@ Voorgaande code veronderstelt dat de gebruiker géén fouten invoert. De convers
 
 In het begin van de leercurve **moet** je er altijd van uitgaan dat de gebruiker foutloze input geeft. Later leer je wel hoe je dit kan afhandelen.
 
-> ⚠️ **Opgelet**: de invoer van kommagetallen door de gebruiker is afhankelijk van de landinstellingen van je besturingssysteem. Staat deze in Belgisch/Nederlands dan moet je kommagetallen met een **KOMMA**(`,`) invoeren (dus `9,81`), staat deze in het Engels dan moet je een **PUNT**(`.`) gebruiken (`9.81`).
+:::warning
+**Opgelet**: de invoer van kommagetallen door de gebruiker is afhankelijk van de landinstellingen van je besturingssysteem. Staat deze in Belgisch/Nederlands dan moet je kommagetallen met een **KOMMA**(`,`) invoeren (dus `9,81`), staat deze in het Engels dan moet je een **PUNT**(`.`) gebruiken (`9.81`).
+:::
 
-> ⚠️ **Opgelet 2**: In je C# code moet je doubles ALTIJD met een punt schrijven. Dit is onafhankelijk van je taalinstellingen.
+:::warning
+**Opgelet 2**: In je C# code moet je doubles ALTIJD met een punt schrijven. Dit is onafhankelijk van je taalinstellingen.
+:::

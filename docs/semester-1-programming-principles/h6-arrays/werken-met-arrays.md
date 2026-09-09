@@ -1,6 +1,8 @@
 # Werken met arrays
 
-> ✅ [Kennisclip](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=dd1a0ea2-a768-4554-ae32-adcd0077b930)
+:::tip
+[Kennisclip](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=dd1a0ea2-a768-4554-ae32-adcd0077b930)
+:::
 
 ### Nuttige array methoden <a href="#nuttige-array-methoden" id="nuttige-array-methoden"></a>
 

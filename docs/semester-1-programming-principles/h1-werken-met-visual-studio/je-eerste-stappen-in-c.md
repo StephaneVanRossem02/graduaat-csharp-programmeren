@@ -1,6 +1,13 @@
+---
+title: "Je eerste stappen in C#"
+sidebar_label: "Je eerste stappen in C#"
+---
+
 # Je eerste stappen in C#
 
-> ✅ [Kennisclip voor deze inhoud](https://youtu.be/Qzd8K96mRj4)
+:::tip
+[Kennisclip voor deze inhoud](https://youtu.be/Qzd8K96mRj4)
+:::
 
 ## Doelstelling
 
@@ -60,4 +67,6 @@
    Het eerste wat we opmerken is dat een **statement eindigt met een ;** (een puntkomma).\
    In dit statement roepen we de methode `WriteLine` op en geven als *argument* de tekst "Hello World" mee. De methode `WriteLine` beschikt over 1 parameter die deze tekst aanneemt en voor ons in de console zal tonen.
 
-> ❗ **Let erop dat je iedere 'zin' eindigt met een puntkomma.**
+:::danger
+**Let erop dat je iedere 'zin' eindigt met een puntkomma.**
+:::

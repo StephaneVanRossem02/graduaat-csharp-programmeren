@@ -1,6 +1,8 @@
 # Kleuren in Console
 
-> ✅ [Kennisclip voor deze inhoud](https://youtu.be/VhM-zg7Rt_U)
+:::tip
+[Kennisclip voor deze inhoud](https://youtu.be/VhM-zg7Rt_U)
+:::
 
 ## Kleuren in console
 
@@ -30,7 +32,9 @@ Als je deze code uitvoert krijg je als resultaat:
 
 ![Resultaat voorgaande code](/img/img-3029.png)
 
-> ℹ️ Kleur in console gebruiken is nuttig om je gebruikers een minder eentonig en meer informatieve applicatie aan te bieden. Je zou bijvoorbeeld alle foutmeldingen in het rood kunnen laten verschijnen.
+:::info
+Kleur in console gebruiken is nuttig om je gebruikers een minder eentonig en meer informatieve applicatie aan te bieden. Je zou bijvoorbeeld alle foutmeldingen in het rood kunnen laten verschijnen.
+:::
 
 ## Kleur resetten
 

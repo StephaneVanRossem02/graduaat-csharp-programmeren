@@ -1,6 +1,8 @@
 # Beslissingen intro
 
-> ✅ [Inleiding](https://youtu.be/fflxk0QGu5I)
+:::tip
+[Inleiding](https://youtu.be/fflxk0QGu5I)
+:::
 
 Nu we de elementaire zaken van C# en Visual Studio kennen is het tijd om onze programma's wat interessanter te maken. De ontwikkelde programma's tot nog toe waren steevast lineair van opbouw, ze werden lijn per lijn uitgevoerd zonder de mogelijkheid om de *flow* van het programma aan te passen. Het programma doorliep de lijnen braaf na elkaar en wanneer deze aan het einde kwam sloot het programma zich af.
 

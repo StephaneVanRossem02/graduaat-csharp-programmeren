@@ -1,6 +1,8 @@
 # Input/Output: ReadLine/WriteLine
 
-> ✅ [Kennisclip voor deze inhoud](https://youtu.be/mfO4oEshg2U)
+:::tip
+[Kennisclip voor deze inhoud](https://youtu.be/mfO4oEshg2U)
+:::
 
 Via Console.WriteLine kan je iets op het scherm laten zien:
 

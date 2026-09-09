@@ -1,8 +1,12 @@
 # Samengestelde booleaanse expressies
 
-> ✅ [Kennisclip 1](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=1e36fa54-2062-4955-93e8-adbe00e6481c)
+:::tip
+[Kennisclip 1](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=1e36fa54-2062-4955-93e8-adbe00e6481c)
+:::
 
-> ✅ [Kennisclip 2](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=bb631bd5-c504-4c3e-9a56-adbe00e64818)
+:::tip
+[Kennisclip 2](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=bb631bd5-c504-4c3e-9a56-adbe00e64818)
+:::
 
 ## Logische operatoren
 

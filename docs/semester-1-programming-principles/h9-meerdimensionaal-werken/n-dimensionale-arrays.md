@@ -28,7 +28,9 @@ Nu kan je veel makkelijker aflezen dat er in de eerste kolom inderdaad OXO staat
 
 Meerdimensionale arrays leveren hetzelfde voordeel op wanneer je programmeert. Ze staan toe data op te delen in roosters, zodat het makkelijker wordt cellen in een bepaalde richting te doorlopen (rij per rij, kolom per kolom, in de diepte,...). Dit is vaak nuttig om zaken die we "op het zicht" doen te kunnen toepassen op arrays.
 
-> ⚠️ Met meerdimensionale arrays kan je technisch niet meer of minder dan met ééndimensionale arrays. Maar afhankelijk van het probleem maken ze het programmeerwerk wel een pak eenvoudiger.
+:::warning
+Met meerdimensionale arrays kan je technisch niet meer of minder dan met ééndimensionale arrays. Maar afhankelijk van het probleem maken ze het programmeerwerk wel een pak eenvoudiger.
+:::
 
 ### Syntax
 

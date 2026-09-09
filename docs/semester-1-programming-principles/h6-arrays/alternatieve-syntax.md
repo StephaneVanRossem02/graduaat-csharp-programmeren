@@ -1,6 +1,8 @@
 # Alternatieve syntax
 
-> ✅ [Kennisclip](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=bdc85a1e-7bf9-4137-864a-adcd00771f88)
+:::tip
+[Kennisclip](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=bdc85a1e-7bf9-4137-864a-adcd00771f88)
+:::
 
 De reeds besproken manier om arrays te maken is veelzijdig en toont alle aspecten, maar vraagt vrij veel schrijfwerk. Er zijn nog manieren om arrays aan te maken, maar deze veronderstellen dat je de array in één keer kan opvullen.
 

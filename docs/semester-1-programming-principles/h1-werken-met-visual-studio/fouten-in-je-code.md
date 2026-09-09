@@ -1,10 +1,14 @@
 # Fouten in je code
 
-> ✅ [Kennisclip voor deze inhoud](https://youtu.be/seZ8MfWdRf4)
+:::tip
+[Kennisclip voor deze inhoud](https://youtu.be/seZ8MfWdRf4)
+:::
 
 ![](/img/img-3036.png)
 
-> ❗ Je code kan niet gecompileerd en uitgevoerd worden zolang er fouten in je code staan.
+:::danger
+Je code kan niet gecompileerd en uitgevoerd worden zolang er fouten in je code staan.
+:::
 
 ### Opzettelijk een fout maken
 

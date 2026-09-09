@@ -1,6 +1,8 @@
 # Random
 
-> ✅ [Kennisclip voor deze inhoud](https://youtu.be/LtRw1bYoNsY)
+:::tip
+[Kennisclip voor deze inhoud](https://youtu.be/LtRw1bYoNsY)
+:::
 
 ### Random getallen genereren
 

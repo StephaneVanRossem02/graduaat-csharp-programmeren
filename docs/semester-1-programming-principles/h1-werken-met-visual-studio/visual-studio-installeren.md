@@ -102,6 +102,6 @@ Vervolgens dien je binnen Visual Studio in het menu Tools naar Code Snippets Man
 
 Je kiest voor Language CSharp en klikt op de knop Import.
 
-![](/img/img-0025.png)
+![](/img/img-3027.png)
 
 Je kiest het snippet bestand en voegt dit toe.

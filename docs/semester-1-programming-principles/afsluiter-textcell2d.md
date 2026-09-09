@@ -1,3 +1,7 @@
+---
+draft: true
+---
+
 # Afsluiter: TextCell2D
 
 ## Inleiding

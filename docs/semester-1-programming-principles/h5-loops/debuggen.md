@@ -66,4 +66,6 @@ En via de "call stack" zien we dat we niet gewoon in `MethodeA` zitten, maar dat
 
 ![Onderaan staan de methodes die al het langst aan het uitvoeren zijn. Met andere woorden: Main heeft MethodeA opgeroepen.](/img/img-3105.png)
 
-> ❗ Er komen geen oefeningen specifiek rond debuggen. Dat gaat niet, want debuggen helpt je alleen informatie verzamelen. Toch is het een zéér, zéér belangrijke skill. Debuggen kan je helpen inzien **wat je programma doet**. Er worden geen rechtstreekse punten op gegeven, maar als je goed debugt, kan je opdrachten afwerken die je anders niet zou kunnen maken. Gedraagt je programma zich tijdens de labosessies niet zoals je verwacht? **Zet een breakpoint en kijk wat er aan de hand is!**
+:::danger
+Er komen geen oefeningen specifiek rond debuggen. Dat gaat niet, want debuggen helpt je alleen informatie verzamelen. Toch is het een zéér, zéér belangrijke skill. Debuggen kan je helpen inzien **wat je programma doet**. Er worden geen rechtstreekse punten op gegeven, maar als je goed debugt, kan je opdrachten afwerken die je anders niet zou kunnen maken. Gedraagt je programma zich tijdens de labosessies niet zoals je verwacht? **Zet een breakpoint en kijk wat er aan de hand is!**
+:::

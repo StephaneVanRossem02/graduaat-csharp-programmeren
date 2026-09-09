@@ -1,14 +1,22 @@
+---
+draft: true
+---
+
 # SchoolAdmin
 
 Onderstaande kennisclips moet je bekijken voor wat de onderdelen betreft die handelen over het SchoolAdmin project en je dient deze mee maken met de filmpjes.
 
-> ✅ * [Kennisclip 1](https://youtu.be/eT5uhSw9nFo)
-> * [Kennisclip 2](https://youtu.be/Wuk9G1_JMWc)
-> * [Kennisclip 3](https://youtu.be/q__6UaGtNGs)
+:::tip
+* [Kennisclip 1](https://youtu.be/eT5uhSw9nFo)
+* [Kennisclip 2](https://youtu.be/Wuk9G1_JMWc)
+* [Kennisclip 3](https://youtu.be/q__6UaGtNGs)
+:::
 
 ## Oefening: H10-StudentKlasse
 
-> ⚠️ Deze oefening veronderstelt dat je de theoriefilmpjes hebt gevolgd en dat je daar de klasse `Student` al hebt aangemaakt in een SchoolAdmin project.
+:::warning
+Deze oefening veronderstelt dat je de theoriefilmpjes hebt gevolgd en dat je daar de klasse `Student` al hebt aangemaakt in een SchoolAdmin project.
+:::
 
 ### Leerdoelen
 
@@ -73,11 +81,15 @@ Databanken:               14
 Gemiddelde:               14.3
 ```
 
-> ⚠️ Commit je aanpassingen na deze oefening!
+:::warning
+Commit je aanpassingen na deze oefening!
+:::
 
 ## Oefening: H10-Cursus
 
-> ⚠️ Deze klasse hoort bij het SchoolAdmin project.
+:::warning
+Deze klasse hoort bij het SchoolAdmin project.
+:::
 
 ### Leerdoelen
 
@@ -121,7 +133,9 @@ Webtechnologie
 Said Aziz
 ```
 
-> ⚠️ Commit je aanpassingen!
+:::warning
+Commit je aanpassingen!
+:::
 
 ## Oefening: H10-CursusResultaat
 
@@ -141,11 +155,15 @@ Voorzie een klasse CursusResultaat met twee velden: `Naam` en `Resultaat`. Het e
 
 Vervang vervolgens de arrays `cursussen` en `CursusResultaten` door één `private` array van objecten van deze nieuwe klasse met naam `cursusResultaten`. Vervang `RegistreerVoorCursus` door `RegistreerCursusResultaat` om dit mogelijk te maken (met een parameter voor de naam en een parameter voor het cijfer). `DemonstreerStudenten` moet identiek dezelfde uitvoer blijven produceren als tevoren.
 
-> ℹ️ Deze oefening vraagt om veel aanpassingen, maar ze zijn niet zo groot. Hou vooral je hoofd erbij en denk goed na over hoe je elk fout gemarkeerd stukje code kan herschrijven wanneer je de oude arrays hebt verwijderd.
+:::info
+Deze oefening vraagt om veel aanpassingen, maar ze zijn niet zo groot. Hou vooral je hoofd erbij en denk goed na over hoe je elk fout gemarkeerd stukje code kan herschrijven wanneer je de oude arrays hebt verwijderd.
+:::
 
 ## Kennisclip
 
-> ✅ Deze [filmpje](https://youtu.be/f4HwuIax5IM) dien je ook te bekijken voor wat het onderdeel rond SchoolAdmin betreft.
+:::tip
+Deze [filmpje](https://youtu.be/f4HwuIax5IM) dien je ook te bekijken voor wat het onderdeel rond SchoolAdmin betreft.
+:::
 
 ## Uitbreiding CursusResultaat (SchoolAdmin project)
 
@@ -221,9 +239,13 @@ Schrijf een methode `StudentUitTekstFormaat(string csvWaarde)` die een object va
 
 Schrijf daarna een methode `DemonstreerStudentUitTekstFormaat()`. Deze vraagt om de tekstvoorstelling van één student in te typen, maakt de student aan en toont dan het overzicht voor deze student. Neem deze methode ook op als optie in je keuzemenu voor `SchoolAdmin`.
 
-> ⚠️ Deze methode vereist geen bestaande `Student`. Ze heeft wel te maken met de klasse `Student`.
+:::warning
+Deze methode vereist geen bestaande `Student`. Ze heeft wel te maken met de klasse `Student`.
+:::
 
-> ℹ️ De student hoeft niet opgenomen te worden in de array `Studenten` van een `Cursus`-object. We verbeteren dit later nog.
+:::info
+De student hoeft niet opgenomen te worden in de array `Studenten` van een `Cursus`-object. We verbeteren dit later nog.
+:::
 
 ### Voorbeeldinteractie
 
@@ -243,7 +265,9 @@ Gemiddelde      13,3
 
 ## Kennisclip
 
-> ✅ Dit [filmpje](https://youtu.be/vzNCIlFjq5g) bevat demonstraties van SchoolAdmin en dien je mee te maken.
+:::tip
+Dit [filmpje](https://youtu.be/vzNCIlFjq5g) bevat demonstraties van SchoolAdmin en dien je mee te maken.
+:::
 
 ## SchoolAdmin project: alle cursussen opvolgen
 
@@ -497,7 +521,9 @@ Naam: Wouter Roelants
 Leeftijd: 43
 ```
 
-> ℹ️ Voorzie in één keer een property `Leeftijd` die berekend wordt aan de hand van de huidige datum.
+:::info
+Voorzie in één keer een property `Leeftijd` die berekend wordt aan de hand van de huidige datum.
+:::
 
 Zorg dat de concrete klassen hier ook het statuut van de persoon aan koppelen, bijvoorbeeld:
 
@@ -634,7 +660,9 @@ Om zeker te zijn dat een datum op elke machine op dezelfde manier wordt voorgest
 
 Dit garandeert dat de Vlaamse voorstellingswijze voor een datum wordt gebruikt.
 
-> ℹ️ Tip: gebruik overerving om de gemeenschappelijke aspecten niet telkens opnieuw te schrijven. Je kan dit ofwel doen via `base.ToCSV` ofwel met een hulpmethode die de serialisatie van het gedeelte van de ouderklasse afhandelt. De eerste aanpak levert je minder methodes, de tweede kan voorkomen dat je vergeet de methode af te werken in de kindklassen.
+:::info
+Tip: gebruik overerving om de gemeenschappelijke aspecten niet telkens opnieuw te schrijven. Je kan dit ofwel doen via `base.ToCSV` ofwel met een hulpmethode die de serialisatie van het gedeelte van de ouderklasse afhandelt. De eerste aanpak levert je minder methodes, de tweede kan voorkomen dat je vergeet de methode af te werken in de kindklassen.
+:::
 
 ### Voorbeeldinteractie
 

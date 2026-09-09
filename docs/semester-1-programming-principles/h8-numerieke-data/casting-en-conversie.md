@@ -2,7 +2,9 @@
 
 ## Casting en conversie <a href="#casting-en-conversie" id="casting-en-conversie"></a>
 
-> ✅ [Kennisclip basis](https://youtu.be/EspjsQkxD3s) (meer kennisclips lager op de pagina)
+:::tip
+[Kennisclip basis](https://youtu.be/EspjsQkxD3s) (meer kennisclips lager op de pagina)
+:::
 
 Wanneer je de waarde van een variabele wil toekennen aan een variabele van een ander type mag dit niet zomaar. Volgende code zal bijvoorbeeld een error geven, omdat aan de linkerkant staat dat je een geheel getal wil bijhouden (door middel van `int`) en aan de rechterkant een kommagetal staat:
 
@@ -44,7 +46,9 @@ Console.WriteLine(kommaNietWelkom);
 
 #### Narrowing <a href="#narrowing" id="narrowing"></a>
 
-> ✅ [Kennisclip narrowing en widening](https://youtu.be/2HA96kQI6X0)
+:::tip
+[Kennisclip narrowing en widening](https://youtu.be/2HA96kQI6X0)
+:::
 
 Casting gebruik je vaak als je een variabele wil gebruiken als een ander type dat deze waarde niet kan bevatten. We moeten dan aan **narrowing** doen, letterlijk het versmallen van de data.
 
@@ -92,7 +96,9 @@ Deze code zal zonder problemen gaan. `var2` zal de waarde `20.0` bevatten. De in
 
 ### Conversie <a href="#conversie" id="conversie"></a>
 
-> ✅ [Kennisclip Convert klasse](https://youtu.be/5Yj2k2fPI68)
+:::tip
+[Kennisclip Convert klasse](https://youtu.be/5Yj2k2fPI68)
+:::
 
 Casting is een in de taal ingebakken manier van data omzetten, die vooral zeer nuttig is daar deze ook werkt in andere C#-related programmeertalen zoals C, C++ en Java. Om te weten hoe deze omzettingen gebeuren, kan je kijken in de handleiding van de taal C# zelf.
 

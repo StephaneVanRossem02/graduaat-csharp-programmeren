@@ -47,7 +47,9 @@ Console.WriteLine("Dit is één symbool: \ud835\udcb3");
 
 Je hoeft de werking van surrogate pairs voor deze cursus niet in detail te kennen, maar als je ooit een applicatie schrijft die emoji,... bevat, vind je [hier](https://docs.microsoft.com/en-us/dotnet/standard/base-types/character-encoding-introduction) de details.
 
-> ⚠️ Je kan emoji gebruiken in je programmatekst, maar je moet de terminal ook verwittigen dat je dit wil doen. Hiervoor zet je de encodering **van de terminal** via `Console.OutputEncoding = Encoding.UTF8`.
+:::warning
+Je kan emoji gebruiken in je programmatekst, maar je moet de terminal ook verwittigen dat je dit wil doen. Hiervoor zet je de encodering **van de terminal** via `Console.OutputEncoding = Encoding.UTF8`.
+:::
 
 ## Verbatim strings
 
@@ -58,7 +60,9 @@ Dit wordt vaak gebruikt om een filepath iets leesbaarder te maken.
 * Zonder verbatim: `string path= "c:\\Temp\\myfile.txt";`
 * Met verbatim: `string path= @"c:\Temp\myfile.txt";`
 
-> ⚠️ Bovenstaande strings zijn **identiek** voor C#! De @ geeft geen enkele extra functionaliteit, maar zorgt gewoon dat we dezelfde tekst (meerbepaald: backslashes en line breaks) wat makkelijker kunnen intypen.
+:::warning
+Bovenstaande strings zijn **identiek** voor C#! De @ geeft geen enkele extra functionaliteit, maar zorgt gewoon dat we dezelfde tekst (meerbepaald: backslashes en line breaks) wat makkelijker kunnen intypen.
+:::
 
 Volgende stukken code doen dus hetzelfde:
 

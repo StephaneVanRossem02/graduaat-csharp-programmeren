@@ -1,8 +1,12 @@
 # Return waarden
 
-> ✅ [Kennisclip return](https://youtu.be/w2y9vKcs83o)
+:::tip
+[Kennisclip return](https://youtu.be/w2y9vKcs83o)
+:::
 
-> ✅ [Kennisclip return en parameters samen](https://youtu.be/i_RX5Scb06c)
+:::tip
+[Kennisclip return en parameters samen](https://youtu.be/i_RX5Scb06c)
+:::
 
 Een stappenplan, en dus een methode, voer je uit met het oog op een bepaald resultaat. Soms moet dat resultaat terugbezorgd worden aan een opdrachtgever. Soms niet. Methodes staan toe beide variaties op een stappenplan te schrijven.
 
@@ -14,7 +18,9 @@ Denk aan een ouderwetse bakker. Het stappenplan dat deze bakker volgt is er een 
 
 We vertalen nu deze interactie naar code en verklaren daarna de vertaling:
 
-> ℹ️ Dit is maar een voorbeeld om de flow te verduidelijken. Er is geen "juiste" manier om een methode te schrijven om brood te bakken (tenzij je misschien een broodmachine programmeert).
+:::info
+Dit is maar een voorbeeld om de flow te verduidelijken. Er is geen "juiste" manier om een methode te schrijven om brood te bakken (tenzij je misschien een broodmachine programmeert).
+:::
 
 ```csharp
 public static void Bakker() {
@@ -38,9 +44,11 @@ Je moet dus noteren wat voor resultaat er achter `return` staat: een string of e
 
 Maar niet alle methodes bezorgen iets terug aan hun opdrachtgever. Sommige hebben gewoon een effect. Voor deze methodes schrijven we `void` als return type. Als een methode dit return type heeft, kunnen we het resultaat van een call dus niet toekennen aan een variabele, want er is geen resultaat.
 
-> ⚠️ "Er is geen resultaat" wil niet zeggen dat een `void` methode niets doet. Console.WriteLine is bijvoorbeeld een methode met return type `void`. Het punt is dat de call je niets terugbezorgt waarmee je verder kan werken. Je kan bijvoorbeeld niet schrijven: `string tekst = Console.WriteLine("Dit is tekst");`
-> 
-> Er is dus een groot verschil tussen `return "tekst";` en `Console.WriteLine("tekst");` Bij de eerste code is er geen garantie dat de geproduceerde tekst ooit op het scherm verschijnt, maar je kan er wel mee verder werken. Bij de tweede verschijnt hij per definitie wel op het scherm, maar kan je hem niet toekennen aan een variabele om later mee verder te werken.
+:::warning
+"Er is geen resultaat" wil niet zeggen dat een `void` methode niets doet. Console.WriteLine is bijvoorbeeld een methode met return type `void`. Het punt is dat de call je niets terugbezorgt waarmee je verder kan werken. Je kan bijvoorbeeld niet schrijven: `string tekst = Console.WriteLine("Dit is tekst");`
+
+Er is dus een groot verschil tussen `return "tekst";` en `Console.WriteLine("tekst");` Bij de eerste code is er geen garantie dat de geproduceerde tekst ooit op het scherm verschijnt, maar je kan er wel mee verder werken. Bij de tweede verschijnt hij per definitie wel op het scherm, maar kan je hem niet toekennen aan een variabele om later mee verder te werken.
+:::
 
 We kunnen dus wel doen: `string ingredient3 = Molenaar();` (want het return type van `Molenaar()` is `string`) maar we kunnen niet schrijven: `string product = Bakker();` (want `Bakker()` heeft return type `void` en produceert dus geen resultaat). Deze code compileert dan ook niet.
 

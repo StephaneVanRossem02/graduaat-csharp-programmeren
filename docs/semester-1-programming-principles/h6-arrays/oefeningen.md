@@ -185,9 +185,9 @@ Je kan eventueel onderstaande flowchart gebruiken.
 
 #### Voorbeeldinteractie
 
-![](/img/img-0134.png)
+<!-- TODO: afbeelding ontbreekt in static/img (heette img-0134.png in de GitBook-export) -->
 
-![](/img/img-0135.png)
+<!-- TODO: afbeelding ontbreekt in static/img (heette img-0135.png in de GitBook-export) -->
 
 <OefeningAssistent oefening="H6-IntegerIndexOf" hoofdstuk="H6" />
 
@@ -212,9 +212,9 @@ Om twee strings te ordenen, gebruik je `string1.CompareTo(string2)`. Dit levert 
 
 #### Voorbeeldinteractie
 
-![](/img/img-0136.png)
+<!-- TODO: afbeelding ontbreekt in static/img (heette img-0136.png in de GitBook-export) -->
 
-![](/img/img-0137.png)
+<!-- TODO: afbeelding ontbreekt in static/img (heette img-0137.png in de GitBook-export) -->
 
 <OefeningAssistent oefening="H6-BinarySearch" hoofdstuk="H6" />
 

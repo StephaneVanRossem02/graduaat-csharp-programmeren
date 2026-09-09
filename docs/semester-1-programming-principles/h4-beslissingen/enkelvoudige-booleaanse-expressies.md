@@ -1,6 +1,8 @@
 # Enkelvoudige booleaanse expressies
 
-> ✅ [Kennisclip](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f8e00e11-9d99-48be-a670-adbe0076d68b)
+:::tip
+[Kennisclip](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f8e00e11-9d99-48be-a670-adbe0076d68b)
+:::
 
 ## Relationele operators
 
@@ -15,7 +17,9 @@ Om beslissingen te kunnen nemen in C# moeten we kunnen nagaan of een bepaalde ui
 | `<=`      | kleiner dan of gelijk aan |
 | `>=`      | groter dan of gelijk aan  |
 
-> ⚠️ "Gelijk aan" noteren we met twee symbolen, omdat één symbool gebruikt wordt voor een toekenning.
+:::warning
+"Gelijk aan" noteren we met twee symbolen, omdat één symbool gebruikt wordt voor een toekenning.
+:::
 
 Deze operatoren leveren je altijd één van twee mogelijkheden als uitkomst: `true` of `false`. Je kan dit ook uittesten: `Console.WriteLine(4 < 7);` of `Console.WriteLine(4 < 2);` toont je het verwachte resultaat.
 

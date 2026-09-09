@@ -1,6 +1,8 @@
 # Expressies en operators
 
-> ✅ [Kennisclip voor deze inhoud](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=6e2e7e80-9be2-490f-95e8-adb1009c6316)
+:::tip
+[Kennisclip voor deze inhoud](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=6e2e7e80-9be2-490f-95e8-adb1009c6316)
+:::
 
 ## Expressies en operators
 

@@ -1,6 +1,8 @@
 # If, else, else if
 
-> ✅ [Kennisclip](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=e78ccafd-9804-40cc-8744-adbe00e37ac0)
+:::tip
+[Kennisclip](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=e78ccafd-9804-40cc-8744-adbe00e37ac0)
+:::
 
 In dit deel zullen we bekijken hoe we ons programma dynamischer kunnen maken met behulp van het `if`-statement, al dan niet uitgebreid met `else` en `else if`.
 
@@ -24,7 +26,9 @@ Uit dit programma kan je dan ook volgende C#-code afleiden:
 
 In de gegenereerde code stemt de rode ruit dus overeen met de haakjes meteen na `if` en stemt de tak `True` overeen met de accolades.
 
-> ℹ️ Flowgorithm is vrij te downloaden, dus als je moeite hebt met deze concepten, wordt aangeraden hier wat mee te experimenteren.
+:::info
+Flowgorithm is vrij te downloaden, dus als je moeite hebt met deze concepten, wordt aangeraden hier wat mee te experimenteren.
+:::
 
 ## Veelgemaakte if-fouten
 
@@ -44,7 +48,9 @@ if (wachtwoord == "gEhEiM")
     Console.WriteLine ("Fijne dag nog!");
 ```
 
-> ℹ️ Voor ons is het simpel: we schrijven `if` **altijd** met accolades.
+:::info
+Voor ons is het simpel: we schrijven `if` **altijd** met accolades.
+:::
 
 ## If/else
 

@@ -1,3 +1,7 @@
+---
+draft: true
+---
+
 # All-In-Projecten
 
 - [Overzicht](./all-in-projecten/overzicht.md)

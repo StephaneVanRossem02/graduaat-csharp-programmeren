@@ -1,6 +1,8 @@
 # Variabelen
 
-> ✅ [Kennisclip voor deze inhoud](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=9ee07d38-af69-45e3-a45f-adb1008ebbf2)
+:::tip
+[Kennisclip voor deze inhoud](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=9ee07d38-af69-45e3-a45f-adb1008ebbf2)
+:::
 
 ## Variabelen
 
@@ -15,7 +17,7 @@ Een variabele wordt bijgehouden in het geheugen van je machine, maar in een prog
 Om een variabele te maken moeten we deze **declareren**, door een type en naam te geven. Vanaf dan zal de computer een hoeveelheid geheugen voor je reserveren. Hiervoor dien je op te geven:
 
 1. Het **datatype** (bv `int`, `double`).
-2. Een **identifier** zodat de variabele uniek kan geïdentificeerd worden ([volgens de naamgevingsregel van C#](./0_csharpessentials.md)).
+2. Een **identifier** zodat de variabele uniek kan geïdentificeerd worden ([volgens de naamgevingsregel van C#](./csharpessentials.md)).
 
 Een variabele declaratie heeft als syntax:
 

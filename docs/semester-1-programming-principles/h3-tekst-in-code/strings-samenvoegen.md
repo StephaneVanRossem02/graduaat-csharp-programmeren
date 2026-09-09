@@ -1,6 +1,8 @@
 # Strings samenvoegen
 
-> ✅ [Kennisclip voor deze inhoud](https://youtu.be/UXOdj_j0c6I)
+:::tip
+[Kennisclip voor deze inhoud](https://youtu.be/UXOdj_j0c6I)
+:::
 
 ## Strings samenvoegen
 
@@ -9,7 +11,9 @@ Je kan strings en variabelen samenvoegen tot een nieuwe string op verschillende 
 * `+`-operator
 * `$` string interpolation
 
-> ⚠️ Gebruik zelf stringinterpolatie tenzij het anders gevraagd wordt. Dit is bijna altijd de handigste manier. Online kom je nog (vooral oudere) code tegen die het anders doet, maar we geven deze bewust **niet** omdat stringinterpolatie bijna altijd het beste werkt.
+:::warning
+Gebruik zelf stringinterpolatie tenzij het anders gevraagd wordt. Dit is bijna altijd de handigste manier. Online kom je nog (vooral oudere) code tegen die het anders doet, maar we geven deze bewust **niet** omdat stringinterpolatie bijna altijd het beste werkt.
+:::
 
 ### In dit hoofdstuk
 
@@ -37,7 +41,9 @@ Op het eerste zicht is dit een eenvoudige manier om strings op te bouwen, maar z
 * er komt vrij veel extra werk bij kijken als je data in een specifiek formaat wil weergeven, bijvoorbeeld met een specifiek aantal cijfers na de komma
 * als je grote, complexe strings op deze manier opbouwt, kost het erg veel rekentijd
 
-> ℹ️ We geven deze manier van werken vooral mee omdat ze in héél veel programmeertalen bestaat en omdat ze simpel is. Ze is niet bijzonder *goed*.
+:::info
+We geven deze manier van werken vooral mee omdat ze in héél veel programmeertalen bestaat en omdat ze simpel is. Ze is niet bijzonder *goed*.
+:::
 
 ## Manier 2: String interpolation met `$`
 

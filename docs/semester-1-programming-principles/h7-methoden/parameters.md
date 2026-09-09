@@ -1,6 +1,8 @@
 # Parameters
 
-> ✅ [Kennisclip](https://youtu.be/3T7acLgWgA4)
+:::tip
+[Kennisclip](https://youtu.be/3T7acLgWgA4)
+:::
 
 ## Wat zijn parameters?
 
@@ -88,7 +90,9 @@ Console.WriteLine(b);
 
 Dit programma zal je eerst `3` tonen en dan, op de volgende regel, `4`. Dit komt omdat de `=` op regel 2 niet betekent "`a` is hetzelfde als `b`", maar wel "kopieer het ding met naam `a` en geef de kopie de naam `b`". Dit is hoe toekenning werkt met alle types die we tot hiertoe gezien hebben.
 
-> ⚠️ Dit is niet hoe toekenning altijd werkt. Met name voor arrays is het wat anders, maar dat geval zullen we later in meer detail behandelen.
+:::warning
+Dit is niet hoe toekenning altijd werkt. Met name voor arrays is het wat anders, maar dat geval zullen we later in meer detail behandelen.
+:::
 
 Met argumenten van een methode-oproep is het hetzelfde. Nog een voorbeeld:
 

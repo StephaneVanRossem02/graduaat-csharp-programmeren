@@ -18,7 +18,7 @@ function HeroSection() {
           <Link className={styles.btnPrimary} to="/semester-1-programming-principles/h1-werken-met-visual-studio">
             Semester 1 — Programming Principles
           </Link>
-          <Link className={styles.btnSecondary} to="/semester-2-oop/h8-klassen-en-objecten">
+          <Link className={styles.btnSecondary} to="/semester-2-oop/h11-klassen-en-objecten">
             Semester 2 — OOP
           </Link>
         </div>
@@ -44,7 +44,7 @@ function CardGrid() {
     {
       title: 'Semester 2 — OOP',
       description: 'Klassen, objecten, overerving, interfaces, generics, testing en meer.',
-      to: '/semester-2-oop/h8-klassen-en-objecten',
+      to: '/semester-2-oop/h11-klassen-en-objecten',
       badge: '2',
     },
     {

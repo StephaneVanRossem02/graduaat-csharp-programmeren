@@ -1,3 +1,8 @@
+---
+title: "Introductie tot C#"
+sidebar_label: "Introductie tot C#"
+---
+
 # Introductie tot C#
 
 ## Introductie tot programmeren met C-Sharp

@@ -20,7 +20,9 @@ for (int i = 0; i < lines.Length; i++)
 }
 ```
 
-> ⚠️ Deze methode probeert automatisch de juiste encodering van het bestand te detecteren. Dit zal niet voor elke encodering werken. Als je vreemde karakters ziet, zal je moeten uitzoeken wat de encodering is en uitdrukkelijk aangeven dat je deze wenst te gebruiken.
+:::warning
+Deze methode probeert automatisch de juiste encodering van het bestand te detecteren. Dit zal niet voor elke encodering werken. Als je vreemde karakters ziet, zal je moeten uitzoeken wat de encodering is en uitdrukkelijk aangeven dat je deze wenst te gebruiken.
+:::
 
 #### CSV uitlezen
 

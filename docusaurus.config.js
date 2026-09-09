@@ -103,7 +103,7 @@ const config = {
             title: 'Cursus',
             items: [
               { label: 'Semester 1', to: '/semester-1-programming-principles/h0-werken-met-visual-studio' },
-              { label: 'Semester 2', to: '/semester-2-oop/h8-klassen-en-objecten' },
+              { label: 'Semester 2', to: '/semester-2-oop/h11-klassen-en-objecten' },
             ],
           },
         ],

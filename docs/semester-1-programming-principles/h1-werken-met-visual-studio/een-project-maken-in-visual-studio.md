@@ -20,4 +20,6 @@
 
 Ik raad jullie aan een rootmap te maken voor alle vakken die je op AP volgt. Je geeft die bijvoorbeeld de naam "AP" of "Hogeschool". Daarin maak je een map met de naam **Basis Programmeren**. In deze map zullen we alle projecten plaatsen die we in dit vak zullen maken.
 
-> ⚠️ Voor vakken waarin met Git gewerkt wordt, vermijden we mappen die automatisch gesynchroniseerd worden. Zet je rootmap dus niet in OneDrive of Dropbox of Google Drive. Dat kan voor technische problemen zorgen. Meer info vind je in [de cursus Git](https://apwt.gitbook.io/leerlijn-git/).
+:::warning
+Voor vakken waarin met Git gewerkt wordt, vermijden we mappen die automatisch gesynchroniseerd worden. Zet je rootmap dus niet in OneDrive of Dropbox of Google Drive. Dat kan voor technische problemen zorgen. Meer info vind je in [de cursus Git](https://apwt.gitbook.io/leerlijn-git/).
+:::

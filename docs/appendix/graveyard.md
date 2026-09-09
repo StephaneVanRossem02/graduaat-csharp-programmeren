@@ -1,3 +1,7 @@
+---
+draft: true
+---
+
 # Oefeningen kerkhof
 
 Op deze pagina vind je alle briljante en minder briljante oefeningen terug die niet meer bij een bepaald hoofdstuk staan. Meestal staan deze oefeningen hier omdat ze leerstof behandelen die niet meer bij de verplichte leerstof hoort.

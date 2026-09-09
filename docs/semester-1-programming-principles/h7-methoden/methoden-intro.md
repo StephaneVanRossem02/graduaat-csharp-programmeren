@@ -1,6 +1,8 @@
 # Methoden intro
 
-> ✅ [Kennisclip](https://youtu.be/eXcX25OfYOY)
+:::tip
+[Kennisclip](https://youtu.be/eXcX25OfYOY)
+:::
 
 ## Methoden
 
@@ -69,8 +71,10 @@ class Program {
 
 In Flowgorithm herken je de oproep als volgt:
 
-![](/img/img-0140.png)
+![](/img/img-3131.png)
 
 Een oproep van een methode betekent dus dat je een andere flowchart uitvoert alsof het één stap is van de flowchart waarin je bezig bent.
 
-> ℹ️ Net zoals eerder kan je dit ook in C# stap voor stap uitvoeren door de debugger te gebruiken. Om de werking van een methode in detail te zien, gebruik je "step into".
+:::info
+Net zoals eerder kan je dit ook in C# stap voor stap uitvoeren door de debugger te gebruiken. Om de werking van een methode in detail te zien, gebruik je "step into".
+:::

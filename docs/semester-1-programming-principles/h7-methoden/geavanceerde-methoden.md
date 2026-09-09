@@ -2,7 +2,9 @@
 
 Volgende sectie is grotendeels gebaseerd op het volgende [artikel](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments).
 
-> ✅ [Kennisclip](https://youtu.be/TGtO--YpKrU)
+:::tip
+[Kennisclip](https://youtu.be/TGtO--YpKrU)
+:::
 
 ### Named parameters
 
@@ -126,4 +128,6 @@ Console.WriteLine($"Rechthoek: {ComputeArea(5, 6)}");
 Console.WriteLine($"Circle: {ComputeArea(7)}");
 ```
 
-> ℹ️ Method overloading is de reden waarom je in Visual Studio Code de documentatie van meerdere versies van een methode kan bekijken. Dit doe je door op de pijltjes naast de info over die methode te klikken.
+:::info
+Method overloading is de reden waarom je in Visual Studio Code de documentatie van meerdere versies van een methode kan bekijken. Dit doe je door op de pijltjes naast de info over die methode te klikken.
+:::

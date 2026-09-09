@@ -1,6 +1,8 @@
 # Compositie en aggregatie
 
-> ℹ️ We leggen niets nieuws uit, maar we benoemen zaken die je waarschijnlijk al toepaste zonder te weten dat er daar ook een naam voor was.
+:::info
+We leggen niets nieuws uit, maar we benoemen zaken die je waarschijnlijk al toepaste zonder te weten dat er daar ook een naam voor was.
+:::
 
 We spreken over compositie (**composition**) en aggregatie (**aggregation**) wanneer we een object in een ander object gebruiken. Denk bijvoorbeeld aan een object van het type `Motor` dat je gebruikt in een object van het type `Auto`. Afhankelijk of het 'interne' object kan bestaan zonder het ouder-object bepaalt of het gaat om aggregatie of compositie:
 
@@ -15,7 +17,9 @@ Overerving konden we detecteren door de "is een"-relatie. Compositie daarentegen
 
 Je hoort ook ogenblikkelijk of het om een "heeft één" of "heeft meerdere"-relatie gaat. In het tweede geval, heeft meerdere, wil dit zeggen dat het moederobject **een array van het interne object** in zich heeft. Wederom het voorbeeld van het boek: een boek heeft meerdere pagina's. Dus in de klasse `Boek` zullen we vermoedelijk een object van het type `Pagina[]` of `List<Pagina>` tegenkomen.
 
-> ℹ️ Een klassieke fout is overerving gebruiken wanneer je bijvoorbeeld de relatie tussen een boek en z'n pagina's wilt aanduiden. Een boek is géén pagina, ook niet omgekeerd. Een boek HEEFT een pagina (of meerdere).
+:::info
+Een klassieke fout is overerving gebruiken wanneer je bijvoorbeeld de relatie tussen een boek en z'n pagina's wilt aanduiden. Een boek is géén pagina, ook niet omgekeerd. Een boek HEEFT een pagina (of meerdere).
+:::
 
 #### Compositie en aggregatie beschrijven
 
@@ -31,7 +35,9 @@ Uiteraard zijn ook combinaties mogelijk. Stel je voor dat je een applicatie moet
 
 ![](/img/img-3177.png)
 
-> ℹ️ Herinner je: overerving duiden we aan met een pijl die wijst naar de parent-klasse en duidt een "is een"-relatie aan.
+:::info
+Herinner je: overerving duiden we aan met een pijl die wijst naar de parent-klasse en duidt een "is een"-relatie aan.
+:::
 
 ### Compositie en aggregatie in de praktijk
 
@@ -61,7 +67,9 @@ In principe kunnen we nu zeggen dat we aggregatie hebben toegepast. Uiteraard mo
 
 De instantie van een geaggregeerd object kan op verschillende manieren en is afhankelijk van wat je nodig hebt in je applicatie.
 
-> ℹ️ Compositie is, net zoals overerving, een onderdeel van het OOP paradigma. Er is geen exacte oplossingstrategie om compositie toe te passen: deze zal afhankelijk zijn van je specifieke probleem (en oplossing). Staar je dus niet blind op deze voorbeelden, het is maar een greep uit de vele manieren waarmee je compositie kunt gebruiken.
+:::info
+Compositie is, net zoals overerving, een onderdeel van het OOP paradigma. Er is geen exacte oplossingstrategie om compositie toe te passen: deze zal afhankelijk zijn van je specifieke probleem (en oplossing). Staar je dus niet blind op deze voorbeelden, het is maar een greep uit de vele manieren waarmee je compositie kunt gebruiken.
+:::
 
 #### Manier 1: Rechtstreeks de instantievariabele instellen
 
@@ -74,21 +82,21 @@ class PC
 }
 ```
 
-> ⚠️
-> 
-> Het moge duidelijk zijn: compositie/aggregatie en referenties horen samen. Maar hoe zit dit er allemaal uit in het geheugen? Blij dat je het vraagt!
-> 
-> Wanneer we van voorgaande klasse een object aanmaken als volgt:
-> 
-> ```java
-> PC mijnSuperPC = new PC();
-> ```
-> 
-> Dan zien we volgende "beeld":
-> 
-> ![](/img/img-0008.png)
-> 
-> Compositie wil dus niet zeggen dat je in het geheugen grote *monolithische* stukken gaat hebben die het samengestelde object voorstellen. Neen, we blijven, dankzij de kracht van referenties, de boel apart houden. Zoals je ziet is het belangrijk te beseffen dat bij compositie én aggregatie het *inner* object op zichzelf in de heap ergens zal gezet worden en dus niet *in* het parent-object komt. Alles dat we dus al wisten in verband met het doorgeven van referenties blijft dus nog steeds gelden. Of zoals het hoofdstuk al begon: eigenlijk niets nieuws onder de zon!
+:::warning
+Het moge duidelijk zijn: compositie/aggregatie en referenties horen samen. Maar hoe zit dit er allemaal uit in het geheugen? Blij dat je het vraagt!
+
+Wanneer we van voorgaande klasse een object aanmaken als volgt:
+
+```java
+PC mijnSuperPC = new PC();
+```
+
+Dan zien we volgende "beeld":
+
+<!-- TODO: afbeelding ontbreekt in static/img (heette img-0008.png in de GitBook-export) -->
+
+Compositie wil dus niet zeggen dat je in het geheugen grote *monolithische* stukken gaat hebben die het samengestelde object voorstellen. Neen, we blijven, dankzij de kracht van referenties, de boel apart houden. Zoals je ziet is het belangrijk te beseffen dat bij compositie én aggregatie het *inner* object op zichzelf in de heap ergens zal gezet worden en dus niet *in* het parent-object komt. Alles dat we dus al wisten in verband met het doorgeven van referenties blijft dus nog steeds gelden. Of zoals het hoofdstuk al begon: eigenlijk niets nieuws onder de zon!
+:::
 
 #### Manier 2: Via de constructor(s)
 
@@ -110,13 +118,13 @@ class PC
 }
 ```
 
-> ⚠️
-> 
-> De lijn `cHardeSchijf == null` is niet noodzakelijk, daar `cHardeSchijf` sowieso `null` zal zijn indien we niet in de `if` gaan. Ik raad je toch aan dit altijd expliciet te doen. Hiermee zeg je nadrukkelijk: "als we via de overloaded constructor een PC aanmaken en er is geen preinstallatie vereist dan zit er geen harde schijf in de pc". Het kan namelijk gebeuren dat voor we aan deze code komen er ondertussen iets voor heeft gezorgd dat `cHardeSchijf` alsnog een objectreferentie bevat. Door deze nu op `null` te zetten verwijderen we zeker de harde schijf als die er toch nog had ingezeten.
-> 
-> Heb je gezien hoe ik praat over deze preinstallatie alsof het om iets gaat dat in het echte leven gebeurt? Dit is bewust: het OOP paradigma draait om het feit dat het ons toelaat de realiteit zo dicht mogelijk te benaderen. Het helpt dan ook om je code (en probleemanalyse) steeds vanuit de context van de "echte wereld" te benaderen. Bijna ieder concept uit de echte wereld heeft een equivalent binnen C# als OOP-taal.
-> 
-> Het is een goede OOP oefening om af en toe in je omgeving eens rond te kijken, en wat je ziet vervolgens te vertalen naar een structuur van klassen, objecten en verbanden tussen die dingen (overerving, compositie, arrays en later ook nog polymorfisme en interfaces).
+:::warning
+De lijn `cHardeSchijf == null` is niet noodzakelijk, daar `cHardeSchijf` sowieso `null` zal zijn indien we niet in de `if` gaan. Ik raad je toch aan dit altijd expliciet te doen. Hiermee zeg je nadrukkelijk: "als we via de overloaded constructor een PC aanmaken en er is geen preinstallatie vereist dan zit er geen harde schijf in de pc". Het kan namelijk gebeuren dat voor we aan deze code komen er ondertussen iets voor heeft gezorgd dat `cHardeSchijf` alsnog een objectreferentie bevat. Door deze nu op `null` te zetten verwijderen we zeker de harde schijf als die er toch nog had ingezeten.
+
+Heb je gezien hoe ik praat over deze preinstallatie alsof het om iets gaat dat in het echte leven gebeurt? Dit is bewust: het OOP paradigma draait om het feit dat het ons toelaat de realiteit zo dicht mogelijk te benaderen. Het helpt dan ook om je code (en probleemanalyse) steeds vanuit de context van de "echte wereld" te benaderen. Bijna ieder concept uit de echte wereld heeft een equivalent binnen C# als OOP-taal.
+
+Het is een goede OOP oefening om af en toe in je omgeving eens rond te kijken, en wat je ziet vervolgens te vertalen naar een structuur van klassen, objecten en verbanden tussen die dingen (overerving, compositie, arrays en later ook nog polymorfisme en interfaces).
+:::
 
 #### Manier 3: Properties
 
@@ -141,7 +149,9 @@ mijnPC.CHardeSchijf = mijnHardeSchijf ;
 
 Op deze manier hebben we nog steeds een referentie naar `mijnHardeSchijf` en zal de garbage collection dit object dus niet verwijderen wanneer , om welke reden ook, `mijnPC` wordt opgekuist.
 
-> ℹ️ Kortom, nog steeds niets nieuws onder de zon. Alle manieren die ja al kende om met bestaande types objecten aan te maken gelden nog steeds. Compositie deed je al de hele tijd wanneer je bijvoorbeeld zei "een student heeft een geboortejaar" en dan een instantievariabele `int geboortejaar` aanmaakte. Het grote verschil is echter dat objecten moeten geïnstantieerd worden, wat niet moest met value-types en je dus iets vaker op `null` zal moeten controleren.
+:::info
+Kortom, nog steeds niets nieuws onder de zon. Alle manieren die ja al kende om met bestaande types objecten aan te maken gelden nog steeds. Compositie deed je al de hele tijd wanneer je bijvoorbeeld zei "een student heeft een geboortejaar" en dan een instantievariabele `int geboortejaar` aanmaakte. Het grote verschil is echter dat objecten moeten geïnstantieerd worden, wat niet moest met value-types en je dus iets vaker op `null` zal moeten controleren.
+:::
 
 #### Compositie en aggregatie objecten gebruiken
 
@@ -158,25 +168,27 @@ class PC
 }
 ```
 
-> ⚠️ **NullReferenceException is een klassieke fout**
-> 
-> Een veelvoorkomende fout bij compositie en aggregatie van objecten is dat je een intern object aanspreekt dat nooit werd geïnstantieerd. Je krijgt dan een `NullReferenceException`.
-> 
-> Het is dus zeker bij compositie en aggregatie een goede gewoonte om zoveel mogelijk te controleren op `null` telkens je het object gaat gebruiken:
-> 
-> ```java
-> public override string ToString()
-> {
->     string result= "Dit is een Intel i9";
->     if(cHardeSchijf != null)
->         result += $"Capaciteit HD: {cHardeSchijf.MaxCapacity} Gb";
->     else
->         result += "Er is geen harde schijf aanwezig";
->     return resumt:
-> }
-> ```
-> 
-> En uiteraard kan het ook nooit kwaad om alles in `try-catch` blokken te zetten, alleen is dat op detail-niveau niet werkbaar: je werkt met objecten en zal dus bijna de hele tijd code hebben waar `NullReferenceException` een potentieel gevaar is. Het is dus beter om vanaf de start je code zodanig te schrijven (met controles op `null`) dat er quasi geen uitzonderingen op `null` kunnen optreden.
+:::warning
+**NullReferenceException is een klassieke fout**
+
+Een veelvoorkomende fout bij compositie en aggregatie van objecten is dat je een intern object aanspreekt dat nooit werd geïnstantieerd. Je krijgt dan een `NullReferenceException`.
+
+Het is dus zeker bij compositie en aggregatie een goede gewoonte om zoveel mogelijk te controleren op `null` telkens je het object gaat gebruiken:
+
+```java
+public override string ToString()
+{
+    string result= "Dit is een Intel i9";
+    if(cHardeSchijf != null)
+        result += $"Capaciteit HD: {cHardeSchijf.MaxCapacity} Gb";
+    else
+        result += "Er is geen harde schijf aanwezig";
+    return resumt:
+}
+```
+
+En uiteraard kan het ook nooit kwaad om alles in `try-catch` blokken te zetten, alleen is dat op detail-niveau niet werkbaar: je werkt met objecten en zal dus bijna de hele tijd code hebben waar `NullReferenceException` een potentieel gevaar is. Het is dus beter om vanaf de start je code zodanig te schrijven (met controles op `null`) dat er quasi geen uitzonderingen op `null` kunnen optreden.
+:::
 
 ### "Heeft meerdere"- relatie
 
@@ -229,27 +241,29 @@ Dit heeft als voordeel dat we de `Insert` methode van de `List`-klasse kunnen ge
 zieScherper.AllePaginas.Insert(new Pagina(), 5);
 ```
 
-> ⚠️ Dit voorbeeld met `List` is vanuit OOP-standpunt **geen goede oplossing**. Het vereist namelijk dat programmeurs, die jouw klasse `Boek` gebruiken, weten dat intern met een `List` wordt gewerkt.
-> 
-> We willen echter zo goed mogelijk een **blackbox** creëren, conform het abstractie-principe, die van buitenuit duidelijk en eenvoudig in gebruik is. Het is daarom beter om alsnog aan je `Boek` klasse een `Insert` methode toe te voegen. Dit geeft als extra verbetering dat we daarmee de `set` van onze lijst van pagina's `private` kunnen houden:
-> 
-> ```java
-> class Boek
-> {
->     public List<Pagina> AllePaginas {get; private set;} = new List<Pagina>();
-> 
->     public void InsertPagina(Pagina paginaIn, int positie)
->     {
->         allPaginas.Insert(paginaIn, positie)
->     }
-> }
-> ```
-> 
-> Pagina's voegen we nu als volgt toe:
-> 
-> ```java
-> zieScherper.InsertPagina(new Pagina(), 5);
-> ```
+:::warning
+Dit voorbeeld met `List` is vanuit OOP-standpunt **geen goede oplossing**. Het vereist namelijk dat programmeurs, die jouw klasse `Boek` gebruiken, weten dat intern met een `List` wordt gewerkt.
+
+We willen echter zo goed mogelijk een **blackbox** creëren, conform het abstractie-principe, die van buitenuit duidelijk en eenvoudig in gebruik is. Het is daarom beter om alsnog aan je `Boek` klasse een `Insert` methode toe te voegen. Dit geeft als extra verbetering dat we daarmee de `set` van onze lijst van pagina's `private` kunnen houden:
+
+```java
+class Boek
+{
+    public List<Pagina> AllePaginas {get; private set;} = new List<Pagina>();
+
+    public void InsertPagina(Pagina paginaIn, int positie)
+    {
+        allPaginas.Insert(paginaIn, positie)
+    }
+}
+```
+
+Pagina's voegen we nu als volgt toe:
+
+```java
+zieScherper.InsertPagina(new Pagina(), 5);
+```
+:::
 
 ### Compositie of overerving?
 

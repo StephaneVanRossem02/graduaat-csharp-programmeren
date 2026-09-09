@@ -1,4 +1,9 @@
+---
+draft: true
+---
 # Events
 
-- [Events](./events/events.md)
-- [Chat server](./events/chat-server.md)
+> 🚧 Dit hoofdstuk is nog in opbouw. De onderstaande onderwerpen zijn gepland, maar de pagina's zijn nog niet geschreven.
+
+- Events
+- Chat server

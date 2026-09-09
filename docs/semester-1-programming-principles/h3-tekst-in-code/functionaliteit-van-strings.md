@@ -46,7 +46,9 @@ string hallo2 = hallo1.Substring(0,2);
 Console.WriteLine(hallo2);
 ```
 
-> ⚠️ **Onthoud het goed: je kan een string niet aanpassen in C#. We kunnen alle gevolgen hiervan nog niet uitleggen, maar het is wel zo.**
+:::warning
+**Onthoud het goed: je kan een string niet aanpassen in C#. We kunnen alle gevolgen hiervan nog niet uitleggen, maar het is wel zo.**
+:::
 
 ## `IndexOf`
 

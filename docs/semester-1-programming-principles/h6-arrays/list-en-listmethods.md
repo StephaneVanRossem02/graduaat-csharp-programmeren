@@ -1,8 +1,15 @@
+---
+title: "List<T>"
+sidebar_label: "List<T>"
+---
+
 # List\<T>
 
 Een `List<>` collectie is de meest standaard collectie die je kan beschouwen als een flexibelere variant op een een doodnormale array.
 
-> ℹ️ De Generieke `List<>` klasse bevindt zich in de `System.Collections.Generic` namespace. Je dient deze namespace dus als `using` bovenaan toe te voegen wil je deze klasse kunnen gebruiken.
+:::info
+De Generieke `List<>` klasse bevindt zich in de `System.Collections.Generic` namespace. Je dient deze namespace dus als `using` bovenaan toe te voegen wil je deze klasse kunnen gebruiken.
+:::
 
 #### List aanmaken
 
@@ -62,7 +69,9 @@ Interessante methoden en properties voorts zijn:
 * `RemoveAt()`: verwijder een element op de index die je als parameter meegeeft.
 * `Remove():` verwijder het gegeven element
 
-> ❗ `Contains, Remove` en `IndexOf` zullen zich met jouw eigen klassen niet noodzakelijk gedragen zoals je verwacht. De verklaring hierachter komt later aan bod, wanneer we Equals en GetHashCode bekijken. Ze zullen wel werken zoals verwacht voor voorgedefinieerde types, inclusief `DateTime`.
+:::danger
+`Contains, Remove` en `IndexOf` zullen zich met jouw eigen klassen niet noodzakelijk gedragen zoals je verwacht. De verklaring hierachter komt later aan bod, wanneer we Equals en GetHashCode bekijken. Ze zullen wel werken zoals verwacht voor voorgedefinieerde types, inclusief `DateTime`.
+:::
 
 #### Foreach loops
 
@@ -82,4 +91,6 @@ foreach(int prime in integerList)
 }
 ```
 
-> ⚠️ Er bestaat strikt gesproken geen meerdimensionale `List<T>`, maar een lijst kan wel andere lijsten bevatten. Je kan de functionaliteit ervan dus nabootsen.
+:::warning
+Er bestaat strikt gesproken geen meerdimensionale `List<T>`, maar een lijst kan wel andere lijsten bevatten. Je kan de functionaliteit ervan dus nabootsen.
+:::
