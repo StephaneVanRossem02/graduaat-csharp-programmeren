@@ -1,7 +1,5 @@
 # Oefeningen
 
-<DownloadSlot hoofdstuk="H6" />
-
 ## Oefeningen
 
 ### **Oefening: H6-ArrayTrueFalse**
@@ -303,3 +301,7 @@ Gemiddelde prijs: 265.0 euro
 ```
 
 <OefeningAssistent oefening="H6-ChristmasShoppingList" hoofdstuk="H6" />
+
+## Modeloplossingen
+
+<DownloadSlot hoofdstuk="H6" />

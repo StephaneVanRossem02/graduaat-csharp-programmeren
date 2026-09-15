@@ -1,7 +1,5 @@
 # Oefeningen
 
-<DownloadSlot hoofdstuk="H12" />
-
 Werk verder in de klasse `ClassesAndObjects`:
 
 ## Oefening: H12-FiguresWithConstructor
@@ -173,3 +171,7 @@ In de klasse `ClassesAndObjects` maak je:
 ### Voorbeeldinteractie
 
 ![](/img/img-3210.png)
+
+## Modeloplossingen
+
+<DownloadSlot hoofdstuk="H12" />

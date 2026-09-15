@@ -1,7 +1,5 @@
 # Oefeningen
 
-<DownloadSlot hoofdstuk="H15" />
-
 ## Aparte oefeningen overerving
 
 Deze oefeningen maak je allebei in een klasse genaamd `Inheritance`, met haar eigen `ShowSubmenu` methode.
@@ -251,3 +249,7 @@ Doorloop vervolgens met een `foreach` de lijst met alle lectoren en toon zo alle
 Hieronder zie je al de klassediagrammen tot nu in SchoolAdmin:
 
 ![](/img/img-3220.png)
+
+## Modeloplossingen
+
+<DownloadSlot hoofdstuk="H15" />

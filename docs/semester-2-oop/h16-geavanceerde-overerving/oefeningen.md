@@ -1,7 +1,5 @@
 # Oefeningen
 
-<DownloadSlot hoofdstuk="H16" />
-
 ## h16-Orders-bugfix
 
 ### Functionele analyse
@@ -250,3 +248,7 @@ Let op, er kan maar een vakinschrijving toegevoegd worden als er minstens één 
 
 
 ![](/img/img-3197.png)
+
+## Modeloplossingen
+
+<DownloadSlot hoofdstuk="H16" />

@@ -1,7 +1,5 @@
 # Oefeningen
 
-<DownloadSlot hoofdstuk="H9" />
-
 ## Inleiding
 
 Al deze oefeningen maak je als statische methoden van een klasse Meerdimensionaal. Je kan elk van deze methoden uitvoeren via een keuzemenu, zoals bij vorige hoofdstukken.
@@ -341,3 +339,7 @@ Vervolgens ga je generatie per generatie laten zien. Van de éne generatie op de
 Laat elke generatie 2 seconden zien en bereken dan de volgende generatie
 
 <OefeningAssistent oefening="H9-ConwayGameOfLife" hoofdstuk="H9" />
+
+## Modeloplossingen
+
+<DownloadSlot hoofdstuk="H9" />

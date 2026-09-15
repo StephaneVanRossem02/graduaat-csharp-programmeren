@@ -1,7 +1,5 @@
 # Oefeningen
 
-<DownloadSlot hoofdstuk="H17" />
-
 ## h17-weekdagen-zonder-exception-handling
 
 ### Functionele analyse
@@ -382,3 +380,7 @@ De werking van elke klasse is als volgt:
 ### Voorbeeldinteractie
 
 ![](/img/img-3184.png)
+
+## Modeloplossingen
+
+<DownloadSlot hoofdstuk="H17" />

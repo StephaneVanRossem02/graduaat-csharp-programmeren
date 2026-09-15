@@ -1,7 +1,5 @@
 # Oefeningen
 
-<DownloadSlot hoofdstuk="H11" />
-
 ## Richtlijnen
 
 ### Structuur oefeningen
@@ -371,3 +369,7 @@ Voorbeeld:
 
 
 ##
+
+## Modeloplossingen
+
+<DownloadSlot hoofdstuk="H11" />

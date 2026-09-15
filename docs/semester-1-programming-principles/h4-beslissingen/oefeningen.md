@@ -1,7 +1,5 @@
 # Oefeningen
 
-<DownloadSlot hoofdstuk="H4" />
-
 Al deze oefeningen maak je in een klasse `Beslissingen`
 
 ## **Oefening: H4-ShoeSeller**
@@ -311,3 +309,7 @@ Elke klasse die je tot hiertoe in dit project gemaakt hebt, voorzie je dus van e
 ![](/img/img-3089.png)
 
 <OefeningAssistent oefening="H4-Menu" hoofdstuk="H4" />
+
+## Modeloplossingen
+
+<DownloadSlot hoofdstuk="H4" />

@@ -1,7 +1,5 @@
 # Oefeningen
 
-<DownloadSlot hoofdstuk="H5" />
-
 Al deze oefeningen maak je in een klasse `Loops`
 
 ## Oefeningen WHILE en DO WHILE
@@ -470,3 +468,7 @@ Je kan een deel van de code van de vorige oefening gebruiken
 Test met een negatieve laagste waarde.
 
 <OefeningAssistent oefening="H5-PrimeNumberGenerator" hoofdstuk="H5" />
+
+## Modeloplossingen
+
+<DownloadSlot hoofdstuk="H5" />

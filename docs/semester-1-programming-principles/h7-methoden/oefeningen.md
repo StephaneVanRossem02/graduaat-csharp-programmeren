@@ -1,7 +1,5 @@
 # Oefeningen
 
-<DownloadSlot hoofdstuk="H7" />
-
 ## Oefeningen
 
 Al deze oefeningen schrijf je in een klasse `Methodes`.
@@ -130,3 +128,7 @@ Welk karakter gebruiken we als patroon?
 ```
 
 <OefeningAssistent oefening="H7-Triangle" hoofdstuk="H7" />
+
+## Modeloplossingen
+
+<DownloadSlot hoofdstuk="H7" />

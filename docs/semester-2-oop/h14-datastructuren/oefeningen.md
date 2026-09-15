@@ -1,7 +1,5 @@
 # Oefeningen
 
-<DownloadSlot hoofdstuk="H14" />
-
 ## H14-PhoneBookNameNumber
 
 ### Functionele analyse
@@ -93,3 +91,7 @@ Maak ook de lijst Courses in de klasse `StudyProgram` Read-Only en immutable. Pa
 
 
 ![](/img/img-3203.png)
+
+## Modeloplossingen
+
+<DownloadSlot hoofdstuk="H14" />

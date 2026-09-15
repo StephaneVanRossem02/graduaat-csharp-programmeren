@@ -1,7 +1,5 @@
 # Oefeningen
 
-<DownloadSlot hoofdstuk="H2" />
-
 Al deze oefeningen maak je in een klasse `VariabelenEnDatatypes`. In de oefeningen van hoofdstuk 1 heb je gezien hoe je een nieuwe klasse maakt.
 
 ## Oefening: H2-AddUp
@@ -308,3 +306,7 @@ Bereken apart de BTW en de verkoopprijs BTW inbegrepen.
 ![](/img/img-3043.png)
 
 <OefeningAssistent oefening="H2-BicycleSeller" hoofdstuk="H2" />
+
+## Modeloplossingen
+
+<DownloadSlot hoofdstuk="H2" />

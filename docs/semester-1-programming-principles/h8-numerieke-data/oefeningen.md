@@ -1,7 +1,5 @@
 # Oefeningen
 
-<DownloadSlot hoofdstuk="H8" />
-
 ## Inleiding
 
 Deze oefeningen maak je als statische methoden van een klasse `NumeriekeData`. Je kan elk van deze methoden uitvoeren via een keuzemenu, zoals bij vorige hoofdstukken.
@@ -131,3 +129,7 @@ De computer is gewonnen!
 *Pas op de juiste plaatsen alle code die een `int` veronderstelt aan naar een `double`. Zorg ervoor dat, na het uitrekenen van alle formules, alle cellen klassiek afgerond worden tot 2 cijfers na de komma.*
 
 <OefeningAssistent oefening="H8-TextCellDecimals" hoofdstuk="H8" />
+
+## Modeloplossingen
+
+<DownloadSlot hoofdstuk="H8" />

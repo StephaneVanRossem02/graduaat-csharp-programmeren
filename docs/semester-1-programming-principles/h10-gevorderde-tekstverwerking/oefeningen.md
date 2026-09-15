@@ -1,7 +1,5 @@
 # Oefeningen
 
-<DownloadSlot hoofdstuk="H10" />
-
 ## Inleiding
 
 Al deze oefeningen maak je als statische methoden van een klasse `GevorderdeTekstverwerking`. Je kan elk van deze methoden uitvoeren via een keuzemenu, zoals bij vorige hoofdstukken.
@@ -160,3 +158,7 @@ Er wordt ook bijgehouden hoeveel pogingen de gebruiker er over gedaan heeft tot 
 ###
 
 <OefeningAssistent oefening="H10-TextCellPersistent" hoofdstuk="H10" />
+
+## Modeloplossingen
+
+<DownloadSlot hoofdstuk="H10" />

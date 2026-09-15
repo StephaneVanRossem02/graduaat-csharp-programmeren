@@ -1,7 +1,5 @@
 # Oefeningen
 
-<DownloadSlot hoofdstuk="H13" />
-
 ## H13\_2 SchoolAdmin: cursus opzoeken op Id
 
 #### Functionele analyse
@@ -137,3 +135,7 @@ Gebruik nu volgende code voor de demonstratiemethode:
 ```
 
 Opnieuw loopt het fout. Benoem zelf de oorzaak en corrigeer de fout.
+
+## Modeloplossingen
+
+<DownloadSlot hoofdstuk="H13" />

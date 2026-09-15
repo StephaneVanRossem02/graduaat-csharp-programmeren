@@ -1,7 +1,5 @@
 # Oefeningen
 
-<DownloadSlot hoofdstuk="H18" />
-
 :::info
 Onderstaande oefeningen maak je oproepbaar via een klasse `Polymorfisme` met een methode `ToonSubmenu`.
 :::
@@ -266,3 +264,7 @@ Na het uitvoeren van "Demonstreer cursussen" en "Data exporteren":
 
 
 7. Zorg ervoor dat na het tonen van de csv-gegevens, deze gegevens ook weggeschreven worden in een bestand `SchoolAdminData.csv`. 
+
+## Modeloplossingen
+
+<DownloadSlot hoofdstuk="H18" />
