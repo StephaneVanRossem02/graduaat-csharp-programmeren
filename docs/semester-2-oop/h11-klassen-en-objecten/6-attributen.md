@@ -148,3 +148,5 @@ Schrijf in de `Main` de code om 2 objecten te maken:
 * mieke:  Mieke Vermeulen, geboren 1 januari 1998 met studentennummer 2; Mieke volgt Communicatie
 
 De studentennummers krijgen een waarde door een toekenning van de `StudentCounter`dat die je na elke toekenning met één verhoogt.
+
+<OefeningAssistent oefening="H11-SchoolAdmin-1" hoofdstuk="H11" />

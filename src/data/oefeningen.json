@@ -229,6 +229,50 @@
         "een methode binnen een andere methode definieren (-3 punten)",
         "goto, en break of continue buiten een switch (-3 punten)"
       ]
+    },
+    "H11": {
+      "titel": "Klassen en objecten",
+      "maxCodeTekens": 8000,
+      "toegelaten": [
+        "alles uit semester 1 (basisprogrammeren H1-H10)",
+        "eigen klassen, elk in een eigen bestand met dezelfde naam",
+        "objecten aanmaken met new Klasse() en daarna hun attributen of properties invullen",
+        "attributen (velden), public of private; private leden in camelCase",
+        "instantiemethoden, en static methoden en attributen",
+        "access modifiers public en private",
+        "properties: full properties met een privaat achterliggend veld, read-only properties, een private setter en computed properties zonder veld",
+        "DateTime en TimeSpan: new DateTime(jaar, maand, dag), DateTime.Now, DateTime.Parse, DateTime.IsLeapYear, Ticks, formatteren met ToString en CultureInfo",
+        "enumeraties",
+        "List<T> op het niveau van de oefeningen: Add, Contains, Count en foreach",
+        "stringinterpolatie ($\"...\") en formattering zoals :F1",
+        "switch en een oneindige while (true) voor keuzemenu's",
+        "System.Threading.Thread.Sleep en Console.Clear"
+      ],
+      "nogNietGezien": [
+        "eigen constructors: die komen pas in H12. In H11 krijgen objecten hun waarden door na new de attributen of properties in te vullen",
+        "object initializers zoals new Student { Name = \"...\" }",
+        "ToString overschrijven (H16)",
+        "overerving, base en protected (H15-H16)",
+        "interfaces en polymorfisme (H18)",
+        "zelf exceptions gooien of opvangen met try/catch (H17)",
+        "Dictionary en andere datastructuren, immutable collecties (H14)",
+        "LINQ, lambda's en delegates"
+      ],
+      "verboden": [
+        "top-level statements: bij een nieuw project moet het vinkje 'Do not use top-level statements' aan staan (-5 punten)",
+        "een methode binnen een andere methode definieren (-3 punten)",
+        "goto, en break of continue buiten een switch (-3 punten)",
+        "meerdere klassen in een bestand: elke klasse in een eigen .cs-bestand (-3 punten vanaf semester 2)",
+        "LINQ-methodes zoals Average, Sum, Max of Count() op lijsten of arrays in plaats van zelf een lus (-3 punten)",
+        "meer dan een return in een methode"
+      ],
+      "didactiek": [
+        "Dit is objectgeorienteerd programmeren. Help eerst op het niveau van het ontwerp en pas daarna op het niveau van de code. Stel vragen als: welke klasse is hiervoor verantwoordelijk? Hoort dit bij een object of bij de hele klasse (static)? Moet dit van buitenaf aanpasbaar zijn?",
+        "Werk van grof naar fijn: welke klassen, welke attributen en methoden per klasse (vergelijk met het klassediagram), wat public en wat private is, en pas op het einde de uitwerking van een methode.",
+        "Vraagt de student naar algemene syntax, zoals hoe je een property of een static attribuut schrijft, geef dan een kort voorbeeld met een eigen, niet-verwante klasse (bijvoorbeeld Dog met een property Name). Nooit met de klassen, namen of waarden uit de oefening zelf.",
+        "Plakt de student een groot project, vraag dan welke klasse of methode niet doet wat hij verwacht, en focus daarop. Een probleem kunnen isoleren hoort bij het leren.",
+        "Het klassediagram in de opgave is bindend: namen, types en of iets public (+) of private (-) is, moeten overeenkomen. Wijs een afwijking aan zonder de juiste regel code te geven."
+      ]
     }
   },
   "oefeningen": {
@@ -1829,6 +1873,486 @@
         "Test bij opslaan en laden of het bestand al dan niet bestaat."
       ],
       "voorbeeldinteractieOntbreekt": true
+    },
+    "H11-Voorbereiding": {
+      "titel": "H11-voorbereiding",
+      "hoofdstuk": "H11",
+      "methodeNaam": "ShowSubmenu",
+      "leerdoelen": [
+        "een ordelijke menustructuur voor je code voorzien"
+      ],
+      "functioneleAnalyse": "Een keuzemenu met twee niveaus om alle oefeningen van het vak op te starten: de gebruiker kiest eerst een topic en daarna een oefening binnen dat topic. Na een oefening kan hij opnieuw kiezen; het programma eindigt nooit.",
+      "organisatie": "Een project OOExercises. Main toont de topics met een nummer en roept via een switch de methode ShowSubmenu van het gekozen topic op. De eerste topicklasse is DateTimeExercises, met een methode ShowSubmenu zonder parameters en met return type void. Zolang er geen oefeningen zijn, toont ShowSubmenu \"Er zijn nog geen oefeningen over dit topic\". Daarna toont ze de oefeningen genummerd en voert ze de gekozen oefening uit.",
+      "voorbeeldinteractie": "Welkom bij de oefeningen van Objectgeoriënteerd Programmeren!\nTopic van de uit te voeren oefening?\n1. DateTime\n2. Properties en access modifiers\n> 1\nUit te voeren oefening?\n1. H11-Clock\n2. H11-Birthday\n> 2\n(...)",
+      "letOp": "Dit menu groeit mee met elke oefening die de student maakt. Welke topics en oefeningen erin staan, hangt af van hoe ver hij is; een kleiner menu is dus geen fout zolang de structuur klopt.",
+      "veelgemaakteFouten": [
+        "alle oefeningen rechtstreeks in Main zetten in plaats van een ShowSubmenu per topic",
+        "ShowSubmenu parameters of een returnwaarde geven",
+        "met break uit de oneindige lus springen: break mag enkel een case van een switch afsluiten",
+        "na een oefening stoppen in plaats van terug naar het menu te gaan"
+      ],
+      "hints": [
+        "Hoeveel niveaus heeft je menu, en welke methode toont elk niveau?",
+        "Wat moet er gebeuren nadat een oefening afgelopen is: stopt het programma of kom je terug in het menu?",
+        "Een switch op het gekozen nummer bepaalt welke methode je oproept."
+      ]
+    },
+    "H11-Clock": {
+      "titel": "H11-Clock",
+      "hoofdstuk": "H11",
+      "methodeNaam": "Clock",
+      "leerdoelen": [
+        "werken met DateTime.Now",
+        "een DateTime formatteren"
+      ],
+      "functioneleAnalyse": "Een applicatie met een oneindige lus. Elke seconde pauzeert ze met System.Threading.Thread.Sleep(1000), maakt ze het scherm leeg en toont ze de huidige tijd. Enkel de tijd, niet de datum.",
+      "organisatie": "Een static methode Clock in de klasse DateTimeExercises, op te roepen via ShowSubmenu.",
+      "letOp": "Enkel de tijd verschijnt, zonder datum. Het programma stopt nooit; dat is zo gevraagd.",
+      "veelgemaakteFouten": [
+        "de datum mee tonen",
+        "het scherm niet leegmaken, waardoor alle tijden onder elkaar komen",
+        "de huidige tijd een keer voor de lus opvragen, zodat ze nooit verandert"
+      ],
+      "hints": [
+        "Waar vraag je de huidige tijd op: een keer voor de lus, of telkens opnieuw?",
+        "Welke methode van Console maakt het venster leeg?",
+        "Een DateTime kan je met ToString formatteren. Zoek in de cursus een formaat dat enkel de tijd toont."
+      ]
+    },
+    "H11-Birthday": {
+      "titel": "H11-Birthday",
+      "hoofdstuk": "H11",
+      "methodeNaam": "Birthday",
+      "leerdoelen": [
+        "een DateTime inlezen",
+        "rekenen met datums"
+      ],
+      "functioneleAnalyse": "De applicatie vraagt de gebruiker op welke dag hij of zij jarig is en toont over hoeveel dagen die verjaardag zal zijn.",
+      "organisatie": "Een static methode Birthday in de klasse DateTimeExercises, op te roepen via ShowSubmenu.",
+      "letOp": "De opgave vraagt enkel het aantal dagen tot de verjaardag. Wat er moet gebeuren als de verjaardag dit jaar al voorbij is, wordt niet gevraagd.",
+      "voorbeeldinteractieOntbreekt": true,
+      "veelgemaakteFouten": [
+        "de invoer als string laten staan en er dan niet mee kunnen rekenen",
+        "het aantal dagen als kommagetal tonen"
+      ],
+      "hints": [
+        "Welk type moet de ingegeven verjaardag hebben om ermee te kunnen rekenen?",
+        "Wat krijg je als je twee DateTime-waarden van elkaar aftrekt? Kijk in de cursus bij DateTime.",
+        "Dat resultaat heeft een property met het aantal volledige dagen."
+      ]
+    },
+    "H11-DayOfTheWeek": {
+      "titel": "H11-DayOfTheWeek",
+      "hoofdstuk": "H11",
+      "methodeNaam": "DayOfTheWeek",
+      "leerdoelen": [
+        "aanmaken van DateTime objecten",
+        "formatteren van DateTime objecten"
+      ],
+      "functioneleAnalyse": "Voor een willekeurige datum bepalen welke dag van de week het is. Eerst worden dag, maand en jaar gevraagd, daarna verschijnen de datum in een leesbaar formaat en de dag van de week in het Nederlands.",
+      "organisatie": "Een static methode DayOfTheWeek in de klasse DateTimeExercises. De dag van de week wordt bepaald via formattering van een DateTime.",
+      "voorbeeldinteractie": "Welke dag?\n> 14\nWelke maand?\n> 2\nWelk jaar?\n> 2020\n14 februari 2020 is een vrijdag.",
+      "letOp": "Dag en maand moeten in het Nederlands verschijnen, ook op een pc die in het Engels ingesteld staat.",
+      "veelgemaakteFouten": [
+        "jaar, maand en dag in de verkeerde volgorde aan new DateTime(...) meegeven",
+        "de dag van de week zelf proberen te berekenen in plaats van formattering te gebruiken",
+        "een Engelse dag- of maandnaam tonen"
+      ],
+      "hints": [
+        "In welke volgorde verwacht new DateTime(...) het jaar, de maand en de dag?",
+        "Je hoeft de weekdag niet zelf te berekenen: DateTime kan die tonen via formattering.",
+        "Hoe zorg je dat dag- en maandnamen in het Nederlands komen, los van de taal van je pc?"
+      ]
+    },
+    "H11-TicksSince2000": {
+      "titel": "H11-TicksSince2000",
+      "hoofdstuk": "H11",
+      "methodeNaam": "TicksSince2000",
+      "leerdoelen": [
+        "aanmaken van DateTime objecten"
+      ],
+      "functioneleAnalyse": "Bepalen hoeveel ticks (1/10000 milliseconde) er voorbij zijn sinds het absolute begin van het jaar 2000.",
+      "organisatie": "Een static methode TicksSince2000 in de klasse DateTimeExercises.",
+      "voorbeeldinteractie": "Sinds 1 januari 2000 zijn er (hier wordt het aantal getoond) ticks voorbijgegaan.",
+      "veelgemaakteFouten": [
+        "DateTime.Now.Ticks tonen: dat zijn de ticks sinds het jaar 1, niet sinds 2000"
+      ],
+      "hints": [
+        "Wat stelt DateTime.Now.Ticks eigenlijk voor: ticks sinds wanneer?",
+        "Maak een DateTime voor het begin van 2000 en bepaal het verschil met nu.",
+        "Dat verschil heeft zelf een property Ticks."
+      ]
+    },
+    "H11-LeapYearCount": {
+      "titel": "H11-LeapYearCount",
+      "hoofdstuk": "H11",
+      "methodeNaam": "LeapYearCount",
+      "leerdoelen": [
+        "gebruik van een statische methode"
+      ],
+      "functioneleAnalyse": "Bepalen hoeveel schrikkeljaren er zijn tussen 1799 en 2021.",
+      "organisatie": "Een static methode LeapYearCount in de klasse DateTimeExercises. De logica voor schrikkeljaren programmeer je niet zelf: je gebruikt een statische methode van DateTime.",
+      "voorbeeldinteractie": "Er zijn (hier wordt het aantal getoond) schrikkeljaren tussen 1799 en 2021.",
+      "letOp": "\"Tussen 1799 en 2021\" betekent dat die twee jaren zelf niet meetellen.",
+      "veelgemaakteFouten": [
+        "zelf de regel voor schrikkeljaren programmeren, terwijl de opgave dat verbiedt",
+        "de grenzen van de lus verkeerd kiezen, waardoor het aantal net afwijkt"
+      ],
+      "hints": [
+        "Moet je zelf weten welke jaren schrikkeljaren zijn? Lees de technische analyse nog eens.",
+        "DateTime heeft een static methode die voor een jaar zegt of het een schrikkeljaar is.",
+        "Welke jaren liggen er precies tussen 1799 en 2021? Tellen die twee zelf mee?"
+      ]
+    },
+    "H11-CodeTiming": {
+      "titel": "H11-CodeTiming",
+      "hoofdstuk": "H11",
+      "methodeNaam": "CodeTiming",
+      "leerdoelen": [
+        "eenvoudig code leren timen",
+        "gebruiken van DateTime",
+        "herhaling arrays"
+      ],
+      "functioneleAnalyse": "Meten hoe lang het duurt om een array van een miljoen ints aan te maken en op te vullen met de waarden 1, 2, 3, ...",
+      "organisatie": "Een static methode CodeTiming in de klasse DateTimeExercises. Bepaal het tijdstip voor en na het aanmaken van de array en vul de array met een for-lus.",
+      "voorbeeldinteractie": "Het duurt (hier wordt het aantal getoond) milliseconden om een array van een miljoen elementen aan te maken en op te vullen met opeenvolgende waarden.",
+      "veelgemaakteFouten": [
+        "het starttijdstip pas nemen nadat de array al aangemaakt is",
+        "de array vullen met 0, 1, 2 in plaats van 1, 2, 3"
+      ],
+      "hints": [
+        "Welke twee momenten moet je vastleggen, en waar in je code staan die?",
+        "Wat krijg je als je twee DateTime-waarden van elkaar aftrekt?",
+        "Dat verschil kan je uitdrukken in milliseconden. Kijk welke properties het daarvoor heeft."
+      ]
+    },
+    "H11-CombinationOf2Numbers": {
+      "titel": "H11-CombinationOf2Numbers",
+      "hoofdstuk": "H11",
+      "leerdoelen": [
+        "werken met klassen en objecten",
+        "instantieattributen",
+        "instantiemethoden"
+      ],
+      "functioneleAnalyse": "Op basis van twee getallen worden de som, het verschil, het product en het quotient getoond. Moet er door nul gedeeld worden, dan verschijnt er een foutmelding.",
+      "organisatie": "Een nieuwe submenuklasse ClassesAndObjects. Een eigen klasse CombinationOf2Numbers in een eigen bestand CombinationOf2Numbers.cs, met de publieke int-attributen Number1 en Number2 en vier methoden die elk een double teruggeven: Sum, Difference, Product en Quotient. Quotient print een foutmelding als er door 0 gedeeld moet worden en voert de deling dan toch uit. De democode uit de opgave staat in een publieke statische methode DemoCombinationOf2Numbers van ClassesAndObjects, op te roepen via het submenu.",
+      "voorbeeldinteractie": "Paar: 12, 34\nSom = 46\nVerschil = -22\nProduct = 408\nQuotient = 0,352941176470588",
+      "letOp": "Het quotient van 12 en 34 moet een kommagetal opleveren, geen 0.",
+      "veelgemaakteFouten": [
+        "een gehele deling doen, waardoor het quotient 0 wordt",
+        "de methoden static maken, terwijl ze bij een specifiek paar getallen horen",
+        "Number1 en Number2 private maken, terwijl de democode ze rechtstreeks gebruikt",
+        "CombinationOf2Numbers in hetzelfde bestand als ClassesAndObjects zetten"
+      ],
+      "hints": [
+        "Hoort Sum bij een specifiek paar getallen of bij de klasse in het algemeen? Wat betekent dat voor static?",
+        "Waarom levert 12 / 34 in C# 0 op als beide getallen int zijn?",
+        "Wat verandert er als minstens een van beide getallen een double is op het moment van delen?"
+      ]
+    },
+    "H11-Figures": {
+      "titel": "H11-Figures",
+      "hoofdstuk": "H11",
+      "leerdoelen": [
+        "werken met klassen en objecten",
+        "gebruik maken van properties om geldige waarden af te dwingen"
+      ],
+      "functioneleAnalyse": "Het programma maakt twee rechthoeken en twee driehoeken met vaste afmetingen in meter aan, berekent hun oppervlakte en toont die. De gebruiker hoeft niets in te geven.",
+      "organisatie": "Een klasse Rectangle met de full properties Width en Height, en een klasse Triangle met Base en Height, elk in een eigen bestand. Elke afmeting start op 1.0 en wordt daarna via de setter ingesteld. Een waarde van 0 of minder wordt geweigerd met Console.WriteLine($\"Het is verboden een (afmeting) van (waarde) in te stellen!\"). De oppervlakte is een read-only property Area van het type double. base is een keyword in C#; als privaat veld kan je @base gebruiken. De voorbeelden staan in een static methode DemoFigures van ClassesAndObjects. Formatteer met een cijfer na de komma.",
+      "voorbeeldinteractie": "Het is verboden een breedte van -1 in te stellen!\nHet is verboden een breedte van 0 in te stellen!\nEen rechthoek met een breedte van 2,2m en een hoogte van 1,5m heeft een oppervlakte van 3,3m².\nEen rechthoek met een breedte van 3m en een hoogte van 1m heeft een oppervlakte van 3m².\nEen driehoek met een basis van 3m en een hoogte van 1m heeft een oppervlakte van 1,5m².\nEen driehoek met een basis van 2m en een hoogte van 2m heeft een oppervlakte van 2m².",
+      "letOp": "Eerst worden bij de eerste rechthoek de ongeldige waarden -1 en 0 geprobeerd; die worden geweigerd en daarna krijgt hij zijn echte afmetingen. Een geweigerde waarde laat de vorige waarde staan.",
+      "veelgemaakteFouten": [
+        "de controle op een geldige waarde in DemoFigures doen in plaats van in de setter",
+        "een auto-property gebruiken, waardoor er niets gecontroleerd kan worden",
+        "Area als gewoon attribuut bewaren, zodat het niet meeverandert met de afmetingen",
+        "base als naam van het privaat veld gebruiken zonder @"
+      ],
+      "hints": [
+        "Waar moet de controle staan zodat ze altijd gebeurt, wie de waarde ook instelt?",
+        "Een full property heeft een privaat veld. Wat doet de setter met value als die ongeldig is?",
+        "Moet de oppervlakte bewaard worden, of kan ze telkens berekend worden uit de afmetingen?"
+      ]
+    },
+    "H11-SchoolAdmin-1": {
+      "titel": "H11_1 SchoolAdmin Student attributen",
+      "hoofdstuk": "H11",
+      "leerdoelen": [
+        "een eigen klasse met attributen maken",
+        "objecten aanmaken en invullen",
+        "een static attribuut gebruiken"
+      ],
+      "functioneleAnalyse": "Een klasse Student met publieke attributen voor de naam, de geboortedatum, het studentennummer en de gevolgde cursussen, plus een attribuut StudentCounter met beginwaarde 1 dat bijhoudt hoeveel studenten er zijn. In Main worden twee objecten gemaakt: said (Said Aziz, geboren 1 juni 2000, studentennummer 1, volgt Programmeren en Databanken) en mieke (Mieke Vermeulen, geboren 1 januari 1998, studentennummer 2, volgt Communicatie). De studentennummers krijgen hun waarde door StudentCounter toe te kennen en die daarna telkens met een te verhogen.",
+      "organisatie": "Een apart project SchoolAdmin. De klasse Student staat in Student.cs.",
+      "klassediagram": "Student\n+ Name : string\n+ Birthdate : DateTime\n+ StudentNumber : uint\n+ Courses : List<string>\n+ StudentCounter : uint = 1   (static)",
+      "projectContext": "Nog niets: dit is de eerste stap. SchoolAdmin is een apart project, los van OOExercises, dat stap voor stap meegroeit over het hele semester.",
+      "latereStappen": [
+        "H11_2: de methoden GenerateNameCard en DetermineWorkload, en een keuzemenu met DemoStudents",
+        "H11_3: Courses private maken (hernoemd naar courses) en de methode RegisterForCourse",
+        "H11_4: de klasse Course met ShowOverview, en de methode DemoCourses",
+        "H11_5: de klasse CourseResult en de methode RegisterCourseResult",
+        "H11_6: de methoden Average en ShowOverview in Student",
+        "H11_7: de properties CreditPoints en Id, en de static leden maxId en AllCourses in Course",
+        "H11_8: Name en Result van CourseResult omzetten naar properties",
+        "H11_9: de computed property Age",
+        "H12: eigen constructors, onder meer om een Id automatisch toe te kennen en AllCourses te vullen",
+        "later in het semester: overerving (bijvoorbeeld een klasse Person), ToString overschrijven en exceptions"
+      ],
+      "veelgemaakteFouten": [
+        "StudentCounter niet static maken, waardoor elke student zijn eigen teller heeft",
+        "de studentennummers rechtstreeks op 1 en 2 zetten in plaats van StudentCounter te gebruiken",
+        "Courses niet initialiseren, waardoor het programma crasht bij de eerste cursus die toegevoegd wordt",
+        "de klasse Student in Program.cs zetten"
+      ],
+      "hints": [
+        "Hoort StudentCounter bij een student, of bij alle studenten samen?",
+        "Wat zit er in Courses nadat je een Student aanmaakt, als je zelf niets toekent?",
+        "Ken eerst StudentCounter toe aan het studentennummer en verhoog pas daarna de teller."
+      ]
+    },
+    "H11-SchoolAdmin-2": {
+      "titel": "H11_2 SchoolAdmin Student methoden",
+      "hoofdstuk": "H11",
+      "leerdoelen": [
+        "instantiemethoden schrijven",
+        "een methode een waarde laten teruggeven",
+        "code verhuizen naar een eigen methode"
+      ],
+      "functioneleAnalyse": "Student krijgt twee methoden. GenerateNameCard geeft de naam van de student gevolgd door (STUDENT). DetermineWorkload berekent de werkbelasting: 10 uur per week per cursus waarvoor de student ingeschreven is. Main toont een keuzemenu; optie 1 roept de methode DemoStudents op in Program.cs. De bestaande code uit Main verhuist naar DemoStudents en wordt aangevuld met de oproepen die de uitvoer hieronder geven.",
+      "klassediagram": "Student\n+ Name : string\n+ Birthdate : DateTime\n+ StudentNumber : uint\n+ Courses : List<string>\n+ StudentCounter : uint = 1   (static)\n+ GenerateNameCard() : string\n+ DetermineWorkload() : byte",
+      "voorbeeldinteractie": "Wat wil je doen?\n1. DemonstreerStudenten uitvoeren\n1\nSaid Aziz (STUDENT)\n20\nMieke Vermeulen (STUDENT)\n10",
+      "projectContext": "Een klasse Student met de publieke attributen Name (string), Birthdate (DateTime), StudentNumber (uint), Courses (List<string>) en het static attribuut StudentCounter (uint, beginwaarde 1). In Main worden de studenten said en mieke aangemaakt, krijgen ze hun studentennummer via StudentCounter en worden ze ingeschreven voor hun cursussen.",
+      "latereStappen": [
+        "H11_3: Courses private maken (hernoemd naar courses) en de methode RegisterForCourse",
+        "H11_4: de klasse Course met ShowOverview, en de methode DemoCourses",
+        "H11_5: de klasse CourseResult en de methode RegisterCourseResult",
+        "H11_6: de methoden Average en ShowOverview in Student",
+        "H11_7: de properties CreditPoints en Id, en de static leden maxId en AllCourses in Course",
+        "H11_8: Name en Result van CourseResult omzetten naar properties",
+        "H11_9: de computed property Age",
+        "H12: eigen constructors, onder meer om een Id automatisch toe te kennen en AllCourses te vullen",
+        "later in het semester: overerving (bijvoorbeeld een klasse Person), ToString overschrijven en exceptions"
+      ],
+      "veelgemaakteFouten": [
+        "GenerateNameCard zelf laten afdrukken in plaats van een string terug te geven",
+        "DetermineWorkload een vast getal laten teruggeven in plaats van te rekenen met het aantal cursussen",
+        "de methoden static maken, terwijl ze bij een specifieke student horen",
+        "DemoStudents niet static maken, terwijl Main ze rechtstreeks oproept"
+      ],
+      "hints": [
+        "Wie toont de naamkaart op het scherm: GenerateNameCard zelf, of de code die de methode oproept?",
+        "Waarvan hangt de werkbelasting van een student af?",
+        "Waarom moet DemoStudents static zijn, en GenerateNameCard niet?"
+      ]
+    },
+    "H11-SchoolAdmin-3": {
+      "titel": "H11_3 SchoolAdmin Student Cursussen private",
+      "hoofdstuk": "H11",
+      "leerdoelen": [
+        "een attribuut afschermen met private",
+        "toegang regelen via een methode"
+      ],
+      "functioneleAnalyse": "Courses wordt afgeschermd, en een student mag niet meermaals voor dezelfde cursus ingeschreven worden. Courses wordt private en daarom hernoemd naar courses. Een nieuwe methode RegisterForCourse voegt een cursus enkel toe als ze nog niet in courses zit. DemoStudents schrijft de studenten in via die methode.",
+      "klassediagram": "Student\n+ Name : string\n+ Birthdate : DateTime\n+ StudentNumber : uint\n- courses : List<string>\n+ StudentCounter : uint = 1   (static)\n+ GenerateNameCard() : string\n+ DetermineWorkload() : byte\n+ RegisterForCourse(course: string) : void",
+      "projectContext": "De klasse Student uit H11_1, uitgebreid met GenerateNameCard en DetermineWorkload. Main toont een keuzemenu; optie 1 roept de static methode DemoStudents in Program.cs op, waar de studenten aangemaakt worden en hun naamkaart en werkbelasting getoond worden.",
+      "latereStappen": [
+        "H11_4: de klasse Course met ShowOverview, en de methode DemoCourses",
+        "H11_5: de klasse CourseResult en de methode RegisterCourseResult",
+        "H11_6: de methoden Average en ShowOverview in Student",
+        "H11_7: de properties CreditPoints en Id, en de static leden maxId en AllCourses in Course",
+        "H11_8: Name en Result van CourseResult omzetten naar properties",
+        "H11_9: de computed property Age",
+        "H12: eigen constructors, onder meer om een Id automatisch toe te kennen en AllCourses te vullen",
+        "later in het semester: overerving (bijvoorbeeld een klasse Person), ToString overschrijven en exceptions"
+      ],
+      "veelgemaakteFouten": [
+        "Courses private maken maar de naam niet naar camelCase omzetten",
+        "in DemoStudents nog rechtstreeks aan de lijst toevoegen, wat niet meer compileert",
+        "niet controleren of de cursus er al in zit, waardoor dubbele inschrijvingen mogelijk blijven"
+      ],
+      "hints": [
+        "Wat gebeurt er in DemoStudents zodra de lijst private is?",
+        "Hoe kan je nagaan of een List<string> een bepaalde tekst al bevat?",
+        "Wanneer mag RegisterForCourse de cursus toevoegen, en wanneer niet?"
+      ]
+    },
+    "H11-SchoolAdmin-4": {
+      "titel": "H11_4 SchoolAdmin klasse Course",
+      "hoofdstuk": "H11",
+      "leerdoelen": [
+        "een tweede klasse ontwerpen",
+        "een lijst van objecten bijhouden",
+        "objecten van verschillende klassen laten samenwerken"
+      ],
+      "functioneleAnalyse": "Per cursus wordt bijgehouden welke studenten ingeschreven zijn. De klasse Course heeft de attributen Students (een List van Student-objecten) en Title (string), en een methode ShowOverview die de titel toont met daaronder de namen van alle studenten. Een static methode DemoCourses in Program.cs maakt dezelfde twee studenten aan als DemoStudents, maakt vier cursussen (Communicatie, Programmeren, Webtechnologie en Databanken), schrijft de studenten in zoals in het voorbeeld, en toont het overzicht van elke cursus. DemoCourses is optie 2 van het keuzemenu, en het menu staat in een oneindige lus.",
+      "klassediagram": "Course\n+ Title : string\n+ Students : List<Student>\n+ ShowOverview() : void",
+      "voorbeeldinteractie": "Wat wil je doen?\n1. DemonstreerStudenten uitvoeren\n2. DemonstreerCursussen uitvoeren\n2\nCommunicatie\nSaid Aziz\nMieke Vermeulen\n\nProgrammeren\nSaid Aziz\nMieke Vermeulen\n\nWebtechnologie\nSaid Aziz\n\nDatabanken\nMieke Vermeulen",
+      "letOp": "De opgave noemt de variabelen communicatie, programmeren, webtechnologie en databanken. Volgens de code-afspraken zijn Engelse namen de norm; omdat de opgave de Nederlandse namen letterlijk voorschrijft, is geen van beide fout.",
+      "projectContext": "Een klasse Student met Name, Birthdate, StudentNumber, een private List<string> courses, het static attribuut StudentCounter, en de methoden GenerateNameCard, DetermineWorkload en RegisterForCourse (voegt een cursus enkel toe als ze er nog niet in zit). Program.cs heeft een keuzemenu met optie 1: DemoStudents.",
+      "latereStappen": [
+        "H11_5: de klasse CourseResult en de methode RegisterCourseResult",
+        "H11_6: de methoden Average en ShowOverview in Student",
+        "H11_7: de properties CreditPoints en Id, en de static leden maxId en AllCourses in Course",
+        "H11_8: Name en Result van CourseResult omzetten naar properties",
+        "H11_9: de computed property Age",
+        "H12: eigen constructors, onder meer om een Id automatisch toe te kennen en AllCourses te vullen",
+        "later in het semester: overerving (bijvoorbeeld een klasse Person), ToString overschrijven en exceptions"
+      ],
+      "veelgemaakteFouten": [
+        "Students niet initialiseren, waardoor het programma crasht bij de eerste Add",
+        "in ShowOverview de hele Student tonen in plaats van zijn naam",
+        "Course in Program.cs of in Student.cs zetten",
+        "het menu niet in een oneindige lus zetten"
+      ],
+      "hints": [
+        "Welke gegevens horen bij een cursus, en welke bij een student?",
+        "Wat zit er in Students nadat je een Course aanmaakt, als je zelf niets toekent?",
+        "In ShowOverview loop je over de studenten. Welk attribuut van elke student toon je?"
+      ]
+    },
+    "H11-SchoolAdmin-5": {
+      "titel": "H11_5 SchoolAdmin klasse CourseResult",
+      "hoofdstuk": "H11",
+      "leerdoelen": [
+        "een klasse maken die gegevens groepeert",
+        "een bestaande klasse herwerken"
+      ],
+      "functioneleAnalyse": "Per student wordt bijgehouden welk resultaat hij voor welke cursus behaalde. Een nieuwe klasse CourseResult heeft de attributen Name (string) en Result (byte). In Student vervangt een lijst courseResults van CourseResult-objecten de lijst courses, en vervangt RegisterCourseResult de methode RegisterForCourse. RegisterCourseResult geeft \"Ongeldig cijfer!\" bij een resultaat boven 20; anders maakt de methode een nieuw CourseResult, vult Name en Result in met de parameters en voegt het toe aan courseResults. DetermineWorkload wordt aangepast. DemoStudents en DemoCourses schrijven in met RegisterCourseResult: Said met Communicatie 12, Programmeren 15 en Webtechnologie 13; Mieke met Communicatie 13, Programmeren 16 en Databanken 14. De uitvoer van beide methoden verandert niet.",
+      "klassediagram": "CourseResult\n+ Name : string\n+ Result : byte\n\nStudent\n+ Name : string\n+ Birthdate : DateTime\n+ StudentNumber : uint\n- courseResults : List<CourseResult>\n+ StudentCounter : uint = 1   (static)\n+ GenerateNameCard() : string\n+ DetermineWorkload() : byte\n+ RegisterCourseResult(course: string, result: byte) : void",
+      "letOp": "De uitvoer van DemoStudents en DemoCourses blijft precies dezelfde als na H11_4.",
+      "projectContext": "Alles uit H11_4: de klasse Student met private courses en RegisterForCourse, een klasse Course met Title, Students (List<Student>) en ShowOverview, en in Program.cs de methoden DemoStudents en DemoCourses in een keuzemenu.",
+      "latereStappen": [
+        "H11_6: de methoden Average en ShowOverview in Student",
+        "H11_7: de properties CreditPoints en Id, en de static leden maxId en AllCourses in Course",
+        "H11_8: Name en Result van CourseResult omzetten naar properties",
+        "H11_9: de computed property Age",
+        "H12: eigen constructors, onder meer om een Id automatisch toe te kennen en AllCourses te vullen",
+        "later in het semester: overerving (bijvoorbeeld een klasse Person), ToString overschrijven en exceptions"
+      ],
+      "veelgemaakteFouten": [
+        "een resultaat boven 20 toch toevoegen na de foutmelding",
+        "DetermineWorkload nog over de oude lijst laten lopen",
+        "een nieuw CourseResult aanmaken maar het niet aan de lijst toevoegen",
+        "CourseResult niet in een eigen bestand zetten"
+      ],
+      "hints": [
+        "Welke twee gegevens horen samen bij een behaald resultaat?",
+        "In RegisterCourseResult: wat moet er gebeuren voor je een nieuw CourseResult maakt?",
+        "Waarover moet DetermineWorkload nu tellen, nu courses niet meer bestaat?"
+      ]
+    },
+    "H11-SchoolAdmin-6": {
+      "titel": "H11_6 SchoolAdmin Student Average",
+      "hoofdstuk": "H11",
+      "leerdoelen": [
+        "een berekening in een methode stoppen",
+        "een overzicht opbouwen uit andere methoden"
+      ],
+      "functioneleAnalyse": "Voor een student wordt het gemiddelde van de behaalde resultaten berekend en in een overzicht getoond. Average overloopt courseResults, telt alle resultaten op en deelt door het aantal. ShowOverview toont de naam, daaronder de werkbelasting, een cijferrapport met de gevolgde cursussen en resultaten, en onderaan het gemiddelde. In DemoStudents worden de oproepen van GenerateNameCard en DetermineWorkload geschrapt, en wordt voor elke student ShowOverview uitgevoerd.",
+      "klassediagram": "Student\n+ Name : string\n+ Birthdate : DateTime\n+ StudentNumber : uint\n- courseResults : List<CourseResult>\n+ StudentCounter : uint = 1   (static)\n+ GenerateNameCard() : string\n+ DetermineWorkload() : byte\n+ RegisterCourseResult(course: string, result: byte) : void\n+ Average() : double\n+ ShowOverview() : void",
+      "voorbeeldinteractie": "Wat wil je doen?\n1. DemonstreerStudenten uitvoeren\n2. DemonstreerCursussen uitvoeren\n1\nSaid Aziz\nWerkbelasting: 30 uren\nCijferrapport\n*************\nCommunicatie:   12\nProgrammeren:   15\nWebtechnologie: 13\nGemiddelde:     13,3\n\nMieke Vermeulen\nWerkbelasting: 30 uren\nCijferrapport\n*************\nCommunicatie:   13\nProgrammeren:   16\nDatabanken:     14\nGemiddelde:     14,3",
+      "letOp": "Het gemiddelde staat met een cijfer na de komma. De cijfers staan uitgelijnd onder elkaar.",
+      "projectContext": "Een klasse CourseResult met de publieke attributen Name (string) en Result (byte). Student houdt een private List<CourseResult> courseResults bij en heeft GenerateNameCard, DetermineWorkload en RegisterCourseResult (weigert cijfers boven 20 met \"Ongeldig cijfer!\"). De klasse Course heeft Title, Students en ShowOverview. Program.cs heeft DemoStudents en DemoCourses, met de resultaten van Said en Mieke.",
+      "latereStappen": [
+        "H11_7: de properties CreditPoints en Id, en de static leden maxId en AllCourses in Course",
+        "H11_8: Name en Result van CourseResult omzetten naar properties",
+        "H11_9: de computed property Age",
+        "H12: eigen constructors, onder meer om een Id automatisch toe te kennen en AllCourses te vullen",
+        "later in het semester: overerving (bijvoorbeeld een klasse Person), ToString overschrijven en exceptions"
+      ],
+      "veelgemaakteFouten": [
+        "een gehele deling doen, waardoor het gemiddelde afgerond wordt",
+        "ShowOverview een string laten teruggeven in plaats van het overzicht te tonen",
+        "in ShowOverview de werkbelasting opnieuw berekenen in plaats van DetermineWorkload op te roepen",
+        "LINQ gebruiken zoals Average() op de lijst, in plaats van zelf op te tellen"
+      ],
+      "hints": [
+        "Welk type moet het totaal hebben zodat de deling geen gehele deling wordt?",
+        "Welke methoden die al bestaan, kan ShowOverview hergebruiken?",
+        "Hoe toon je een kommagetal met precies een cijfer na de komma?"
+      ]
+    },
+    "H11-SchoolAdmin-7": {
+      "titel": "H11_7 SchoolAdmin properties Course",
+      "hoofdstuk": "H11",
+      "leerdoelen": [
+        "een property met een private setter maken",
+        "een read-only property maken",
+        "static attributen gebruiken"
+      ],
+      "functioneleAnalyse": "Elke cursus krijgt een id en studiepunten, en er komt een lijst met alle cursussen. Maak de property CreditPoints met een private setter, de read-only property Id, het static attribuut maxId met beginwaarde 1, en het static attribuut AllCourses: een lijst van Course-objecten.",
+      "klassediagram": "Course\n+ Title : string\n+ Students : List<Student>\n+ CreditPoints : byte\n+ Id : int\n- maxId : int = 1   (static)\n+ AllCourses : List<Course>   (static)\n+ ShowOverview() : void",
+      "letOp": "In deze stap maak je deze leden enkel aan. Het automatisch toekennen van een id en het vullen van AllCourses gebeurt pas in H12, met een constructor. Dat Id voorlopig nergens ingevuld wordt, is dus geen fout.",
+      "projectContext": "Een klasse CourseResult met de publieke attributen Name (string) en Result (byte). Student houdt een private List<CourseResult> courseResults bij en heeft GenerateNameCard, DetermineWorkload en RegisterCourseResult (weigert cijfers boven 20 met \"Ongeldig cijfer!\"). De klasse Course heeft Title, Students en ShowOverview. Program.cs heeft DemoStudents en DemoCourses, met de resultaten van Said en Mieke. Student heeft daarnaast Average en ShowOverview, en DemoStudents toont per student enkel nog dat overzicht.",
+      "latereStappen": [
+        "H11_8: Name en Result van CourseResult omzetten naar properties",
+        "H11_9: de computed property Age",
+        "H12: eigen constructors, onder meer om een Id automatisch toe te kennen en AllCourses te vullen",
+        "later in het semester: overerving (bijvoorbeeld een klasse Person), ToString overschrijven en exceptions"
+      ],
+      "veelgemaakteFouten": [
+        "Id een publieke setter geven",
+        "maxId public of niet static maken",
+        "CreditPoints een publieke setter geven"
+      ],
+      "hints": [
+        "Wat is het verschil tussen een property zonder setter en een property met een private setter?",
+        "Hoort maxId bij een cursus, of bij alle cursussen samen?",
+        "Wat betekent de - voor maxId in het klassediagram?"
+      ]
+    },
+    "H11-SchoolAdmin-8": {
+      "titel": "H11_8 SchoolAdmin properties CourseResult",
+      "hoofdstuk": "H11",
+      "leerdoelen": [
+        "attributen omzetten naar properties",
+        "een setter laten controleren"
+      ],
+      "functioneleAnalyse": "De bestaande attributen van CourseResult worden properties. Name wordt een property Name. Result wordt een property Result die enkel een resultaat van ten hoogste 20 laat instellen.",
+      "klassediagram": "CourseResult\n+ Name : string\n+ Result : byte\n(in het klassediagram is geen verschil te zien tussen een attribuut en een property)",
+      "letOp": "Het klassediagram ziet er hetzelfde uit als na H11_5: de wijziging zit volledig in de code.",
+      "projectContext": "Een klasse CourseResult met de publieke attributen Name (string) en Result (byte). Student houdt een private List<CourseResult> courseResults bij en heeft GenerateNameCard, DetermineWorkload en RegisterCourseResult (weigert cijfers boven 20 met \"Ongeldig cijfer!\"). De klasse Course heeft Title, Students en ShowOverview. Program.cs heeft DemoStudents en DemoCourses, met de resultaten van Said en Mieke. Student heeft daarnaast Average en ShowOverview, en DemoStudents toont per student enkel nog dat overzicht. Course heeft nu ook de property CreditPoints (private setter), de read-only property Id, en de static leden maxId en AllCourses.",
+      "latereStappen": [
+        "H11_9: de computed property Age",
+        "H12: eigen constructors, onder meer om een Id automatisch toe te kennen en AllCourses te vullen",
+        "later in het semester: overerving (bijvoorbeeld een klasse Person), ToString overschrijven en exceptions"
+      ],
+      "veelgemaakteFouten": [
+        "de publieke attributen laten staan naast de nieuwe properties met dezelfde naam",
+        "in de setter van Result de controle vergeten",
+        "het privaat veld dezelfde naam in PascalCase geven als de property"
+      ],
+      "hints": [
+        "Wat heeft een full property nodig om een waarde te kunnen bewaren?",
+        "Waar hoort de controle op maximaal 20 nu thuis?",
+        "Hoe heet volgens de afspraken een privaat veld, en hoe de property?"
+      ]
+    },
+    "H11-SchoolAdmin-9": {
+      "titel": "H11_9 SchoolAdmin Student Age",
+      "hoofdstuk": "H11",
+      "leerdoelen": [
+        "een computed property maken",
+        "rekenen met DateTime"
+      ],
+      "functioneleAnalyse": "Op basis van de geboortedatum wordt de exacte leeftijd berekend en in het overzicht getoond. Age is een read-only property zonder achterliggend veld. Ze berekent eerst het verschil in jaren tussen het huidige jaar en het geboortejaar, en trekt daar eventueel een af als de student dit jaar nog niet verjaard is: de maand van de verjaardag komt na de huidige maand, of het is de maand van de verjaardag maar de dag komt nog. ShowOverview toont de leeftijd.",
+      "klassediagram": "Student\n+ Name : string\n+ Birthdate : DateTime\n+ StudentNumber : uint\n- courseResults : List<CourseResult>\n+ StudentCounter : uint = 1   (static)\n+ Age : int\n+ GenerateNameCard() : string\n+ DetermineWorkload() : byte\n+ RegisterCourseResult(course: string, result: byte) : void\n+ Average() : double\n+ ShowOverview() : void",
+      "voorbeeldinteractie": "Said Aziz (22 jaar)\nWerkbelasting: 30 uren\nCijferrapport\n*************\nCommunicatie:   12\nProgrammeren:   15\nWebtechnologie: 13\nGemiddelde:     13,3",
+      "letOp": "De leeftijd in het voorbeeld hangt af van de datum waarop het uitgevoerd werd. Een ander getal is dus normaal.",
+      "projectContext": "Een klasse CourseResult met de publieke attributen Name (string) en Result (byte). Student houdt een private List<CourseResult> courseResults bij en heeft GenerateNameCard, DetermineWorkload en RegisterCourseResult (weigert cijfers boven 20 met \"Ongeldig cijfer!\"). De klasse Course heeft Title, Students en ShowOverview. Program.cs heeft DemoStudents en DemoCourses, met de resultaten van Said en Mieke. Student heeft daarnaast Average en ShowOverview, en DemoStudents toont per student enkel nog dat overzicht. Course heeft nu ook de property CreditPoints (private setter), de read-only property Id, en de static leden maxId en AllCourses. Name en Result van CourseResult zijn properties geworden; Result laat enkel waarden tot en met 20 toe.",
+      "latereStappen": [
+        "H12: eigen constructors, onder meer om een Id automatisch toe te kennen en AllCourses te vullen",
+        "later in het semester: overerving (bijvoorbeeld een klasse Person), ToString overschrijven en exceptions"
+      ],
+      "veelgemaakteFouten": [
+        "enkel de jaartallen aftrekken zonder na te gaan of de verjaardag dit jaar al geweest is",
+        "Age als attribuut bewaren dat een keer berekend wordt",
+        "enkel de maand of enkel de dag vergelijken in plaats van beide te combineren"
+      ],
+      "hints": [
+        "Wanneer klopt \"huidig jaar min geboortejaar\" niet?",
+        "In welke twee gevallen is iemand dit jaar nog niet verjaard?",
+        "Heeft Age een privaat veld nodig, of kan de waarde telkens berekend worden?"
+      ]
     }
   }
 }

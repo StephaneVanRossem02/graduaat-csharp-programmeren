@@ -5,7 +5,7 @@ import useIsBrowser from '@docusaurus/useIsBrowser';
 import Antwoord from './Antwoord';
 import { leesConfig } from './config';
 import { AssistentFout, vraagAanGemini } from './gemini';
-import { bouwSystemPrompt, zoekOefening } from './prompt';
+import { bouwSystemPrompt, zoekHoofdstuk, zoekOefening } from './prompt';
 import {
   KEY_GEWIJZIGD,
   bewaarKey,
@@ -56,6 +56,10 @@ export default function OefeningAssistent({ oefening, hoofdstuk }) {
   const config = leesConfig(siteConfig);
 
   const oefeningData = zoekOefening(oefening);
+  // Een OOP-project bestaat uit meerdere klassen; per hoofdstuk mag de limiet voor geplakte
+  // code daarom ruimer zijn dan de standaard.
+  const maxCodeTekens =
+    zoekHoofdstuk(hoofdstuk ?? oefeningData?.hoofdstuk)?.maxCodeTekens ?? config.maxCodeTekens;
 
   const [key, setKey] = useState('');
   const [keyInvoer, setKeyInvoer] = useState('');
@@ -95,7 +99,7 @@ export default function OefeningAssistent({ oefening, hoofdstuk }) {
   }, [berichten, bezig]);
 
   const quotaOp = verbruik >= config.vragenPerDag;
-  const codeTeLang = code.length > config.maxCodeTekens;
+  const codeTeLang = code.length > maxCodeTekens;
   const vraagTeLang = vraag.length > config.maxVraagTekens;
   const kanVersturen =
     !bezig && !quotaOp && !codeTeLang && !vraagTeLang && vraag.trim().length > 0 && !!key;
@@ -364,7 +368,7 @@ export default function OefeningAssistent({ oefening, hoofdstuk }) {
                   aria-label="Je code"
                 />
                 <span className={codeTeLang ? styles.tellerFout : styles.teller}>
-                  {code.length} / {config.maxCodeTekens} tekens
+                  {code.length} / {maxCodeTekens} tekens
                   {codeTeLang && ' — dat is te veel. Plak enkel het stuk waar het misloopt.'}
                 </span>
               </>

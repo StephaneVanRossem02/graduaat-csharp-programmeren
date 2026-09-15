@@ -29,7 +29,8 @@ const TOEGELATEN_ORIGINS = [
 
 /** Bovengrenzen, zodat een kapotte of kwaadwillige client de Worker niet kan belasten. */
 const MAX_BEURTEN = 20;
-const MAX_TEKENS_PER_BEURT = 8000;
+// Vraag plus geplakte code. OOP-hoofdstukken laten tot 8000 tekens code toe, dus wat marge.
+const MAX_TEKENS_PER_BEURT = 12000;
 
 function corsHeaders(origin) {
   const toegestaan = TOEGELATEN_ORIGINS.includes((origin || '').toLowerCase());

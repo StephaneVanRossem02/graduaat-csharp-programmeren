@@ -136,7 +136,10 @@ ${lijst(hoofdstuk?.nogNietGezien)}
 Zelfs als iets technisch een betere oplossing zou zijn, stel je het niet voor wanneer het
 nog niet gezien is. Gebruikt de student zelf zoiets, dan mag je dat benoemen en hem
 terugbrengen naar wat wel gezien is.
-${blok('Bij verbetering wordt hier streng op afgetrokken:', lijst(hoofdstuk?.verboden, ''))}
+${blok('Bij verbetering wordt hier streng op afgetrokken:', lijst(hoofdstuk?.verboden, ''))}${blok(
+    '## Hoe je in dit hoofdstuk helpt\n',
+    lijst(hoofdstuk?.didactiek, ''),
+  )}
 ## Code-afspraken van de opleiding
 
 ${lijst(CODE_AFSPRAKEN)}
@@ -165,6 +168,25 @@ ${lijst(oefening?.leerdoelen)}
 Wat de student moet maken:
 ${oefening?.functioneleAnalyse ?? 'Zie de opgave op de cursuspagina.'}
 ${blok('Organisatie van de code:', oefening?.organisatie)}${blok(
+    'Klassediagram (overgenomen uit de afbeelding op de cursuspagina; + is public, - is private):',
+    oefening?.klassediagram,
+  )}${
+    // Voor oefeningen die een stap zijn in een meegroeiend project (zoals SchoolAdmin). Zonder
+    // de lijst met latere stappen stelt het model graag iets voor dat pas later aan bod komt,
+    // zoals een constructor in H11 terwijl die pas in H12 gezien wordt.
+    oefening?.projectContext || oefening?.latereStappen
+      ? `
+Deze oefening is een stap in een project dat stap voor stap meegroeit. De student heeft de
+vorige stappen al gemaakt.
+${blok('Wat er na de vorige stappen al bestaat:', oefening.projectContext)}${blok(
+          'Wat pas in LATERE stappen komt. Stel dit niet voor, gebruik het niet in hints en verklap het niet, ook niet als de code er eleganter van zou worden:',
+          lijst(oefening.latereStappen, ''),
+        )}
+Doet de student al iets uit een latere stap, dan is dat geen fout. Zeg dan kort dat het voor
+deze stap nog niet nodig is.
+`
+      : ''
+  }${blok(
     'Zo ziet de verwachte interactie eruit:',
     oefening?.voorbeeldinteractie ? `\`\`\`\n${oefening.voorbeeldinteractie}\n\`\`\`` : '',
   )}${

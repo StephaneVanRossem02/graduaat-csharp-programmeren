@@ -44,15 +44,24 @@ Uit te voeren oefening?
 (...)
 ```
 
+<OefeningAssistent oefening="H11-Voorbereiding" hoofdstuk="H11" />
+
+
 ## Oefening: H11-Clock
 
 Maak een applicatie die bestaat uit een oneindige loop. De loop zal iedere seconde pauzeren: `System.Threading.Thread.Sleep(1000);`
 
  Vervolgens wordt het scherm leeg gemaakt en wordt de huidige tijd getoond. Merk op dat ENKEL de tijd wordt getoond, niet de datum.
 
+<OefeningAssistent oefening="H11-Clock" hoofdstuk="H11" />
+
+
 ## Oefening: H11-Birthday
 
 Maak een applicatie die aan de gebruiker vraagt op welke dag hij/zij jarig is. Toon vervolgens over hoeveel dagen de verjaardag van de gebruiker zal zijn.
+
+<OefeningAssistent oefening="H11-Birthday" hoofdstuk="H11" />
+
 
 ## Oefening: H11-DayOfTheWeek
 
@@ -85,6 +94,9 @@ Welk jaar?
 14 februari 2020 is een vrijdag.
 ```
 
+<OefeningAssistent oefening="H11-DayOfTheWeek" hoofdstuk="H11" />
+
+
 ## Oefening: H11-TicksSince2000
 
 ### Leerdoelen
@@ -107,6 +119,9 @@ We willen weten hoe veel fracties van een seconde al verlopen zijn sinds het beg
 Sinds 1 januari 2000 zijn er (hier wordt het aantal getoond) ticks voorbijgegaan.
 ```
 
+<OefeningAssistent oefening="H11-TicksSince2000" hoofdstuk="H11" />
+
+
 ## Oefening: H11-LeapYearCount
 
 ### Leerdoelen
@@ -128,6 +143,9 @@ We willen bepalen hoe veel schrikkeljaren er zijn tussen 1799 en 2021.
 ```
 Er zijn (hier wordt het aantal getoond) schrikkeljaren tussen 1799 en 2021.
 ```
+
+<OefeningAssistent oefening="H11-LeapYearCount" hoofdstuk="H11" />
+
 
 ## Oefening: H11-CodeTiming
 
@@ -152,6 +170,9 @@ We zijn benieuwd hoe lang het duurt een array van 1 miljoen `int`s te maken en o
 ```
 Het duurt (hier wordt het aantal getoond) milliseconden om een array van een miljoen elementen aan te maken en op te vullen met opeenvolgende waarden.
 ```
+
+<OefeningAssistent oefening="H11-CodeTiming" hoofdstuk="H11" />
+
 
 ### Oefeningen na *Access modifiers*:
 
@@ -203,6 +224,9 @@ Product = 408
 Quotient = 0,352941176470588
 ```
 
+<OefeningAssistent oefening="H11-CombinationOf2Numbers" hoofdstuk="H11" />
+
+
 ## H11\_4 SchoolAdmin klasse Course
 
 We willen per cursus bijhouden welke studenten ingeschreven zijn en maken daarvoor een klasse `Course`.
@@ -220,6 +244,9 @@ De methode `DemoCourses` wordt ook opgeroepen via het keuzemenu in `Main`. Plaat
 #### Voorbeeldinteractie
 
 ![](/img/img-3258.png)
+
+<OefeningAssistent oefening="H11-SchoolAdmin-4" hoofdstuk="H11" />
+
 
 
 ## H11\_5 SchoolAdmin klasse CourseResult 
@@ -260,6 +287,9 @@ Doe de nodige aanpassing aan de methode `DetermineWorkload`.
 
 De uitvoer van deze 2 methodes is niet gewijzigd.
 
+<OefeningAssistent oefening="H11-SchoolAdmin-5" hoofdstuk="H11" />
+
+
 ## H11\_6 SchoolAdmin Student Average
 
 Voor een student gaan we een gemiddelde berekenen van de behaalde resultaten en we tonen dit in een overzicht.
@@ -278,6 +308,9 @@ Pas de methode `DemoStudents` aan (in Program.cs). Schrap hier de methoden `Gene
 Resultaat van `DemoStudents`:
 
 ![](/img/img-3262.png)
+
+<OefeningAssistent oefening="H11-SchoolAdmin-6" hoofdstuk="H11" />
+
 
 
 ### Oefeningen na *Properties*:
@@ -322,6 +355,9 @@ Een driehoek met een basis van 3m en een hoogte van 1m heeft een oppervlakte van
 Een driehoek met een basis van 2m en een hoogte van 2m heeft een oppervlakte van 2m².
 ```
 
+<OefeningAssistent oefening="H11-Figures" hoofdstuk="H11" />
+
+
 ## H11\_7 SchoolAdmin properties Course
 
 We willen elke cursus automatisch een id toewijzen en ook willen we studiepunten per cursus bijhouden. \
@@ -338,6 +374,9 @@ Voeg de read-only property `Id` toe. Om telkens een volgend nummer toe te wijzen
 
 Maak het attribuut `AllCourses`(static); dit is een list van Course-objecten.
 
+<OefeningAssistent oefening="H11-SchoolAdmin-7" hoofdstuk="H11" />
+
+
 ## H11\_8 SchoolAdmin properties CourseResult
 
 We herschrijven de bestaande attributen naar properties
@@ -350,6 +389,9 @@ We herschrijven de bestaande attributen naar properties
 Van Name maak je een property `Name`.
 
 Van Result maak je een property `Result`. Zorg ervoor dat er enkel een resultaat kan ingesteld worden dat niet meer is dan 20.
+
+<OefeningAssistent oefening="H11-SchoolAdmin-8" hoofdstuk="H11" />
+
 
 ## H11\_9 SchoolAdmin Student Age
 
@@ -366,6 +408,9 @@ Voeg de leeftijd toe aan het overzicht in `ShowOverview`.\
 Voorbeeld:
 
 ![](/img/img-3266.png)
+
+<OefeningAssistent oefening="H11-SchoolAdmin-9" hoofdstuk="H11" />
+
 
 
 ##

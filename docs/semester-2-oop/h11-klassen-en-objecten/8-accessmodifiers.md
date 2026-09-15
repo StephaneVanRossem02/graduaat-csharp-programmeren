@@ -50,3 +50,5 @@ In C# schrijven we private members in camel case. Daarom wordt het attribuut her
 Voeg een methode `RegisterForCourse`toe. Enkel als de cursus waarvoor men wil registreren zich nog niet in `courses`bevindt, wordt deze toegevoegd.
 
 Zorg ervoor dat in `DemoStudents`de inschrijvingen voor een cursus gebeuren met behulp van de nieuwe methode.
+
+<OefeningAssistent oefening="H11-SchoolAdmin-3" hoofdstuk="H11" />

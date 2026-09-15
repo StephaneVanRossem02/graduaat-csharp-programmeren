@@ -143,3 +143,5 @@ Maak in de `Main` een keuzemenu zoals hieronder.
 
 
 Optie 1 roept een methode `DemoStudents` op. Maak deze in Program.cs. Verplaats daarvoor de reeds bestaande code in de Main naar de nieuwe methode en vul ze aan met de oproepen naar de juiste methodes om bovenstaand resultaat te krijgen.
+
+<OefeningAssistent oefening="H11-SchoolAdmin-2" hoofdstuk="H11" />
