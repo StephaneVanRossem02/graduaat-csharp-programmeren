@@ -1,5 +1,7 @@
 # Oefeningen
 
+<DownloadSlot hoofdstuk="H15" />
+
 ## Aparte oefeningen overerving
 
 Deze oefeningen maak je allebei in een klasse genaamd `Inheritance`, met haar eigen `ShowSubmenu` methode.

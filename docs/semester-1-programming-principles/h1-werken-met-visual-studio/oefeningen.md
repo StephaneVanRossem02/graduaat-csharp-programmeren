@@ -1,5 +1,7 @@
 # Oefeningen
 
+<DownloadSlot hoofdstuk="H1" />
+
 ## Structuur van je oefeningen
 
 Om je oefeningen ordelijk bij te houden, gaan we al een aantal zaken gebruiken die je pas verder in de cursus in detail leert. Hieronder krijg je een korte inleiding.

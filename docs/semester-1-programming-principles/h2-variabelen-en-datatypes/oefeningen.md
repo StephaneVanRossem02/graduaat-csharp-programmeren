@@ -1,5 +1,7 @@
 # Oefeningen
 
+<DownloadSlot hoofdstuk="H2" />
+
 Al deze oefeningen maak je in een klasse `VariabelenEnDatatypes`. In de oefeningen van hoofdstuk 1 heb je gezien hoe je een nieuwe klasse maakt.
 
 ## Oefening: H2-AddUp

@@ -1,5 +1,7 @@
 # Oefeningen
 
+<DownloadSlot hoofdstuk="H4" />
+
 Al deze oefeningen maak je in een klasse `Beslissingen`
 
 ## **Oefening: H4-ShoeSeller**

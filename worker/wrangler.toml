@@ -2,12 +2,33 @@ name = "oefening-assistent"
 main = "src/index.js"
 compatibility_date = "2026-08-01"
 
-# Geen secrets en geen KV nodig: de Worker heeft geen eigen Gemini-key.
-# De key van de student komt per aanvraag mee in de header x-student-key.
+# Modeloplossingen per hoofdstuk als ZIP. Die staan bewust NIET in de publieke site of repo;
+# de Worker levert ze pas na de juiste code. Sleutels: oplossing-H1 .. oplossing-H19.
+# Dit is een eigen namespace, los van die van de cursus Testing & Security.
+[[kv_namespaces]]
+binding = "DOWNLOADS"
+id = "5dfd5c5497aa40fc99b4fb58079c1a7c"
 
-# Lokaal draaien zonder Cloudflare-account:
-#   npx wrangler dev --port 8787
+# Pogingslimiet op codes: 10 pogingen per minuut per IP. Zonder limiet is elke code met een
+# scriptje te raden.
+[[ratelimits]]
+name = "CODE_POGINGEN"
+namespace_id = "1001"
+
+  [ratelimits.simple]
+  limit = 10
+  period = 60
+
+# Secrets per hoofdstuk:
+#   OPLOSSINGCODE_H1 .. OPLOSSINGCODE_H19  -> geeft de modeloplossingen (ZIP) vrij
+# Geen secret = dat hoofdstuk is nog niet vrijgegeven (403).
 #
-# Deployen (hiervoor is wel een account nodig):
-#   npx wrangler login
-#   npx wrangler deploy
+# Code zetten of wijzigen:   npx wrangler secret put OPLOSSINGCODE_H11
+# Terug afschermen:          npx wrangler secret delete OPLOSSINGCODE_H11
+# ZIP vervangen:             npx wrangler kv key put oplossing-H11 --path downloads/<zip> --binding DOWNLOADS --remote
+#
+# Lokaal testen:  npx wrangler dev --port 8787   (codes uit worker/.dev.vars, niet in git)
+# Deployen:       npx wrangler deploy
+#
+# De Worker heeft geen eigen Gemini-key: die van de student komt per aanvraag mee in de
+# header x-student-key.

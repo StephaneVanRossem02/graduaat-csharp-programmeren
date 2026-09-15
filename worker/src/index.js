@@ -17,6 +17,8 @@
 
 import { bouwSystemPrompt, zoekOefening } from '../../src/components/OefeningAssistent/prompt.js';
 import oplossingenData from '../oplossingen.json';
+// Enkel bestandsnamen per hoofdstuk. De ZIP's zelf staan in KV, niet in de repo of de site.
+import downloadManifest from '../downloads-manifest.json';
 
 const TOEGELATEN_ORIGINS = [
   'https://vincentvcap.github.io',
@@ -52,6 +54,57 @@ function fout(boodschap, status, origin) {
   return json({ error: { message: boodschap, code: status } }, status, origin);
 }
 
+/** Vergelijkt twee strings in constante tijd, zodat de juiste code niet via timing lekt. */
+function gelijkVeilig(a, b) {
+  if (a.length !== b.length) return false;
+  let verschil = 0;
+  for (let i = 0; i < a.length; i += 1) {
+    verschil |= a.charCodeAt(i) ^ b.charCodeAt(i);
+  }
+  return verschil === 0;
+}
+
+/**
+ * Route "download": levert de modeloplossingen van een hoofdstuk als ZIP uit KV, maar enkel
+ * na de juiste code. De codes staan als secret OPLOSSINGCODE_H1 .. OPLOSSINGCODE_H19 in de
+ * Worker en zitten dus niet in de bundel. Geen secret = hoofdstuk nog niet vrijgegeven.
+ */
+async function geefDownload(body, env, origin) {
+  const hoofdstuk = typeof body.hoofdstuk === 'string' ? body.hoofdstuk : '';
+  // hasOwn, zodat "constructor" of "__proto__" niet als hoofdstuk doorgaat.
+  if (!Object.hasOwn(downloadManifest, hoofdstuk)) {
+    return fout('Onbekend hoofdstuk.', 404, origin);
+  }
+
+  const verwacht = env ? env[`OPLOSSINGCODE_${hoofdstuk}`] : undefined;
+  if (!verwacht) {
+    return fout('De modeloplossingen van dit hoofdstuk zijn nog niet vrijgegeven.', 403, origin);
+  }
+
+  const gegeven = (typeof body.code === 'string' ? body.code : '').trim();
+  // Hoofdletterongevoelig: een code die in de les wordt voorgelezen, typt niemand exact over.
+  if (!gegeven || !gelijkVeilig(gegeven.toLowerCase(), verwacht.trim().toLowerCase())) {
+    return fout('Onjuiste code.', 403, origin);
+  }
+
+  const bytes = env.DOWNLOADS ? await env.DOWNLOADS.get(`oplossing-${hoofdstuk}`, 'arrayBuffer') : null;
+  if (!bytes) {
+    return fout('Bestand niet gevonden.', 404, origin);
+  }
+
+  const bestandsnaam = downloadManifest[hoofdstuk];
+  return new Response(bytes, {
+    status: 200,
+    headers: {
+      ...corsHeaders(origin),
+      'Content-Type': 'application/zip',
+      'Content-Disposition': `attachment; filename="${bestandsnaam}"`,
+      'X-Download-Filename': bestandsnaam,
+      'Access-Control-Expose-Headers': 'X-Download-Filename',
+    },
+  });
+}
+
 export default {
   async fetch(request, env) {
     const origin = request.headers.get('Origin') || '';
@@ -66,18 +119,31 @@ export default {
       return fout('Deze site mag deze assistent niet gebruiken.', 403, origin);
     }
 
-    // De key van de student. Bewust een eigen header: hij gaat niet in de URL en wordt
-    // hieronder nergens gelogd of bewaard.
-    const apiKey = request.headers.get('x-student-key');
-    if (!apiKey) {
-      return fout('Er is geen API-key meegestuurd.', 401, origin);
-    }
-
     let body;
     try {
       body = await request.json();
     } catch {
       return fout('De aanvraag was geen geldige JSON.', 400, origin);
+    }
+
+    // Route voor de modeloplossingen. Heeft geen Gemini-key nodig, wel een pogingslimiet:
+    // zonder die limiet is elke code met een scriptje te raden.
+    if (body?.actie === 'download') {
+      if (env.CODE_POGINGEN) {
+        const ip = request.headers.get('CF-Connecting-IP') || 'onbekend';
+        const { success } = await env.CODE_POGINGEN.limit({ key: ip });
+        if (!success) {
+          return fout('Te veel pogingen. Wacht een minuut en probeer opnieuw.', 429, origin);
+        }
+      }
+      return geefDownload(body, env, origin);
+    }
+
+    // De key van de student. Bewust een eigen header: hij gaat niet in de URL en wordt
+    // hieronder nergens gelogd of bewaard.
+    const apiKey = request.headers.get('x-student-key');
+    if (!apiKey) {
+      return fout('Er is geen API-key meegestuurd.', 401, origin);
     }
 
     const { oefening, hoofdstuk, geschiedenis, model, generationConfig } = body ?? {};

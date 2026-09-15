@@ -1,5 +1,7 @@
 # Oefeningen
 
+<DownloadSlot hoofdstuk="H11" />
+
 ## Richtlijnen
 
 ### Structuur oefeningen

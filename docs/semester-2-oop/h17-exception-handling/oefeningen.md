@@ -1,5 +1,7 @@
 # Oefeningen
 
+<DownloadSlot hoofdstuk="H17" />
+
 ## h17-weekdagen-zonder-exception-handling
 
 ### Functionele analyse

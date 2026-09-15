@@ -1,5 +1,7 @@
 # Oefeningen
 
+<DownloadSlot hoofdstuk="H12" />
+
 Werk verder in de klasse `ClassesAndObjects`:
 
 ## Oefening: H12-FiguresWithConstructor

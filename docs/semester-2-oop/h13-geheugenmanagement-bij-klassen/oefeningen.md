@@ -1,5 +1,7 @@
 # Oefeningen
 
+<DownloadSlot hoofdstuk="H13" />
+
 ## H13\_2 SchoolAdmin: cursus opzoeken op Id
 
 #### Functionele analyse

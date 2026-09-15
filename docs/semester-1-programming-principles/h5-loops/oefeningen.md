@@ -1,5 +1,7 @@
 # Oefeningen
 
+<DownloadSlot hoofdstuk="H5" />
+
 Al deze oefeningen maak je in een klasse `Loops`
 
 ## Oefeningen WHILE en DO WHILE

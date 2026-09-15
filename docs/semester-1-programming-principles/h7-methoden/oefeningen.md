@@ -1,5 +1,7 @@
 # Oefeningen
 
+<DownloadSlot hoofdstuk="H7" />
+
 ## Oefeningen
 
 Al deze oefeningen schrijf je in een klasse `Methodes`.

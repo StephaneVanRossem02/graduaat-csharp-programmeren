@@ -1,5 +1,7 @@
 # Oefeningen
 
+<DownloadSlot hoofdstuk="H3" />
+
 Al deze oefeningen maak je in een klasse `StringsEnHunMethoden`
 
 ### Oefening: CapitalLetters <a href="#oefening-variabelenenhoofdletters" id="oefening-variabelenenhoofdletters"></a>

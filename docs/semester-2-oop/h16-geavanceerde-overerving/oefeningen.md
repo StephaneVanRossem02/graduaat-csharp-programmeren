@@ -1,5 +1,7 @@
 # Oefeningen
 
+<DownloadSlot hoofdstuk="H16" />
+
 ## h16-Orders-bugfix
 
 ### Functionele analyse

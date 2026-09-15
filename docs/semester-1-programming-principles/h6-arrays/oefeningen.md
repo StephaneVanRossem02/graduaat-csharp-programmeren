@@ -1,5 +1,7 @@
 # Oefeningen
 
+<DownloadSlot hoofdstuk="H6" />
+
 ## Oefeningen
 
 ### **Oefening: H6-ArrayTrueFalse**

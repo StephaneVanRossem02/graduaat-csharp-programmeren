@@ -21,3 +21,9 @@ Thumbs.db
 
 # lokale wrangler-rommel
 worker/.wrangler/
+
+# Cloudflare Worker: oplossingen en codes horen nooit in de publieke repo.
+# De Worker bundelt ze lokaal bij `wrangler deploy`; de site heeft ze niet nodig.
+.dev.vars
+worker/downloads/
+worker/oplossingen.json
