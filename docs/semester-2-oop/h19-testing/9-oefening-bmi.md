@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Oefening BMI
 
 #### Controle op berekening BMI 

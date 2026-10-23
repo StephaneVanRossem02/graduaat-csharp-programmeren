@@ -1,5 +1,45 @@
 [
   {
+    "map": "bp/h1-labo1",
+    "hoofdstuk": 1,
+    "labo": 1,
+    "titel": "H1: Werken met Visual Studio",
+    "subtitel": "Labo 1 · week 1 · installatie en je eerste project",
+    "pdf": "h1-labo1-visual-studio.pdf",
+    "week": 1,
+    "vak": "bp"
+  },
+  {
+    "map": "bp/h1-labo2",
+    "hoofdstuk": 1,
+    "labo": 2,
+    "titel": "H1: Werken met Visual Studio",
+    "subtitel": "Labo 2 · week 1 · eerste stappen, input en output, kleuren",
+    "pdf": "h1-labo2-console.pdf",
+    "week": 1,
+    "vak": "bp"
+  },
+  {
+    "map": "bp/h2-labo1",
+    "hoofdstuk": 2,
+    "labo": 1,
+    "titel": "H2: Variabelen en datatypes",
+    "subtitel": "Labo 1 · week 2 · syntaxis en datatypes",
+    "pdf": "h2-labo1-syntax-datatypes.pdf",
+    "week": 2,
+    "vak": "bp"
+  },
+  {
+    "map": "bp/h2-labo2",
+    "hoofdstuk": 2,
+    "labo": 2,
+    "titel": "H2: Variabelen en datatypes",
+    "subtitel": "Labo 2 · week 2 · variabelen, namen en rekenen",
+    "pdf": "h2-labo2-variabelen-expressies.pdf",
+    "week": 2,
+    "vak": "bp"
+  },
+  {
     "map": "bp/h3-labo1",
     "hoofdstuk": 3,
     "labo": 1,

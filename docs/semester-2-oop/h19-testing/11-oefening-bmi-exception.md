@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Oefening BMI exception
 
 Vul de code van `BMICalculator` aan door te testen op een gewicht minder dan 30. Werp dan een `ArgumentOutOfRangeException`.

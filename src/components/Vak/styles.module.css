@@ -96,10 +96,6 @@
   margin-bottom: 1rem;
 }
 
-.nieuwste {
-  max-width: 22rem;
-}
-
 .hoofdstukken {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));

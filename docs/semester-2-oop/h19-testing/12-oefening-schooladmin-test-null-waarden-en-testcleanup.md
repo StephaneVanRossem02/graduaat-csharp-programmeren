@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Oefening SchoolAdmin test null-waarden en TestCleanup
 
 Bij de SchoolAdmin-opdracht H17\_2 hebben we ervoor gezorgd dat je geen `CourseRegistration` kan aanmaken zonder een student en/of cursus. Als dit gebeurt, dan wordt er een `ArgumentException` geworpen.\

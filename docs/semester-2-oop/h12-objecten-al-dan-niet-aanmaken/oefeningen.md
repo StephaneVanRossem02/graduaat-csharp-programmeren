@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Oefeningen
 
 Werk verder in de klasse `ClassesAndObjects`:

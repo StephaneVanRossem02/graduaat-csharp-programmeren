@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Oefeningen
 
 ## H13\_2 SchoolAdmin: cursus opzoeken op Id

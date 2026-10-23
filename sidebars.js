@@ -1,4 +1,7 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
+const fs = require('fs');
+const path = require('path');
+const { createSlugger } = require('@docusaurus/utils');
 // Twee vakken, elk met een eigen zijbalk: Basis Programmeren (semester 1) en
 // Object-Oriented Programming (semester 2). Wat voor beide geldt, staat in 'algemeen'.
 const sidebars = {
@@ -424,16 +427,85 @@ function zonderOefeningen(items) {
     );
 }
 
+// Het markdownbestand van een doc-id. Een cijfer vooraan de bestandsnaam
+// (9-oefening-bmi.md) zit niet in de id.
+function bestandVoor(id) {
+  const map = path.join(__dirname, 'docs', path.dirname(id));
+  const naam = path.basename(id);
+  const bestand = fs
+    .readdirSync(map)
+    .find((f) => /\.mdx?$/.test(f) && f.replace(/^\d+-/, '').replace(/\.mdx?$/, '') === naam);
+  return bestand ? path.join(map, bestand) : null;
+}
+
+// Platte tekst van een kop, zoals Docusaurus hem ziet (zonder **, `, html, \_).
+// Niet inkorten: een spatie voor een weggelaten <a> komt ook in het anker.
+function kopTekst(ruw) {
+  return ruw
+    .replace(/<[^>]*>/g, '')
+    .replace(/[*`]/g, '')
+    .replace(/\\(.)/g, '$1');
+}
+
+// Is dit de kop van een oefening? "Oefening: H5-CountDown", "H9 - FillRandom",
+// "H11_4 SchoolAdmin ...", maar niet "Oefeningen FOR" of "Modeloplossingen".
+function isOefeningKop(tekst) {
+  return /^Oefening\b(?!en)/i.test(tekst) || /\bOefening:/.test(tekst) || /^H\d+\s*[-_]/i.test(tekst);
+}
+
+// Korte naam voor in de zijbalk: zonder "Oefening:" en zonder de code H5-.
+function korteNaam(tekst) {
+  const naam = tekst
+    .replace(/^Indien [^:]*:\s*/i, '')
+    .replace(/^.*?Oefening:?\s*/i, '')
+    .replace(/^H\d+\s*[-_]\s*(\d+\s+)?/i, '');
+  // juiste-index-extra-voorzichtig wordt Juiste index extra voorzichtig
+  const leesbaar = naam.includes(' ') ? naam : naam.replace(/-/g, ' ');
+  return leesbaar.charAt(0).toUpperCase() + leesbaar.slice(1);
+}
+
+// De oefeningen op een pagina, als links naar hun kop op die pagina.
+function oefeningenOpPagina(id) {
+  const bestand = bestandVoor(id);
+  if (!bestand) return [];
+  const slugger = createSlugger();
+  const links = [];
+  let inCode = false;
+  for (const regel of fs.readFileSync(bestand, 'utf8').split(/\r?\n/)) {
+    if (/^\s*(```|~~~)/.test(regel)) inCode = !inCode;
+    const kop = !inCode && regel.match(/^(#{1,6})\s+(.*?)\s*#*\s*$/);
+    if (!kop) continue;
+    const anker = slugger.slug(kopTekst(kop[2]));
+    const tekst = kopTekst(kop[2]).replace(/\s+/g, ' ').trim();
+    if ((kop[1].length === 2 || kop[1].length === 3) && isOefeningKop(tekst)) {
+      links.push({
+        type: 'link',
+        label: korteNaam(tekst),
+        href: `/${id}#${anker}`,
+        className: 'zijbalk-oefening',
+      });
+    }
+  }
+  return links;
+}
+
 function oefeningenPerHoofdstuk(items) {
   return items
     .filter((item) => item.type === 'category' && /^H\d+:/.test(item.label))
     .map((hoofdstuk) => {
-      const oefeningen = hoofdstuk.items.filter(isOefening);
-      if (oefeningen.length === 0) return null;
-      if (oefeningen.length === 1) {
-        return { type: 'doc', id: oefeningen[0], label: hoofdstuk.label };
-      }
-      return { type: 'category', label: hoofdstuk.label, collapsed: true, items: oefeningen };
+      const paginas = hoofdstuk.items.filter(isOefening);
+      if (paginas.length === 0) return null;
+      // Een oefeningenpagina: het hoofdstuk opent die pagina, met daaronder elke
+      // oefening apart. Meerdere paginas (zoals bij Testing): elke pagina apart.
+      const items =
+        paginas.length === 1 ? oefeningenOpPagina(paginas[0]) : paginas;
+      return {
+        type: 'category',
+        label: hoofdstuk.label,
+        collapsed: true,
+        link: { type: 'doc', id: paginas[0] },
+        items,
+      };
     })
     .filter(Boolean);
 }

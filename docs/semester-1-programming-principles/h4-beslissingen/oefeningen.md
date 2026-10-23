@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Oefeningen
 
 Al deze oefeningen maak je in een klasse `Beslissingen`

@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Oefening SchoolAdmin test equals
 
 We hebben in de klasse `Person` en de klasse `Course` een (override) methode `Equals` gemaakt . Bekijk de code die we daar geschreven hebben. \

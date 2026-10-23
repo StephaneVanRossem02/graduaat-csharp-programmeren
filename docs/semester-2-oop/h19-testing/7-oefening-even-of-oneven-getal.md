@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Oefening even of oneven getal
 
 Voeg een methode **`Even`** toe aan de klasse `Calculator`. \

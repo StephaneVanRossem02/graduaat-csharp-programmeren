@@ -11,7 +11,7 @@ import styles from './styles.module.css';
  * Bouwstenen voor de pagina's van een vak (Basis Programmeren of OOP).
  * Elk vak heeft drie pagina's in docs/<vak>/: index, planning en slides.
  *
- *   <VakOverzicht vak="bp" />   kop van het vak, snelkoppelingen en alle hoofdstukken
+ *   <VakOverzicht vak="bp" />   kop van het vak, knoppen en alle hoofdstukken
  *   <VakPlanning vak="bp" />    tijdlijn per week, uit src/data/planning.json en de decks
  *   <VakSlides vak="bp" />      alle decks van het vak, per hoofdstuk
  *   <VakOefeningen vak="bp" />  per hoofdstuk een link naar de oefeningen
@@ -25,7 +25,6 @@ function decksVan(vak) {
 export function VakOverzicht({ vak }) {
   const gegevens = vakken[vak];
   const vakDecks = decksVan(vak);
-  const nieuwste = [...vakDecks].sort((a, b) => (b.week ?? 0) - (a.week ?? 0) || b.labo - a.labo)[0];
   const [eerste] = hoofdstukkenVan(vak);
 
   return (
@@ -46,15 +45,6 @@ export function VakOverzicht({ vak }) {
           </Link>
         </div>
       </header>
-
-      {nieuwste && (
-        <section className={styles.sectie}>
-          <h2 className={styles.sectieTitel}>Laatste labo</h2>
-          <div className={styles.nieuwste}>
-            <DeckKaart deck={nieuwste} />
-          </div>
-        </section>
-      )}
 
       <section className={styles.sectie}>
         <h2 className={styles.sectieTitel}>Hoofdstukken</h2>

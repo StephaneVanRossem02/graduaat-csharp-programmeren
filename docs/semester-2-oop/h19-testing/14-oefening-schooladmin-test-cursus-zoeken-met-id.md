@@ -1,3 +1,7 @@
+---
+hide_table_of_contents: true
+---
+
 # Oefening SchoolAdmin test cursus zoeken met id
 
 Maak een nieuwe testklasse **`TestSearchCourse`**. Voorzie deze van een `TestInitialize` waarin je 2 cursussen maakt met zelfgekozen titels. Maak ook dadelijk een `TestCleanup` om de titels van beide cursussen terug leeg te maken na elke test.
