@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkcourseoop_docusaurus=globalThis.webpackChunkcourseoop_docusaurus||[]).push([[8311],{8772(u,s,o){o.r(s),o.d(s,{default:()=>e});o(6540);var r=o(6347),a=o(6025),c=o(4848);function e(){return(0,c.jsx)(r.rd,{to:(0,a.Ay)("/bp/slides")})}}}]);

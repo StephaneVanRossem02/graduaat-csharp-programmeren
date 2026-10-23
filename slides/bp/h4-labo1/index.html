@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="nl"><head>
+<script src="../../_libs/clipboard/clipboard.min.js"></script>
+<script src="../../_libs/quarto-html/tabby.min.js"></script>
+<script src="../../_libs/quarto-html/popper.min.js"></script>
+<script src="../../_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../_libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
+
+  <meta name="author" content="Semester 1 · Basis Programmeren">
+  <title>H4: Beslissingen</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #24292e;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #24292e; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #d73a49; } /* Attribute */
+    code span.bn { color: #005cc5; } /* BaseN */
+    code span.bu { color: #d73a49; } /* BuiltIn */
+    code span.cf { color: #d73a49; } /* ControlFlow */
+    code span.ch { color: #032f62; } /* Char */
+    code span.cn { color: #005cc5; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #d73a49; } /* DataType */
+    code span.dv { color: #005cc5; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #d73a49; font-weight: bold; } /* Extension */
+    code span.fl { color: #005cc5; } /* Float */
+    code span.fu { color: #6f42c1; } /* Function */
+    code span.im { color: #032f62; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #d73a49; } /* Keyword */
+    code span.op { color: #24292e; } /* Operator */
+    code span.ot { color: #6f42c1; } /* Other */
+    code span.pp { color: #d73a49; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #005cc5; } /* SpecialChar */
+    code span.ss { color: #032f62; } /* SpecialString */
+    code span.st { color: #032f62; } /* String */
+    code span.va { color: #e36209; } /* Variable */
+    code span.vs { color: #032f62; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../../_libs/revealjs/dist/theme/quarto-646599c42d8b00bcce6bc1292434b7ba.css">
+  <link href="../../_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+<style>html.print-pdf .reveal .slide-number, html.print-pdf .reveal .slide-number-pdf, html.print-pdf .reveal .code-copy-button { display: none !important; }</style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-gradient="linear-gradient(135deg, #e05700 0%, #fd9702 100%)" class="quarto-title-block center">
+  <h1 class="title">H4: Beslissingen</h1>
+  <p class="subtitle">Labo 1 · week 4</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Semester 1 · Basis Programmeren
+</div>
+</div>
+</div>
+
+</section>
+<section id="vandaag" class="slide level2">
+<h2>Vandaag</h2>
+<ol type="1">
+<li class="fragment"><strong>Waarom beslissingen?</strong> Van lineaire programma’s naar programma’s die kiezen</li>
+<li class="fragment"><strong>Booleaanse expressies</strong>: vergelijken met <code>&lt;</code>, <code>&gt;</code>, <code>==</code>, <code>!=</code>, …</li>
+<li class="fragment"><strong><code>if</code></strong>: code die enkel soms uitvoert</li>
+<li class="fragment"><strong><code>if/else</code></strong>: een plan B</li>
+<li class="fragment"><strong>Nesting en <code>else if</code></strong>: meerdere gevallen afhandelen</li>
+</ol>
+<div class="mop">
+<p>Vandaag leren we beslissingen nemen. Dat is meer dan sommigen aan de toog van de frituur kunnen.</p>
+</div>
+</section>
+<section>
+<section id="waarom-beslissingen" class="title-slide slide level1 center" data-background-gradient="linear-gradient(135deg, #e05700 0%, #fd9702 100%)">
+<h1>Waarom beslissingen?</h1>
+
+</section>
+<section id="tot-nu-toe-lineair" class="slide level2">
+<h2>Tot nu toe: lineair</h2>
+<p>Onze programma’s liepen braaf <strong>regel per regel</strong> van boven naar onder. Zoals een algoritme om brood te kopen:</p>
+<div class="compact">
+<ol type="1">
+<li>Neem geld uit spaarpot</li>
+<li>Wandel naar de bakker om de hoek</li>
+<li>Vraag om een brood</li>
+<li>Krijg het brood</li>
+<li>Betaal het geld aan de bakker</li>
+<li>Keer huiswaarts</li>
+<li>Smullen maar</li>
+</ol>
+</div>
+<div class="mop">
+<p>Stap 7: het enige deel van het algoritme dat nooit faalt.</p>
+</div>
+</section>
+<section id="programmas-die-kiezen" class="slide level2">
+<h2>Programma’s die kiezen</h2>
+<p>Een beter algoritme reageert op de <strong>omstandigheden</strong>: is de bakker gesloten? Is er genoeg geld?</p>
+<div class="fragment">
+<p><strong>Het programma neemt beslissingen op basis van aanwezige informatie.</strong></p>
+</div>
+<div class="fragment">
+<p>Voorbeelden in een bestelsysteem:</p>
+<ul>
+<li class="fragment">reageren als de voorraad van een product op is</li>
+<li class="fragment">korting geven op bepaalde dagen van de week</li>
+<li class="fragment">spaarpunten laten inwisselen</li>
+</ul>
+<div class="mop">
+<p>Een programma zonder beslissingen is als een gps die altijd “rechtdoor” zegt.</p>
+</div>
+</div>
+</section></section>
+<section>
+<section id="booleaanse-expressies" class="title-slide slide level1 center" data-background-gradient="linear-gradient(135deg, #e05700 0%, #fd9702 100%)">
+<h1>Booleaanse expressies</h1>
+
+</section>
+<section id="relationele-operatoren" class="slide level2">
+<h2>Relationele operatoren</h2>
+<p>Een <strong>booleaanse expressie</strong> is een stukje code dat <code>true</code> of <code>false</code> oplevert.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;">C#-syntax</th>
+<th>Betekenis</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><code>&gt;</code></td>
+<td>groter dan</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>&lt;</code></td>
+<td>kleiner dan</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>==</code></td>
+<td>gelijk aan</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>!=</code></td>
+<td>niet gelijk aan</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>&lt;=</code></td>
+<td>kleiner dan of gelijk aan</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>&gt;=</code></td>
+<td>groter dan of gelijk aan</td>
+</tr>
+</tbody>
+</table>
+<div class="mop">
+<p>Relationele operatoren: geen datingapp, wel vergelijkingen.</p>
+</div>
+</section>
+<section id="of" class="slide level2">
+<h2><code>=</code> of <code>==</code>?</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource csharp number-lines code-with-copy"><code class="sourceCode cs"><span id="cb1-1"><a href="" aria-label="1"></a><span class="dt">int</span> age <span class="op">=</span> <span class="dv">18</span><span class="op">;</span>                  <span class="co">// toekenning: age wordt 18</span></span>
+<span id="cb1-2"><a href="" aria-label="2"></a>Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span>age <span class="op">==</span> <span class="dv">18</span><span class="op">);</span>  <span class="co">// vraag: is age gelijk aan 18?</span></span></code></pre></div><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="fragment">
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Waarschuwing</strong></p>
+</div>
+<div class="callout-content">
+<p>“Gelijk aan” schrijf je met <strong>twee</strong> symbolen, omdat één <code>=</code> al gebruikt wordt voor een toekenning.</p>
+</div>
+</div>
+</div>
+<div class="mop">
+<p>Eén <code>=</code> geeft een bevel, twee <code>==</code> stellen een vraag. Drie <code>===</code> is JavaScript, en daar praten we hier niet over.</p>
+</div>
+</div>
+</section>
+<section id="uittesten" class="slide level2">
+<h2>Uittesten</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource csharp number-lines code-with-copy"><code class="sourceCode cs"><span id="cb2-1"><a href="" aria-label="1"></a>Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="dv">4</span> <span class="op">&lt;</span> <span class="dv">7</span><span class="op">);</span>   <span class="co">// True</span></span>
+<span id="cb2-2"><a href="" aria-label="2"></a>Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="dv">4</span> <span class="op">&lt;</span> <span class="dv">2</span><span class="op">);</span>   <span class="co">// False</span></span>
+<span id="cb2-3"><a href="" aria-label="3"></a>Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="dv">5</span> <span class="op">==</span> <span class="dv">5</span><span class="op">);</span>  <span class="co">// True</span></span>
+<span id="cb2-4"><a href="" aria-label="4"></a>Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="dv">5</span> <span class="op">!=</span> <span class="dv">5</span><span class="op">);</span>  <span class="co">// False</span></span></code></pre></div><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="fragment">
+<p>Het resultaat kan je ook bewaren in een variabele van het type <code>bool</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource csharp number-lines code-with-copy"><code class="sourceCode cs"><span id="cb3-1"><a href="" aria-label="1"></a><span class="dt">int</span> age <span class="op">=</span> <span class="dv">17</span><span class="op">;</span></span>
+<span id="cb3-2"><a href="" aria-label="2"></a><span class="dt">bool</span> isAdult <span class="op">=</span> age <span class="op">&gt;=</span> <span class="dv">18</span><span class="op">;</span></span>
+<span id="cb3-3"><a href="" aria-label="3"></a>Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span>isAdult<span class="op">);</span>  <span class="co">// False</span></span></code></pre></div><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="mop">
+<p>C# schrijft <code>True</code> met een hoofdletter. Het is nu eenmaal zeker van zijn stuk.</p>
+</div>
+</div>
+</section>
+<section id="even-testen" class="slide level2">
+<h2>Even testen 🤔</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource csharp number-lines code-with-copy"><code class="sourceCode cs"><span id="cb4-1"><a href="" aria-label="1"></a><span class="dt">int</span> number <span class="op">=</span> <span class="dv">10</span><span class="op">;</span></span></code></pre></div><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Welke expressies leveren <code>true</code> op?</p>
+<div class="compact">
+<ol type="1">
+<li><code>number &gt; 10</code> <span class="fragment">→ ❌ <code>false</code></span></li>
+<li><code>number &gt;= 10</code> <span class="fragment">→ ✅ <code>true</code></span></li>
+<li><code>number != 3</code> <span class="fragment">→ ✅ <code>true</code></span></li>
+<li><code>number &lt; 5</code> <span class="fragment">→ ❌ <code>false</code></span></li>
+<li><code>"C#" == "c#"</code> <span class="fragment">→ ❌ <code>false</code></span></li>
+</ol>
+</div>
+<div class="mop">
+<p><code>4 &lt; 7</code> is <code>true</code>. Net als “maandag komt altijd te vroeg”.</p>
+</div>
+</section>
+<section id="appelen-met-peren" class="slide level2">
+<h2>Appelen met peren</h2>
+<p>De types die je vergelijkt, moeten <strong>vergelijkbaar</strong> zijn:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource csharp number-lines code-with-copy"><code class="sourceCode cs"><span id="cb5-1"><a href="" aria-label="1"></a><span class="kw">if</span> <span class="op">(</span><span class="st">"4"</span> <span class="op">&gt;</span> <span class="dv">3</span><span class="op">)</span>   <span class="co">// ❌ compileert niet: string met int vergelijken</span></span></code></pre></div><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="fragment">
+<p>Zet eerst om, dan vergelijk je getallen met getallen:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource csharp number-lines code-with-copy"><code class="sourceCode cs"><span id="cb6-1"><a href="" aria-label="1"></a><span class="kw">if</span> <span class="op">(</span>Convert<span class="op">.</span><span class="fu">ToInt32</span><span class="op">(</span><span class="st">"4"</span><span class="op">)</span> <span class="op">&gt;</span> <span class="dv">3</span><span class="op">)</span>   <span class="co">// ✅</span></span></code></pre></div><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="mop">
+<p>De compiler vergelijkt geen appelen met peren. Hij is geen fruitboer.</p>
+</div>
+</div>
+</section></section>
+<section>
+<section id="if" class="title-slide slide level1 center" data-background-gradient="linear-gradient(135deg, #e05700 0%, #fd9702 100%)">
+<h1><code>if</code></h1>
+
+</section>
+<section id="het-idee" class="slide level2">
+<h2>Het idee</h2>
+<p>Een <code>if</code> bevat code die <strong>enkel</strong> uitvoert als een booleaanse expressie <code>true</code> oplevert. Dat heet <strong>conditionele code</strong>.</p>
+<div class="cell" data-fig-height="4.4" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<svg width="960" height="422" viewbox="0.00 0.00 597.89 456.20" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 452.2)">
+<!-- start -->
+<g id="node1" class="node">
+<title>start</title>
+<path fill="#e8d5f5" stroke="#9673a6" stroke-width="1.2" d="M421.4,-448.2C421.4,-448.2 387.63,-448.2 387.63,-448.2 381.63,-448.2 375.63,-442.2 375.63,-436.2 375.63,-436.2 375.63,-424.2 375.63,-424.2 375.63,-418.2 381.63,-412.2 387.63,-412.2 387.63,-412.2 421.4,-412.2 421.4,-412.2 427.4,-412.2 433.4,-418.2 433.4,-424.2 433.4,-424.2 433.4,-436.2 433.4,-436.2 433.4,-442.2 427.4,-448.2 421.4,-448.2"></path>
+<text text-anchor="middle" x="404.51" y="-425.1" font-family="Segoe UI" font-size="17.00">Main</text>
+</g>
+<!-- input -->
+<g id="node2" class="node">
+<title>input</title>
+<polygon fill="#d5e5f9" stroke="#5a7ab0" stroke-width="1.2" points="535.5,-395.1 327.13,-395.1 273.53,-338.5 481.9,-338.5 535.5,-395.1"></polygon>
+<text text-anchor="middle" x="404.51" y="-361.7" font-family="Segoe UI" font-size="17.00">Input password</text>
+</g>
+<!-- start&#45;&gt;input -->
+<g id="edge1" class="edge">
+<title>start-&gt;input</title>
+<path fill="none" stroke="#555555" d="M404.51,-412.1C404.51,-408.98 404.51,-405.63 404.51,-402.21"></path>
+<polygon fill="#555555" stroke="#555555" points="406.96,-402.17 404.51,-395.17 402.06,-402.17 406.96,-402.17"></polygon>
+</g>
+<!-- check -->
+<g id="node3" class="node">
+<title>check</title>
+<polygon fill="#fbd5d5" stroke="#b85450" stroke-width="1.2" points="404.51,-321.3 219.26,-293 404.51,-264.7 589.76,-293 404.51,-321.3"></polygon>
+<text text-anchor="middle" x="404.51" y="-287.9" font-family="Segoe UI" font-size="17.00">password == "gEhEiM"</text>
+</g>
+<!-- input&#45;&gt;check -->
+<g id="edge2" class="edge">
+<title>input-&gt;check</title>
+<path fill="none" stroke="#555555" d="M404.51,-338.25C404.51,-335.04 404.51,-331.75 404.51,-328.47"></path>
+<polygon fill="#555555" stroke="#555555" points="406.96,-328.36 404.51,-321.36 402.06,-328.36 406.96,-328.36"></polygon>
+</g>
+<!-- secret -->
+<g id="node4" class="node">
+<title>secret</title>
+<polygon fill="#d5f5d5" stroke="#5a9a5a" stroke-width="1.2" points="509.04,-230.5 104.15,-230.5 -0.01,-173.9 404.88,-173.9 509.04,-230.5"></polygon>
+<text text-anchor="middle" x="254.51" y="-197.1" font-family="Segoe UI" font-size="17.00">Output "Geheime informatie: ..."</text>
+</g>
+<!-- check&#45;&gt;secret -->
+<g id="edge3" class="edge">
+<title>check-&gt;secret</title>
+<path fill="none" stroke="#555555" d="M367.82,-270.28C349.5,-259.44 327.02,-246.13 306.93,-234.23"></path>
+<polygon fill="#555555" stroke="#555555" points="308.05,-232.05 300.78,-230.59 305.55,-236.26 308.05,-232.05"></polygon>
+<text text-anchor="middle" x="359.55" y="-243.1" font-family="Segoe UI" font-size="15.00"> True</text>
+</g>
+<!-- join -->
+<g id="node6" class="node">
+<title>join</title>
+<ellipse fill="#fbd5d5" stroke="#b85450" stroke-width="1.2" cx="427.51" cy="-59.5" rx="6.5" ry="6.5"></ellipse>
+</g>
+<!-- check&#45;&gt;join -->
+<g id="edge6" class="edge">
+<title>check-&gt;join</title>
+<path fill="none" stroke="#555555" d="M467.87,-274.33C489.36,-264.98 511.05,-251.05 523.51,-230.6 538.68,-205.71 511.53,-85.26 509.51,-83 492.23,-63.61 459.96,-60.24 441.48,-60.04"></path>
+<polygon fill="#555555" stroke="#555555" points="441.25,-57.59 434.27,-60.11 441.3,-62.49 441.25,-57.59"></polygon>
+<text text-anchor="middle" x="543.22" y="-152.3" font-family="Segoe UI" font-size="15.00"> False</text>
+</g>
+<!-- bye -->
+<g id="node5" class="node">
+<title>bye</title>
+<polygon fill="#d5f5d5" stroke="#5a9a5a" stroke-width="1.2" points="494.73,-139.7 187.36,-139.7 108.29,-83.1 415.66,-83.1 494.73,-139.7"></polygon>
+<text text-anchor="middle" x="301.51" y="-106.3" font-family="Segoe UI" font-size="17.00">Output "Fijne dag nog!"</text>
+</g>
+<!-- secret&#45;&gt;bye -->
+<g id="edge4" class="edge">
+<title>secret-&gt;bye</title>
+<path fill="none" stroke="#555555" d="M269.13,-173.59C273.68,-164.99 278.76,-155.4 283.51,-146.41"></path>
+<polygon fill="#555555" stroke="#555555" points="285.8,-147.33 286.91,-139.99 281.47,-145.03 285.8,-147.33"></polygon>
+</g>
+<!-- bye&#45;&gt;join -->
+<g id="edge5" class="edge">
+<title>bye-&gt;join</title>
+<path fill="none" stroke="#555555" d="M370.78,-82.97C387.71,-76.26 404.04,-69.8 414.79,-65.54"></path>
+<polygon fill="#555555" stroke="#555555" points="415.96,-67.71 421.57,-62.85 414.16,-63.15 415.96,-67.71"></polygon>
+</g>
+<!-- stop -->
+<g id="node7" class="node">
+<title>stop</title>
+<path fill="#e8d5f5" stroke="#9673a6" stroke-width="1.2" d="M442.51,-36C442.51,-36 412.51,-36 412.51,-36 406.51,-36 400.51,-30 400.51,-24 400.51,-24 400.51,-12 400.51,-12 400.51,-6 406.51,0 412.51,0 412.51,0 442.51,0 442.51,0 448.51,0 454.51,-6 454.51,-12 454.51,-12 454.51,-24 454.51,-24 454.51,-30 448.51,-36 442.51,-36"></path>
+<text text-anchor="middle" x="427.51" y="-12.9" font-family="Segoe UI" font-size="17.00">End</text>
+</g>
+<!-- join&#45;&gt;stop -->
+<g id="edge7" class="edge">
+<title>join-&gt;stop</title>
+<path fill="none" stroke="#555555" d="M427.51,-52.67C427.51,-50.07 427.51,-46.82 427.51,-43.36"></path>
+<polygon fill="#555555" stroke="#555555" points="429.96,-43.14 427.51,-36.14 425.06,-43.14 429.96,-43.14"></polygon>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="van-schema-naar-c" class="slide level2">
+<h2>Van schema naar C#</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-code-line-numbers="2|3-6"><pre class="sourceCode numberSource csharp number-lines code-with-copy"><code class="sourceCode cs"><span id="cb7-1"><a href="" aria-label="1"></a><span class="dt">string</span> password <span class="op">=</span> Console<span class="op">.</span><span class="fu">ReadLine</span><span class="op">();</span></span>
+<span id="cb7-2"><a href="" aria-label="2"></a><span class="kw">if</span> <span class="op">(</span>password <span class="op">==</span> <span class="st">"gEhEiM"</span><span class="op">)</span></span>
+<span id="cb7-3"><a href="" aria-label="3"></a><span class="op">{</span></span>
+<span id="cb7-4"><a href="" aria-label="4"></a>    Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Geheime informatie: ..."</span><span class="op">);</span></span>
+<span id="cb7-5"><a href="" aria-label="5"></a>    Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Fijne dag nog!"</span><span class="op">);</span></span>
+<span id="cb7-6"><a href="" aria-label="6"></a><span class="op">}</span></span></code></pre></div><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li class="fragment">De <strong>ruit</strong> = de voorwaarde tussen de <strong>ronde haakjes</strong> na <code>if</code></li>
+<li class="fragment">De tak <strong>True</strong> = de code tussen de <strong>accolades</strong></li>
+<li class="fragment">De tak <strong>False</strong> = gewoon verder na de <code>}</code></li>
+</ul>
+<div class="mop">
+<p>Een flowchart is een stripverhaal voor programmeurs. Alleen met meer ruiten en minder superhelden.</p>
+</div>
+</section>
+<section id="met-invoer-van-de-gebruiker" class="slide level2">
+<h2>Met invoer van de gebruiker</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8" data-code-line-numbers="1-2|3|4-6"><pre class="sourceCode numberSource csharp number-lines code-with-copy"><code class="sourceCode cs"><span id="cb8-1"><a href="" aria-label="1"></a>Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Hoe oud ben je?"</span><span class="op">);</span></span>
+<span id="cb8-2"><a href="" aria-label="2"></a><span class="dt">int</span> age <span class="op">=</span> Convert<span class="op">.</span><span class="fu">ToInt32</span><span class="op">(</span>Console<span class="op">.</span><span class="fu">ReadLine</span><span class="op">());</span></span>
+<span id="cb8-3"><a href="" aria-label="3"></a><span class="kw">if</span> <span class="op">(</span>age <span class="op">&gt;=</span> <span class="dv">18</span><span class="op">)</span></span>
+<span id="cb8-4"><a href="" aria-label="4"></a><span class="op">{</span></span>
+<span id="cb8-5"><a href="" aria-label="5"></a>    Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Je mag stemmen."</span><span class="op">);</span></span>
+<span id="cb8-6"><a href="" aria-label="6"></a><span class="op">}</span></span>
+<span id="cb8-7"><a href="" aria-label="7"></a>Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Bedankt!"</span><span class="op">);</span></span></code></pre></div><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="fragment">
+<pre class="output"><code>Hoe oud ben je?
+16
+Bedankt!</code></pre>
+<div class="mop">
+<p>In België is stemmen voor de meeste verkiezingen zelfs een plicht. Ook dat is een <code>if</code>.</p>
+</div>
+</div>
+</section>
+<section id="accolades-vergeten" class="slide level2">
+<h2>Accolades vergeten</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource csharp number-lines code-with-copy"><code class="sourceCode cs"><span id="cb10-1"><a href="" aria-label="1"></a><span class="kw">if</span> <span class="op">(</span>password <span class="op">==</span> <span class="st">"gEhEiM"</span><span class="op">)</span></span>
+<span id="cb10-2"><a href="" aria-label="2"></a>    Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Geheime informatie: ..."</span><span class="op">);</span></span>
+<span id="cb10-3"><a href="" aria-label="3"></a>    Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Fijne dag nog!"</span><span class="op">);</span></span></code></pre></div><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="fragment">
+<p>Zonder accolades hoort <strong>enkel de eerste regel</strong> bij de <code>if</code>. De tweede regel wordt <strong>altijd</strong> uitgevoerd, ook met een fout wachtwoord. Het inspringen verandert daar niets aan.</p>
+</div>
+<div class="fragment">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Belangrijk</strong></p>
+</div>
+<div class="callout-content">
+<p>Voor ons is het simpel: we schrijven <code>if</code> <strong>altijd</strong> met accolades.</p>
+</div>
+</div>
+</div>
+<div class="mop">
+<p>Accolades vergeten is als je broek vergeten: technisch kan je vertrekken, maar het loopt slecht af.</p>
+</div>
+</div>
+</section></section>
+<section>
+<section id="ifelse" class="title-slide slide level1 center" data-background-gradient="linear-gradient(135deg, #e05700 0%, #fd9702 100%)">
+<h1><code>if/else</code></h1>
+
+</section>
+<section id="een-plan-b" class="slide level2">
+<h2>Een plan B</h2>
+<p>Vaak wil je iets <strong>anders</strong> doen als niet aan de voorwaarde voldaan is.</p>
+<div class="cell" data-fig-height="3.4" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<svg width="960" height="326" viewbox="0.00 0.00 1045.14 259.40" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 255.4)">
+<!-- input -->
+<g id="node1" class="node">
+<title>input</title>
+<polygon fill="#d5e5f9" stroke="#5a7ab0" stroke-width="1.2" points="651.5,-251.3 443.13,-251.3 389.53,-194.7 597.9,-194.7 651.5,-251.3"></polygon>
+<text text-anchor="middle" x="520.51" y="-217.9" font-family="Segoe UI" font-size="17.00">Input password</text>
+</g>
+<!-- check -->
+<g id="node2" class="node">
+<title>check</title>
+<polygon fill="#fbd5d5" stroke="#b85450" stroke-width="1.2" points="520.51,-177.5 335.26,-149.2 520.51,-120.9 705.76,-149.2 520.51,-177.5"></polygon>
+<text text-anchor="middle" x="520.51" y="-144.1" font-family="Segoe UI" font-size="17.00">password == "gEhEiM"</text>
+</g>
+<!-- input&#45;&gt;check -->
+<g id="edge1" class="edge">
+<title>input-&gt;check</title>
+<path fill="none" stroke="#555555" d="M520.51,-194.45C520.51,-191.24 520.51,-187.95 520.51,-184.67"></path>
+<polygon fill="#555555" stroke="#555555" points="522.96,-184.56 520.51,-177.56 518.06,-184.56 522.96,-184.56"></polygon>
+</g>
+<!-- secret -->
+<g id="node3" class="node">
+<title>secret</title>
+<polygon fill="#d5f5d5" stroke="#5a9a5a" stroke-width="1.2" points="509.04,-86.7 104.15,-86.7 -0.01,-30.1 404.88,-30.1 509.04,-86.7"></polygon>
+<text text-anchor="middle" x="254.51" y="-53.3" font-family="Segoe UI" font-size="17.00">Output "Geheime informatie: ..."</text>
+</g>
+<!-- check&#45;&gt;secret -->
+<g id="edge2" class="edge">
+<title>check-&gt;secret</title>
+<path fill="none" stroke="#555555" d="M464.1,-129.37C429,-117.65 383.1,-102.33 343.2,-89.01"></path>
+<polygon fill="#555555" stroke="#555555" points="343.75,-86.61 336.34,-86.72 342.2,-91.26 343.75,-86.61"></polygon>
+<text text-anchor="middle" x="427.55" y="-99.3" font-family="Segoe UI" font-size="15.00"> True</text>
+</g>
+<!-- alarm -->
+<g id="node4" class="node">
+<title>alarm</title>
+<polygon fill="#d5f5d5" stroke="#5a9a5a" stroke-width="1.2" points="1037.26,-86.7 639.97,-86.7 537.76,-30.1 935.06,-30.1 1037.26,-86.7"></polygon>
+<text text-anchor="middle" x="787.51" y="-53.3" font-family="Segoe UI" font-size="17.00">Output "Maak dat je wegkomt!"</text>
+</g>
+<!-- check&#45;&gt;alarm -->
+<g id="edge3" class="edge">
+<title>check-&gt;alarm</title>
+<path fill="none" stroke="#555555" d="M576.81,-129.48C612.03,-117.76 658.17,-102.42 698.29,-89.07"></path>
+<polygon fill="#555555" stroke="#555555" points="699.32,-91.31 705.19,-86.78 697.77,-86.66 699.32,-91.31"></polygon>
+<text text-anchor="middle" x="695.22" y="-99.3" font-family="Segoe UI" font-size="15.00"> False</text>
+</g>
+<!-- join -->
+<g id="node5" class="node">
+<title>join</title>
+<ellipse fill="#fbd5d5" stroke="#b85450" stroke-width="1.2" cx="520.51" cy="-6.5" rx="6.5" ry="6.5"></ellipse>
+</g>
+<!-- secret&#45;&gt;join -->
+<g id="edge4" class="edge">
+<title>secret-&gt;join</title>
+<path fill="none" stroke="#555555" d="M400.35,-30.04C444.37,-21.78 486.48,-13.88 507.19,-10"></path>
+<polygon fill="#555555" stroke="#555555" points="507.83,-12.37 514.26,-8.67 506.93,-7.56 507.83,-12.37"></polygon>
+</g>
+<!-- alarm&#45;&gt;join -->
+<g id="edge5" class="edge">
+<title>alarm-&gt;join</title>
+<path fill="none" stroke="#555555" d="M641.12,-30.04C596.95,-21.78 554.67,-13.88 533.89,-10"></path>
+<polygon fill="#555555" stroke="#555555" points="534.12,-7.55 526.79,-8.67 533.22,-12.37 534.12,-7.55"></polygon>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div class="mop">
+<p><code>if/else</code>: het enige moment waarop een computer een plan B heeft.</p>
+</div>
+</section>
+<section id="ifelse-in-c" class="slide level2">
+<h2><code>if/else</code> in C#</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-code-line-numbers="1-4|5-8"><pre class="sourceCode numberSource csharp number-lines code-with-copy"><code class="sourceCode cs"><span id="cb11-1"><a href="" aria-label="1"></a><span class="kw">if</span> <span class="op">(</span>password <span class="op">==</span> <span class="st">"gEhEiM"</span><span class="op">)</span></span>
+<span id="cb11-2"><a href="" aria-label="2"></a><span class="op">{</span></span>
+<span id="cb11-3"><a href="" aria-label="3"></a>    Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Geheime informatie: ..."</span><span class="op">);</span></span>
+<span id="cb11-4"><a href="" aria-label="4"></a><span class="op">}</span></span>
+<span id="cb11-5"><a href="" aria-label="5"></a><span class="kw">else</span></span>
+<span id="cb11-6"><a href="" aria-label="6"></a><span class="op">{</span></span>
+<span id="cb11-7"><a href="" aria-label="7"></a>    Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Maak dat je wegkomt!"</span><span class="op">);</span></span>
+<span id="cb11-8"><a href="" aria-label="8"></a><span class="op">}</span></span></code></pre></div><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li class="fragment">De tak <strong>True</strong> = het eerste blok accolades</li>
+<li class="fragment">De tak <strong>False</strong> = het blok na <code>else</code></li>
+<li class="fragment">Er wordt <strong>altijd precies één</strong> van de twee uitgevoerd</li>
+</ul>
+</section>
+<section id="code-voor-beide-gevallen" class="slide level2">
+<h2>Code voor beide gevallen</h2>
+<p>Wat je <strong>altijd</strong> wil doen, hoort niet in een vertakking. Zet het <strong>na</strong> de volledige <code>if/else</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12" data-code-line-numbers="9"><pre class="sourceCode numberSource csharp number-lines code-with-copy"><code class="sourceCode cs"><span id="cb12-1"><a href="" aria-label="1"></a><span class="kw">if</span> <span class="op">(</span>password <span class="op">==</span> <span class="st">"gEhEiM"</span><span class="op">)</span></span>
+<span id="cb12-2"><a href="" aria-label="2"></a><span class="op">{</span></span>
+<span id="cb12-3"><a href="" aria-label="3"></a>    Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Geheime informatie: ..."</span><span class="op">);</span></span>
+<span id="cb12-4"><a href="" aria-label="4"></a><span class="op">}</span></span>
+<span id="cb12-5"><a href="" aria-label="5"></a><span class="kw">else</span></span>
+<span id="cb12-6"><a href="" aria-label="6"></a><span class="op">{</span></span>
+<span id="cb12-7"><a href="" aria-label="7"></a>    Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Maak dat je wegkomt!"</span><span class="op">);</span></span>
+<span id="cb12-8"><a href="" aria-label="8"></a><span class="op">}</span></span>
+<span id="cb12-9"><a href="" aria-label="9"></a>Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Fijne dag nog!"</span><span class="op">);</span></span></code></pre></div><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="mop">
+<p>“Fijne dag nog!” krijg je altijd. Zelfs als je net betrapt bent.</p>
+</div>
+</section></section>
+<section>
+<section id="nesting-en-else-if" class="title-slide slide level1 center" data-background-gradient="linear-gradient(135deg, #e05700 0%, #fd9702 100%)">
+<h1>Nesting en <code>else if</code></h1>
+
+</section>
+<section id="nesting-een-if-in-een-if" class="slide level2 smaller">
+<h2>Nesting: een <code>if</code> in een <code>if</code></h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource csharp number-lines code-with-copy"><code class="sourceCode cs"><span id="cb13-1"><a href="" aria-label="1"></a><span class="kw">if</span> <span class="op">(</span>password <span class="op">==</span> <span class="st">"gEhEiM"</span><span class="op">)</span></span>
+<span id="cb13-2"><a href="" aria-label="2"></a><span class="op">{</span></span>
+<span id="cb13-3"><a href="" aria-label="3"></a>    Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Geheime informatie: ..."</span><span class="op">);</span></span>
+<span id="cb13-4"><a href="" aria-label="4"></a><span class="op">}</span></span>
+<span id="cb13-5"><a href="" aria-label="5"></a><span class="kw">else</span></span>
+<span id="cb13-6"><a href="" aria-label="6"></a><span class="op">{</span></span>
+<span id="cb13-7"><a href="" aria-label="7"></a>    Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Dat klopt niet! Je krijgt nog één kans..."</span><span class="op">);</span></span>
+<span id="cb13-8"><a href="" aria-label="8"></a>    password <span class="op">=</span> Console<span class="op">.</span><span class="fu">ReadLine</span><span class="op">();</span></span>
+<span id="cb13-9"><a href="" aria-label="9"></a>    <span class="kw">if</span> <span class="op">(</span>password <span class="op">==</span> <span class="st">"gEhEiM"</span><span class="op">)</span></span>
+<span id="cb13-10"><a href="" aria-label="10"></a>    <span class="op">{</span></span>
+<span id="cb13-11"><a href="" aria-label="11"></a>        Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Geheime informatie: ..."</span><span class="op">);</span></span>
+<span id="cb13-12"><a href="" aria-label="12"></a>    <span class="op">}</span></span>
+<span id="cb13-13"><a href="" aria-label="13"></a>    <span class="kw">else</span></span>
+<span id="cb13-14"><a href="" aria-label="14"></a>    <span class="op">{</span></span>
+<span id="cb13-15"><a href="" aria-label="15"></a>        Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Ook niet juist."</span><span class="op">);</span></span>
+<span id="cb13-16"><a href="" aria-label="16"></a>    <span class="op">}</span></span>
+<span id="cb13-17"><a href="" aria-label="17"></a><span class="op">}</span></span></code></pre></div><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="mop">
+<p>Te diep nesten is als matroesjka’s openen: leuk, tot je de kleinste zoekt.</p>
+</div>
+</section>
+<section id="meerdere-gevallen" class="slide level2">
+<h2>Meerdere gevallen</h2>
+<p>Niet het juiste wachtwoord, maar <strong>bijna</strong>? Dan geven we een hint.</p>
+<div class="cell" data-fig-height="3.4" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<svg width="960" height="326" viewbox="0.00 0.00 1015.98 246.40" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 242.4)">
+<!-- check1 -->
+<g id="node1" class="node">
+<title>check1</title>
+<polygon fill="#fbd5d5" stroke="#b85450" stroke-width="1.2" points="637.47,-238.3 452.22,-210 637.47,-181.7 822.72,-210 637.47,-238.3"></polygon>
+<text text-anchor="middle" x="637.47" y="-204.9" font-family="Segoe UI" font-size="17.00">password == "gEhEiM"</text>
+</g>
+<!-- check2 -->
+<g id="node2" class="node">
+<title>check2</title>
+<polygon fill="#fbd5d5" stroke="#b85450" stroke-width="1.2" points="292.47,-147.5 114.86,-119.2 292.47,-90.9 470.08,-119.2 292.47,-147.5"></polygon>
+<text text-anchor="middle" x="292.47" y="-114.1" font-family="Segoe UI" font-size="17.00">password == "geheim"</text>
+</g>
+<!-- check1&#45;&gt;check2 -->
+<g id="edge2" class="edge">
+<title>check1-&gt;check2</title>
+<path fill="none" stroke="#555555" d="M570.54,-191.77C511.48,-176.57 425.6,-154.47 364.94,-138.85"></path>
+<polygon fill="#555555" stroke="#555555" points="365.43,-136.45 358.04,-137.08 364.21,-141.2 365.43,-136.45"></polygon>
+<text text-anchor="middle" x="514.17" y="-160.1" font-family="Segoe UI" font-size="15.00"> False</text>
+</g>
+<!-- secret -->
+<g id="node3" class="node">
+<title>secret</title>
+<polygon fill="#d5f5d5" stroke="#5a9a5a" stroke-width="1.2" points="1007.99,-147.5 603.1,-147.5 498.94,-90.9 903.84,-90.9 1007.99,-147.5"></polygon>
+<text text-anchor="middle" x="753.47" y="-114.1" font-family="Segoe UI" font-size="17.00">Output "Geheime informatie: ..."</text>
+</g>
+<!-- check1&#45;&gt;secret -->
+<g id="edge1" class="edge">
+<title>check1-&gt;secret</title>
+<path fill="none" stroke="#555555" d="M667.34,-186.13C680.85,-175.79 697.05,-163.39 711.74,-152.15"></path>
+<polygon fill="#555555" stroke="#555555" points="713.43,-153.94 717.49,-147.74 710.45,-150.05 713.43,-153.94"></polygon>
+<text text-anchor="middle" x="721.5" y="-160.1" font-family="Segoe UI" font-size="15.00"> True</text>
+</g>
+<!-- warm -->
+<g id="node4" class="node">
+<title>warm</title>
+<polygon fill="#d5f5d5" stroke="#5a9a5a" stroke-width="1.2" points="280.9,-56.7 57.5,-56.7 0.03,-0.1 223.43,-0.1 280.9,-56.7"></polygon>
+<text text-anchor="middle" x="140.47" y="-23.3" font-family="Segoe UI" font-size="17.00">Output "Warm!"</text>
+</g>
+<!-- check2&#45;&gt;warm -->
+<g id="edge3" class="edge">
+<title>check2-&gt;warm</title>
+<path fill="none" stroke="#555555" d="M255.67,-96.7C237.04,-85.82 214.08,-72.4 193.57,-60.42"></path>
+<polygon fill="#555555" stroke="#555555" points="194.57,-58.17 187.29,-56.76 192.1,-62.4 194.57,-58.17"></polygon>
+<text text-anchor="middle" x="246.5" y="-69.3" font-family="Segoe UI" font-size="15.00"> True</text>
+</g>
+<!-- cold -->
+<g id="node5" class="node">
+<title>cold</title>
+<polygon fill="#d5f5d5" stroke="#5a9a5a" stroke-width="1.2" points="581.16,-56.7 365.3,-56.7 309.77,-0.1 525.63,-0.1 581.16,-56.7"></polygon>
+<text text-anchor="middle" x="445.47" y="-23.3" font-family="Segoe UI" font-size="17.00">Output "Koud!"</text>
+</g>
+<!-- check2&#45;&gt;cold -->
+<g id="edge4" class="edge">
+<title>check2-&gt;cold</title>
+<path fill="none" stroke="#555555" d="M329.5,-96.7C348.26,-85.82 371.37,-72.4 392.01,-60.42"></path>
+<polygon fill="#555555" stroke="#555555" points="393.51,-62.39 398.33,-56.76 391.05,-58.15 393.51,-62.39"></polygon>
+<text text-anchor="middle" x="401.17" y="-69.3" font-family="Segoe UI" font-size="15.00"> False</text>
+</g>
+</g>
+</svg>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="genest-in-c" class="slide level2 smaller">
+<h2>Genest in C#</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource csharp number-lines code-with-copy"><code class="sourceCode cs"><span id="cb14-1"><a href="" aria-label="1"></a><span class="kw">if</span> <span class="op">(</span>password <span class="op">==</span> <span class="st">"gEhEiM"</span><span class="op">)</span></span>
+<span id="cb14-2"><a href="" aria-label="2"></a><span class="op">{</span></span>
+<span id="cb14-3"><a href="" aria-label="3"></a>    Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Geheime informatie: ..."</span><span class="op">);</span></span>
+<span id="cb14-4"><a href="" aria-label="4"></a><span class="op">}</span></span>
+<span id="cb14-5"><a href="" aria-label="5"></a><span class="kw">else</span></span>
+<span id="cb14-6"><a href="" aria-label="6"></a><span class="op">{</span></span>
+<span id="cb14-7"><a href="" aria-label="7"></a>    <span class="kw">if</span> <span class="op">(</span>password <span class="op">==</span> <span class="st">"geheim"</span><span class="op">)</span></span>
+<span id="cb14-8"><a href="" aria-label="8"></a>    <span class="op">{</span></span>
+<span id="cb14-9"><a href="" aria-label="9"></a>        Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Warm!"</span><span class="op">);</span></span>
+<span id="cb14-10"><a href="" aria-label="10"></a>    <span class="op">}</span></span>
+<span id="cb14-11"><a href="" aria-label="11"></a>    <span class="kw">else</span></span>
+<span id="cb14-12"><a href="" aria-label="12"></a>    <span class="op">{</span></span>
+<span id="cb14-13"><a href="" aria-label="13"></a>        Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Koud!"</span><span class="op">);</span></span>
+<span id="cb14-14"><a href="" aria-label="14"></a>    <span class="op">}</span></span>
+<span id="cb14-15"><a href="" aria-label="15"></a><span class="op">}</span></span></code></pre></div><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="hetzelfde-met-else-if" class="slide level2">
+<h2>Hetzelfde met <code>else if</code></h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15" data-code-line-numbers="5|9"><pre class="sourceCode numberSource csharp number-lines code-with-copy"><code class="sourceCode cs"><span id="cb15-1"><a href="" aria-label="1"></a><span class="kw">if</span> <span class="op">(</span>password <span class="op">==</span> <span class="st">"gEhEiM"</span><span class="op">)</span></span>
+<span id="cb15-2"><a href="" aria-label="2"></a><span class="op">{</span></span>
+<span id="cb15-3"><a href="" aria-label="3"></a>    Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Geheime informatie: ..."</span><span class="op">);</span></span>
+<span id="cb15-4"><a href="" aria-label="4"></a><span class="op">}</span></span>
+<span id="cb15-5"><a href="" aria-label="5"></a><span class="kw">else</span> <span class="kw">if</span> <span class="op">(</span>password <span class="op">==</span> <span class="st">"geheim"</span><span class="op">)</span></span>
+<span id="cb15-6"><a href="" aria-label="6"></a><span class="op">{</span></span>
+<span id="cb15-7"><a href="" aria-label="7"></a>    Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Warm!"</span><span class="op">);</span></span>
+<span id="cb15-8"><a href="" aria-label="8"></a><span class="op">}</span></span>
+<span id="cb15-9"><a href="" aria-label="9"></a><span class="kw">else</span></span>
+<span id="cb15-10"><a href="" aria-label="10"></a><span class="op">{</span></span>
+<span id="cb15-11"><a href="" aria-label="11"></a>    Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Koud!"</span><span class="op">);</span></span>
+<span id="cb15-12"><a href="" aria-label="12"></a><span class="op">}</span></span></code></pre></div><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="fragment">
+<p>Doet <strong>exact hetzelfde</strong>, maar leest van boven naar onder als een lijstje gevallen.</p>
+<div class="mop">
+<p>Warm! Koud! Programmeren is eigenlijk “warmer, kouder” spelen met de compiler.</p>
+</div>
+</div>
+</section>
+<section id="de-volgorde-telt" class="slide level2">
+<h2>De volgorde telt ⚠️</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource csharp number-lines code-with-copy"><code class="sourceCode cs"><span id="cb16-1"><a href="" aria-label="1"></a><span class="dt">int</span> score <span class="op">=</span> <span class="dv">17</span><span class="op">;</span></span>
+<span id="cb16-2"><a href="" aria-label="2"></a><span class="kw">if</span> <span class="op">(</span>score <span class="op">&gt;=</span> <span class="dv">10</span><span class="op">)</span></span>
+<span id="cb16-3"><a href="" aria-label="3"></a><span class="op">{</span></span>
+<span id="cb16-4"><a href="" aria-label="4"></a>    Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Geslaagd"</span><span class="op">);</span></span>
+<span id="cb16-5"><a href="" aria-label="5"></a><span class="op">}</span></span>
+<span id="cb16-6"><a href="" aria-label="6"></a><span class="kw">else</span> <span class="kw">if</span> <span class="op">(</span>score <span class="op">&gt;=</span> <span class="dv">16</span><span class="op">)</span></span>
+<span id="cb16-7"><a href="" aria-label="7"></a><span class="op">{</span></span>
+<span id="cb16-8"><a href="" aria-label="8"></a>    Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Met onderscheiding!"</span><span class="op">);</span></span>
+<span id="cb16-9"><a href="" aria-label="9"></a><span class="op">}</span></span></code></pre></div><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="fragment">
+<pre class="output"><code>Geslaagd</code></pre>
+</div>
+<div class="fragment">
+<p><code>17 &gt;= 10</code> is al <code>true</code>, dus de tweede voorwaarde wordt <strong>nooit</strong> bekeken. Zet de <strong>strengste</strong> voorwaarde eerst.</p>
+<div class="mop">
+<p>De eerste ware voorwaarde wint. Zoals aan de kassa: wie eerst komt, eerst maalt.</p>
+</div>
+</div>
+</section>
+<section id="wat-is-de-output" class="slide level2 smaller">
+<h2>Wat is de output? 🤔</h2>
+<div class="columns">
+<div class="column" style="width:62%;">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource csharp number-lines code-with-copy"><code class="sourceCode cs"><span id="cb18-1"><a href="" aria-label="1"></a><span class="kw">if</span> <span class="op">(</span>temperature <span class="op">&gt;</span> <span class="dv">30</span><span class="op">)</span></span>
+<span id="cb18-2"><a href="" aria-label="2"></a><span class="op">{</span></span>
+<span id="cb18-3"><a href="" aria-label="3"></a>    Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Tropisch!"</span><span class="op">);</span></span>
+<span id="cb18-4"><a href="" aria-label="4"></a><span class="op">}</span></span>
+<span id="cb18-5"><a href="" aria-label="5"></a><span class="kw">else</span> <span class="kw">if</span> <span class="op">(</span>temperature <span class="op">&gt;</span> <span class="dv">20</span><span class="op">)</span></span>
+<span id="cb18-6"><a href="" aria-label="6"></a><span class="op">{</span></span>
+<span id="cb18-7"><a href="" aria-label="7"></a>    Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Lekker weer"</span><span class="op">);</span></span>
+<span id="cb18-8"><a href="" aria-label="8"></a><span class="op">}</span></span>
+<span id="cb18-9"><a href="" aria-label="9"></a><span class="kw">else</span> <span class="kw">if</span> <span class="op">(</span>temperature <span class="op">&gt;</span> <span class="dv">10</span><span class="op">)</span></span>
+<span id="cb18-10"><a href="" aria-label="10"></a><span class="op">{</span></span>
+<span id="cb18-11"><a href="" aria-label="11"></a>    Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Jas mee"</span><span class="op">);</span></span>
+<span id="cb18-12"><a href="" aria-label="12"></a><span class="op">}</span></span>
+<span id="cb18-13"><a href="" aria-label="13"></a><span class="kw">else</span></span>
+<span id="cb18-14"><a href="" aria-label="14"></a><span class="op">{</span></span>
+<span id="cb18-15"><a href="" aria-label="15"></a>    Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="st">"Blijf binnen"</span><span class="op">);</span></span>
+<span id="cb18-16"><a href="" aria-label="16"></a><span class="op">}</span></span></code></pre></div><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></div>
+</div><div class="column" style="width:38%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><code>temperature</code></th>
+<th style="text-align: center;">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">22</td>
+<td style="text-align: center;"><span class="fragment"><code>Lekker weer</code></span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">35</td>
+<td style="text-align: center;"><span class="fragment"><code>Tropisch!</code></span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;"><span class="fragment"><code>Blijf binnen</code></span></td>
+</tr>
+</tbody>
+</table>
+</div></div>
+<div class="mop">
+<p>Bij 10 graden binnenblijven. Typisch Belgisch weerbericht.</p>
+</div>
+</section>
+<section id="handig-voor-de-oefeningen" class="slide level2">
+<h2>Handig voor de oefeningen: <code>%</code></h2>
+<p>De <strong>modulo</strong>-operator <code>%</code> geeft de <strong>rest</strong> van een deling.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode numberSource csharp number-lines code-with-copy"><code class="sourceCode cs"><span id="cb19-1"><a href="" aria-label="1"></a>Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="dv">10</span> <span class="op">%</span> <span class="dv">3</span><span class="op">);</span>  <span class="co">// 1</span></span>
+<span id="cb19-2"><a href="" aria-label="2"></a>Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="dv">14</span> <span class="op">%</span> <span class="dv">5</span><span class="op">);</span>  <span class="co">// 4</span></span>
+<span id="cb19-3"><a href="" aria-label="3"></a>Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="dv">8</span> <span class="op">%</span> <span class="dv">2</span><span class="op">);</span>   <span class="co">// 0 → 8 is even</span></span>
+<span id="cb19-4"><a href="" aria-label="4"></a>Console<span class="op">.</span><span class="fu">WriteLine</span><span class="op">(</span><span class="dv">7</span> <span class="op">%</span> <span class="dv">2</span><span class="op">);</span>   <span class="co">// 1 → 7 is oneven</span></span></code></pre></div><button title="Kopieer naar klembord" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="fragment">
+<p>Een getal is <strong>even</strong> als <code>number % 2 == 0</code>.</p>
+<div class="mop">
+<p><code>%</code> is geen korting. Sorry.</p>
+</div>
+</div>
+</section>
+<section id="samengevat" class="slide level2">
+<h2>Samengevat</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Wat</th>
+<th>Hoe</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>vergelijken</td>
+<td><code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>, <code>==</code>, <code>!=</code> → <code>true</code> of <code>false</code></td>
+</tr>
+<tr class="even">
+<td>soms iets doen</td>
+<td><code>if (voorwaarde) { ... }</code></td>
+</tr>
+<tr class="odd">
+<td>anders iets anders doen</td>
+<td><code>if { ... } else { ... }</code></td>
+</tr>
+<tr class="even">
+<td>meerdere gevallen</td>
+<td><code>if { ... } else if { ... } else { ... }</code></td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Belangrijk</strong></p>
+</div>
+<div class="callout-content">
+<p>Altijd <strong>accolades</strong>. En bij <code>else if</code>: de <strong>eerste</strong> ware voorwaarde wint, dus let op de volgorde.</p>
+</div>
+</div>
+</div>
+<div class="mop">
+<p>Je kan nu beslissingen nemen. Begin maar met de moeilijkste: stoofvlees of bicky?</p>
+</div>
+</div>
+</section>
+<section id="aan-de-slag" class="slide level2">
+<h2>Aan de slag 💻</h2>
+<p>Maak in de klasse <code>Beslissingen</code>:</p>
+<div class="compact">
+<ol type="1">
+<li><strong>ShoeSeller</strong> (basis): bereken de prijs van schoenen, met korting vanaf 3 paar</li>
+<li><strong>EvenOrOdd</strong>: toon of een getal even of oneven is</li>
+<li><strong>PositiveNegativeZero</strong>: toon of een getal positief, negatief of 0 is</li>
+<li><strong>BMICalculator</strong>: bereken de BMI en geef een beoordeling</li>
+</ol>
+</div>
+<div class="fragment">
+<p>👉 Klaar? Dan <strong>OhmsLaw</strong> en <strong>PocketMoney</strong>. De uitbreiding van ShoeSeller volgt in labo 2.</p>
+<div class="mop">
+<p><code>if (exercisesDone) { naar huis } else { nog even blijven }</code></p>
+</div>
+
+</div>
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="../../_shared/logo.png" class="slide-logo"></p>
+<div class="footer footer-default">
+<p>Programmeren &amp; OOP · H4 Beslissingen · labo 1</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Gekopieerd!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Gekopieerd!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
