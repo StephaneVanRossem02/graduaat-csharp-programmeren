@@ -4,7 +4,7 @@ hide_table_of_contents: true
 
 # Oefeningen
 
-## h17-weekdagen-zonder-exception-handling
+## h7-weekdagen-zonder-exception-handling
 
 ### Functionele analyse
 
@@ -43,11 +43,11 @@ Woensdag
 Donderdag
 ```
 
-## h17-weekdagen-met-exception-handling
+## h7-weekdagen-met-exception-handling
 
 Start terug vanaf de code van eerder. Noem ze ditmaal `DemonstrateWeekdayErrorHandlingWithException`. Los nu het probleem op, enkel en alleen door exception handling toe te voegen op de juiste plaats. De voorbeeldinteractie blijft identiek dezelfde.
 
-## h17-overflow-zonder-exception-handling
+## h7-overflow-zonder-exception-handling
 
 ### Functionele analyse
 
@@ -77,7 +77,7 @@ Spoor zelf de fout op en pas de code aan zodat ze hetzelfde doet, zonder gebruik
 30 x 60 = 1800
 ```
 
-## h17-overflow-met-exception-handling
+## h7-overflow-met-exception-handling
 
 Start terug vanaf de code van eerder. Los nu het probleem op door te vermelden wat er is misgelopen met behulp van exception handling. Noem je methode nu `DemonstrateOverflowErrorHandlingWithException`.
 
@@ -87,7 +87,7 @@ Start terug vanaf de code van eerder. Los nu het probleem op door te vermelden w
 Het getal is te groot om te converteren naar het gewenste formaat.
 ```
 
-## h17-juiste-index
+## h7-juiste-index
 
 ### Functionele analyse
 
@@ -135,7 +135,7 @@ Unhandled exception. System.FormatException: Input string was not in a correct f
    at IndividueleOefeningen.Program.Main(String[] args) in Program.cs:line 30
 ```
 
-## h17-juiste-index-extra-voorzichtig
+## h7-juiste-index-extra-voorzichtig
 
 ### Functionele analyse
 
@@ -149,7 +149,7 @@ Voorzie vervolgens exception handling om uit te leggen wat er is misgelopen zond
 
 Voorzie ook code om om het even welk type exception af te handelen.
 
-## h17-leeftijd-kat
+## h7-leeftijd-kat
 
 ### Functionele analyse
 
@@ -171,7 +171,7 @@ Cat cat = new Cat(27);
 Deze kat is te oud!
 ```
 
-## h17-leeftijd-katten
+## h7-leeftijd-katten
 
 ### Functionele analyse
 
@@ -203,7 +203,7 @@ De volledige lijst met katten is aangemaakt!
 Het is niet gelukt :-(
 ```
 
-## h17-filehelper
+## h7-filehelper
 
 ### Functionele analyse
 
@@ -237,11 +237,11 @@ Welke file wil je lezen?
 File bestaat, maar kon niet gelezen worden. Mogelijk heb je geen toegangsrechten.
 ```
 
-## h17-leeftijd-kat-custom
+## h7-leeftijd-kat-custom
 
 ### Functionele analyse
 
-We doen een uitbreiding op h17-leeftijd-kat. We zouden graag makkelijk in detail kunnen uitleggen aan de gebruiker waarom het is misgelopen. We doen dit hier in de eerste plaats door een custom exception type te voorzien.
+We doen een uitbreiding op h7-leeftijd-kat. We zouden graag makkelijk in detail kunnen uitleggen aan de gebruiker waarom het is misgelopen. We doen dit hier in de eerste plaats door een custom exception type te voorzien.
 
 ### Technische analyse
 
@@ -269,7 +269,7 @@ CatWithCustomException cat = new CatWithCustomException(37);
 
 Dit bericht mag niet "hardgecodeerd zijn". Elk getal moet uit de exception gehaald worden.
 
-## H17\_1 SchoolAdmin: geen dubbele cursusnamen
+## H7\_1 SchoolAdmin: geen dubbele cursusnamen
 
 #### Functionele analyse
 
@@ -296,7 +296,7 @@ Id van de reeds bestaande cursus is: 1
 ```
 
 
-## H17\_2 SchoolAdmin: geen lege waarden voor CourseRegistration
+## H7\_2 SchoolAdmin: geen lege waarden voor CourseRegistration
 
 #### Functionele analyse
 
@@ -326,7 +326,7 @@ Cursus mag niet ontbreken.
 ```
 
 
-## H17\_3 SchoolAdmin: geen tweede inschrijving voor dezelfde cursus
+## H7\_3 SchoolAdmin: geen tweede inschrijving voor dezelfde cursus
 
 #### Functionele analyse
 
@@ -358,7 +358,7 @@ Een student kan niet meermaals inschrijven voor dezelfde cursus.
 ```
 
 
-## H17\_4 SchoolAdmin: beperkt aantal inschrijvingen per cursus
+## H7\_4 SchoolAdmin: beperkt aantal inschrijvingen per cursus
 
 #### Functionele analyse
 
@@ -393,7 +393,7 @@ Er zijn al teveel studenten ingeschreven voor Nederlandse literatuur
 ```
 
 
-## h17-gedeeltelijke-afhandeling
+## h7-gedeeltelijke-afhandeling
 
 ### Functionele analyse
 

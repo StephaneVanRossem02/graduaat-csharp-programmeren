@@ -14,7 +14,7 @@ Dit heeft gevolgen. Je kan code die een value type verwacht niet zomaar gebruike
 
 Voor de nullable versies van de value types die je al kent, kan je gekende operaties (zoals `+`, `-`, ... voor getallen) blijven gebruiken, maar je moet opletten. Een berekening met `null` in levert je sowieso `null` op als resultaat. Een vergelijking (via `<=`, `<`, `>`, `>=`) met `null` levert je sowieso `false` op als resultaat.
 
-## H13\_1 SchoolAdmin nullable Resultaat
+## H3\_1 SchoolAdmin nullable Resultaat
 
 Tot nu kan een student zich enkel inschrijven voor een cursus als er een cursusresultaat is. We gaan ervoor zorgen dat null kan ingegeven worden als resultaat.
 

@@ -4,7 +4,7 @@ hide_table_of_contents: true
 
 # Oefeningen
 
-## H13\_2 SchoolAdmin: cursus opzoeken op Id
+## H3\_2 SchoolAdmin: cursus opzoeken op Id
 
 #### Functionele analyse
 
@@ -21,7 +21,7 @@ De methode werkt door `AllCourses`element per element te doorlopen en de waarde 
 ![](/img/img-3272.png)
 
 
-## H13\_3 SchoolAdmin: gelinkte objecten
+## H3\_3 SchoolAdmin: gelinkte objecten
 
 ### Functionele analyse
 
@@ -66,7 +66,7 @@ Gemiddelde:     18,0
 ```
 
 
-## H13\_4 SchoolAdmin: Studieprogramma
+## H3\_4 SchoolAdmin: Studieprogramma
 
 #### Functionele analyse
 
@@ -98,7 +98,7 @@ Gebruik volgende code voor de demonstratiemethode:
 ![](/img/img-3275.png)
 
 
-## H13\_5 SchoolAdmin: Studieprogramma aanpassen
+## H3\_5 SchoolAdmin: Studieprogramma aanpassen
 
 #### Functionele analyse
 

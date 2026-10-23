@@ -249,13 +249,13 @@
         "System.Threading.Thread.Sleep en Console.Clear"
       ],
       "nogNietGezien": [
-        "eigen constructors: die komen pas in H12. In H11 krijgen objecten hun waarden door na new de attributen of properties in te vullen",
+        "eigen constructors: die komen pas in OOP H2. In OOP H1 krijgen objecten hun waarden door na new de attributen of properties in te vullen",
         "object initializers zoals new Student { Name = \"...\" }",
-        "ToString overschrijven (H16)",
-        "overerving, base en protected (H15-H16)",
-        "interfaces en polymorfisme (H18)",
-        "zelf exceptions gooien of opvangen met try/catch (H17)",
-        "Dictionary en andere datastructuren, immutable collecties (H14)",
+        "ToString overschrijven (OOP H6)",
+        "overerving, base en protected (OOP H5-H6)",
+        "interfaces en polymorfisme (OOP H8)",
+        "zelf exceptions gooien of opvangen met try/catch (OOP H7)",
+        "Dictionary en andere datastructuren, immutable collecties (OOP H4)",
         "LINQ, lambda's en delegates"
       ],
       "verboden": [
@@ -1875,7 +1875,7 @@
       "voorbeeldinteractieOntbreekt": true
     },
     "H11-Voorbereiding": {
-      "titel": "H11-voorbereiding",
+      "titel": "H1-voorbereiding",
       "hoofdstuk": "H11",
       "methodeNaam": "ShowSubmenu",
       "leerdoelen": [
@@ -1883,7 +1883,7 @@
       ],
       "functioneleAnalyse": "Een keuzemenu met twee niveaus om alle oefeningen van het vak op te starten: de gebruiker kiest eerst een topic en daarna een oefening binnen dat topic. Na een oefening kan hij opnieuw kiezen; het programma eindigt nooit.",
       "organisatie": "Een project OOExercises. Main toont de topics met een nummer en roept via een switch de methode ShowSubmenu van het gekozen topic op. De eerste topicklasse is DateTimeExercises, met een methode ShowSubmenu zonder parameters en met return type void. Zolang er geen oefeningen zijn, toont ShowSubmenu \"Er zijn nog geen oefeningen over dit topic\". Daarna toont ze de oefeningen genummerd en voert ze de gekozen oefening uit.",
-      "voorbeeldinteractie": "Welkom bij de oefeningen van Objectgeoriënteerd Programmeren!\nTopic van de uit te voeren oefening?\n1. DateTime\n2. Properties en access modifiers\n> 1\nUit te voeren oefening?\n1. H11-Clock\n2. H11-Birthday\n> 2\n(...)",
+      "voorbeeldinteractie": "Welkom bij de oefeningen van Objectgeoriënteerd Programmeren!\nTopic van de uit te voeren oefening?\n1. DateTime\n2. Properties en access modifiers\n> 1\nUit te voeren oefening?\n1. H1-Clock\n2. H1-Birthday\n> 2\n(...)",
       "letOp": "Dit menu groeit mee met elke oefening die de student maakt. Welke topics en oefeningen erin staan, hangt af van hoe ver hij is; een kleiner menu is dus geen fout zolang de structuur klopt.",
       "veelgemaakteFouten": [
         "alle oefeningen rechtstreeks in Main zetten in plaats van een ShowSubmenu per topic",
@@ -1898,7 +1898,7 @@
       ]
     },
     "H11-Clock": {
-      "titel": "H11-Clock",
+      "titel": "H1-Clock",
       "hoofdstuk": "H11",
       "methodeNaam": "Clock",
       "leerdoelen": [
@@ -1920,7 +1920,7 @@
       ]
     },
     "H11-Birthday": {
-      "titel": "H11-Birthday",
+      "titel": "H1-Birthday",
       "hoofdstuk": "H11",
       "methodeNaam": "Birthday",
       "leerdoelen": [
@@ -1942,7 +1942,7 @@
       ]
     },
     "H11-DayOfTheWeek": {
-      "titel": "H11-DayOfTheWeek",
+      "titel": "H1-DayOfTheWeek",
       "hoofdstuk": "H11",
       "methodeNaam": "DayOfTheWeek",
       "leerdoelen": [
@@ -1965,7 +1965,7 @@
       ]
     },
     "H11-TicksSince2000": {
-      "titel": "H11-TicksSince2000",
+      "titel": "H1-TicksSince2000",
       "hoofdstuk": "H11",
       "methodeNaam": "TicksSince2000",
       "leerdoelen": [
@@ -1984,7 +1984,7 @@
       ]
     },
     "H11-LeapYearCount": {
-      "titel": "H11-LeapYearCount",
+      "titel": "H1-LeapYearCount",
       "hoofdstuk": "H11",
       "methodeNaam": "LeapYearCount",
       "leerdoelen": [
@@ -2005,7 +2005,7 @@
       ]
     },
     "H11-CodeTiming": {
-      "titel": "H11-CodeTiming",
+      "titel": "H1-CodeTiming",
       "hoofdstuk": "H11",
       "methodeNaam": "CodeTiming",
       "leerdoelen": [
@@ -2027,7 +2027,7 @@
       ]
     },
     "H11-CombinationOf2Numbers": {
-      "titel": "H11-CombinationOf2Numbers",
+      "titel": "H1-CombinationOf2Numbers",
       "hoofdstuk": "H11",
       "leerdoelen": [
         "werken met klassen en objecten",
@@ -2051,7 +2051,7 @@
       ]
     },
     "H11-Figures": {
-      "titel": "H11-Figures",
+      "titel": "H1-Figures",
       "hoofdstuk": "H11",
       "leerdoelen": [
         "werken met klassen en objecten",
@@ -2074,7 +2074,7 @@
       ]
     },
     "H11-SchoolAdmin-1": {
-      "titel": "H11_1 SchoolAdmin Student attributen",
+      "titel": "H1_1 SchoolAdmin Student attributen",
       "hoofdstuk": "H11",
       "leerdoelen": [
         "een eigen klasse met attributen maken",
@@ -2086,15 +2086,15 @@
       "klassediagram": "Student\n+ Name : string\n+ Birthdate : DateTime\n+ StudentNumber : uint\n+ Courses : List<string>\n+ StudentCounter : uint = 1   (static)",
       "projectContext": "Nog niets: dit is de eerste stap. SchoolAdmin is een apart project, los van OOExercises, dat stap voor stap meegroeit over het hele semester.",
       "latereStappen": [
-        "H11_2: de methoden GenerateNameCard en DetermineWorkload, en een keuzemenu met DemoStudents",
-        "H11_3: Courses private maken (hernoemd naar courses) en de methode RegisterForCourse",
-        "H11_4: de klasse Course met ShowOverview, en de methode DemoCourses",
-        "H11_5: de klasse CourseResult en de methode RegisterCourseResult",
-        "H11_6: de methoden Average en ShowOverview in Student",
-        "H11_7: de properties CreditPoints en Id, en de static leden maxId en AllCourses in Course",
-        "H11_8: Name en Result van CourseResult omzetten naar properties",
-        "H11_9: de computed property Age",
-        "H12: eigen constructors, onder meer om een Id automatisch toe te kennen en AllCourses te vullen",
+        "H1_2: de methoden GenerateNameCard en DetermineWorkload, en een keuzemenu met DemoStudents",
+        "H1_3: Courses private maken (hernoemd naar courses) en de methode RegisterForCourse",
+        "H1_4: de klasse Course met ShowOverview, en de methode DemoCourses",
+        "H1_5: de klasse CourseResult en de methode RegisterCourseResult",
+        "H1_6: de methoden Average en ShowOverview in Student",
+        "H1_7: de properties CreditPoints en Id, en de static leden maxId en AllCourses in Course",
+        "H1_8: Name en Result van CourseResult omzetten naar properties",
+        "H1_9: de computed property Age",
+        "OOP H2: eigen constructors, onder meer om een Id automatisch toe te kennen en AllCourses te vullen",
         "later in het semester: overerving (bijvoorbeeld een klasse Person), ToString overschrijven en exceptions"
       ],
       "veelgemaakteFouten": [
@@ -2110,7 +2110,7 @@
       ]
     },
     "H11-SchoolAdmin-2": {
-      "titel": "H11_2 SchoolAdmin Student methoden",
+      "titel": "H1_2 SchoolAdmin Student methoden",
       "hoofdstuk": "H11",
       "leerdoelen": [
         "instantiemethoden schrijven",
@@ -2122,14 +2122,14 @@
       "voorbeeldinteractie": "Wat wil je doen?\n1. DemonstreerStudenten uitvoeren\n1\nSaid Aziz (STUDENT)\n20\nMieke Vermeulen (STUDENT)\n10",
       "projectContext": "Een klasse Student met de publieke attributen Name (string), Birthdate (DateTime), StudentNumber (uint), Courses (List<string>) en het static attribuut StudentCounter (uint, beginwaarde 1). In Main worden de studenten said en mieke aangemaakt, krijgen ze hun studentennummer via StudentCounter en worden ze ingeschreven voor hun cursussen.",
       "latereStappen": [
-        "H11_3: Courses private maken (hernoemd naar courses) en de methode RegisterForCourse",
-        "H11_4: de klasse Course met ShowOverview, en de methode DemoCourses",
-        "H11_5: de klasse CourseResult en de methode RegisterCourseResult",
-        "H11_6: de methoden Average en ShowOverview in Student",
-        "H11_7: de properties CreditPoints en Id, en de static leden maxId en AllCourses in Course",
-        "H11_8: Name en Result van CourseResult omzetten naar properties",
-        "H11_9: de computed property Age",
-        "H12: eigen constructors, onder meer om een Id automatisch toe te kennen en AllCourses te vullen",
+        "H1_3: Courses private maken (hernoemd naar courses) en de methode RegisterForCourse",
+        "H1_4: de klasse Course met ShowOverview, en de methode DemoCourses",
+        "H1_5: de klasse CourseResult en de methode RegisterCourseResult",
+        "H1_6: de methoden Average en ShowOverview in Student",
+        "H1_7: de properties CreditPoints en Id, en de static leden maxId en AllCourses in Course",
+        "H1_8: Name en Result van CourseResult omzetten naar properties",
+        "H1_9: de computed property Age",
+        "OOP H2: eigen constructors, onder meer om een Id automatisch toe te kennen en AllCourses te vullen",
         "later in het semester: overerving (bijvoorbeeld een klasse Person), ToString overschrijven en exceptions"
       ],
       "veelgemaakteFouten": [
@@ -2145,7 +2145,7 @@
       ]
     },
     "H11-SchoolAdmin-3": {
-      "titel": "H11_3 SchoolAdmin Student Cursussen private",
+      "titel": "H1_3 SchoolAdmin Student Cursussen private",
       "hoofdstuk": "H11",
       "leerdoelen": [
         "een attribuut afschermen met private",
@@ -2153,15 +2153,15 @@
       ],
       "functioneleAnalyse": "Courses wordt afgeschermd, en een student mag niet meermaals voor dezelfde cursus ingeschreven worden. Courses wordt private en daarom hernoemd naar courses. Een nieuwe methode RegisterForCourse voegt een cursus enkel toe als ze nog niet in courses zit. DemoStudents schrijft de studenten in via die methode.",
       "klassediagram": "Student\n+ Name : string\n+ Birthdate : DateTime\n+ StudentNumber : uint\n- courses : List<string>\n+ StudentCounter : uint = 1   (static)\n+ GenerateNameCard() : string\n+ DetermineWorkload() : byte\n+ RegisterForCourse(course: string) : void",
-      "projectContext": "De klasse Student uit H11_1, uitgebreid met GenerateNameCard en DetermineWorkload. Main toont een keuzemenu; optie 1 roept de static methode DemoStudents in Program.cs op, waar de studenten aangemaakt worden en hun naamkaart en werkbelasting getoond worden.",
+      "projectContext": "De klasse Student uit H1_1, uitgebreid met GenerateNameCard en DetermineWorkload. Main toont een keuzemenu; optie 1 roept de static methode DemoStudents in Program.cs op, waar de studenten aangemaakt worden en hun naamkaart en werkbelasting getoond worden.",
       "latereStappen": [
-        "H11_4: de klasse Course met ShowOverview, en de methode DemoCourses",
-        "H11_5: de klasse CourseResult en de methode RegisterCourseResult",
-        "H11_6: de methoden Average en ShowOverview in Student",
-        "H11_7: de properties CreditPoints en Id, en de static leden maxId en AllCourses in Course",
-        "H11_8: Name en Result van CourseResult omzetten naar properties",
-        "H11_9: de computed property Age",
-        "H12: eigen constructors, onder meer om een Id automatisch toe te kennen en AllCourses te vullen",
+        "H1_4: de klasse Course met ShowOverview, en de methode DemoCourses",
+        "H1_5: de klasse CourseResult en de methode RegisterCourseResult",
+        "H1_6: de methoden Average en ShowOverview in Student",
+        "H1_7: de properties CreditPoints en Id, en de static leden maxId en AllCourses in Course",
+        "H1_8: Name en Result van CourseResult omzetten naar properties",
+        "H1_9: de computed property Age",
+        "OOP H2: eigen constructors, onder meer om een Id automatisch toe te kennen en AllCourses te vullen",
         "later in het semester: overerving (bijvoorbeeld een klasse Person), ToString overschrijven en exceptions"
       ],
       "veelgemaakteFouten": [
@@ -2176,7 +2176,7 @@
       ]
     },
     "H11-SchoolAdmin-4": {
-      "titel": "H11_4 SchoolAdmin klasse Course",
+      "titel": "H1_4 SchoolAdmin klasse Course",
       "hoofdstuk": "H11",
       "leerdoelen": [
         "een tweede klasse ontwerpen",
@@ -2189,12 +2189,12 @@
       "letOp": "De opgave noemt de variabelen communicatie, programmeren, webtechnologie en databanken. Volgens de code-afspraken zijn Engelse namen de norm; omdat de opgave de Nederlandse namen letterlijk voorschrijft, is geen van beide fout.",
       "projectContext": "Een klasse Student met Name, Birthdate, StudentNumber, een private List<string> courses, het static attribuut StudentCounter, en de methoden GenerateNameCard, DetermineWorkload en RegisterForCourse (voegt een cursus enkel toe als ze er nog niet in zit). Program.cs heeft een keuzemenu met optie 1: DemoStudents.",
       "latereStappen": [
-        "H11_5: de klasse CourseResult en de methode RegisterCourseResult",
-        "H11_6: de methoden Average en ShowOverview in Student",
-        "H11_7: de properties CreditPoints en Id, en de static leden maxId en AllCourses in Course",
-        "H11_8: Name en Result van CourseResult omzetten naar properties",
-        "H11_9: de computed property Age",
-        "H12: eigen constructors, onder meer om een Id automatisch toe te kennen en AllCourses te vullen",
+        "H1_5: de klasse CourseResult en de methode RegisterCourseResult",
+        "H1_6: de methoden Average en ShowOverview in Student",
+        "H1_7: de properties CreditPoints en Id, en de static leden maxId en AllCourses in Course",
+        "H1_8: Name en Result van CourseResult omzetten naar properties",
+        "H1_9: de computed property Age",
+        "OOP H2: eigen constructors, onder meer om een Id automatisch toe te kennen en AllCourses te vullen",
         "later in het semester: overerving (bijvoorbeeld een klasse Person), ToString overschrijven en exceptions"
       ],
       "veelgemaakteFouten": [
@@ -2210,7 +2210,7 @@
       ]
     },
     "H11-SchoolAdmin-5": {
-      "titel": "H11_5 SchoolAdmin klasse CourseResult",
+      "titel": "H1_5 SchoolAdmin klasse CourseResult",
       "hoofdstuk": "H11",
       "leerdoelen": [
         "een klasse maken die gegevens groepeert",
@@ -2218,14 +2218,14 @@
       ],
       "functioneleAnalyse": "Per student wordt bijgehouden welk resultaat hij voor welke cursus behaalde. Een nieuwe klasse CourseResult heeft de attributen Name (string) en Result (byte). In Student vervangt een lijst courseResults van CourseResult-objecten de lijst courses, en vervangt RegisterCourseResult de methode RegisterForCourse. RegisterCourseResult geeft \"Ongeldig cijfer!\" bij een resultaat boven 20; anders maakt de methode een nieuw CourseResult, vult Name en Result in met de parameters en voegt het toe aan courseResults. DetermineWorkload wordt aangepast. DemoStudents en DemoCourses schrijven in met RegisterCourseResult: Said met Communicatie 12, Programmeren 15 en Webtechnologie 13; Mieke met Communicatie 13, Programmeren 16 en Databanken 14. De uitvoer van beide methoden verandert niet.",
       "klassediagram": "CourseResult\n+ Name : string\n+ Result : byte\n\nStudent\n+ Name : string\n+ Birthdate : DateTime\n+ StudentNumber : uint\n- courseResults : List<CourseResult>\n+ StudentCounter : uint = 1   (static)\n+ GenerateNameCard() : string\n+ DetermineWorkload() : byte\n+ RegisterCourseResult(course: string, result: byte) : void",
-      "letOp": "De uitvoer van DemoStudents en DemoCourses blijft precies dezelfde als na H11_4.",
-      "projectContext": "Alles uit H11_4: de klasse Student met private courses en RegisterForCourse, een klasse Course met Title, Students (List<Student>) en ShowOverview, en in Program.cs de methoden DemoStudents en DemoCourses in een keuzemenu.",
+      "letOp": "De uitvoer van DemoStudents en DemoCourses blijft precies dezelfde als na H1_4.",
+      "projectContext": "Alles uit H1_4: de klasse Student met private courses en RegisterForCourse, een klasse Course met Title, Students (List<Student>) en ShowOverview, en in Program.cs de methoden DemoStudents en DemoCourses in een keuzemenu.",
       "latereStappen": [
-        "H11_6: de methoden Average en ShowOverview in Student",
-        "H11_7: de properties CreditPoints en Id, en de static leden maxId en AllCourses in Course",
-        "H11_8: Name en Result van CourseResult omzetten naar properties",
-        "H11_9: de computed property Age",
-        "H12: eigen constructors, onder meer om een Id automatisch toe te kennen en AllCourses te vullen",
+        "H1_6: de methoden Average en ShowOverview in Student",
+        "H1_7: de properties CreditPoints en Id, en de static leden maxId en AllCourses in Course",
+        "H1_8: Name en Result van CourseResult omzetten naar properties",
+        "H1_9: de computed property Age",
+        "OOP H2: eigen constructors, onder meer om een Id automatisch toe te kennen en AllCourses te vullen",
         "later in het semester: overerving (bijvoorbeeld een klasse Person), ToString overschrijven en exceptions"
       ],
       "veelgemaakteFouten": [
@@ -2241,7 +2241,7 @@
       ]
     },
     "H11-SchoolAdmin-6": {
-      "titel": "H11_6 SchoolAdmin Student Average",
+      "titel": "H1_6 SchoolAdmin Student Average",
       "hoofdstuk": "H11",
       "leerdoelen": [
         "een berekening in een methode stoppen",
@@ -2253,10 +2253,10 @@
       "letOp": "Het gemiddelde staat met een cijfer na de komma. De cijfers staan uitgelijnd onder elkaar.",
       "projectContext": "Een klasse CourseResult met de publieke attributen Name (string) en Result (byte). Student houdt een private List<CourseResult> courseResults bij en heeft GenerateNameCard, DetermineWorkload en RegisterCourseResult (weigert cijfers boven 20 met \"Ongeldig cijfer!\"). De klasse Course heeft Title, Students en ShowOverview. Program.cs heeft DemoStudents en DemoCourses, met de resultaten van Said en Mieke.",
       "latereStappen": [
-        "H11_7: de properties CreditPoints en Id, en de static leden maxId en AllCourses in Course",
-        "H11_8: Name en Result van CourseResult omzetten naar properties",
-        "H11_9: de computed property Age",
-        "H12: eigen constructors, onder meer om een Id automatisch toe te kennen en AllCourses te vullen",
+        "H1_7: de properties CreditPoints en Id, en de static leden maxId en AllCourses in Course",
+        "H1_8: Name en Result van CourseResult omzetten naar properties",
+        "H1_9: de computed property Age",
+        "OOP H2: eigen constructors, onder meer om een Id automatisch toe te kennen en AllCourses te vullen",
         "later in het semester: overerving (bijvoorbeeld een klasse Person), ToString overschrijven en exceptions"
       ],
       "veelgemaakteFouten": [
@@ -2272,7 +2272,7 @@
       ]
     },
     "H11-SchoolAdmin-7": {
-      "titel": "H11_7 SchoolAdmin properties Course",
+      "titel": "H1_7 SchoolAdmin properties Course",
       "hoofdstuk": "H11",
       "leerdoelen": [
         "een property met een private setter maken",
@@ -2281,12 +2281,12 @@
       ],
       "functioneleAnalyse": "Elke cursus krijgt een id en studiepunten, en er komt een lijst met alle cursussen. Maak de property CreditPoints met een private setter, de read-only property Id, het static attribuut maxId met beginwaarde 1, en het static attribuut AllCourses: een lijst van Course-objecten.",
       "klassediagram": "Course\n+ Title : string\n+ Students : List<Student>\n+ CreditPoints : byte\n+ Id : int\n- maxId : int = 1   (static)\n+ AllCourses : List<Course>   (static)\n+ ShowOverview() : void",
-      "letOp": "In deze stap maak je deze leden enkel aan. Het automatisch toekennen van een id en het vullen van AllCourses gebeurt pas in H12, met een constructor. Dat Id voorlopig nergens ingevuld wordt, is dus geen fout.",
+      "letOp": "In deze stap maak je deze leden enkel aan. Het automatisch toekennen van een id en het vullen van AllCourses gebeurt pas in OOP H2, met een constructor. Dat Id voorlopig nergens ingevuld wordt, is dus geen fout.",
       "projectContext": "Een klasse CourseResult met de publieke attributen Name (string) en Result (byte). Student houdt een private List<CourseResult> courseResults bij en heeft GenerateNameCard, DetermineWorkload en RegisterCourseResult (weigert cijfers boven 20 met \"Ongeldig cijfer!\"). De klasse Course heeft Title, Students en ShowOverview. Program.cs heeft DemoStudents en DemoCourses, met de resultaten van Said en Mieke. Student heeft daarnaast Average en ShowOverview, en DemoStudents toont per student enkel nog dat overzicht.",
       "latereStappen": [
-        "H11_8: Name en Result van CourseResult omzetten naar properties",
-        "H11_9: de computed property Age",
-        "H12: eigen constructors, onder meer om een Id automatisch toe te kennen en AllCourses te vullen",
+        "H1_8: Name en Result van CourseResult omzetten naar properties",
+        "H1_9: de computed property Age",
+        "OOP H2: eigen constructors, onder meer om een Id automatisch toe te kennen en AllCourses te vullen",
         "later in het semester: overerving (bijvoorbeeld een klasse Person), ToString overschrijven en exceptions"
       ],
       "veelgemaakteFouten": [
@@ -2301,7 +2301,7 @@
       ]
     },
     "H11-SchoolAdmin-8": {
-      "titel": "H11_8 SchoolAdmin properties CourseResult",
+      "titel": "H1_8 SchoolAdmin properties CourseResult",
       "hoofdstuk": "H11",
       "leerdoelen": [
         "attributen omzetten naar properties",
@@ -2309,11 +2309,11 @@
       ],
       "functioneleAnalyse": "De bestaande attributen van CourseResult worden properties. Name wordt een property Name. Result wordt een property Result die enkel een resultaat van ten hoogste 20 laat instellen.",
       "klassediagram": "CourseResult\n+ Name : string\n+ Result : byte\n(in het klassediagram is geen verschil te zien tussen een attribuut en een property)",
-      "letOp": "Het klassediagram ziet er hetzelfde uit als na H11_5: de wijziging zit volledig in de code.",
+      "letOp": "Het klassediagram ziet er hetzelfde uit als na H1_5: de wijziging zit volledig in de code.",
       "projectContext": "Een klasse CourseResult met de publieke attributen Name (string) en Result (byte). Student houdt een private List<CourseResult> courseResults bij en heeft GenerateNameCard, DetermineWorkload en RegisterCourseResult (weigert cijfers boven 20 met \"Ongeldig cijfer!\"). De klasse Course heeft Title, Students en ShowOverview. Program.cs heeft DemoStudents en DemoCourses, met de resultaten van Said en Mieke. Student heeft daarnaast Average en ShowOverview, en DemoStudents toont per student enkel nog dat overzicht. Course heeft nu ook de property CreditPoints (private setter), de read-only property Id, en de static leden maxId en AllCourses.",
       "latereStappen": [
-        "H11_9: de computed property Age",
-        "H12: eigen constructors, onder meer om een Id automatisch toe te kennen en AllCourses te vullen",
+        "H1_9: de computed property Age",
+        "OOP H2: eigen constructors, onder meer om een Id automatisch toe te kennen en AllCourses te vullen",
         "later in het semester: overerving (bijvoorbeeld een klasse Person), ToString overschrijven en exceptions"
       ],
       "veelgemaakteFouten": [
@@ -2328,7 +2328,7 @@
       ]
     },
     "H11-SchoolAdmin-9": {
-      "titel": "H11_9 SchoolAdmin Student Age",
+      "titel": "H1_9 SchoolAdmin Student Age",
       "hoofdstuk": "H11",
       "leerdoelen": [
         "een computed property maken",
@@ -2340,7 +2340,7 @@
       "letOp": "De leeftijd in het voorbeeld hangt af van de datum waarop het uitgevoerd werd. Een ander getal is dus normaal.",
       "projectContext": "Een klasse CourseResult met de publieke attributen Name (string) en Result (byte). Student houdt een private List<CourseResult> courseResults bij en heeft GenerateNameCard, DetermineWorkload en RegisterCourseResult (weigert cijfers boven 20 met \"Ongeldig cijfer!\"). De klasse Course heeft Title, Students en ShowOverview. Program.cs heeft DemoStudents en DemoCourses, met de resultaten van Said en Mieke. Student heeft daarnaast Average en ShowOverview, en DemoStudents toont per student enkel nog dat overzicht. Course heeft nu ook de property CreditPoints (private setter), de read-only property Id, en de static leden maxId en AllCourses. Name en Result van CourseResult zijn properties geworden; Result laat enkel waarden tot en met 20 toe.",
       "latereStappen": [
-        "H12: eigen constructors, onder meer om een Id automatisch toe te kennen en AllCourses te vullen",
+        "OOP H2: eigen constructors, onder meer om een Id automatisch toe te kennen en AllCourses te vullen",
         "later in het semester: overerving (bijvoorbeeld een klasse Person), ToString overschrijven en exceptions"
       ],
       "veelgemaakteFouten": [

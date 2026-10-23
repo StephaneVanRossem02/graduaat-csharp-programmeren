@@ -44,6 +44,20 @@ export function zoekHoofdstuk(hoofdstukId) {
   return oefeningenData.hoofdstukken?.[hoofdstukId] ?? null;
 }
 
+/**
+ * Naam van een hoofdstuk zoals de student hem kent. Intern heten de OOP-hoofdstukken
+ * nog H11 tot H20, op de site nummert elk vak vanaf 1: H11 is dus "OOP H1".
+ */
+export function toonHoofdstuk(hoofdstukId) {
+  const nummer = Number(/^H(\d+)$/.exec(hoofdstukId ?? '')?.[1]);
+  return nummer > 10 ? `OOP H${nummer - 10}` : hoofdstukId;
+}
+
+/** Idem voor een oefening-id: H14-PhoneBookNameNumber wordt H4-PhoneBookNameNumber. */
+function toonOefening(oefeningId) {
+  return oefeningId.replace(/^H(1[1-9]|20)(?=[-_])/, (_, nummer) => `H${nummer - 10}`);
+}
+
 function lijst(items, leeg = 'niet gespecifieerd') {
   if (!items || items.length === 0) return leeg;
   return items.map((item) => `- ${item}`).join('\n');
@@ -71,8 +85,8 @@ export function bouwSystemPrompt({ oefeningId, hoofdstukId, oplossing = null }) 
   const oefening = zoekOefening(oefeningId);
   const hoofdstuk = zoekHoofdstuk(hoofdstukId ?? oefening?.hoofdstuk);
 
-  const titel = oefening?.titel ?? oefeningId;
-  const niveau = hoofdstukId ?? oefening?.hoofdstuk ?? 'het huidige hoofdstuk';
+  const titel = oefening?.titel ?? toonOefening(oefeningId);
+  const niveau = toonHoofdstuk(hoofdstukId ?? oefening?.hoofdstuk) ?? 'het huidige hoofdstuk';
 
   return `Je bent een didactische programmeerassistent voor eerstejaarsstudenten C#
 aan AP Hogeschool (Graduaat Programmeren). Je helpt een student die vastzit op een oefening.
@@ -173,7 +187,7 @@ ${blok('Organisatie van de code:', oefening?.organisatie)}${blok(
   )}${
     // Voor oefeningen die een stap zijn in een meegroeiend project (zoals SchoolAdmin). Zonder
     // de lijst met latere stappen stelt het model graag iets voor dat pas later aan bod komt,
-    // zoals een constructor in H11 terwijl die pas in H12 gezien wordt.
+    // zoals een constructor in OOP H1 terwijl die pas in OOP H2 gezien wordt.
     oefening?.projectContext || oefening?.latereStappen
       ? `
 Deze oefening is een stap in een project dat stap voor stap meegroeit. De student heeft de

@@ -4,7 +4,7 @@ hide_table_of_contents: true
 
 # Oefeningen
 
-## h16-Orders-bugfix
+## h6-Orders-bugfix
 
 ### Functionele analyse
 
@@ -30,7 +30,7 @@ Gewone bestelling (1) of internationale bestelling (2)?
 Totaalprijs: 32000,00 
 ```
 
-## h16-Pizza
+## h6-Pizza
 
 ### Functionele analyse
 
@@ -98,7 +98,7 @@ spinazie
 ```
 
 
-## h16-Menu
+## h6-Menu
 
 ### Functionele analyse
 
@@ -138,7 +138,7 @@ In de volgende stappen, zullen we SchoolAdmin verder uitbouwen. Volgend diagram 
 ![](/img/img-3190.png)
 
 
-## H16\_1 SchoolAdmin: Vergelijkbare objecten
+## H6\_1 SchoolAdmin: Vergelijkbare objecten
 
 #### Functionele analyse
 
@@ -154,7 +154,7 @@ Een cursus is gelijk aan een andere cursus met hetzelfde ID.
 
 Voorzie ook overal een hash code volgens de vuistregel in de cursus (gebruik het Id).
 
-## H16\_2 SchoolAdmin: ToString
+## H6\_2 SchoolAdmin: ToString
 
 #### Functionele analyse
 
@@ -185,7 +185,7 @@ Administratief personeel
 
 Doe dit niet met `GetType`, want dan is de schrijfwijze anders. Schrijf het statuut letterlijk in de code per klasse.
 
-## H16\_3 SchoolAdmin: Eenmaking statische lijsten personen
+## H6\_3 SchoolAdmin: Eenmaking statische lijsten personen
 
 #### Functionele analyse
 
@@ -205,7 +205,7 @@ Vervang daarom de lijsten voor de subklassen van `Person` zodat er geen achterli
 
 Vergeet niet om voor de gewijzigde klassen de constructor aan te passen.
 
-## H16\_4 SchoolAdmin: Tweerichtingsverkeer voor CourseRegistration
+## H6\_4 SchoolAdmin: Tweerichtingsverkeer voor CourseRegistration
 
 #### Functionele analyse
 
@@ -236,7 +236,7 @@ De oplossing die hier voorgesteld wordt, verreist wel wat aanpassingen. We zulle
     * verwijder de lijst `saidEnMieke` bij het maken van de `Course`-instanties.
     *  verwijder het toevoegen van studenten aan een cursus
 
-## H16\_5 SchoolAdmin: Cursussen in semesters
+## H6\_5 SchoolAdmin: Cursussen in semesters
 
 #### Functionele analyse
 
@@ -267,7 +267,7 @@ Daarna pas je de demonstratiecode aan. Zorg dat communicatie bij de opleiding pr
 
 Het veranderen van de titel van een cursus naar "Scripting" zal niet meer werken. Herschrijf de code zodat deze wijziging nog steeds gebeurt.
 
-## H16\_6 SchoolAdmin: Manueel data invoeren
+## H6\_6 SchoolAdmin: Manueel data invoeren
 
 #### Functionele analyse
 

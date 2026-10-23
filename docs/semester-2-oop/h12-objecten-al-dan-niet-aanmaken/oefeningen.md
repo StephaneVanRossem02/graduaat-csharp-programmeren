@@ -6,7 +6,7 @@ hide_table_of_contents: true
 
 Werk verder in de klasse `ClassesAndObjects`:
 
-## Oefening: H12-FiguresWithConstructor
+## Oefening: H2-FiguresWithConstructor
 
 ### Leerdoelen
 
@@ -16,7 +16,7 @@ Werk verder in de klasse `ClassesAndObjects`:
 
 ### Functionele analyse
 
-Functioneel is dit programma hetzelfde als H11-Figures.
+Functioneel is dit programma hetzelfde als H1-Figures.
 
 ### Technische analyse
 
@@ -37,7 +37,7 @@ Een driehoek met een basis van 3m en een hoogte van 1m heeft een oppervlakte van
 Een driehoek met een basis van 2m en een hoogte van 2m heeft een oppervlakte van 2,0m².
 ```
 
-## H12\_1 SchoolAdmin Student Constructor
+## H2\_1 SchoolAdmin Student Constructor
 
 We willen een constructor gebruiken in `Student` om zeker te zijn dat we de nodige attributen en properties initialiseren.
 
@@ -50,7 +50,7 @@ Maak de constructor met 2 parameters. Zorg er ook voor dat je `StudentNumber`de 
 
 De default constructor kan nu niet meer gebruikt worden. Pas de code aan van `DemoStudents` met gebruik van de nieuwe constructor. Neem diezelfde code over in `DemoCourses`(zonder `ShowOverview`).
 
-## H12\_2 SchoolAdmin Cursus Constructor
+## H2\_2 SchoolAdmin Cursus Constructor
 
 We wensen op verschillende manieren `Course`-objecten te kunnen aanmaken. 
 
@@ -82,7 +82,7 @@ Herschrijf de code:\
 \- voeg said toe aan de list `Students`van webtechnologie en mieke aan die van databanken;\
 \- toon de overzichten van de cursussen.
 
-## H12\_3 SchoolAdmin CursusResultaat Constructor
+## H2\_3 SchoolAdmin CursusResultaat Constructor
 
 We willen gemakkelijker `CourseResult`-objecten kunnen aanmaken met behulp van een constructor.
 
@@ -97,7 +97,7 @@ Voeg een constructor toe met de parameters `name` en `result`.
 
 De default constructor kan nu niet meer gebruikt worden en dat heeft gevolgen in de klasse Student. Pas de methode `RegisterCourseResult` aan.
 
-## H12\_4 SchoolAdmin Student uit tekst lezen
+## H2\_4 SchoolAdmin Student uit tekst lezen
 
 na spelen met strings
 
@@ -128,7 +128,7 @@ Frans, deel 2:  18
 Gemiddelde      13,3
 ```
 
-## Oefening: H12-FoodPurchase
+## Oefening: H2-FoodPurchase
 
 ### Leerdoelen
 
@@ -176,10 +176,10 @@ In de klasse `ClassesAndObjects` maak je:
 
 ```text
 Uit te voeren oefening?
-1. H11-CombinationOf2Numbers
-2. H11-Figures
-3. H12-FiguresWithConstructor
-4. H12-FoodPurchase
+1. H1-CombinationOf2Numbers
+2. H1-Figures
+3. H2-FiguresWithConstructor
+4. H2-FoodPurchase
 >4
 De totaalprijs van KAAS is 4,9 euro.
 De vervaldatum van aankoop 1 is 15/04/2024 10:21:11

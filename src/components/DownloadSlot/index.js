@@ -120,7 +120,7 @@ export default function DownloadSlot({ hoofdstuk, label }) {
           placeholder="Code"
           autoComplete="off"
           spellCheck="false"
-          aria-label={`Code voor de modeloplossingen van ${hoofdstuk}`}
+          aria-label="Code voor de modeloplossingen van dit hoofdstuk"
           disabled={bezig}
         />
         <button type="submit" className={styles.knop} disabled={bezig || !codeInvoer.trim()}>

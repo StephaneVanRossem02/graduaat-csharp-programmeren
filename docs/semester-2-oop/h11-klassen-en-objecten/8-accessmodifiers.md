@@ -34,7 +34,7 @@ We kunnen ook methoden `private` maken. Dit gebeurt niet zo vaak als bij attribu
 Een studente vroeg in een van de afgelopen jaren: "Kunnen we niet gewoon afspreken dat we van sommige zaken afblijven?" In principe wel. Python doet het min of meer zo. Langs de andere kant: als wij meedelen dat de examenvragen op een publieke website staan en dat je er niet naartoe mag surfen, zou niemand dat dan doen? Private velden aanpassen kan soms een goed idee lijken op korte termijn, maar een project saboteren op langere termijn.
 :::
 
-## H11\_3 SchoolAdmin Student Cursussen private
+## H1\_3 SchoolAdmin Student Cursussen private
 
 We willen `Courses`afschermen en vermijden dat er dubbele inschrijvingen zijn; namelijk dat een student meermaals voor dezelfde cursus wordt ingeschreven.
 

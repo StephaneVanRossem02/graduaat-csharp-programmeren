@@ -133,7 +133,7 @@ We willen een programma maken dat ons helpt om in een school te beheren welke st
 
 We doen dit in een **apart project** `SchoolAdmin`. 
 
-## H11\_1 SchoolAdmin Student attributen
+## H1\_1 SchoolAdmin Student attributen
 
 We maken een klasse student, met publieke attributen voor de naam, geboortedatum, het studentennummer en de gevolgde cursussen. We houden ook bij hoeveel studenten er zijn via een attribuut `StudentCounter`dat de beginwaarde 1 krijgt.
 

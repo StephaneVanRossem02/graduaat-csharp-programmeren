@@ -10,7 +10,7 @@ hide_table_of_contents: true
 
 Vanaf hier veronderstellen we dat je in één groot project (`OOExercises`) werkt dat één klasse `Program` heeft. Deze klasse heeft een `Main` methode die een keuzemenu opstart. Oefeningen rond eenzelfde topic worden (statische) methodes van één klasse met een methode `ShowSubmenu`, die je een menu toont van alle oefeningen over dat topic en die je toestaat een oefening naar keuze te testen. Dit wordt uitgelegd in de eerste oefening.
 
-## Oefening: H11-voorbereiding
+## Oefening: H1-voorbereiding
 
 ### Leerdoelen
 
@@ -42,8 +42,8 @@ Topic van de uit te voeren oefening?
 2. Properties en access modifiers
 > 1
 Uit te voeren oefening?
-1. H11-Clock
-2. H11-Birthday
+1. H1-Clock
+2. H1-Birthday
 > 2
 (...)
 ```
@@ -51,7 +51,7 @@ Uit te voeren oefening?
 <OefeningAssistent oefening="H11-Voorbereiding" hoofdstuk="H11" />
 
 
-## Oefening: H11-Clock
+## Oefening: H1-Clock
 
 Maak een applicatie die bestaat uit een oneindige loop. De loop zal iedere seconde pauzeren: `System.Threading.Thread.Sleep(1000);`
 
@@ -60,14 +60,14 @@ Maak een applicatie die bestaat uit een oneindige loop. De loop zal iedere secon
 <OefeningAssistent oefening="H11-Clock" hoofdstuk="H11" />
 
 
-## Oefening: H11-Birthday
+## Oefening: H1-Birthday
 
 Maak een applicatie die aan de gebruiker vraagt op welke dag hij/zij jarig is. Toon vervolgens over hoeveel dagen de verjaardag van de gebruiker zal zijn.
 
 <OefeningAssistent oefening="H11-Birthday" hoofdstuk="H11" />
 
 
-## Oefening: H11-DayOfTheWeek
+## Oefening: H1-DayOfTheWeek
 
 ### Leerdoelen
 
@@ -101,7 +101,7 @@ Welk jaar?
 <OefeningAssistent oefening="H11-DayOfTheWeek" hoofdstuk="H11" />
 
 
-## Oefening: H11-TicksSince2000
+## Oefening: H1-TicksSince2000
 
 ### Leerdoelen
 
@@ -126,7 +126,7 @@ Sinds 1 januari 2000 zijn er (hier wordt het aantal getoond) ticks voorbijgegaan
 <OefeningAssistent oefening="H11-TicksSince2000" hoofdstuk="H11" />
 
 
-## Oefening: H11-LeapYearCount
+## Oefening: H1-LeapYearCount
 
 ### Leerdoelen
 
@@ -151,7 +151,7 @@ Er zijn (hier wordt het aantal getoond) schrikkeljaren tussen 1799 en 2021.
 <OefeningAssistent oefening="H11-LeapYearCount" hoofdstuk="H11" />
 
 
-## Oefening: H11-CodeTiming
+## Oefening: H1-CodeTiming
 
 ### Leerdoelen
 
@@ -180,7 +180,7 @@ Het duurt (hier wordt het aantal getoond) milliseconden om een array van een mil
 
 ### Oefeningen na *Access modifiers*:
 
-## Oefening: H11-CombinationOf2Numbers
+## Oefening: H1-CombinationOf2Numbers
 
 ### Leerdoelen
 
@@ -231,7 +231,7 @@ Quotient = 0,352941176470588
 <OefeningAssistent oefening="H11-CombinationOf2Numbers" hoofdstuk="H11" />
 
 
-## H11\_4 SchoolAdmin klasse Course
+## H1\_4 SchoolAdmin klasse Course
 
 We willen per cursus bijhouden welke studenten ingeschreven zijn en maken daarvoor een klasse `Course`.
 
@@ -271,7 +271,7 @@ Mieke Vermeulen
 
 
 
-## H11\_5 SchoolAdmin klasse CourseResult 
+## H1\_5 SchoolAdmin klasse CourseResult 
 
 We willen voor de student goed kunnen bijhouden voor welke cursus er welk resultaat behaald werd. Daarvoor maken we een nieuwe klasse `CourseResult`. Daarna passen we ook de klasse `Student` aan.
 
@@ -312,7 +312,7 @@ De uitvoer van deze 2 methodes is niet gewijzigd.
 <OefeningAssistent oefening="H11-SchoolAdmin-5" hoofdstuk="H11" />
 
 
-## H11\_6 SchoolAdmin Student Average
+## H1\_6 SchoolAdmin Student Average
 
 Voor een student gaan we een gemiddelde berekenen van de behaalde resultaten en we tonen dit in een overzicht.
 
@@ -337,7 +337,7 @@ Resultaat van `DemoStudents`:
 
 ### Oefeningen na *Properties*:
 
-## Oefening: H11-Figures
+## Oefening: H1-Figures
 
 ### Leerdoelen
 
@@ -380,7 +380,7 @@ Een driehoek met een basis van 2m en een hoogte van 2m heeft een oppervlakte van
 <OefeningAssistent oefening="H11-Figures" hoofdstuk="H11" />
 
 
-## H11\_7 SchoolAdmin properties Course
+## H1\_7 SchoolAdmin properties Course
 
 We willen elke cursus automatisch een id toewijzen en ook willen we studiepunten per cursus bijhouden. \
 Daarnaast willen we een lijst bijhouden met alle objecten van de klasse Cursus.
@@ -399,7 +399,7 @@ Maak het attribuut `AllCourses`(static); dit is een list van Course-objecten.
 <OefeningAssistent oefening="H11-SchoolAdmin-7" hoofdstuk="H11" />
 
 
-## H11\_8 SchoolAdmin properties CourseResult
+## H1\_8 SchoolAdmin properties CourseResult
 
 We herschrijven de bestaande attributen naar properties
 
@@ -415,7 +415,7 @@ Van Result maak je een property `Result`. Zorg ervoor dat er enkel een resultaat
 <OefeningAssistent oefening="H11-SchoolAdmin-8" hoofdstuk="H11" />
 
 
-## H11\_9 SchoolAdmin Student Age
+## H1\_9 SchoolAdmin Student Age
 
 Op basis van de geboortedatum berekenen we de exacte leeftijd van de student en nemen we die mee op in het overzicht.
 

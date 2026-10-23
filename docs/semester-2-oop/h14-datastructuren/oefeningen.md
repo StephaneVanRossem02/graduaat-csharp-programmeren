@@ -4,7 +4,7 @@ hide_table_of_contents: true
 
 # Oefeningen
 
-## H14-PhoneBookNameNumber
+## H4-PhoneBookNameNumber
 
 ### Functionele analyse
 
@@ -29,9 +29,9 @@ Topic van de uit te voeren oefening?
 3: Datastructuren
 >3
 Uit te voeren oefening?
-1. H14-PhoneBookNameNumber
-2. H14-PhoneBookCityNameNumber
-3. H14-PhoneBookWithBuilder
+1. H4-PhoneBookNameNumber
+2. H4-PhoneBookCityNameNumber
+3. H4-PhoneBookWithBuilder
 >1
 Wil je een naam en nummer inlezen?
 >ja
@@ -58,7 +58,7 @@ Gebruiker2: 23456
 ```
 
 
-## H14-PhoneBookCityNameNumber
+## H4-PhoneBookCityNameNumber
 
 ### Functionele analyse
 
@@ -110,7 +110,7 @@ Gebruiker3: 34567
 ```
 
 
-## H14-PhoneBookWithBuilder
+## H4-PhoneBookWithBuilder
 
 ### Functionele analyse
 
@@ -125,11 +125,11 @@ We willen graag dat ons Dictionary (zonder gemeente) veilig doorgegeven kan word
 
 ### Voorbeeldinteractie
 
-In de interactie zie je geen verschil [met de eerdere oefening](#h14-phonebooknamenumber).
+In de interactie zie je geen verschil [met de eerdere oefening](#h4-phonebooknamenumber).
 
 ## SchoolAdmin project
 
-## H14\_1 SchoolAdmin: AlleStudenten
+## H4\_1 SchoolAdmin: AlleStudenten
 
 #### Functionele analyse
 
@@ -144,7 +144,7 @@ Voorzie de klasse `Student` van een statische read-only property `AllStudents`. 
 ![](/img/img-3201.png)
 
 
-## H14\_2 SchoolAdmin: Cursuslijsten immutable
+## H4\_2 SchoolAdmin: Cursuslijsten immutable
 
 #### Functionele analyse
 

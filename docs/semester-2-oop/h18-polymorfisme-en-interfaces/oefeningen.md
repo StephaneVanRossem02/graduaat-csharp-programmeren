@@ -8,7 +8,7 @@ hide_table_of_contents: true
 Onderstaande oefeningen maak je oproepbaar via een klasse `Polymorfisme` met een methode `ToonSubmenu`.
 :::
 
-## h18-autoconstructeur
+## h8-autoconstructeur
 
 ### Functionele analyse
 
@@ -57,7 +57,7 @@ Versnellen - Benzine
 Versnellen - Elektrisch
 ```
 
-## h18-grootkeuken
+## h8-grootkeuken
 
 ### Functionele analyse
 
@@ -108,7 +108,7 @@ Stoomketel - waterdoseren
 ketel zonder doseren - verwarmen
 ```
 
-## h18-Rooster-stap1
+## h8-Rooster-stap1
 
 ### Functionele analyse
 
@@ -151,7 +151,7 @@ System.Console.WriteLine($"Totale kalendertijd: {(blok1.Tijdsduur + blok2.Tijdsd
 Totale kalendertijd: 3u40m
 ```
 
-## h18-Rooster-stap2
+## h8-Rooster-stap2
 
 ### Functionele analyse
 
@@ -199,7 +199,7 @@ Wil je nog een item toevoegen?
 5/20/2021 5:00:00 PM:Projectwerk
 ```
 
-## h18-Rooster-stap3
+## h8-Rooster-stap3
 
 ### Functionele analyse
 
@@ -240,7 +240,7 @@ public void VoegToeLosgekoppeld() {
 
 Merk op dat je maar een heel kleine aanpassing zou moeten doen om `Kalender` uit te breiden met bijvoorbeeld `QualityTime`. Die klasse zou door iemand anders geschreven mogen worden.
 
-## H18\_1 SchoolAdmin: sorteren volgens criteria
+## H8\_1 SchoolAdmin: sorteren volgens criteria
 
 #### Functionele analyse
 
@@ -292,7 +292,7 @@ Webtechnologie (3)
 ```
 
 
-## H18\_2 SchoolAdmin: data export naar CSV
+## H8\_2 SchoolAdmin: data export naar CSV
 
 #### Functionele analyse
 

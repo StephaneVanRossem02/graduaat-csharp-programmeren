@@ -122,7 +122,7 @@ class Auto {
 }
 ```
 
-## H11\_2 SchoolAdmin Student methoden 
+## H1\_2 SchoolAdmin Student methoden 
 
 We breiden onze klasse uit met 2 methoden.
 
