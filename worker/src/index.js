@@ -21,7 +21,8 @@ import oplossingenData from '../oplossingen.json';
 import downloadManifest from '../downloads-manifest.json';
 
 const TOEGELATEN_ORIGINS = [
-  'https://csharp.apload.be',
+  'https://csharp.apload.be', //old
+  'https://csharp.programmeren-ap.be',
   'https://vincentvcap.github.io',
   'https://stephanevanrossem02.github.io',
   'http://localhost:3000',
