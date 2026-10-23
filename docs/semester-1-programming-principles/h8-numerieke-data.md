@@ -4,3 +4,5 @@
 - [Random](./h8-numerieke-data/random.md)
 - [Casting en conversie](./h8-numerieke-data/casting-en-conversie.md)
 - [Oefeningen](./h8-numerieke-data/oefeningen.md)
+
+<LaboSlides hoofdstuk={8} />

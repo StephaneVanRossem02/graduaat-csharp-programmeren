@@ -7,3 +7,5 @@
 - [Scope van variabelen](./h4-beslissingen/scope.md)
 - [Switch](./h4-beslissingen/switch.md)
 - [Oefeningen](./h4-beslissingen/oefeningen.md)
+
+<LaboSlides hoofdstuk={4} />

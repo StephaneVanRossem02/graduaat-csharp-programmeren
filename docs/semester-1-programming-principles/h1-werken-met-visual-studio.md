@@ -8,3 +8,5 @@
 - [Input/Output: ReadLine/WriteLine](./h1-werken-met-visual-studio/console.md)
 - [Kleuren in Console](./h1-werken-met-visual-studio/kleuren.md)
 - [Oefeningen](./h1-werken-met-visual-studio/oefeningen.md)
+
+<LaboSlides hoofdstuk={1} />

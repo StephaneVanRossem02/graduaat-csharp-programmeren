@@ -5,3 +5,5 @@
 - [For](./h5-loops/for.md)
 - [Debuggen](./h5-loops/debuggen.md)
 - [Oefeningen](./h5-loops/oefeningen.md)
+
+<LaboSlides hoofdstuk={5} />

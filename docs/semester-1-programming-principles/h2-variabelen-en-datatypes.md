@@ -5,3 +5,5 @@
 - [Variabelen](./h2-variabelen-en-datatypes/variabelen.md)
 - [Expressies en operators](./h2-variabelen-en-datatypes/expressies.md)
 - [Oefeningen](./h2-variabelen-en-datatypes/oefeningen.md)
+
+<LaboSlides hoofdstuk={2} />

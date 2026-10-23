@@ -27,3 +27,9 @@ worker/.wrangler/
 .dev.vars
 worker/downloads/
 worker/oplossingen.json
+
+/.quarto/
+**/*.quarto_ipynb
+
+# Quarto-slides per labo: lokaal houden, niet pushen
+/slides/

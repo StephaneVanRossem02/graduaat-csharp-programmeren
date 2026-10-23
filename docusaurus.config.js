@@ -103,6 +103,11 @@ const config = {
             position: 'left',
             label: 'Cursus',
           },
+          {
+            to: '/slides',
+            position: 'left',
+            label: 'Slides',
+          },
         ],
       },
       footer: {

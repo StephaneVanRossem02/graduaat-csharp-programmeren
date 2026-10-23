@@ -6,3 +6,5 @@
 - [Defaultwaarden](./h6-arrays/defaultwaarden.md)
 - [List\<T>](./h6-arrays/list-en-listmethods.md)
 - [Oefeningen](./h6-arrays/oefeningen.md)
+
+<LaboSlides hoofdstuk={6} />

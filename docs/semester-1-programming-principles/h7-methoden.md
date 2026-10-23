@@ -5,3 +5,5 @@
 - [Return waarden](./h7-methoden/returnwaarden.md)
 - [Geavanceerde methoden](./h7-methoden/geavanceerde-methoden.md)
 - [Oefeningen](./h7-methoden/oefeningen.md)
+
+<LaboSlides hoofdstuk={7} />

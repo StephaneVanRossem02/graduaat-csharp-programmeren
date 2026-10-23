@@ -5,3 +5,5 @@
 - [Omzetten van en naar strings](./h3-tekst-in-code/omzetten-van-en-naar-strings.md)
 - [Functionaliteit van strings](./h3-tekst-in-code/functionaliteit-van-strings.md)
 - [Oefeningen](./h3-tekst-in-code/oefeningen.md)
+
+<LaboSlides hoofdstuk={3} />

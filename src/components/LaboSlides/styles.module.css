@@ -1,0 +1,97 @@
+.blok {
+  margin: 1.5rem 0;
+}
+
+.kop {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.raster {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: 1rem;
+}
+
+.kaart {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-left: 4px solid var(--ifm-color-primary);
+  border-radius: var(--ifm-card-border-radius, 8px);
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.kaart:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ifm-color-primary);
+}
+
+.titel {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.subtitel {
+  font-size: 0.875rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.acties {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.75rem;
+}
+
+.open,
+.pdf {
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 1px solid var(--ifm-color-primary);
+}
+
+.open {
+  background: var(--ifm-color-primary);
+  color: #fff;
+}
+
+.pdf {
+  color: var(--ifm-color-primary);
+}
+
+.open:hover,
+.pdf:hover {
+  text-decoration: none;
+  filter: brightness(1.1);
+}
+
+.open:hover {
+  color: #fff;
+}
+
+:global([data-theme='dark']) .open,
+:global([data-theme='dark']) .open:hover {
+  color: #1b1b1d;
+}
+
+.pdf:hover {
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-primary);
+}
