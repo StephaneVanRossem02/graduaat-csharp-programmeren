@@ -2,7 +2,7 @@
 const { themes: prismThemes } = require('prism-react-renderer');
 
 // Custom domain van de hoofdsite. Enkel de hoofdrepo publiceert hierheen.
-const CUSTOM_DOMAIN = 'csharp.apload.be'; //TODO
+const CUSTOM_DOMAIN = 'csharp.programmeren-ap.be';
 const owner = (process.env.GITHUB_REPOSITORY_OWNER || 'VincentVCAP').toLowerCase();
 const isMainSite = owner === 'vincentvcap';
 
@@ -17,10 +17,10 @@ const config = {
   // GITHUB_REPOSITORY_OWNER zet GitHub Actions zelf; lokaal valt alles terug op VincentVCAP.
   // De hoofdsite draait op een custom domain (root, dus baseUrl '/'); forks draaien op
   // <owner>.github.io/graduaat-csharp-programmeren/ en houden daar de repo-naam als baseUrl.
-  // url: isMainSite ? `https://${CUSTOM_DOMAIN}` : `https://${owner}.github.io`,
-  // baseUrl: isMainSite ? '/' : '/graduaat-csharp-programmeren/',
-  url: `https://${owner}.github.io`,
-  baseUrl: '/graduaat-csharp-programmeren/',
+   url: isMainSite ? `https://${CUSTOM_DOMAIN}` : `https://${owner}.github.io`,
+   baseUrl: isMainSite ? '/' : '/graduaat-csharp-programmeren/',
+  //url: `https://${owner}.github.io`,
+  //baseUrl: '/graduaat-csharp-programmeren/',
 
   organizationName: process.env.GITHUB_REPOSITORY_OWNER || 'VincentVCAP',
   projectName: 'graduaat-csharp-programmeren',
