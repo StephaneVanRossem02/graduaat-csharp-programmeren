@@ -1,0 +1,349 @@
+/* De kleur van het vak komt uit --vak-bp of --vak-oop (src/css/custom.css). */
+[data-vak='bp'] {
+  --vak: var(--vak-bp);
+  --vak-van: var(--vak-bp-van);
+  --vak-tot: var(--vak-bp-tot);
+}
+
+[data-vak='oop'] {
+  --vak: var(--vak-oop);
+  --vak-van: var(--vak-oop-van);
+  --vak-tot: var(--vak-oop-tot);
+}
+
+/* ─── Overzicht ─────────────────────────────────────────────── */
+
+.banner {
+  padding: 2.25rem 2rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--vak-van) 0%, var(--vak-tot) 100%);
+  color: #fff;
+  margin-bottom: 2.5rem;
+}
+
+.semester {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.bannerTitel {
+  color: #fff;
+  font-size: 2.2rem;
+  margin: 0.75rem 0 0.5rem;
+}
+
+.bannerTekst {
+  max-width: 38rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  opacity: 0.95;
+  margin-bottom: 1.5rem;
+}
+
+.knoppen {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.knopWit,
+.knopRand {
+  padding: 0.5rem 1.1rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.knopWit {
+  background: #fff;
+  color: var(--vak-van);
+}
+
+.knopWit:hover {
+  text-decoration: none;
+  color: var(--vak-van);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.knopRand {
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  color: #fff;
+}
+
+.knopRand:hover {
+  text-decoration: none;
+  color: #fff;
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sectie {
+  margin-bottom: 2.5rem;
+}
+
+/* Gewone kop, zonder de lijn die de docs-koppen krijgen. */
+.sectieTitel {
+  font-size: 1.15rem;
+  border: none !important;
+  padding: 0 !important;
+  margin-bottom: 1rem;
+}
+
+.nieuwste {
+  max-width: 22rem;
+}
+
+.hoofdstukken {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 0.75rem;
+}
+
+.hoofdstuk {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  color: var(--ifm-font-color-base);
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+
+.hoofdstuk:hover {
+  text-decoration: none;
+  color: var(--ifm-font-color-base);
+  border-color: var(--vak);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  transform: translateY(-1px);
+}
+
+.badge {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--vak) 14%, transparent);
+  color: var(--vak);
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.hoofdstukNaam {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.chip {
+  margin-left: auto;
+  flex: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* ─── Planning ──────────────────────────────────────────────── */
+
+.tijdlijn {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+}
+
+.week {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  gap: 1.25rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+/* De verticale lijn tussen de weken. */
+.week:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 2rem;
+  top: 4.25rem;
+  bottom: 0.25rem;
+  width: 2px;
+  background: var(--ifm-color-emphasis-200);
+}
+
+.weeknummer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--vak) 14%, transparent);
+  color: var(--vak);
+  line-height: 1.1;
+}
+
+.weeknummer span {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.weeknummer strong {
+  font-size: 1.5rem;
+}
+
+.weekInhoud {
+  padding-top: 0.5rem;
+  min-width: 0;
+}
+
+.weekHoofdstuk {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.weekTitel {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--ifm-font-color-base);
+}
+
+.weekTitel:hover {
+  color: var(--vak);
+}
+
+.weekOefeningen {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--vak);
+}
+
+.opmerking {
+  margin: 0.25rem 0 0;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.95rem;
+}
+
+.decks {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* ─── Slides ────────────────────────────────────────────────── */
+
+.slidesHoofdstuk {
+  margin-bottom: 2rem;
+}
+
+/* ─── Oefeningen ────────────────────────────────────────────── */
+
+.oefeningen {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.oefening {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.oefening:hover {
+  text-decoration: none;
+  color: var(--ifm-font-color-base);
+  border-color: var(--vak);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.pijl {
+  margin-left: auto;
+  color: var(--vak);
+  font-weight: 700;
+}
+
+/* ─── Leerdoelen ────────────────────────────────────────────── */
+
+.leerdoelen {
+  margin: 1.25rem 0 2rem;
+  padding: 1.1rem 1.4rem 0.6rem;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--ifm-color-primary) 7%, transparent);
+  border: 1px solid color-mix(in srgb, var(--ifm-color-primary) 20%, transparent);
+}
+
+.leerdoelenKop {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.leerdoelen ul {
+  padding-left: 1.2rem;
+}
+
+.leeg {
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px dashed var(--ifm-color-emphasis-300);
+  text-align: center;
+  color: var(--ifm-color-emphasis-700);
+}
+
+@media (max-width: 600px) {
+  .banner {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .bannerTitel {
+    font-size: 1.7rem;
+  }
+
+  .week {
+    grid-template-columns: 3.25rem 1fr;
+    gap: 0.75rem;
+  }
+
+  .week:not(:last-child)::before {
+    left: 1.6rem;
+    top: 3.5rem;
+  }
+
+  .weeknummer {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+
+  .weeknummer strong {
+    font-size: 1.2rem;
+  }
+}

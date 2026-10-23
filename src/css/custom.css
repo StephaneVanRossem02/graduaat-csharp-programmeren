@@ -23,32 +23,275 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+/* ─── Twee vakken, twee kleuren ────────────────────────────────
+   Basis Programmeren is oranje (het C#-logo), OOP petrolblauw: een warm-koud
+   paar dat goed samengaat. Op elke pagina van OOP wordt petrol de hoofdkleur. */
+:root {
+  --vak-bp: #cc6800;
+  --vak-bp-van: #c25000;
+  --vak-bp-tot: #f08a00;
+  --vak-oop: #0e7490;
+  --vak-oop-van: #0b5c70;
+  --vak-oop-tot: #1590a3;
+}
+
+[data-theme='dark'] {
+  --vak-bp: #fd9b18;
+  --vak-oop: #45c4d9;
+}
+
+html[class*='docs-doc-id-oop/'],
+html[class*='docs-doc-id-semester-2-'],
+html[class*='docs-doc-id-pro-geen-leerstof'] {
+  --ifm-color-primary: #0e7490;
+  --ifm-color-primary-dark: #0d6882;
+  --ifm-color-primary-darker: #0c637b;
+  --ifm-color-primary-darkest: #0a5165;
+  --ifm-color-primary-light: #0f80a0;
+  --ifm-color-primary-lighter: #1085a6;
+  --ifm-color-primary-lightest: #1197bd;
+}
+
+html[data-theme='dark'][class*='docs-doc-id-oop/'],
+html[data-theme='dark'][class*='docs-doc-id-semester-2-'],
+html[data-theme='dark'][class*='docs-doc-id-pro-geen-leerstof'] {
+  --ifm-color-primary: #45c4d9;
+  --ifm-color-primary-dark: #2fbcd3;
+  --ifm-color-primary-darker: #2ab4ca;
+  --ifm-color-primary-darkest: #2394a6;
+  --ifm-color-primary-light: #5bccde;
+  --ifm-color-primary-lighter: #66d0e1;
+  --ifm-color-primary-lightest: #87dbe8;
+}
+
+/* ─── Rustige koppen ──────────────────────────────────────────── */
 article h2 {
-  border-bottom: 2px solid var(--ifm-color-primary);
-  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  padding-bottom: 0.4rem;
+  margin-top: 2.25rem;
 }
 
-/* Orange navbar everywhere except the homepage, which keeps its original
-   (pre-redesign) navbar since it already has its own hero banner below it. */
+/* ─── Navbar: licht en rustig ──────────────────────────────────
+   De homepage houdt zijn eigen navbar boven de hero. */
 #__docusaurus:not(:has(> .homepage)) .navbar {
-  background-color: color-mix(in srgb, var(--ifm-color-primary-lightest) 70%, white 30%);
+  background-color: var(--ifm-background-surface-color);
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  box-shadow: none;
 }
 
-[data-theme='dark'] #__docusaurus:not(:has(> .homepage)) .navbar {
-  background-color: color-mix(in srgb, var(--ifm-color-primary-darkest) 96%, white 4%);
+.navbar__title {
+  font-weight: 700;
 }
 
-#__docusaurus:not(:has(> .homepage)) .navbar__title,
-#__docusaurus:not(:has(> .homepage)) .navbar__link {
-  color: #000000;
+.navbar__link {
+  font-weight: 500;
 }
 
-[data-theme='dark'] #__docusaurus:not(:has(> .homepage)) .navbar__title,
-[data-theme='dark'] #__docusaurus:not(:has(> .homepage)) .navbar__link {
-  color: #ffffff;
+/* De twee vakken als zachte pillen; het actieve vak krijgt zijn eigen kleur. */
+.navbar-vak {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--ifm-color-emphasis-700);
+  border-radius: 999px;
+  padding: 0.3rem 0.9rem;
+  margin: 0 0.1rem;
+  transition: background 0.15s, color 0.15s;
 }
 
-[data-theme='dark'] #__docusaurus:not(:has(> .homepage)) .navbar__link:hover,
-[data-theme='dark'] #__docusaurus:not(:has(> .homepage)) .navbar__link--active {
-  color: var(--ifm-color-primary-lightest);
+.navbar-vak:hover {
+  background: var(--ifm-color-emphasis-100);
+}
+
+.navbar-vak--bp:hover,
+.navbar-vak--bp.navbar__link--active {
+  color: var(--vak-bp);
+}
+
+.navbar-vak--oop:hover,
+.navbar-vak--oop.navbar__link--active {
+  color: var(--vak-oop);
+}
+
+.navbar-vak--bp.navbar__link--active {
+  background: color-mix(in srgb, var(--vak-bp) 12%, transparent);
+}
+
+.navbar-vak--oop.navbar__link--active {
+  background: color-mix(in srgb, var(--vak-oop) 12%, transparent);
+}
+
+/* ─── Zijbalk ──────────────────────────────────────────────────── */
+.theme-doc-sidebar-menu {
+  font-size: 0.92rem;
+}
+
+.theme-doc-sidebar-menu .menu__link {
+  border-radius: 8px;
+  padding: 0.38rem 0.75rem;
+  color: var(--ifm-color-emphasis-800);
+  font-weight: 450;
+  line-height: 1.35;
+}
+
+.theme-doc-sidebar-menu .menu__link:hover {
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-emphasis-900);
+}
+
+.theme-doc-sidebar-menu .menu__link--active:not(.menu__link--sublist),
+.theme-doc-sidebar-menu .menu__list-item-collapsible--active,
+.theme-doc-sidebar-menu .menu__list-item-collapsible--active .menu__link {
+  background: color-mix(in srgb, var(--ifm-color-primary) 10%, transparent);
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+.theme-doc-sidebar-menu .menu__list-item-collapsible:hover {
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 8px;
+}
+
+.theme-doc-sidebar-menu .menu__caret::before,
+.theme-doc-sidebar-menu .menu__link--sublist-caret::after {
+  opacity: 0.45;
+  transform-origin: center;
+}
+
+/* Onderdelen van een hoofdstuk: ingesprongen met een dun lijntje. */
+.theme-doc-sidebar-menu .menu__list .menu__list {
+  margin: 0.15rem 0 0.35rem 1rem;
+  padding-left: 0.4rem;
+  border-left: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.theme-doc-sidebar-menu .menu__list .menu__list .menu__link {
+  font-size: 0.875rem;
+  padding: 0.28rem 0.65rem;
+}
+
+/* Kop: welk vak dit is. */
+.vak-kop {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 0.1rem 0.25rem 0.6rem;
+  padding: 0.4rem 0.5rem 0.9rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  font-weight: 700;
+  font-size: 0.98rem;
+  line-height: 1.25;
+}
+
+.vak-kop small {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 0.1rem;
+}
+
+.vak-kop__stip {
+  flex: none;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+}
+
+.vak-kop--bp .vak-kop__stip {
+  background: var(--vak-bp);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--vak-bp) 20%, transparent);
+}
+
+.vak-kop--oop .vak-kop__stip {
+  background: var(--vak-oop);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--vak-oop) 20%, transparent);
+}
+
+/* Groepstitels: Hoofdstukken, Meer. */
+.menu-groep {
+  display: block;
+  margin: 1.1rem 0.75rem 0.35rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ifm-color-emphasis-600);
+}
+
+/* Overzicht, Planning, Slides: met een klein icoontje. */
+.menu-snel > .menu__link::before {
+  content: '';
+  flex: none;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.6rem;
+  background: currentColor;
+  opacity: 0.7;
+  -webkit-mask: var(--icoon) center / contain no-repeat;
+  mask: var(--icoon) center / contain no-repeat;
+}
+
+.menu-snel--index {
+  --icoon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='7' height='7' rx='1.5'/%3E%3Crect x='14' y='3' width='7' height='7' rx='1.5'/%3E%3Crect x='3' y='14' width='7' height='7' rx='1.5'/%3E%3Crect x='14' y='14' width='7' height='7' rx='1.5'/%3E%3C/svg%3E");
+}
+
+.menu-snel--planning {
+  --icoon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='17' rx='2'/%3E%3Cpath d='M16 2v4M8 2v4M3 10h18'/%3E%3C/svg%3E");
+}
+
+.menu-snel--slides {
+  --icoon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='2' y='3' width='20' height='14' rx='2'/%3E%3Cpath d='M8 21h8M12 17v4'/%3E%3C/svg%3E");
+}
+
+.menu-snel--oefeningen {
+  --icoon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 20h9'/%3E%3Cpath d='M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z'/%3E%3C/svg%3E");
+}
+
+/* Tabjes bovenaan de zijbalk: Hoofdstukken | Oefeningen, als segmentknop. */
+.theme-doc-sidebar-menu .zijbalk-tab {
+  display: inline-block;
+  width: calc(50% - 0.25rem);
+  margin: 0 0 0.75rem;
+  padding: 3px;
+  vertical-align: top;
+  background: var(--ifm-color-emphasis-100);
+}
+
+.theme-doc-sidebar-menu .zijbalk-tab:has(+ .zijbalk-tab) {
+  border-radius: 10px 0 0 10px;
+  margin-left: 0.25rem;
+  padding-right: 0;
+}
+
+.theme-doc-sidebar-menu .zijbalk-tab + .zijbalk-tab {
+  border-radius: 0 10px 10px 0;
+  padding-left: 0;
+}
+
+.theme-doc-sidebar-menu .zijbalk-tab .menu__link {
+  justify-content: center;
+  padding: 0.35rem 0.5rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-700);
+  background: transparent;
+}
+
+.theme-doc-sidebar-menu .zijbalk-tab .menu__link:hover {
+  background: transparent;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.theme-doc-sidebar-menu .zijbalk-tab--actief .menu__link,
+.theme-doc-sidebar-menu .zijbalk-tab--actief .menu__link:hover {
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-color-primary);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+[data-theme='dark'] .theme-doc-sidebar-menu .zijbalk-tab--actief .menu__link {
+  background: var(--ifm-color-emphasis-200);
 }

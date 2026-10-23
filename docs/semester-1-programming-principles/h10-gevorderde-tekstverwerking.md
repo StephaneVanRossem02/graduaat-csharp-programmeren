@@ -1,9 +1,16 @@
 # H10: Gevorderde tekstverwerking
 
-- [Voorstelling van tekst](./h10-gevorderde-tekstverwerking/voorstelling-van-tekst.md)
-- [Interpolatie met formattering](./h10-gevorderde-tekstverwerking/interpolatie-met-formattering.md)
-- [Werken met arrays van strings](./h10-gevorderde-tekstverwerking/werken-met-arrays-van-strings.md)
-- [Input en output van tekstbestanden](./h10-gevorderde-tekstverwerking/input-en-output-van-tekstbestanden.md)
-- [Oefeningen](./h10-gevorderde-tekstverwerking/oefeningen.md)
+<Leerdoelen>
 
-<LaboSlides hoofdstuk={10} />
+- uitleggen hoe een computer tekst voorstelt (Unicode en karaktersets) en verbatim strings gebruiken
+- getallen netjes formatteren in een string interpolation
+- strings opsplitsen met `Split` en samenvoegen met `Join`
+- tekstbestanden lezen en schrijven
+
+</Leerdoelen>
+
+## Inhoud
+
+<HoofdstukInhoud vak="bp" hoofdstuk={10} />
+
+<LaboSlides vak="bp" hoofdstuk={10} />

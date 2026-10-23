@@ -1,7 +1,15 @@
 # H9: Meerdimensionaal werken
 
-- [N-dimensionale arrays](./h9-meerdimensionaal-werken/n-dimensionale-arrays.md)
-- [Geneste iteratie](./h9-meerdimensionaal-werken/geneste-iteratie.md)
-- [Oefeningen](./h9-meerdimensionaal-werken/oefeningen.md)
+<Leerdoelen>
 
-<LaboSlides hoofdstuk={9} />
+- data organiseren in een tweedimensionale of n-dimensionale array
+- de lengte van elke dimensie opvragen
+- met geneste loops over een tweedimensionale array itereren
+
+</Leerdoelen>
+
+## Inhoud
+
+<HoofdstukInhoud vak="bp" hoofdstuk={9} />
+
+<LaboSlides vak="bp" hoofdstuk={9} />

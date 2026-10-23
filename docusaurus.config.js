@@ -97,16 +97,27 @@ const config = {
           src: 'img/favicon.png',
         },
         items: [
+          // Twee aparte vakken, elk met twee zijbalken: theorie en oefeningen (zie
+          // sidebars.js). Het vak blijft actief op alle pagina's van dat vak.
           {
-            type: 'docSidebar',
-            sidebarId: 'sidebar',
+            to: '/bp',
             position: 'left',
-            label: 'Cursus',
+            label: 'Basis Programmeren',
+            className: 'navbar-vak navbar-vak--bp',
+            activeBaseRegex: '/(bp|semester-1-programming-principles|semester-1-appendix)(/|$)',
           },
           {
-            to: '/slides',
+            to: '/oop',
             position: 'left',
-            label: 'Slides',
+            label: 'OOP',
+            className: 'navbar-vak navbar-vak--oop',
+            activeBaseRegex: '/(oop|semester-2-oop|semester-2-appendix|pro-geen-leerstof-en-of-in-opbouw)(/|$)',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'algemeen',
+            position: 'right',
+            label: 'Info & afspraken',
           },
         ],
       },
@@ -114,10 +125,27 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Cursus',
+            title: 'Basis Programmeren',
             items: [
-              { label: 'Semester 1', to: '/semester-1-programming-principles/h1-werken-met-visual-studio' },
-              { label: 'Semester 2', to: '/semester-2-oop/h11-klassen-en-objecten' },
+              { label: 'Overzicht', to: '/bp' },
+              { label: 'Planning', to: '/bp/planning' },
+              { label: 'Slides', to: '/bp/slides' },
+            ],
+          },
+          {
+            title: 'Object-Oriented Programming',
+            items: [
+              { label: 'Overzicht', to: '/oop' },
+              { label: 'Planning', to: '/oop/planning' },
+              { label: 'Slides', to: '/oop/slides' },
+            ],
+          },
+          {
+            title: 'Algemeen',
+            items: [
+              { label: 'Inleiding', to: '/inleiding' },
+              { label: 'Afspraken code', to: '/inleiding/afsprakencode' },
+              { label: 'Coding guidelines', to: '/appendix/coding-guidelines' },
             ],
           },
         ],

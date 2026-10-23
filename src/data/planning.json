@@ -1,0 +1,11 @@
+{
+  "bp": [
+    { "week": 1, "hoofdstukken": [1] },
+    { "week": 2, "hoofdstukken": [2] },
+    { "week": 3, "hoofdstukken": [3] },
+    { "week": 4, "hoofdstukken": [4] },
+    { "week": 5, "hoofdstukken": [4, 5], "opmerking": "switch uit H4, daarna while en do while" },
+    { "week": 6, "hoofdstukken": [5] }
+  ],
+  "oop": []
+}

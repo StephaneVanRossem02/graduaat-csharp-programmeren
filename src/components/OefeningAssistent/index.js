@@ -369,7 +369,7 @@ export default function OefeningAssistent({ oefening, hoofdstuk }) {
                 />
                 <span className={codeTeLang ? styles.tellerFout : styles.teller}>
                   {code.length} / {maxCodeTekens} tekens
-                  {codeTeLang && ' — dat is te veel. Plak enkel het stuk waar het misloopt.'}
+                  {codeTeLang && '. Dat is te veel: plak enkel het stuk waar het misloopt.'}
                 </span>
               </>
             )}

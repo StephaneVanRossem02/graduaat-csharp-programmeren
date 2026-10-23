@@ -1,9 +1,15 @@
 # H3: Strings en hun methoden
 
-- [Strings](./h3-tekst-in-code/chars-strings.md)
-- [Strings samenvoegen](./h3-tekst-in-code/strings-samenvoegen.md)
-- [Omzetten van en naar strings](./h3-tekst-in-code/omzetten-van-en-naar-strings.md)
-- [Functionaliteit van strings](./h3-tekst-in-code/functionaliteit-van-strings.md)
-- [Oefeningen](./h3-tekst-in-code/oefeningen.md)
+<Leerdoelen>
 
-<LaboSlides hoofdstuk={3} />
+- strings declareren en samenvoegen met `+` en met string interpolation (`$`)
+- input van de gebruiker omzetten naar een getal, en een getal terug naar tekst
+- stringmethoden gebruiken zoals `Length`, `Substring`, `IndexOf`, `ToUpper`, `Replace` en `Trim`
+
+</Leerdoelen>
+
+## Inhoud
+
+<HoofdstukInhoud vak="bp" hoofdstuk={3} />
+
+<LaboSlides vak="bp" hoofdstuk={3} />

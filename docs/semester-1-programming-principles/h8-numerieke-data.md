@@ -1,8 +1,15 @@
 # H8: Numerieke data
 
-- [Math klasse](./h8-numerieke-data/de-math-klasse.md)
-- [Random](./h8-numerieke-data/random.md)
-- [Casting en conversie](./h8-numerieke-data/casting-en-conversie.md)
-- [Oefeningen](./h8-numerieke-data/oefeningen.md)
+<Leerdoelen>
 
-<LaboSlides hoofdstuk={8} />
+- berekeningen maken met de `Math`-klasse
+- willekeurige getallen maken met `Random`
+- het verschil tussen casting en conversie uitleggen en beide toepassen
+
+</Leerdoelen>
+
+## Inhoud
+
+<HoofdstukInhoud vak="bp" hoofdstuk={8} />
+
+<LaboSlides vak="bp" hoofdstuk={8} />

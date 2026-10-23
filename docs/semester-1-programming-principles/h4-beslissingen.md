@@ -1,11 +1,17 @@
 # H4: Beslissingen
 
-- [Beslissingen intro](./h4-beslissingen/beslissingen-intro.md)
-- [Enkelvoudige booleaanse expressies](./h4-beslissingen/enkelvoudige-booleaanse-expressies.md)
-- [If, else, else if](./h4-beslissingen/if.md)
-- [Samengestelde booleaanse expressies](./h4-beslissingen/samengestelde-booleaanse-expressies.md)
-- [Scope van variabelen](./h4-beslissingen/scope.md)
-- [Switch](./h4-beslissingen/switch.md)
-- [Oefeningen](./h4-beslissingen/oefeningen.md)
+<Leerdoelen>
 
-<LaboSlides hoofdstuk={4} />
+- booleaanse expressies schrijven met relationele operators
+- voorwaarden combineren met de logische operators `&&`, `||` en `!`
+- beslissingen in code maken met `if`, `else` en `else if`
+- uitleggen wat de scope van een variabele is
+- een `switch` gebruiken als alternatief voor een lange reeks `else if`'s
+
+</Leerdoelen>
+
+## Inhoud
+
+<HoofdstukInhoud vak="bp" hoofdstuk={4} />
+
+<LaboSlides vak="bp" hoofdstuk={4} />

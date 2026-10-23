@@ -1,66 +1,82 @@
 [
   {
-    "map": "h3-labo1",
+    "map": "bp/h3-labo1",
     "hoofdstuk": 3,
     "labo": 1,
     "titel": "H3: Strings en hun methoden",
     "subtitel": "Labo 1 · week 3",
-    "pdf": "h3-labo1-strings.pdf"
+    "pdf": "h3-labo1-strings.pdf",
+    "week": 3,
+    "vak": "bp"
   },
   {
-    "map": "h3-labo2",
+    "map": "bp/h3-labo2",
     "hoofdstuk": 3,
     "labo": 2,
     "titel": "H3: Strings en hun methoden",
     "subtitel": "Labo 2 · week 3 · het vervolg",
-    "pdf": "h3-labo2-strings-vervolg.pdf"
+    "pdf": "h3-labo2-strings-vervolg.pdf",
+    "week": 3,
+    "vak": "bp"
   },
   {
-    "map": "h4-labo1",
+    "map": "bp/h4-labo1",
     "hoofdstuk": 4,
     "labo": 1,
     "titel": "H4: Beslissingen",
     "subtitel": "Labo 1 · week 4",
-    "pdf": "h4-labo1-beslissingen.pdf"
+    "pdf": "h4-labo1-beslissingen.pdf",
+    "week": 4,
+    "vak": "bp"
   },
   {
-    "map": "h4-labo2",
+    "map": "bp/h4-labo2",
     "hoofdstuk": 4,
     "labo": 2,
     "titel": "H4: Beslissingen",
     "subtitel": "Labo 2 · week 4 · samengestelde voorwaarden en scope",
-    "pdf": "h4-labo2-samengestelde-expressies.pdf"
+    "pdf": "h4-labo2-samengestelde-expressies.pdf",
+    "week": 4,
+    "vak": "bp"
   },
   {
-    "map": "h5-labo1",
+    "map": "bp/h5-labo1",
     "hoofdstuk": 5,
     "labo": 1,
     "titel": "H5: Loops deel 1",
     "subtitel": "Labo 1 · week 5 · switch, while en do while",
-    "pdf": "h5-labo1-switch-loops.pdf"
+    "pdf": "h5-labo1-switch-loops.pdf",
+    "week": 5,
+    "vak": "bp"
   },
   {
-    "map": "h5-labo2",
+    "map": "bp/h5-labo2",
     "hoofdstuk": 5,
     "labo": 2,
     "titel": "H5: Loops deel 1",
     "subtitel": "Labo 2 · week 5 · complexe condities, oneindige loops en scope",
-    "pdf": "h5-labo2-loops-condities-scope.pdf"
+    "pdf": "h5-labo2-loops-condities-scope.pdf",
+    "week": 5,
+    "vak": "bp"
   },
   {
-    "map": "h5-labo3",
+    "map": "bp/h5-labo3",
     "hoofdstuk": 5,
     "labo": 3,
     "titel": "H5: Loops deel 2",
     "subtitel": "Labo 1 · week 6 · for en de Math-klasse",
-    "pdf": "h5-labo3-for-math.pdf"
+    "pdf": "h5-labo3-for-math.pdf",
+    "week": 6,
+    "vak": "bp"
   },
   {
-    "map": "h5-labo4",
+    "map": "bp/h5-labo4",
     "hoofdstuk": 5,
     "labo": 4,
     "titel": "H5: Loops deel 2",
     "subtitel": "Labo 2 · week 6 · debuggen",
-    "pdf": "h5-labo4-debuggen.pdf"
+    "pdf": "h5-labo4-debuggen.pdf",
+    "week": 6,
+    "vak": "bp"
   }
 ]

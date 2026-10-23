@@ -1,10 +1,16 @@
 # H6: Arrays
 
-- [Array principes](./h6-arrays/array-principes.md)
-- [Alternatieve syntax](./h6-arrays/alternatieve-syntax.md)
-- [Werken met arrays](./h6-arrays/werken-met-arrays.md)
-- [Defaultwaarden](./h6-arrays/defaultwaarden.md)
-- [List\<T>](./h6-arrays/list-en-listmethods.md)
-- [Oefeningen](./h6-arrays/oefeningen.md)
+<Leerdoelen>
 
-<LaboSlides hoofdstuk={6} />
+- een array aanmaken, vullen en de elementen gebruiken
+- de defaultwaarden van een array kennen
+- nuttige arraymethoden toepassen
+- een `List<T>` gebruiken wanneer je lijst moet kunnen groeien
+
+</Leerdoelen>
+
+## Inhoud
+
+<HoofdstukInhoud vak="bp" hoofdstuk={6} />
+
+<LaboSlides vak="bp" hoofdstuk={6} />

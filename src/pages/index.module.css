@@ -1,21 +1,21 @@
 .hero {
-  background: linear-gradient(135deg, #e05700 0%, #fd9702 100%);
+  background: linear-gradient(135deg, #2b2b33 0%, #1b1b1f 100%);
   color: #fff;
-  padding: 4rem 2rem;
+  padding: 4rem 1.5rem 7rem;
   text-align: center;
 }
 
 .heroInner {
-  max-width: 800px;
+  max-width: 760px;
   margin: 0 auto;
 }
 
 .heroLabel {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  opacity: 0.85;
+  opacity: 0.7;
   margin-bottom: 0.5rem;
 }
 
@@ -24,115 +24,207 @@
   font-weight: 800;
   margin: 0 0 1rem;
   color: #fff;
+  background: linear-gradient(90deg, var(--vak-bp-tot), #f3c27a 50%, #4cc3d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .heroSub {
-  font-size: 1.2rem;
-  opacity: 0.9;
-  margin-bottom: 2rem;
+  font-size: 1.15rem;
+  opacity: 0.85;
   line-height: 1.6;
+  margin: 0;
 }
 
-.heroButtons {
+.main {
+  padding: 0 1.5rem 4rem;
+}
+
+/* ─── Twee vakken naast elkaar ──────────────────────────────── */
+
+[data-vak='bp'] {
+  --vak: var(--vak-bp);
+  --vak-van: var(--vak-bp-van);
+  --vak-tot: var(--vak-bp-tot);
+}
+
+[data-vak='oop'] {
+  --vak: var(--vak-oop);
+  --vak-van: var(--vak-oop-van);
+  --vak-tot: var(--vak-oop-tot);
+}
+
+.vakken {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: -4.5rem auto 0;
+}
+
+.vak {
   display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--ifm-background-surface-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
-.btnPrimary {
-  background: #fff;
-  color: var(--ifm-color-primary-darkest);
-  font-weight: 700;
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: opacity 0.15s;
-}
-
-.btnPrimary:hover {
-  opacity: 0.9;
-  color: var(--ifm-color-primary-darkest);
-  text-decoration: none;
-}
-
-.btnSecondary {
-  background: transparent;
+.vakKop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg, var(--vak-van), var(--vak-tot));
   color: #fff;
+}
+
+.vakSemester {
+  font-size: 0.8rem;
   font-weight: 700;
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
-  border: 2px solid rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.vakAfkorting {
+  font-size: 1.6rem;
+  font-weight: 800;
+  opacity: 0.9;
+}
+
+.vakBody {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.vakNaam {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
+}
+
+.vakTekst {
+  color: var(--ifm-color-emphasis-800);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.vakHoofdstukken {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.4rem;
+}
+
+.vakHoofdstukken a {
+  display: inline-grid;
+  place-items: center;
+  min-width: 2.4rem;
+  height: 2rem;
+  padding: 0 0.4rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--vak);
+  background: color-mix(in srgb, var(--vak) 12%, transparent);
+  transition: background 0.15s, color 0.15s;
+}
+
+.vakHoofdstukken a:hover {
   text-decoration: none;
+  color: #fff;
+  background: var(--vak);
+}
+
+.vakBereik {
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 1.5rem;
+}
+
+.vakKnoppen {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  margin-top: auto;
+}
+
+.vakStart {
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--vak-van);
+  transition: filter 0.15s;
+}
+
+.vakStart:hover {
+  color: #fff;
+  text-decoration: none;
+  filter: brightness(1.1);
+}
+
+.vakLink {
+  font-weight: 600;
+  color: var(--vak);
+}
+
+/* ─── Algemeen ──────────────────────────────────────────────── */
+
+.algemeen {
+  max-width: 1100px;
+  margin: 3.5rem auto 0;
+}
+
+.algemeenTitel {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.algemeenRaster {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+
+.algemeenKaart {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem 1.15rem;
+  border-radius: 12px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  color: var(--ifm-font-color-base);
   transition: border-color 0.15s;
 }
 
-.btnSecondary:hover {
-  border-color: #fff;
-  color: #fff;
+.algemeenKaart:hover {
   text-decoration: none;
+  color: var(--ifm-font-color-base);
+  border-color: var(--ifm-color-emphasis-500);
 }
 
-.cardSection {
-  padding: 3rem 2rem;
+.algemeenKaart span {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
 }
 
-.cardGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
+@media (max-width: 600px) {
+  .hero {
+    padding: 3rem 1rem 6rem;
+  }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  padding: 1.75rem;
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: 8px;
-  text-decoration: none;
-  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
-  color: inherit;
-}
+  .heroTitle {
+    font-size: 2.2rem;
+  }
 
-.card:hover {
-  border-color: var(--ifm-color-primary);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  transform: translateY(-2px);
-  text-decoration: none;
-  color: inherit;
-}
-
-.cardEmoji {
-  font-size: 2rem;
-  margin-bottom: 0.75rem;
-}
-
-.cardBadge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  background: var(--ifm-color-primary);
-  color: #fff;
-  font-weight: 800;
-  font-size: 1.1rem;
-  margin-bottom: 0.75rem;
-}
-
-.cardTitle {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin: 0 0 0.5rem;
-  color: var(--ifm-color-primary);
-}
-
-.cardDesc {
-  font-size: 0.95rem;
-  opacity: 0.8;
-  margin: 0;
-  line-height: 1.5;
+  .main {
+    padding: 0 1rem 3rem;
+  }
 }
